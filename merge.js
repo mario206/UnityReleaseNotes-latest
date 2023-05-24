@@ -40,7 +40,12 @@ async function getReleaseNotes(directoryPath,resultFileName) {
 
     const releaseNotesHTML = $releaseNotes.html();
 
-    content += `${releaseNotesHTML}\n\n`;
+    content += `<html>\n\n
+                  <head></head>\n\n
+                  <body>\n\n
+                  ${releaseNotesHTML}\n\n
+                  </body>\n\n
+                  </html>`;
   }
 
   await fs.writeFile(`merge_htmls/${resultFileName}`, content);
