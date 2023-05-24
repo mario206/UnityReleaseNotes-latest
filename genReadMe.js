@@ -20,12 +20,20 @@ function versionNumberCompare(a, b) {
 
 function getCurrentFormattedTime() {
   const current = new Date();
-  const year = current.getFullYear();
-  const month = String(current.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-  const day = String(current.getDate()).padStart(2, '0');
-  const hours = String(current.getHours()).padStart(2, '0');
-  const minutes = String(current.getMinutes()).padStart(2, '0');
-  const seconds = String(current.getSeconds()).padStart(2, '0');
+  // 获取本地时间与 UTC 时间的分钟差
+  const timezoneOffsetInMinutes = current.getTimezoneOffset();
+  // 将本地时间根据 UTC 时间和目标时区得到 UTC+8 时间
+  const utcPlus8OffsetInMinutes = -8 * 60; // UTC+8 时区值
+  const targetOffsetInMinutes = timezoneOffsetInMinutes - utcPlus8OffsetInMinutes;
+  const targetTimestamp = current.getTime() + targetOffsetInMinutes * 60000;
+  const targetDate = new Date(targetTimestamp);
+
+  const year = targetDate.getFullYear();
+  const month = String(targetDate.getMonth() + 1).padStart(2, '0');
+  const day = String(targetDate.getDate()).padStart(2, '0');
+  const hours = String(targetDate.getHours()).padStart(2, '0');
+  const minutes = String(targetDate.getMinutes()).padStart(2, '0');
+  const seconds = String(targetDate.getSeconds()).padStart(2, '0');
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
