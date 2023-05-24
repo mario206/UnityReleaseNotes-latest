@@ -40,13 +40,13 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
   var columns = 9;
   for(var i = 0;i < columns;++i)
   {
-    table += "|-"
+    table += "|&emsp;" //todo
   }
   table += "|\n";
 
   for(var i = 0;i < columns;++i)
   {
-    table += "|:-"
+    table += "|:-" 
   }
   table += "|\n";
 
