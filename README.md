@@ -1,24 +1,15 @@
 # UnityReleaseNotes
-**Last update time : 2023-05-24 10:03:56 Powered By ChatGPT**
+**Last update time : 2023-05-24 10:06:24 Powered By ChatGPT**
 
 |-|-|-|-|-|
 |:-:|:-:|:-:|:-:|:-:|
-| [2022.2](./merge_htmls/2022.2.html) | [2022.1](./merge_htmls/2022.1.html) | [2021.3](./merge_htmls/2021.3.html) | [2021.2](./merge_htmls/2021.2.html) | [2021.1](./merge_htmls/2021.1.html) |
-| [2020.3](./merge_htmls/2020.3.html) | [2020.2](./merge_htmls/2020.2.html) | [2020.1](./merge_htmls/2020.1.html) | [2019.4](./merge_htmls/2019.4.html) | [2019.3](./merge_htmls/2019.3.html) |
-| [2019.2](./merge_htmls/2019.2.html) | [2019.1](./merge_htmls/2019.1.html) | [2018.4](./merge_htmls/2018.4.html) | [2018.3](./merge_htmls/2018.3.html) | [2018.2](./merge_htmls/2018.2.html) |
-| [2018.1](./merge_htmls/2018.1.html) | [2017.4](./merge_htmls/2017.4.html) | [2017.3](./merge_htmls/2017.3.html) | [2017.2](./merge_htmls/2017.2.html) | [2017.1](./merge_htmls/2017.1.html) |
-| [5.6](./merge_htmls/5.6.html) | [5.5](./merge_htmls/5.5.html) | [5.4](./merge_htmls/5.4.html) | [5.3](./merge_htmls/5.3.html) | [5.2](./merge_htmls/5.2.html) |
-| [5.1](./merge_htmls/5.1.html) | [5.0](./merge_htmls/5.0.html) | | | |
-<html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.20f1</h3>
+| [2022.2](./merge_htmls/2022.2.html) | [2022.1](./merge_htmls/2022.1.html) | [2021.3](./merge_htmls/2021.3.html) | [2021.2](./merge_htmls/2021.2.html) | [2021.1](./merge_htmls/2021.1.html) | [2020.3](./merge_htmls/2020.3.html) | [2020.2](./merge_htmls/2020.2.html) | [2020.1](./merge_htmls/2020.1.html) |
+| [2019.4](./merge_htmls/2019.4.html) | [2019.3](./merge_htmls/2019.3.html) | [2019.2](./merge_htmls/2019.2.html) | [2019.1](./merge_htmls/2019.1.html) | [2018.4](./merge_htmls/2018.4.html) | [2018.3](./merge_htmls/2018.3.html) | [2018.2](./merge_htmls/2018.2.html) | [2018.1](./merge_htmls/2018.1.html) |
+| [2017.4](./merge_htmls/2017.4.html) | [2017.3](./merge_htmls/2017.3.html) | [2017.2](./merge_htmls/2017.2.html) | [2017.1](./merge_htmls/2017.1.html) | [5.6](./merge_htmls/5.6.html) | [5.5](./merge_htmls/5.5.html) | [5.4](./merge_htmls/5.4.html) | [5.3](./merge_htmls/5.3.html) |
+| [5.2](./merge_htmls/5.2.html) | [5.1](./merge_htmls/5.1.html) | [5.0](./merge_htmls/5.0.html) | | | | | |
+| | | | | | | | |
+| | | | | | | | |
+<h3>Known Issues in 2022.2.20f1</h3>
 
 <ul>
 <li><p>Culling: [Burst Occlusion Culling] Editor Crash when occlusion enabled and enter / exit playmode
@@ -139,20 +130,7 @@
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.19f1</h3>
+<h3>Known Issues in 2022.2.19f1</h3>
 
 <ul>
 <li><p>DirectX12: [macOS] Editor freezes when saving prefab changes in Play Mode if “VSync” is enabled
@@ -285,20 +263,7 @@
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.18f1</h3>
+<h3>Known Issues in 2022.2.18f1</h3>
 
 <ul>
 <li><p>DirectX12: [macOS] Editor freezes when saving prefab changes in Play Mode if “VSync” is enabled
@@ -486,20 +451,7 @@ A debug panel also has live reporting of the current prefetched mips in the mark
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.17f1</h3>
+<h3>Known Issues in 2022.2.17f1</h3>
 
 <ul>
 <li><p>DirectX12: [macOS] Editor freezes when saving prefab changes in Play Mode if “VSync” is enabled
@@ -704,20 +656,7 @@ The second knob is high and low res PBR dof checkbox. The previous drop down has
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.16f1</h3>
+<h3>Known Issues in 2022.2.16f1</h3>
 
 <ul>
 <li><p>DirectX12: [DXR] GPU memory leaks when Renderer.rayTracingMode is set to UnityEngine.Experimental.Rendering.RayTracingMode.DynamicGeometry
@@ -889,20 +828,7 @@ The second knob is high and low res PBR dof checkbox. The previous drop down has
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.15f1</h3>
+<h3>Known Issues in 2022.2.15f1</h3>
 
 <ul>
 <li><p>2D: Editor goes into a loop while importing the “UI Toolkit Sample – Dragon Crashers” asset
@@ -1040,20 +966,7 @@ Calls to the obsolete enums will be automatically updated to the new one. If usi
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.14f1</h3>
+<h3>Known Issues in 2022.2.14f1</h3>
 
 <ul>
 <li><p>2D: Editor goes into a loop while importing the “UI Toolkit Sample – Dragon Crashers” asset
@@ -1270,20 +1183,7 @@ Fixed EnumField updating the label when calling SetValueWithoutNotify and the va
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.13f1</h3>
+<h3>Known Issues in 2022.2.13f1</h3>
 
 <ul>
 <li><p>Build Systems: "wasm-ld.exe" is not terminated when canceling a WebGL Build during the "Linking build.js (wasm)" phase
@@ -1451,20 +1351,7 @@ Improved offline experience by disabling the plugin when there is no internet co
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.12f1</h3>
+<h3>Known Issues in 2022.2.12f1</h3>
 
 <ul>
 <li><p>FrameDebugger: Frame Debugger VRAM memory leak
@@ -1621,20 +1508,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.11f1</h3>
+<h3>Known Issues in 2022.2.11f1</h3>
 
 <ul>
 <li><p>FrameDebugger: Frame Debugger VRAM memory leak
@@ -1735,20 +1609,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.10f1</h3>
+<h3>Known Issues in 2022.2.10f1</h3>
 
 <ul>
 <li><p>FrameDebugger: Frame Debugger VRAM memory leak
@@ -1868,20 +1729,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.9f1</h3>
+<h3>Known Issues in 2022.2.9f1</h3>
 
 <ul>
 <li><p>FrameDebugger: Frame Debugger VRAM memory leak
@@ -2139,20 +1987,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.8f1</h3>
+<h3>Known Issues in 2022.2.8f1</h3>
 
 <ul>
 <li><p>Inspector Framework: Editor freezes when selecting multiple assets with different Scripted Importers
@@ -2227,20 +2062,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.7f1</h3>
+<h3>Known Issues in 2022.2.7f1</h3>
 
 <ul>
 <li><p>Animation: Root Motion character warps into a new position when negative speed values  are applied in a Blend Tree
@@ -2409,20 +2231,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.6f1</h3>
+<h3>Known Issues in 2022.2.6f1</h3>
 
 <ul>
 <li><p>2D: [URP] Memory leak when in Play Mode
@@ -2537,20 +2346,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.5f1</h3>
+<h3>Known Issues in 2022.2.5f1</h3>
 
 <ul>
 <li><p>2D: [URP] Memory leak when in Play Mode
@@ -2737,20 +2533,7 @@ Updated the dragger manipulators from 1.0px to 0.1px for the following UI Builde
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.4f1</h3>
+<h3>Known Issues in 2022.2.4f1</h3>
 
 <ul>
 <li><p>2D: [URP] Memory leak when in Play Mode
@@ -2941,20 +2724,7 @@ Fixed env smoothness attenuation on pools.
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.3f1</h3>
+<h3>Known Issues in 2022.2.3f1</h3>
 
 <ul>
 <li><p>2D: [URP] Memory leak when in Play Mode
@@ -3344,20 +3114,7 @@ The job scheduler now avoids potential stalls on the main thread as mobile devic
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.2f1</h3>
+<h3>Known Issues in 2022.2.2f1</h3>
 
 <ul>
 <li><p>2D: [URP] Memory leak when in Play Mode
@@ -3577,20 +3334,7 @@ The warning is only shown if <strong>Auto Generate</strong> is ticked and the te
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.1f1</h3>
+<h3>Known Issues in 2022.2.1f1</h3>
 
 <ul>
 <li><p>Asset - Database: Crash on GameObject::ActivateAwakeRecursivelyInternal when opening project
@@ -3704,20 +3448,7 @@ The warning is only shown if <strong>Auto Generate</strong> is ticked and the te
 
 
 
-
-                  </body>
-
-
-                  </html><html>
-
-
-                  <head></head>
-
-
-                  <body>
-
-
-                  <h3>Known Issues in 2022.2.0f1</h3>
+<h3>Known Issues in 2022.2.0f1</h3>
 
 <ul>
 <li><p>Asset - Database: Crash on GameObject::ActivateAwakeRecursivelyInternal when opening project
@@ -6708,8 +6439,3 @@ Fixed performance issue with UI.CooldownWindowDelayer.OnUpdate running on projec
 
 
 
-
-                  </body>
-
-
-                  </html>

@@ -39,10 +39,11 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
 
   table += '|-|-|-|-|-|\n|:-:|:-:|:-:|:-:|:-:|\n';
 
+  var columns = 8;
   for (let i = 0; i < rows; i++) {
     let row = '|';
-    for (let j = 0; j < 5; j++) {
-      const index = i * 5 + j;
+    for (let j = 0; j < columns; j++) {
+      const index = i * columns + j;
       if (index < sortedUnityVersions.length) {
         const version = sortedUnityVersions[index];
         const link = `./merge_htmls/${version}.html`;

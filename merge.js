@@ -40,13 +40,16 @@ async function getReleaseNotes(directoryPath,resultFileName) {
 
     const releaseNotesHTML = $releaseNotes.html();
 
+    /*
     content += `<html>\n\n
                   <head></head>\n\n
                   <body>\n\n
                   ${releaseNotesHTML}\n\n
                   </body>\n\n
                   </html>`;
-  }
+                  */
+    content += `${releaseNotesHTML}\n\n`;
+}
 
   await fs.writeFile(`merge_htmls/${resultFileName}`, content);
   console.log('ReadMe.md has been successfully created.');
