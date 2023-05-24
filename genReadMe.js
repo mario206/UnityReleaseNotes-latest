@@ -37,19 +37,38 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
   let table = "# UnityReleaseNotes\n"
   table += `**Last update time : ${getCurrentFormattedTime()} Powered By ChatGPT**\n\n`
 
-  table += '|-|-|-|-|-|\n|:-:|:-:|:-:|:-:|:-:|\n';
+  var columns = 9;
+  for(var i = 0;i < columns;++i)
+  {
+    table += "|-"
+  }
+  table += "|\n";
 
-  var columns = 8;
+  for(var i = 0;i < columns;++i)
+  {
+    table += "|:-"
+  }
+  table += "|\n";
+
   for (let i = 0; i < rows; i++) {
-    let row = '|';
+    let row = '';
     for (let j = 0; j < columns; j++) {
       const index = i * columns + j;
       if (index < sortedUnityVersions.length) {
         const version = sortedUnityVersions[index];
         const link = `./merge_htmls/${version}.html`;
+        if(j == 0)
+        {
+          row += "|";
+        }
         row += ` [${version}](${link}) |`;
       } else {
-        row += ' |';
+        if(j == 0) {
+          break
+        }
+        else {
+          row += ' |';
+        }
       }
     }
     table += row + '\n';
