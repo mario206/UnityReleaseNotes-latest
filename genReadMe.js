@@ -35,8 +35,8 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
   const sortedUnityVersions = unityVersions.sort(versionNumberCompare);
   const rows = Math.ceil(sortedUnityVersions.length / 5);
   let table = "# UnityReleaseNotes\n"
-  table += `**Last update time : ${getCurrentFormattedTime()} Powered By ChatGPT**\n\n`
-
+  table += `**Last update time : \`${getCurrentFormattedTime()}\`\tPowered By ChatGPT**\n\n`
+  table += `## More Unity Versions \n`
   var columns = 9;
   for(var i = 0;i < columns;++i)
   {
@@ -50,6 +50,7 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
   }
   table += "|\n";
 
+  var end = false;
   for (let i = 0; i < rows; i++) {
     let row = '';
     for (let j = 0; j < columns; j++) {
@@ -64,6 +65,7 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
         row += ` [${version}](${link}) |`;
       } else {
         if(j == 0) {
+          end = true
           break
         }
         else {
@@ -71,13 +73,19 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
         }
       }
     }
-    table += row + '\n';
+    if(!end)
+    {
+      table += row + '\n';
+    }
   }
 
+  var version = "2020.3";
+
   //var filePath = `./merge_htmls/${sortedUnityVersions[0]}.md`;
-  var filePath = `./merge_htmls/2020.3.md`;
+  var filePath = `./merge_htmls/${version}.md`;
   const fileContent = await fs.readFile(filePath, 'utf8');
 
+  table += `\n## ${version}\n\n`
   table += fileContent;
 
   return table;
