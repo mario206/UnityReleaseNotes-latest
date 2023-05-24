@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const cheerio = require('cheerio');
+const TurndownService = require('turndown');
 
 async function getReleaseNotes(directoryPath,resultFileName) {
   const files = await fs.readdir(directoryPath);
@@ -40,6 +41,12 @@ async function getReleaseNotes(directoryPath,resultFileName) {
 
     const releaseNotesHTML = $releaseNotes.html();
 
+    const turndownService = new TurndownService();
+    const html = releaseNotesHTML;
+    const markdown = turndownService.turndown(html);
+
+    //console.log(markdown);
+
     /*
     content += `<html>\n\n
                   <head></head>\n\n
@@ -48,7 +55,7 @@ async function getReleaseNotes(directoryPath,resultFileName) {
                   </body>\n\n
                   </html>`;
                   */
-    content += `${releaseNotesHTML}\n\n`;
+    content += `${markdown}\n\n`;
 }
 
   await fs.writeFile(`merge_htmls/${resultFileName}`, content);
