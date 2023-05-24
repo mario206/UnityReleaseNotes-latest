@@ -1,0 +1,2488 @@
+<h3>Improvements</h3>
+
+<ul>
+<li>Android: Audio - Enabled OpenSL for GearVR.</li>
+<li>iOS/IL2CPP: Load embedded resource files as memory mapped read-only files so that they do not contribute to memory pressure.</li>
+<li>iOS/IL2CPP: Lower memory used by IL2CPP executables at runtime by removing unused overhead from memory profiling.</li>
+<li>Xbox One: Unity is now build with the June 2015 XDK. You must have the June 2015 XDK installed on your PC and use the matching or later recovery.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>(none) - Android: Fixed an issue whereby unaligned access caused a crash on Tegra K1.</li>
+<li>(691217) - GLES: Fixed crash on Vivante GPUs when using binary shaders.</li>
+<li>(699694) - GLES: Fixed crash when using multithreaded renderer and using shader that uses vertex colors when the mesh data doesn't contain vertex colors.</li>
+<li>(none) - Graphics: Configurable vertex compression to fix lightmap UVs shifting.</li>
+<li>(700474) - Graphics: Fixed issue when loading single channel JPEGs using Texture2D.LoadImage.</li>
+<li>(691599) - Inspector: Fixed NullReferenceException caused by deleting objects during Inspector redraw.</li>
+<li>(685439) - iOS: Fixed an issue whereby lightmapped objects with legacy shaders lit with realtime light in legacy deferred no longer render incorrectly.</li>
+<li>(695118), (701548) - iOS/IL2CPP: Add support for PreserveAttribute to prevent classes, methods, fields and properties from being stripped in IL2CPP.</li>
+<li>(700507) - iOS/IL2CPP:&nbsp;Avoid deadlock during UnloadUnusedAssets.</li>
+<li>(691607), (667147) - iOS/IL2CPP: Correct an exception during code conversion which has the error message "Invalid global variables count" when converting some UnityScript assemblies.</li>
+<li>(698060) - iOS/IL2CPP: Corrected an error in generated code when a constrained generic parameter type is used in a nested lambda expression.</li>
+<li>(698589) - iOS/IL2CPP: Corrected RPC implementation for the UnityEngine.Networking namespace.</li>
+<li>(704018) - iOS/IL2CPP: Ensure that GetCurrentMethod returns the proper value, even when the generated native method is inlined.</li>
+<li>(695179) - iOS/IL2CPP: Fixed a crash which occurred when Ldvirtftn opcode was used on a non-virtual method.</li>
+<li>(691404) - iOS/IL2CPP:&nbsp;Fixed a rare case when bytecode stripper would incorrectly strip wrong overloaded generic virtual method.</li>
+<li>(694535) - iOS/IL2CPP:&nbsp;Fixed an issue which sometimes caused IL2CPP to not call static constructors when Unity created class instances from native code.</li>
+<li>(696986) - iOS/IL2CPP: Fixed ConstructorInfo.Invoke() returning null for Nullable types.</li>
+<li>(694436) - iOS/IL2CPP: Fixed IL2CPP generated code in if (...) block if the condition operand was an IntPtr.</li>
+<li>(694436) - iOS/IL2CPP: Fixed IL2CPP generated marshaling code for marshaling IntPtr into any other primitive type.693316</li>
+<li>(673249) - iOS/IL2CPP: Fixed managed stack traces.</li>
+<li>(702879) - iOS/IL2CPP: Fixed marshaling arrays of structs marked with [Out] attribute.</li>
+<li>(697563) - iOS/IL2CPP: Generate correct C++ code for a generic virtual method which returns an IEnumerator and has a generic constraint defined on the method it overrides.</li>
+<li>(696187) - iOS/IL2CPP: Pr700531event a C++ compiler error in generated code about an undeclared identifier with the test "Unused local just for stack balance".</li>
+<li>(702696) - iOS/IL2CPP: Prevent a runtime exception with IL code in an enumerator's MoveNext method when the enumerator's return type is a constrained generic type.</li>
+<li>(703294) - iOS/IL2CPP: Prevent an exception during code generation when the default value of a field is not the same type as the field.</li>
+<li>(704069) - iOS/IL2CPP: Prevent the player build process from using older generated C++ source files from a previous build.</li>
+<li>(691008) - iOS/IL2CPP: When compiling scripts for the player, appropriate UnityEngine.UI.dll will be referenced.</li>
+<li>(671681) - Lighting: Fixed inaccurate screenspace scissoring of lights with large range.</li>
+<li>(none) - Mono: Double traverse object count to avoid stack overflow when freeing huge amounts of objects.</li>
+<li>(none) - Windows Store Apps: Fixed a rare crash at boot when reading AppxManifest.xml.</li>
+<li>(690152) - Xbox One: Fixed a bug that could cause game chat to fail when more than two players are involved.</li>
+<li>(none) - Xbox One: Mono: Double traverse object count to avoid stack overflow when freeing huge amounts of objects.</li>
+</ul>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Added set to gpu skinning parameter in PlayerSettings.</li>
+<li>iOS/IL2CPP: Decrease IL2CPP memory usage by making metadata structures const.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>Android: Fix for Oculus window buffer memory leak (due to Oculus plugin replacing GL context).</li>
+<li>Audio: If audio output device fails to init, then init to the null device.</li>
+<li>Audio: The Disable Audio option new prevents FMOD from initializing and allocating resources which are exclusive on some platforms.</li>
+<li>Editor: Fixed bad scene view performance when lots of light gizmos are drawn.</li>
+<li>Graphics: Fixed command buffer RenderTargetIdentifier with RenderTexture argument.</li>
+<li>Graphics: Fixed regression in handling "external" textures (Texture2D.CreateExternalTexture).</li>
+<li>iOS: Fixed crash on A7 SoC when locking the screen.</li>
+<li>iOS: Fixed rendering issues when dismissing presenting view controller which overrides orientation constraints.</li>
+<li>iOS: Fixed simulator crashing on startup due to "Symbol not found: __ZN5metal16g_CurrentEncoderE" (696798).</li>
+<li>iOS: Fixed Xcode project supported platforms and SDKs settings.</li>
+<li>iOS/IL2CPP: Avoid adding includes and methods (for method declaration includes) for types generated to terminate generic type recursion.</li>
+<li>iOS/IL2CPP: Correct an error in generated code when a constrained generic parameter type is used in a nested lambda expression.</li>
+<li>iOS/IL2CPP: Correct code generation for a generic type with another generic type as a constraint when the generic parameter for the constraint is a value type.</li>
+<li>iOS/IL2CPP: Corrected the implementation of the ldvirtftn opcode for types using a constrained generic generic parameter.</li>
+<li>iOS/IL2CPP: Correctly invoke an action pointing to an extension method.</li>
+<li>iOS/IL2CPP: Emit memory barriers to ensure the correct acquire and release semantics are enforced for loads and stores of volatile fields.</li>
+<li>iOS/IL2CPP: Ensure that background threads which are not explicitly joined have their resources freed so that the runtime does not leak thread handles.</li>
+<li>iOS/IL2CPP: Fixed a code generation issue when using static constructors in base generic classes.</li>
+<li>iOS/IL2CPP: Fixed a crash which occurred during a call to Socket.SetSocketOption with the AddMembership or DropMembership names.</li>
+<li>iOS/IL2CPP: Fixed a case where static constructor would not be called if an object is constructed within Unity internally.</li>
+<li>iOS/IL2CPP:&nbsp;Fixed WWWForm.data property getter being extremely slow on IL2CPP.</li>
+<li>iOS/IL2CPP: Implemented embedded resources for IL2CPP.</li>
+<li>iOS/IL2CPP: Prevent a crash when a thread with a name is finalized.</li>
+<li>iOS/IL2CPP: Prevent IL2CPP from throwing an exception at conversion time for a generic type deriving from a generic interface.</li>
+<li>iOS/IL2CPP: Static constructor of base type now gets correctly called if a derived class does not have one when creating an object of a derived type.</li>
+<li>iOS/Metal: Fixed crash when using preloaded shaders.</li>
+<li>Mecanim: Fixed duplicated parameter in blend tree of blend tree</li>
+<li>Merge Tool: Fixed auto fallback spec file detection.</li>
+<li>Merge Tool: Handle regression in 5.0.1 introduced by stripped prefabs.</li>
+<li>Physics: Stop force waking up Rigidbodies when AddForce / AddTorque (family) is called with a zero vector. This fixes Rigidbodies starting to accelerate even though a zero force is applied.</li>
+<li>Plugins: Windows plugins won't be included to OSX package, when building for X86 architecture.</li>
+<li>PS3/PS4: Fixed some separate alpha blending shader states not working properly.</li>
+<li>Scripting: Fixed debugger deadlock on OSX.</li>
+<li>Scripting: Fixed MonoDevelop incorrectly stepping over recursive methods.</li>
+<li>Scripting: Fixed Unity crash when using newer versions of the soft debugger client in MonoDevelop.</li>
+<li>VR: Added 3D splash screen to Unity Personal Edition Builds.</li>
+<li>WebPlugin: Fixed cross-domain policy bypass issue (reported by Jouko Pynnonen of Klikki Oy).</li>
+<li>Windows Phone/Store: Fixed assembly converter crashing when a type generic class derives from a generic class which has a generic parameter that is array of generic parameters of the derived class (e. g. class Derived : MyBase).</li>
+<li>Windows Store Apps/Windows Phone 8.1: Fixed extended splash screen sizing.</li>
+</ul>
+
+<h3>Features</h3>
+
+<ul>
+<li>XboxOne: The default update granularity used by XDK's makepkg tool has changed to File granularity rather than Chunk granularity. There is now a setting to control this:
+
+<ul>
+<li>Player Settings &gt; Xbox One &gt; Microsoft Xbox One Package Settings &gt; Update Granularity. This property is set to File by default. Chunk is recommended only for games that have already been released using the Chunk granularity, which was the default prior to this build.</li>
+</ul></li>
+</ul>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Editor: Added Android 5.0 and 5.1 to "Minimum API Level" list.</li>
+<li>GI: Don't add lights to Enlighten at runtime if they don't contribute to GI (bounce intensity at 0).</li>
+<li>GI: Made pig assert message human readable.</li>
+<li>iOS: Enabled thumb instruction support for IL2CPP ARMv7 slice. Should improve ARMv7 slice code size by 10-20%.</li>
+<li>iOS/IL2CPP: Avoid generating NullReference checks on value types.</li>
+<li>iOS/IL2CPP: Improve performance of finally blocks.</li>
+<li>iOS/Metal: Better support for native rendering plugins when using Metal.</li>
+<li>Mecanim: Fix direct blendtree editor slow down when there is too much motion.</li>
+<li>Physics 2D: Added 'AreaEffector2D.useGlobalAngle' to allow the selection of whether the force-angle is global or local.</li>
+<li>Physics 2D: Added 'Effector2D.useColliderMask' to allow the selection of whether the effector collider mask is used or the global collision matrix.</li>
+<li>Physics 2D: Added 'Rigidbody2D.IsTouching' and 'Rigidbody2D.IsTouchingLayers' to complement the same on 'Collider2D' and 'Physics2D'.</li>
+<li>Physics 2D: Renamed 'AreaEffector2D.forceDirection' to 'AreaEffector2D.forceAngle' (sciprts are automaticallly updated).</li>
+<li>Physics: Report detailed error when generating collision meshes, also during asset import. Simplifies troubleshooting creation of non-triangle collision meshes.</li>
+<li>Substance: New Substance features introduced by Substance Designer 5.0 are now supported.</li>
+<li>Terrain: TerrainData.alphamapTextures is now public.</li>
+<li>Windows Standalone: Hint to AMD driver that discrete GPU should be used, rather than integrated GPU.</li>
+<li>XboxOne: Lightmap files are now listed in the package manifest in the same chunk as the scene that uses them.</li>
+<li>XboxOne: Unity is now built with the April 2015 XDK. You will need to install the April 2015 XDK on your PC and use the same or later recovery on your console.</li>
+<li>XboxOne: Updated docs to reflect terminology and tools in latest XDK, and added a section on Packaging.</li>
+<li>XboxOne: Worker threads created by Unity's core systems (Physics, AI) will no longer run on cores 0 and 1, which are reserved for the Rendering thread and Unity's main thread respectively. This will be a performance gain in most cases by avoiding thread context switches.</li>
+</ul>
+
+<h3>Changes</h3>
+
+<ul>
+<li>Android: Added support for real 16bit DisplayBuffer. It can only be enabled in PlayerSettings, Handheld.use32BitDisplayBuffer is deprecated.</li>
+<li>Scripting: GizmoType enum has changed (and is updated by automatic script updater). NotSelected -&gt; NotInSelectionHierarchy. SelectedOrChild -&gt; InSelectionHierarchy. New member NonSelected added.</li>
+<li>XboxOne: Unity is now built with the March 2015 XDK. You will need to install the March 2015 XDK onto your development PC and use the same or later recovery</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>AI: Allow setting slope above 60 deg by using serialized object.</li>
+<li>AI: Fixed buggy example code for script API example.</li>
+<li>AI: Handle out of memory when building huge world.</li>
+<li>Android: Apply Holo or Material theme if the user did not specify other explicitly.</li>
+<li>Android: Apply user theme if set.</li>
+<li>Android: Fixed crash in Mono caused invocation of wrong method.</li>
+<li>Android: Fixed crash on Application.Quit().</li>
+<li>Android: Fixed issues with soft input caused by Samsung back button fix</li>
+<li>Android: Fixed window buffer leakage</li>
+<li>Android: Improved soft input dialog.</li>
+<li>APIUpdater: APIUpdater assumes script encoding is UTF-8.</li>
+<li>APIUpdater: APIUpdater crashes when updating methods that return arrays of generic types.</li>
+<li>APIUpdater: Unity imports/upgrades DLL built for 4.x twice and it throws errors after first import.</li>
+<li>Asset Bundles: AssetBundle.CreateFromMemory with uncompressed bundles will no longer block the main thread for several seconds.</li>
+<li>Asset Importing: Fixed importing of an assembly that contains classes inherited from generic engine's classes.</li>
+<li>Asset Management: PluginImporter settings for OSX native plugins will no longer be lost in .unitypackage files.</li>
+<li>AssetBundle: Fixed the issue that prefab loaded from AssetBundle lost the reference to a material in a variant AssetBundle.</li>
+<li>AssetBundle: Fixed the issue that scene AssetBundle didn't get rebuilt when the referenced prefabs were changed.</li>
+<li>AssetBundle: Make the error message more informative when building AssetBundles.</li>
+<li>D3D11: Fixed shaders that use min16float types.</li>
+<li>Documentation: Fixes for 5.0, removed the "Overview" link.</li>
+<li>Documentation: A number of bugs have been fixed.</li>
+<li>Documentation: Ridigbody typos fixed.</li>
+<li>Editor - Other: Fixed ScriptableObject assets to pull icons correctly from their associated script</li>
+<li>Editor: Android - Fixed updating SDK on x86 Java on Windows.</li>
+<li>Editor: Fixed crash when PlayerSettings.GetPropertyString is called for not existing property.</li>
+<li>Editor: Fixed Camera.SetTargetBuffers with AA-ed renderbuffers.</li>
+<li>Editor: Scene View content is no longer tinted in playmode.</li>
+<li>GI: Ambient light is not shown after baked data is cleared.</li>
+<li>GI: Entering play mode while baking with on demand makes bake indication get stuck and game show incorrect result.</li>
+<li>GI: Fixed crash caused by Unity reading GI files as resource files and a certain GI file had data that looked like a header but caused a huge allocation.</li>
+<li>GI: Fixed lightmap resolution overlay not showing up on Terrains.</li>
+<li>GI: Reloading scene makes the background darker.</li>
+<li>GI: With continuous baking enabled and baked light, light probes stop working after exiting play mode.</li>
+<li>Graphics: Fixed double-fog in deferred shading + forward-only opaque objects + GlobalFog effect.</li>
+<li>Graphics: Fixed printing of some loops in GLSL/Metal.</li>
+<li>Graphics: Improved rough front-to-back sorting for opaque objects, for better GPU Z culling efficiency.</li>
+<li>IMGUI: Fixed calculation of TextGenerator vertices position when lineSpacing is 0.</li>
+<li>Input: Input.GetJoystickNames() on Windows no longer returns a single blank entry when no joysticks are connected.</li>
+<li>Input: Input.mousePosition is clamped correctly when a Windows player is resized.</li>
+<li>iOS: Added dummy vertex channel for missing shader channels when dynamic batching.</li>
+<li>iOS: Added Xcode 6.3 Build &amp; Run support.</li>
+<li>iOS: Fixed crash when rendering empty meshes.</li>
+<li>iOS: Fixed HTTPs problem.</li>
+<li>iOS: Fixed memory corruption and crash initiated by calling WebCamTexture.Stop().</li>
+<li>iOS: Fixed memory leak in iOS WebCamTexture.GetPixels().</li>
+<li>iOS: Fixed crash on rendering empty meshes.</li>
+<li>iOS: Fixed duplicate property value removal in certain Xcode projects.</li>
+<li>iOS: Fixed WebCamTexture.didUpdateThisFrame.</li>
+<li>iOS: Fixed assert in corner case when webcam code is trying to pick supported FPS.</li>
+<li>iOS/IL2CPP: Add a null terminator to string arrays when they are marshaled.</li>
+<li>iOS/IL2CPP: Added support for string.Normalize.</li>
+<li>iOS/IL2CPP: Additional code size improvements from generic sharing:
+
+<ul>
+<li>Allow partial sharing (e.g. Dictionary is shared with Dictionary).</li>
+<li>Allow sharing when the type parameter constraint is an interface.</li>
+<li>Share enums and their base types as generic parameters.</li>
+</ul></li>
+<li>iOS/IL2CPP: Allow Encoding.GetEncoding to correctly.</li>
+<li>iOS/IL2CPP: Allow thread-local static fields to work correctly in generic classes. Specifically, this corrects the Parse SDK crash in 4.6.4p1.</li>
+<li>iOS/IL2CPP: AudioMixerSnapshot.TranslateTo no longer throws null reference exception on IL2CPP.</li>
+<li>iOS/IL2CPP: AudioMixerSnapshot.TranslateTo no longer throws null reference exception on IL2CPP.</li>
+<li>iOS/IL2CPP: Avoid class initialization and metadata construction deadlocks.</li>
+<li>iOS/IL2CPP: Cast non-pointer references types to System.Object for comparison in conditional statements.</li>
+<li>iOS/IL2CPP: Correct an InvalidCastException that can occur when setting an array value.</li>
+<li>iOS/IL2CPP: Correct the behavior of CultureInfo.CreateSpecificCulture.</li>
+<li>iOS/IL2CPP: Correctly lazy initialize the type information when Type.GetDeclaringType is called.</li>
+<li>iOS/IL2CPP: Do not write extern declarations inside p/invoke wrappers for methods that return a class or delegate.</li>
+<li>iOS/IL2CPP: Fix a number of problems related to WebRequest and asynchronous I/O:
+
+<ul>
+<li>Fixed socket I/O requests getting stuck in ThreadPool on POSIX/iOS.</li>
+<li>Fixed race condition in Monitor code that lead to 5 second stalls in Monitor.Exit().</li>
+<li>Fixed ThreadPool not re-using idle worker threads (lead to potentially very high memory consumption and bad performance).</li>
+<li>Fixed ThreadPool upper thread count limits being very low; now roughly the same as on Mono.</li>
+<li>Fixed ThreadPool.SetMinThreads() and SetMaxThreads() having no effect.</li>
+</ul></li>
+<li>iOS/IL2CPP: Fixed an infinite recursion when constructing generic type.</li>
+<li>iOS/IL2CPP: Fixed an issue with open delegates that return void.</li>
+<li>iOS/IL2CPP: Fixed crashes in socket code due to sockets being destroyed too early and prevent Thread.IsAlive from returning true after thread has terminated.</li>
+<li>iOS/IL2CPP: Fixed Interlocked.Exchange and Interlocked.CompareExchange for interfaces.</li>
+<li>iOS/IL2CPP: Fixed issue with managed exceptions not being thrown by a method called by Method.Invoke in some cases.</li>
+<li>iOS/IL2CPP: Fixed multidimensional array interfaces.</li>
+<li>iOS/IL2CPP: Fixed a crash with StrangeIOC.</li>
+<li>iOS/IL2CPP: Fixed an issue where IL2CPP would use -&gt; operator on value types in certain cases.</li>
+<li>iOS/IL2CPP: Fixed code generation for binary comparisons containing expressions.</li>
+<li>iOS/IL2CPP: Fixed code generation for unsafe fixed arrays.</li>
+<li>iOS/IL2CPP: Fixed crash in some cases when accessing an enum inside a generic class.</li>
+<li>iOS/IL2CPP: Fixed crash related to arrays of Enums on 64-bit.</li>
+<li>iOS/IL2CPP: Fixed crash when using weak GC handle onstring constants.</li>
+<li>iOS/IL2CPP: Fixed File::Replace when destinationBackupFileName is null.</li>
+<li>iOS/IL2CPP: Fixed IL2CPP failing to convert an assembly which contains Ldtoken instruction on field that is declared in a generic type. This issue affected CSVHelper.dll plugin.</li>
+<li>iOS/IL2CPP: Fixed issues with exception thrown from DateTime constructor, DateTime ToUniversalTime, DateTime ToLocalTime, DateTime IsDaylightSavingTime.</li>
+<li>iOS/IL2CPP: Fixed memory leak when using audio callbacks.</li>
+<li>iOS/IL2CPP: Fixed occasional code generation issues when multiple local enum variables are used in conditional expressions.</li>
+<li>iOS/IL2CPP: Fixed overflow arithmetic instruction handling.</li>
+<li>iOS/IL2CPP: Fixed overflow arithmetic instruction handling.</li>
+<li>iOS/IL2CPP: Fixed stripping issue when NavMeshAgent was referenced only from scripts.</li>
+<li>iOS/IL2CPP: Fixed support for enums nested in generic types.</li>
+<li>iOS/IL2CPP: Fixed support for type/method names using non ASCII characters.</li>
+<li>iOS/IL2CPP: Fixed System.Environment.TickCount on iOS.</li>
+<li>iOS/IL2CPP: Fixed TerrainData.GetAlphaMaps crashing on IL2CPP.</li>
+<li>iOS/IL2CPP: Fixed TerrainData.GetAlphaMaps crashing on IL2CPP.</li>
+<li>iOS/IL2CPP: Fixed unordered comparison opcodes code generation.</li>
+<li>iOS/IL2CPP: Fixed WebClient requests using a timeout.</li>
+<li>iOS/IL2CPP: Forward declare empty types (created to end infinite recursion) that are used as method arguments.</li>
+<li>iOS/IL2CPP: Generate C++ code which will compile when a nested generic passes the maximum depth for recursive nested generics.</li>
+<li>iOS/IL2CPP: Generate C++ code which will compile when a nested generic passes the maximum depth for recursive nested generics.</li>
+<li>iOS/IL2CPP: Implemented Assembly.CodeBase by returning the value of AssemblyName.Name.</li>
+<li>iOS/IL2CPP: Implemented Assembly.CodeBase by returning the value of AssemblyName.Name.</li>
+<li>iOS/IL2CPP: Make Activator.CreateInstance work for arrays.</li>
+<li>iOS/IL2CPP: Match the behavior of the Mono scripting backend by not stripping the Animation code from the engine when code stripping is enabled.</li>
+<li>iOS/IL2CPP: Match the Mono behavior which allows inflated generic delegate types like System.Action to be marshaled as normal delegates.</li>
+<li>iOS/IL2CPP: Prevent a stack overflow in il2cpp.exe when it converts have an infinitely recursive generic type with an array generic argument.</li>
+<li>iOS/IL2CPP: Removed the option to user precompiled headers in the Player Settings, as this option in no longer supported for the IL2CPP scripting backend.</li>
+<li>iOS/IL2CPP: Return the correct number of write and error sockets from the Socket::Select method.</li>
+<li>iOS/IL2CPP: Support Type.MakeGenericType for runtime creation of generic types where the generic arguments are reference types.</li>
+<li>iOS/IL2CPP: Type.GetType throws an ArgumentException now when the provided type name was wrong.</li>
+<li>iOS/IL2CPP: Use the proper type for the result of the IL sub opcode.</li>
+<li>iOS/IL2CPP: Use the Size field of the StructLayout attribute to pad marshaled types if necessary. This allows Marshal.SizeOf to return the correct value for these types.</li>
+<li>iOS/IL2CPP: Using AudioSettings.Reset() no longer crashes on IL2CPP.</li>
+<li>iOS/ILCPP: Do not emit metadata for generic types at compile time. This significantly decreases the size of the final binary in most cases.</li>
+<li>iOS/Metal: Fixed crash in WarmupAllShaders when called in update with AA-ed backbuffer.</li>
+<li>iOS/Metal: Fixed WebCamTexture.videoVerticallyMirrored.</li>
+<li>JobSystem: Fixed issue where job system would create long stalls in some cases on processors with hyper threading.</li>
+<li>Mecanim: Fixed a bug where copy pasted states would share the same state machine behaviour instance</li>
+<li>Mecanim: Fixed animation events not fired for non looping clip with length of 0 second.</li>
+<li>Mecanim: Fixed Blend Tree parameter doesn't get updated in the graph view when changing the blend tree parameter.</li>
+<li>Mecanim: Fixed cannot rename parameter in animator parameter window.</li>
+<li>Mecanim: Fixed crash when a StateMachineBehaviour disable an animator component or change something that trigger a Rebind.</li>
+<li>Mecanim: Fixed crash when calling AnimationClip.events from script.</li>
+<li>Mecanim: Fixed lost transition when importing a project from 4.x to 5.0.</li>
+<li>MonoDevelop: Fixed issue with Attach to Process dialog making MonoDevelop unresponsive on OSX.</li>
+<li>MonoDevelop: Fixed issue with file tabs being unresponsive after using auto-hide of panels.</li>
+<li>OpenGL ES 2.0: Fixed shadow acne on GPUs that do not support native shadow samplers.</li>
+<li>OpenGL ES: Fixed crash when attempting to render a mesh with 0 vertices.</li>
+<li>OpenGL: Fixed a crash in vertex stream management.</li>
+<li>Physics 2D: 2D physics will now give deterministic results on the same device when entering play-mode in the editor.</li>
+<li>Physics 2D: Don't suppress gravity when a Rigidbody2D.MovePosition is taking place.</li>
+<li>Physics 2D: Ensure that 2D Box/Circle cast methods support shape being overlapped initially.</li>
+<li>Physics 2D: Ensure that a 2D joint created from script is correctly enabled.</li>
+<li>Physics 2D: Fixed regression where PlatformEffector2D 'One Way' would allow a collider to pass but then begin to collide with it.</li>
+<li>Physics 2D: Setting center-of-mass on a Rigidbody2D now doesn't result in bad rotational inertia.</li>
+<li>Physics: Don't allow to break rotational DoF lock by setting angularVelocity directly.</li>
+<li>Physics: Fixed capsule height being incorrectly computed in sweeps and casts code.</li>
+<li>Physics: Fixed cases where HingeJoint settings, like useMotor and useLimits, were not correctly applied.</li>
+<li>Physics: Fixed crash on scene load when Cloth component is missing a SkinnedMeshRenderer component.</li>
+<li>Physics: Fixed crash that could occur when a body had more than 64 contacts generated.</li>
+<li>Physics: Fixed crash when the transform scale on a MeshCollider had an axis set to zero. Request will now be ignored.-</li>
+<li>Physics: Fixed incorrect bounds of a capsule collider.</li>
+<li>Physics: Fixed crash that happened when toggling "isKinematic" on a body with joint that had joint projection disabled and the body had also been connected to the same group of joints already.</li>
+<li>Physics: Fixed crash when a collider has generated too many contacts.</li>
+<li>Physics: Fixed WheelCollider applying inertia tensor rotation the wrong way.</li>
+<li>Physics: Protect SetSteerAngle from setting wheel angles that are bad for PhysX.</li>
+<li>Physics: Raised the max colliders per scene limit on mobile platforms, from 32K.</li>
+<li>Physics: Report error when trying to create a non-convex MeshCollider with Trigger enabled.</li>
+<li>Plugins: Fixed invalid plugin collisions, for ex., in cases where plugin is unsupported by OS, but was still being used.</li>
+<li>Samsung TV: Fixed crash on close issue.</li>
+<li>SamsungTV: Fixed bug where cursor would stop moving when timeScale was set to 0 on 2013 TVs.</li>
+<li>SamsungTV: Fixed problem where native plugins would not be found on retail 2015 TVs.</li>
+<li>SamsungTV: Fixed race condition crash that originated from within mono when NumberFormatter was being called from a non-main managed thread.</li>
+<li>Scene/Game View: Fix the issue about cannot select objects after importing the legacy packages.</li>
+<li>Scripting: Allow a component which derives from a type in UnityEngine.UI and is built in a custom assembly to be used in the project.</li>
+<li>Scripting: Fixed EditorGUI.FloatField and EditorGUILayout.FloatField unable to return negative and positive infinity</li>
+<li>Scripting: GizmoType works as expected</li>
+<li>Scripting: Re-added a stub for Resources.LoadAssetAtPath which auto-upgrades to AssetDatabase.LoadAssetAtPath</li>
+<li>Shaders: Don't crash in shader warmup on "-nographics" device.</li>
+<li>Shaders: Fixed some loops being miscompiled for DX9.</li>
+<li>Shaders: Fixed some sampler precision issues in glsl-optimizer; was resulting in missing cast on Metal when sampling depth texture with explicit LOD.</li>
+<li>Substance: Entering play mode should no longer cause a rebuild of ProceduralMaterials.</li>
+<li>Substance: Fixed 'path != ""' assert when live-previewing a Substance from the Asset Store.</li>
+<li>Substance: Fixed console spam related to the absence of '_MainTex' shader property.</li>
+<li>Substance: Fixed crash when assigning a shader that does not cause outputs to be generated (e.g. Unlit/Color) to a ProceduralMaterial.</li>
+<li>Substance: Fixed hang in ProceduralMaterial::Clean().</li>
+<li>Substance: Global Illumination flags are now correctly handled by ProceduralMaterials.</li>
+<li>Substance: It is no longer possible to dynamically create a ProceduralMaterial using 'new'.</li>
+<li>UI: PointerEventData.worldPosition and .worldNormal are now set correctly for right-mouse-button and middle-mouse-button events.</li>
+<li>VR: Fixed GearVR startup crash on Galaxy S6 devices by enabling pbuffer Context support.</li>
+<li>VR: MSAA autoresolve fixed for GLES 3.0 devices.</li>
+<li>WebGL: Fixed stripping (previously failing to register WebCamTexture class in runtime).</li>
+<li>WebGL:/iOS: Fix crash in UnusedBytecodeStripper on BoxCollider2D/CircleCollider2D center member access.</li>
+<li>WebPlayer: Fixed WWW form posting.</li>
+<li>WebPlayer: Workarounds for new Chrome, where NPAPI is disabled by default.</li>
+<li>Windows Phone 8: Uppercase first letter in InputField.</li>
+<li>Windows Phone 8: Windows Phone 8 specific plugins (compiled against Windows Phone 8 .NET) which don't have a placeholder won't be passed to the Mono compiler, like it was in 4.6.</li>
+<li>Windows Standalone: Allow to close the main window even with the touch support enabled.</li>
+<li>Windows Standalone: Connecting USB devices should no longer throw spurious warnings.</li>
+<li>Windows Store Apps: .NET Core plugins without placeholders, won't be passed to Mono compiler, like it was to 4.6.</li>
+<li>Windows Store Apps: Build&amp;Run disabled when using Unity CSharp projects.</li>
+<li>Windows Store Apps: Fixed the issue, build from editor when C-projects are enabled.</li>
+<li>Windows Store Apps: Fixed issues with plugins in Universal apps, removed SDK property UniversalSDK81 from plugin inspector, as it didn't make sense. Also having Windows 8.1 and Windows Phone 8.1 specific plugins won't longer cause building to Universal apps to fail.</li>
+<li>Windows Store Apps: mouse presence now is detected by mouse activity, which is much more reliable.</li>
+<li>Windows Store Apps/Windows Phone 8.1: Unity will correctly hide password when using GUI*.PasswordField on touch based devices.</li>
+<li>Windows Store Apps/Windows Phone: Fixed AssemblyConverter failing due to types from other module.</li>
+<li>Windows Store Apps/Windows Phone: Fixed NullReferenceException in SerializationWeaver.</li>
+<li>Windows Store Apps/Windows Phone: System.IO.File.Exists should work even if you specify forward slashes which is invalid in WinRT platforms, Unity will convert them to backwards slashes.</li>
+<li>Windows Store/Phone: Unity will always give postprocessed assemblies a new random MVID.</li>
+<li>Windows Store/Windows Phone 8.1: Fixed an issue which caused types unavailable in .NET for Windows Store but available in Unity's replacement library not to be resolved if they were in a plugin.</li>
+<li>WindowsPhone8: Fixed AssemblyConverter error, where sometimes it would fail to find references.</li>
+<li>WWW: WWW.Dispose sometimes hung Unity on a very slow connection.</li>
+<li>XboxOne: Application.OpenURL is now implemented on Xbox One. Calling it will open the Internet Explorer App.</li>
+<li>XboxOne: Bad image from Kinect fixed, YUY2 support.</li>
+<li>XboxOne: Bloom artefact when using MSAA is now fixed.</li>
+<li>XboxOne: Crash when using Clear Depth Only, support for capturing RTs of different bit depths.</li>
+<li>XboxOne: DOF image effect on fade sprites fixed.</li>
+<li>XboxOne: Enabled support for deferred rendering and HDR.</li>
+<li>XboxOne: Fixed a crash that can happen when shutting down the audio device.</li>
+<li>XboxOne: Fixed a rare startup crash that usually manifested as a crash in the audio driver, sometimes showing up as a stack buffer overrun exception.</li>
+<li>XboxOne: Fixed compute shader UAV buffer read/write and memory access.</li>
+<li>XboxOne: Fixed port assignments so Unity Profiler and Debugger work more consistently</li>
+<li>XboxOne: Lightmaps for scene 0 are now included in the package manifest.</li>
+<li>XboxOne: Made Mono's exception handler treat unexpected exceptions (ex: not a breakpoint) better. This should remove some instances where a crash dump was not created.</li>
+<li>XboxOne: Now matches PC (deferred rendering with HDR related).</li>
+<li>XboxOne: The /updcompat option for makepkg.exe now has a space before it so it's read by the tool correctly.</li>
+<li>XboxOne: The file path used for makepkg.exe is now quoted when a custom manifest file is used.</li>
+</ul>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Android: Added framebuffer clear on devices that would prefer framebuffer discard but don't have the required GLES extension.</li>
+<li>Android: Added profiling stats for blit to screen and input processing.</li>
+<li>Android: Joystick input optimization, fixes slowdown on some older devices.</li>
+<li>Android: Parsing device specific XML font configurations to determine system/fallback fonts in addition to the hard-coded list of font names (in 4.6.4 too).</li>
+<li>Android: Splash screen is now shown in full screen mode.</li>
+<li>BlackBerry: Passport device now supports landscape orientation.</li>
+<li>Bug reporter: Added info about license type.</li>
+<li>Editor: Android; added ability to configure JDK path in the Editor preferences (in 4.6.4 too).</li>
+<li>Editor: Android TV; added configuration option for D-pad and gamepad support level.</li>
+<li>GI: Added pushoff for baked lighting, can be used to fix AO artefacts.</li>
+<li>GI: Allow higher AO exponent in Lighting window.</li>
+<li>GI: Don't calculate AO when AO exponent is 0.</li>
+<li>GI: Fixed inconsistent Enlighten build timings; now it should correspond to wall clock time (unless you move at near speed of light relative to your computer, in which case it might still be wrong).</li>
+<li>GI: Moved baked tag to the proper place in UI.</li>
+<li>GI: Output more stats per system and in total: vertex count, face count, chart count and texel count.</li>
+<li>GI: Removed an unnecessary warning that realtime GI is not supported on PS3 and Xbox360 when finishing a bake in non-continuous mode.</li>
+<li>GI: Sped up baked lightmap compositing.</li>
+<li>GI: Spit out timings of the precompute and bake to the Editor log. Timer resets when clearing GI data, exiting continuous mode or cancelling a bake.</li>
+<li>GI: Take texture transparency into account when calculating AO.</li>
+<li>GI: Users will now be warned when building scenes with Precomputed Realtime GI ticked on platforms that do not support Realtime GI.</li>
+<li>Graphics: Shaders now read consistent values across platforms for vertex properties that are missing in a Mesh. We have adopted the OpenGL standard, which is that normals default to (0,0,1) and tangents default to (1,0,0).</li>
+<li>iOS: Improve launch screen support:
+
+<ul>
+<li>Added option to disable launch screen.</li>
+<li>Added option to display relatively sized image on a specific background.</li>
+</ul></li>
+<li>iOS: Short term fix for occasional input stuttering (in 4.6.4 too).</li>
+<li>iOS/Metal: Defer [CAMetalLayer nextDrawable] until it is actually needed (helps with occasional framerate hiccups) (in 4.6.4 too).</li>
+<li>Linux: Query Mesa driver for amount of video memory when feasible.</li>
+<li>Physics 2D: Allow SurfaceEffector2D to control whether friction or bounce is used upon contact.</li>
+<li>Physics 2D: Allow SurfaceEffector2D to control whether the impulse force is applied to the center-of-mass or contact-point.</li>
+<li>Physics 2D: Improve PointEffector2D.distanceScale tooltip/documentation.</li>
+<li>Physics 2D: Joint2D property 'collideConnected' renamed to 'enableCollision' to match 3D physics.</li>
+<li>Physics 2D: PlatformEffector2D property renames based upon feedback: oneWay-&gt;useOneWay, sideFriction-&gt;useSideFriction and sideBounce-&gt;useSideBounce.</li>
+<li>Platforms: Unity Professional users can now optionally show the builtin Unity Splash Screen on applicable platforms, in Player Settings.</li>
+<li>Version Control: Added shortcut to save changeset window.</li>
+<li>Version Control: Added "delete empty changesets" button.</li>
+<li>Version Control: Close change window automatically on success.</li>
+<li>Version Control: New changesets default to expanded now.</li>
+</ul>
+
+<h3>Changes</h3>
+
+<ul>
+<li>GI: Disabled unused Xbox360 solver data generation.</li>
+<li>Input: Changed Input.GetJoystickNames() on Windows to always match names to joystick numbers, similar to most other platforms (in 4.6.4 too).</li>
+<li>iOS: Default scripting backend is set to IL2CPP on iOS.</li>
+<li>Terrain: Only textures with Repeat wrap mode can be used as terrain splat textures now.</li>
+<li>Terrain: Removed 'Override Smoothness' option from terrain settings. A new per-splat smoothness property is available when the splat texture has no alpha channel.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>AI: Fixed an issue where using all navmesh area types in mask didn't work.</li>
+<li>AI: Fixed an issue where warping disabled agents would leak simulated agent.</li>
+<li>Android: Always enable VSync on Android non-development builds.</li>
+<li>Android: Build pipeline; fixed AAR manifest merging.</li>
+<li>Android: Fixed an issue with the multithreaded job system which caused battery drain and bad performance.</li>
+<li>Android: Fixed Auto target graphics mode on devices which wrongly claim to support OpenGL ES 3.0.</li>
+<li>Android: Fixed crashes / touch problems when applying ForwardNativeEventsToDalvik to a non-NativeActivity.</li>
+<li>Android: Fixed immersive mode when returning to activity in Lollipop.</li>
+<li>Android: Fixed non-hidden status bar and status bar related touch issues.</li>
+<li>Android: Fixed sensor compensation issue affecting devices when rotated180 degrees.</li>
+<li>Android: Input - Fixed axis stuck on Android TV after hiding keyboard.</li>
+<li>Android: Reenabled SSE skinning on x86.</li>
+<li>Android: Removed some bogus print-outs to the logcat regarding gles_mode and development_player.</li>
+<li>API Updater: Automatic update from ParticleSystem.CollisionEvent to ParticleCollisionEvent.</li>
+<li>API Updater: Fixed API updater skipping assemblies in some scenarios.</li>
+<li>API Updater: Fixed the issue causing crash while checking assemblies for obsolete API usage.</li>
+<li>Asset Loading: Fixed loading of GI data from an AssetBundle.</li>
+<li>Asset Loading: Fixed the crash when setting the AssetBundle name in OnPreprocessAudio() callback.</li>
+<li>Asset Loading: Fixed the issue that streamed scenes don't draw layered UI in canvases correctly.</li>
+<li>Asset Loading: Fixed the issue whereby streamed scene asset bundles do not allow more than one scene.</li>
+<li>Asset Loading: Fixed the prefab async loading issue by loading the scripts first.</li>
+<li>Asset Loading: Fixed the script loading issue when the references are between scripts.</li>
+<li>Asset Loading: Updated the document to indicate we wanted complete asset paths.</li>
+<li>Audio: Fixed "Trying to play disposed sound!" error message.</li>
+<li>Audio: Fixed the "Disable Audio" option, the flag is now correctly used by the standalone player to disable the audio system.</li>
+<li>Audio: Given AudioImporter overrideSamplerate a default value that makes sense.</li>
+<li>BlackBerry: Fixed platform lookup from string to be case insensitive.</li>
+<li>Bug reporter: Fixed issue with submitting files when temp path includes non-ASCII characters.</li>
+<li>Bug reporter: Fixed the issue causing crash when attaching files on OSX 10.8.5.</li>
+<li>Bug reporter: Fixed title field validation (the title is now mandatory).</li>
+<li>Bug reporter: Hidden files are now always included in bug reports.</li>
+<li>Bug reporter: Make sure the bug reporter triggers from the license error popup.</li>
+<li>Bug reporter: Updated links to the new Bug Reporter (when it's started from outside the Editor).</li>
+<li>BugReporter: Send empty subdirectories of directory attachment. Improved filtering of unnecessary subdirectories under Unity project. Can launch when some parts of the engine might not be initialized yet.</li>
+<li>Deployment Management: Prevent simultaneous launches of Unity loading wrong project.</li>
+<li>Don't allow AddComponent() calls on object that is currently being destructed (leads to crashes).</li>
+<li>Editor: "Missing Prefab" placeholders now respects the active state of their parents.</li>
+<li>Editor: Android - Don't allow to install x86 apk on arm device.</li>
+<li>Editor: Disable vsync for all views except GameView on OSX.</li>
+<li>Editor: Fixed an issue where Editor fails to validate serialization layout when building to Windows Store Apps.</li>
+<li>Editor: Fixed crash when compressing GI cache files with lz4.</li>
+<li>Editor: Fixed crash when using UnityEditorInternal.InternalEditorUtility.LoadSerializedFileAndForget to load a scene with containing stripped prefab instance objects</li>
+<li>Editor: Fixed null-ref from SceneView when having a Hierarchy search filter.</li>
+<li>Editor: Fixed performing Undo on prefab instances where the prefab parent was missing.</li>
+<li>Editor: Fixed reading very very big scenes with more than 32767 monobehaviours created in Unity prior to Uniy 5.</li>
+<li>Editor: Fixed the issue producing fatal error when choosing unwritable drive as a GICache folder on OSX.</li>
+<li>Editor: Fixed undo parenting of prefab.</li>
+<li>Editor: Necessity of rebuilding .meta files detected incorrectly for projects that contain only directories in Assets/.</li>
+<li>Editor: OnOpenAsset callbacks are now called for all asset types when doubled clicked in the project browser.</li>
+<li>Editor: Plugin inspector-set ARMv6 Android plugins incompatible to avoid collisions.</li>
+<li>Editor: Prefab connection is now broken when rearranging components, even if the components are added to the instance. This enables you to rearrange components on prefab instances without losing the order when saving the scene.</li>
+<li>Editor: Stripped prefab instance objects are now marked as stripped in the scene file, so the loading code does not try to upgrade objects which would issue wrong warnings and in worst case crashes.</li>
+<li>Editor: Fixed editor lockup if left in the background and profiler was open.</li>
+<li>GI: Changing directional mode in lighting tab does not force reflection probe.</li>
+<li>GI: Clear lightmapping state when wiping the disk cache in order to avoid errors when building lighting.</li>
+<li>GI: Fixed "Mobile/Unlit (Supports Lightmap)" shader and other fixed function shaders using lightmaps.</li>
+<li>GI: Fixed rare crash in realtime GI pipeline caused by textures held by worker threads being released too early.</li>
+<li>GI: Made Gradient ambient mode properly affect realtime and baked GI.</li>
+<li>GI: Made lightmaps be properly compressed on mobile platforms.</li>
+<li>GI: Report errors from jobs correctly when run in an external process.</li>
+<li>GI: Reset the texture filter mode after rendering object preview in lighting window.</li>
+<li>Graphics: Fixed vertices being lit entirely black on DirectX 11 when normals are missing and the vertex position is (0,0,0).</li>
+<li>iOS: Added Xcode 6.3 compatibility.</li>
+<li>iOS: Disabled unnecessary copies of dll files to the Xcode project directory.</li>
+<li>iOS: Exposed iOSOverrideIPodMusic in player settings.</li>
+<li>iOS: Fixed a typo in UnityRegisterViewControllerListener().</li>
+<li>iOS: Fixed an issue with the job system which caused battery drain and bad performance.</li>
+<li>iOS: Fixed changing from autorotation to enforced screen orientation in case of this orientation being already current.</li>
+<li>iOS: Report a fake Status: HTTP header for informational purposes.</li>
+<li>iOS: Show an error on removal of targets in Xcode project.</li>
+<li>iOS/IL2CPP: Handle 4D arrays.</li>
+<li>iOS/IL2CPP: Handle delegate invoke with nested delegates where the method which is invoked on the outer delegate is a static method.</li>
+<li>iOS/Metal: Fixed fixed function shaders with cubemaps.</li>
+<li>iOS/Metal: Fixed vector_insert_TODO appearing in some shaders.</li>
+<li>iOS/Metal: Partially fixed performance issue on A7 devices when using Standard shader.</li>
+<li>Linux: Fixed crash when swapping UI sprites.</li>
+<li>Oculus: Plugin initialize fixed when GfxDevice had not been Initialized yet.</li>
+<li>OpenGL: Fixed crash with -force-opengl in Windows Editor when trying to enable DirectX 11 via player settings.</li>
+<li>Physics 2D: Added 'forceScale' property to SurfaceEffector2D to allow scaling of the impulse force used.</li>
+<li>Physics 2D: Center-of-mass and Inertia can now be set on a Rigidbody2D component even if it has no Collider2D components attached.</li>
+<li>Physics 2D: Disabled PlatformEffector2D component now fully disables contact processing.</li>
+<li>Physics 2D: Fixed console warning of 'm_Effector == effector' when removing an effector inside a prefab.</li>
+<li>Physics 2D: Fixed PlatformEffector2D so that when stopping inside a collider it doesn't cause a collision for 'one-way'</li>
+<li>Physics 2D: Stop 2D colliders falling through EdgeCollider2D components.</li>
+<li>Physics 2D: Stop crash when NULL passed to Collider2D.IsTouching, Physics2D.IsTouching or Physics2D.IsTouchingLayers.</li>
+<li>Physics: OnJointBreak callback now has correct breaking force magnitude supplied as a parameter.</li>
+<li>Profiler: Fixed editor slowdown if GPU profiler was enabled when the profiler was stopped or closed</li>
+<li>Rendering: Now the back buffer is cleared after the resolution is changed from a script in Windows standalone.</li>
+<li>Samsung TV: Fixed MissingMethodException being thrown when a scene was played that used STV specific APIs.</li>
+<li>Samsung TV: Fixed UEP signing for 2015 TVs.</li>
+<li>Scripting: Crash on Newtonsoft.Json.DeserializeObject(string) when serialized type has generic arrays.</li>
+<li>Scripting: Fixed Application.logMessageReceivedThreaded not being called in main thread.</li>
+<li>Scripting: Fixed crash when trying to invoking delegate bound to open generic method.</li>
+<li>Scripting: Fixed infinite loop in NetworkInterface.GetAllNetworkInterfaces()</li>
+<li>Scripting: Fixed VS / MonoDevelopment project synchronization when "Editor" was the only platform selected in plugins settings.</li>
+<li>Scripting: Throw DivideByZero exception instead of crashing.</li>
+<li>Serialization: Fixed crash when reading file references from long property names.</li>
+<li>Shaders: WPOS semantic works in shaders again (alias of VPOS, i.e. screen position).</li>
+<li>Sprites: Fixed the issue whereby Unity was doubling the memory needed for the Texture Atlases.</li>
+<li>Terrain: Base map generation in Linear rendering mode is now done in linear space.</li>
+<li>Terrain: Fixed a crash when a terrain was using TerrainData with missing textures.</li>
+<li>Terrain: Fixed an issue where modifying terrain heights would result in an inconsistency between the visual and the collision.</li>
+<li>Terrain: Fixed visual inconsistency when rendering with base pass.</li>
+<li>Terrain: Standard terrain shaders now correctly support spot light / point light shadows.</li>
+<li>Version Control: Set correct changeset description when renaming a changeset.</li>
+<li>Version Control: Use saved changeset description when submitting.</li>
+<li>Video: Fixed the issue whereby ogg movie playback skipping frames at beginning and general sync improvement.</li>
+<li>VR: Fixed GearVR startup crash.</li>
+<li>WebGL: Fixed deleting characters in text fields.</li>
+<li>WebGL: Fixed reverting to proper window size when getting out of fullscreen mode.</li>
+<li>WebGL: Fixed shift-arrow-key in text fields.</li>
+<li>WebGL: Fixed WWW.audioClip.</li>
+<li>Windows Standalone: -parentHWND command line argument works again.</li>
+<li>Windows Store Apps: Fix issue where Unity was trying to locate Microsoft.CSharp.dll when processing some of the plugins, for ex., Facebook.Client.dll.</li>
+<li>Windows Store Apps: Fixed player when installed to path containing unicode characters.</li>
+<li>Windows Store Apps: Fixed resource fight on hyperthreading-enabled CPUs which might cause unstable performance on Windows.</li>
+<li>Windows Store Apps/Windows Phone 8: UnityPlayer pdb files will be present again for Debug/Master configs.</li>
+<li>Windows Store Apps/Windows Phone 8: When unloading unused assets or switching to another scene, prefabs will be correctly reloaded and won't loose references. Previous behavior was sometimes textures, mono behaviors, etc in prefabs would be lost, this would result for e.g., in textures not showing up in objects instantiated from prefabs.</li>
+<li>WWW: Fixed incorrect HTTP status 100 when POST data was relatively large.</li>
+<li>Xbox One: Implemented workaround fix for rendering failure when the console is set to instant-on standby and suspend/resume flow occurs.</li>
+<li>Xbox One: Lightmap files are now included in the package manifest. They are included as a part of the launch chunk.</li>
+<li>Xbox One: ReadPixels glitch and performance slowdown: fixed and workaround implemented.</li>
+</ul>
+
+<h4>Fixes that shipped in Unity 4.6.4 too</h4>
+
+<ul>
+<li>Android: Fixed back button crash on Samsung devices.</li>
+<li>Android: Fixed checkjni exception when passing array in JNI at ART.</li>
+<li>Android: Workaround for animation glitch with onscreen keyboard.</li>
+<li>IL2CPP / Raknet: Fixed networking RPC call registration not working on IL2CPP backend.</li>
+<li>iOS: Fixed iPad Mini 3rd gen detection.</li>
+<li>iOS: Improved Xcode project parser robustness for invalid input.</li>
+<li>iOS/IL2CPP: Added support for setting thread names on OS X.</li>
+<li>iOS/IL2CPP: Added support for WebRequest to HTTPS addresses when using the Api Compatibility Level setting of .NET 2.0 Subset.</li>
+<li>iOS/IL2CPP: Allow the LogInAsync method in the ParseSDK to work correctly.</li>
+<li>iOS/IL2CPP: Always initialize type information before accessing static fields.</li>
+<li>iOS/IL2CPP: Assembly.Load() now accepts assembly name in full name format.</li>
+<li>iOS/IL2CPP: Correct a number of problems related to WebRequest and ThreadPool interaction:
+
+<ul>
+<li>Fixed a queuing bug that may lead to WebRequests arriving at the same time and being used incorrectly.</li>
+<li>Fixed assert "pthread_equal (pthread_self (), m_Handle) &amp;&amp; 'Must be called on current thread!'".</li>
+<li>Fixed deadlock on shutdown if socket polling thread was still waiting for network traffic.</li>
+<li>Fixed deadlock when socket exits polling stage when I/O pool is at max capacity and worker threads are in wait state.</li>
+<li>Fixed performance load balancing issue in CullAllPerObjectLights that caused only one job to be run rather than many (occurred when high number of lights and low number of objects)</li>
+<li>Fixed race condition in static constructor calling.</li>
+<li>Fixed thread interruption logic incorrectly thinking that another thread was still waiting.</li>
+<li>Fixed WebRequests getting stuck in socket polling stage when the stage should be skipped.</li>
+</ul></li>
+<li>iOS/IL2CPP: Corrected a problem with Delegate.CreateDelegate.</li>
+<li>iOS/IL2CPP: Corrected the C++ compiler error in generated code: "error: cast from pointer to smaller type 'il2cpp_array_size_t' (aka 'int') loses information"</li>
+<li>iOS/IL2CPP: Correctly write include definitions for a generic class with a const field.</li>
+<li>iOS/IL2CPP: Emit the proper metadata for parameters static inflated generics methods.</li>
+<li>iOS/IL2CPP: Explicitly declare generic types and array types that are created at run-time via Type.MakeGenericType and Type.MakeArrayType in the il2cpp_extra_types.txt file, so that IL2CPP will AOT compile them.</li>
+<li>iOS/IL2CPP: Fixed a case where having throw statement at the end of a method would cause IL2CPP to crash.</li>
+<li>iOS/IL2CPP: Fixed the problem with shift operators, resulting in problems with MD5 calculation and crypto, amongst other things.</li>
+<li>iOS/IL2CPP: Fixed array marshaling when passing an incorrect argument.</li>
+<li>iOS/IL2CPP: Fixed Array.CopyTo() fast path, which was doing the wrong thing when the source array was a value type and destination array was not.</li>
+<li>iOS/IL2CPP: Fixed C++ compile error in some cases when using fields with the same name in a class hierarchy.</li>
+<li>iOS/IL2CPP: Fixed C++ linker error in some cases when using generic method constraints.</li>
+<li>iOS/IL2CPP: Fixed C++ linker error in some cases when using generic parameters.</li>
+<li>iOS/IL2CPP: Fixed code generation for delegates having parameters tagged with the Out attribute.</li>
+<li>iOS/IL2CPP: Fixed conversion error in obscure edge case of method overrides through metadata and signature.</li>
+<li>iOS/IL2CPP: Fixed crash when calling MethodInfo.ReturnTypeCustomAttributes.GetCustomAttributes on a constructor.</li>
+<li>iOS/IL2CPP: Fixed crash when System.Console is included in link.xml.</li>
+<li>iOS/IL2CPP: Fixed deadlock or timeouts when C# code does BeginInvoke+EndInvoke on a worker thread and the pool has only one thread.</li>
+<li>iOS/IL2CPP: Fixed exceptions thrown by using System.Configuration.ApplicationSettingsBase.</li>
+<li>iOS/IL2CPP: Fixed IL2CPP crash in some cases when using virtual generic methods.</li>
+<li>iOS/IL2CPP: Fixed IL2CPP crash when passing null as value to array parameter in custom attribute constructor.</li>
+<li>iOS/IL2CPP: Fixed issue with String.Intern not always returning the correct string.</li>
+<li>iOS/IL2CPP: Fixed List.FindAll().</li>
+<li>iOS/IL2CPP: Fixed MethodInfo.GetBaseDefinition().</li>
+<li>iOS/IL2CPP: Fixed null reference exception when calling TripleDES.Create.</li>
+<li>iOS/IL2CPP: Fixed order of properties returned by Type.GetProperties().</li>
+<li>iOS/IL2CPP: Fixed rare crash when calling Type.GetMethods.</li>
+<li>iOS/IL2CPP: Fixed single core CPU system resulting in ThreadPool with no threads.</li>
+<li>iOS/IL2CPP: Handle code generation for an struct which has an array of enums as a field.</li>
+<li>iOS/IL2CPP: Handle IL code which uses one local variable as an array index more than once, with different values.</li>
+<li>iOS/IL2CPP: Handle NULL const string values.</li>
+<li>iOS/IL2CPP: Handle out and ref marshaling of a delegate with a struct that has no instance fields.</li>
+<li>iOS/IL2CPP: Implemented Assembly.GetName().</li>
+<li>iOS/IL2CPP: Implemented Assembly.GlobalAssemblyCache so that it always returns false.</li>
+<li>iOS/IL2CPP: Implemented marshaling of the SafeHandle type.</li>
+<li>iOS/IL2CPP: Implemented marshaling support for explicit struct layouts.</li>
+<li>iOS/IL2CPP: Implemented MethodBase.GetMethodFromHandle with two arguments for a non-generic type.</li>
+<li>iOS/IL2CPP: Implemented missing Marshal.PtrToStructure overload which takes object reference.</li>
+<li>iOS/IL2CPP: Implemented the use of SizeParamIndex for marshaling.</li>
+<li>iOS/IL2CPP: Improved support for MakeGenericMethod.</li>
+<li>iOS/IL2CPP: Implemented marshaling of the System.Runtime.InteropServices.HandleRef type.</li>
+<li>iOS/IL2PP: Fixed ParameterInfo.Attributes always returned ParameterAttributes.None for parameters.</li>
+<li>iOS/Metal: Fixed RenderTexture mip-map generation in cases of ReadPixels immediately after drawing.</li>
+<li>Linux: Fixed the issue which was causing crash with native plugins using STL types.</li>
+<li>Linux: Hide system cursor when using software cursor.</li>
+<li>Scripting: Fixed C# compiler generating incorrect IL in some cases for iterator finally blocks.</li>
+<li>Stripping: Fixed the issue which was making stripping completely disabled for Mono scripting backend.</li>
+<li>UI: Fixed overriding/inheriting of pixel perfect status in child canvases.</li>
+<li>Windows Store Apps: Fixed VS solution generation with paths containing unicode characters.</li>
+<li>Windows Store Apps: Use exception log type for exceptions now.</li>
+<li>Windows Store Apps/Windows Phone 8: Fixed a memory leak, which was occurring in various places. For e.g., in physics collision callbacks such as OnCollisionEnter(Collision collision).</li>
+</ul>
+
+<h3>Features</h3>
+
+<h4>AI</h4>
+
+<ul>
+<li>NavMesh supports LoadLevelAdditive</li>
+<li>Improved performance and reduced memory consumption:
+
+<ul>
+<li>NavMeshObstacles update is multi-threaded now. Carving speed generally improved 2-4x.</li>
+<li>NavMesh data for non-carved regions takes ~2x less memory now.</li>
+<li>Performance improvements for multi-threaded NavMeshAgent updates.</li>
+<li>HeightMeshes bake faster, work faster at runtime, and use ~35% less memory.</li>
+<li>Path replanning in presence of many carving obstacles is faster and more accurate.</li>
+</ul></li>
+<li>Improved inspectors and debug visualizations:
+
+<ul>
+<li>NavMesh Areas inspector (previously NavMesh Layers) got a facelift.</li>
+<li>Reorganized parameters NavMeshAgent inspector.</li>
+<li>Added carve hull debug visualisation for NavMeshObstacles.</li>
+<li>Added visualisation on how NavMesh bake settings relate to each other.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/ai-1.jpg?itok=SASXaCGd" alt="description"></p>
+
+<p>Improved inspectors and debug visualizations</p>
+
+<ul>
+<li>Improved accuracy and raised limits:
+
+<ul>
+<li>NavMeshObstacle supports two basic shapes - cylinder and box for both carving and avoidance.</li>
+<li>Improved automatic Off-Mesh Link collision detection accuracy. Note that this will change how off-mesh links placement on existing scenes.</li>
+<li>Improved navmesh point location/mapping when height mesh is used.</li>
+<li>Increased the height range of NavMesh baking (can build meshes for taller scenes).</li>
+<li>Made Height Mesh query more resilient to small holes in input geometry.</li>
+<li>NavMesh obstacle rotation is take into account when carving and avoiding.</li>
+<li>NavMesh tile count limit lifted from 216 to 228.</li>
+<li>NavMeshPath and NavMeshAgent paths removed 256 polygon limit.</li>
+<li>OffMeshLink - removed restriction on tile span - previously connected only up to neighbouring tiles.</li>
+</ul></li>
+</ul>
+
+<h4>Android</h4>
+
+<ul>
+<li>KitKat Immersive Fullscreen Mode. Applied by default.</li>
+<li>Rendering to multiple displays.</li>
+<li>Rendering to custom java surfaces. Exposed in Unity as additional displays.</li>
+<li>AAR Support. AAR files can now be used as a replacement for Android Library Project folders.</li>
+</ul>
+
+<h4>Animation</h4>
+
+<ul>
+<li>State Machine Behaviours
+
+<ul>
+<li>StateMachineBehaviours is a new MonoBehaviour-like Component that can be added to a StateMachine state to attach callbacks</li>
+<li>Available callbacks are : OnStateEnter, OnStateExit, OnStateUpdate, OnStateMove, OnStateIK, OnStateMachineEnter and OnStateMachineExit</li>
+<li>Animator.GetBehaviour(). This function return the first StateMachineBehaviour that match type T</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-1.jpg?itok=OT2h2H4Z" alt="description"></p>
+
+<p>State Machine Behaviours</p>
+
+<ul>
+<li>StateMachine Transitions
+
+<ul>
+<li>Can now add higher level transitions from StateMachine to StateMachine</li>
+<li>Entry and Exit nodes define how the StateMachine behaves upon entering and exiting.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-2.jpg?itok=L7fe08lx" alt="description"></p>
+
+<p>StateMachine Transitions</p>
+
+<ul>
+<li>Asset API
+
+<ul>
+<li>Allows to create and edit, in Editor, all types of Mecanim assets ( Controllers, StateMachines, BlendTree etc.)</li>
+<li>Added API for Avatar, Motion Nodes, Events and Curve in the Model Importer</li>
+</ul></li>
+<li>Direct Blend Tree.
+
+<ul>
+<li>New type of blend tree to control the weight of each child independently</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-3.jpg?itok=xrC7PdaJ" alt="description"></p>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-4.jpg?itok=-91HI5oV" alt="description"></p>
+
+<p>Direct Blend Tree (Character by Mixamo)</p>
+
+<ul>
+<li>Root Motion authoring
+
+<ul>
+<li>Can convert animation on the parent transform into Root Motion (Delta Animation)</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-5.jpg?itok=dIk4y1q5" alt="description"></p>
+
+<p>Root Motion authoring</p>
+
+<ul>
+<li>Animator Tool revamp
+
+<ul>
+<li>Improved workflow</li>
+<li>Re-orderable layers and parameters</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-6.jpg?itok=3Z9fgt1n" alt="description"></p>
+
+<p>Animator Tool revamp</p>
+
+<ul>
+<li>Transition interruption source.
+
+<ul>
+<li>Replaces the Atomic setting on transitions. You can now decide if a transition is interrupted by transitions in the source state, the destination state or both.</li>
+<li>Also possible to be interrupted by transitions independently of their order by disabling "ordered interruption" setting on transitions.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-7.jpg?itok=s7CGACX3" alt="description"></p>
+
+<p>Transition interruption source</p>
+
+<ul>
+<li>Added Animator Gizmo that show up upon selection: you can see the mass center, avatar root and the pivot.</li>
+<li>IK Hint for knees and elbows.</li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/animation-8.gif" alt="description"></p>
+
+<p>IK Hint for knees and elbows (Character by Mixamo)</p>
+
+<ul>
+<li>Improved animation previewer camera.
+
+<ul>
+<li>Camera can now Pan, Orbit and Scale with the same control than the scene viewer.</li>
+<li>The camera can also frame on the previewed Object with shortcut F and frame on the cursor position with shortcut G.</li>
+</ul></li>
+<li>AnimationEvents are now fully editable at runtime, see AnimationClip.events to query, add and delete them at runtime</li>
+<li>Keep last evaluated value when a property stops to be animated.
+
+<ul>
+<li>Activated per State</li>
+<li>By default it is writing default value when a property stops to be evaluated</li>
+</ul></li>
+<li>Linear Velocity Blending
+
+<ul>
+<li>Advanced feature for users requiring linear speed interpolation during blending.</li>
+<li>Root Motion Speed and Angular Speed now blend linearly in Blend Trees, Transition or Layers</li>
+<li>Choose between Linear Velocity Blending or Linear Position Blending in Animator with animator.linearVelocityBlending. It is false by default.</li>
+<li>You can now get Animator root motion velocity and angular velocity with animator.velocity and animator.angularVelocity</li>
+</ul></li>
+</ul>
+
+<h4>Audio</h4>
+
+<ul>
+<li>Added a new AudioMixer asset type! Create one or more AudioMixers in a project. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/audio-1.jpg?itok=1Bx36-_T" alt="description">
+
+<ul>
+<li>Use the Audio Mixer window to create complex mixing hierarchies and effect processing chains.</li>
+<li>Mix and master all audio within Unity by tweaking all parameters during edit mode and play mode.</li>
+<li>VU meters for the outputs of all AudioGroup and at attenuation points within the AudioGroup.</li>
+<li>Allow AudioSources to route their signal into any AudioMixer.</li>
+<li>The audio output of one AudioMixer can be routed into any AudioGroup of any other AudioMixer, allowing complex re-configurable Audio processing.</li>
+<li>Audio "Sends" and "Receives" can be inserted anywhere into the signal chain of an AudioGroup.</li>
+<li>The attenuation of an AudioGroup can be applied at any point in the AudioGroup (allowing pre and post fader effects).</li>
+<li>Snapshots of mixer state (on all parameters) can be created for AudioMixers. These snapshots can be interpolated between during play through a set of per-parameter transition curves.</li>
+<li>Snapshots can also be weighted blended (2 or more snapshots).</li>
+<li>Any parameter (volume / pitch / effect parameter etc) can be exposed via a name to the runtime API allowing very precise tweaking of any parameter in a mixer during game play.</li>
+<li>Mixer "Views" can be created so that complex mixer hierarchies can be narrowed down in the GUI allowing focus on tweaking certain parts of the mix (music / foley / etc).</li>
+<li>AudioGroups can be Soloed, Muted and have their effects bypassed.</li>
+<li>Built-in side-chain volume ducking. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/audio-2.jpg?itok=4JXnYNzJ" alt="description"></li>
+<li>Support for custom high-performance native audio plugins through a new SDK. <a href="https://storage.googleapis.com/unity3d_files/public/sites/default/files/audio-3.jpg"><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/developer_profile_thumb/public/audio-3.jpg?itok=mMM46QR2" alt="description"></a></li>
+</ul></li>
+<li>Reverb Zone Mix slider and curve in order to be able to control amount of signal routed to the global reverb associated with Audio Reverb Zones. This allows setting up natural transitions between near field and distant sounds and also allows routing 2D sounds into the reverb.</li>
+<li>Rewritten Audio asset pipeline and AudioClip backend.
+
+<ul>
+<li>AudioClip settings now support multi-editing.</li>
+<li>Per-platform compression setting overrides for AudioClip import, much like texture importing. This includes an API change. Users will now be able to enable override settings per platform and have unity have different compression characteristics for different platforms. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/audio-4.jpg?itok=Glia30PC" alt="description"></li>
+<li>Audio transcoding and packing now happens in a separate tool, removing risk of crashing Unity on import.</li>
+<li>No double loading of sounds during import processing.</li>
+<li>Better handling of huge audio files. If a sound is set to streaming, it is never fully loaded in the editor or player now.</li>
+<li>Editor profiling of Audio is now accurate and reflects how it would be in the game.</li>
+<li>Streaming (file handle) resources are now freed immediately after playback of sound.</li>
+<li>Much improved audio formats in terms of memory and CPU usage. The Format property no longer refers to a specific platform-specific file format, but to a encoding method (Uncompressed, Compressed, ADPCM).</li>
+<li>The audio data of an AudioClip can now be loaded on demand by scripts, and loading can happen in the background without blocking the main game thread. Memory management can now be performed much easier of AudioClips in the project.</li>
+</ul></li>
+<li>Improved Audio Profiler with better statistics and detailed information. To view it, open the Profiler window, click the Audio pane and press the “Channels”, “Groups” or “Channels and groups” button..</li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/audio-5.jpg?itok=0NJPZDvb" alt="description"></p>
+
+<p>Improved Audio Profiler</p>
+
+<ul>
+<li>AudioSettings.GetConfiguration / AudioSettings.Reset API as an alternative to the now deprecated AudioSettings.outputSampleRate/AudioSettings.speakerMode property setters and the AudioSettings.SetDSPBufferSize function. The new API allows querying the current configuration and applying all changes at once.</li>
+<li>Notification callback AudioSettings.OnAudioConfigurationChanged(deviceChanged) callback which can be used to get notifications when sound system reinitialisation happens. This can then be used to adapt audio device settings further or reload volatile AudioClips such as generated PCM clips and restore other audio system state.</li>
+</ul>
+
+<h4>Consoles</h4>
+
+<ul>
+<li>Unity 5.0 has day one support for XBox 360, XBox One, PS Vita, PS3 and PS4, with Wii-U arriving later in the spring.</li>
+<li>A custom editor is no longer required for any console. The console extensions are compatible with the general Unity editor!</li>
+<li>Many developers are already building their games with Unity 5.0 on console having taken part in a Beta release program.</li>
+</ul>
+
+<h4>Editor</h4>
+
+<ul>
+<li>Unity editor is now 64-bit!
+
+<ul>
+<li>A separate 32-bit installer is available for Windows; on Mac OS X we only ship 64-bit now.</li>
+<li>Note that this affects native plugins used in the editor, which now also need to be 64-bit.</li>
+</ul></li>
+<li>New AssetBundle build system.
+
+<ul>
+<li>Adds simple UI to mark assets into assetBundles, provides simple API to build assetBundles without having to write complex custom scripts (no need for Push/Pop).</li>
+<li>Supports incremental build, which only rebuilds AssetBundles that actually change.</li>
+<li>AssetBundle dependencies don't force the rebuild of all the bundles in the dependency chain.</li>
+<li>Provides AppendHashToAssetBundleName option to allow to append the hash to the bundle name.</li>
+<li>Provides AssetBundleManifest which can be used to get the dependent AssetBundles at runtime.</li>
+<li>By default includes type tree in the assetBundle on all the platform except metro.</li>
+</ul></li>
+<li>New Project Wizard dialog.
+
+<ul>
+<li>Recent projects list shows "Last Saved With" version number for each project (if available - this information is only saved starting with 5.0).</li>
+</ul></li>
+<li>Timeline Profiler:
+
+<ul>
+<li>New view in the CPU Profiler that shows the frame samples laid out on a Timeline. Each thread has its own timeline; This is mostly useful for multi-threaded profiling.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/editor-1.jpg?itok=rBMoDl72" alt="description"></p>
+
+<p>Timeline Profiler</p>
+
+<ul>
+<li>Version Control: Scene and Prefab Merging
+
+<ul>
+<li>Command line merge tool that understands the scene and prefab formats in order to do semantic merges.</li>
+<li>Merge tool integration with Unity's existing version control integration. Can be enabled from EditorSettings.</li>
+</ul></li>
+<li>Plugin Inspector: new native plugin importing system. You're no longer required to place platform specific plugins into special folders like Assets/Plugins/iOS, Assets/Plugins/X64, etc. From now on, you can place them anywhere.
+
+<ul>
+<li>You can set platform compatibility settings by clicking on the plugin (files with extensions *.dll, *.so, etc, and folders with extension *.bundle), this include both managed and native files. Plugins can be set for “Any” platform, “Editor only” or a specific platform.</li>
+<li>Platform specific settings can also be set, e.g. CPU type. Different platforms may have different settings.</li>
+</ul></li>
+</ul>
+
+<h4>Graphics</h4>
+
+<ul>
+<li>Integrated Enlighten real-time global illumination (GI) technology, and improved lightmapping workflow. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-1b.jpg?itok=x2khckJX" alt="description">
+
+<ul>
+<li>In “Continuous baking” mode scene changes are automatically picked up and tasks are spawned to precompute data for dynamic GI, calculate static lightmaps, light probes, reflection probes etc.</li>
+<li>Runtime Dynamic GI for lights:
+
+<ul>
+<li>Changes to lights marked as "Dynamic GI" and skylight changes are picked up automatically.</li>
+<li>Emissive surfaces can emit light into GI at runtime. Emissive colors can be changed affect static and dynamic objects in realtime.</li>
+<li>Material changes can be triggered via DynamicGI API.</li>
+</ul></li>
+<li>Directional lightmaps can now be baked in a "directional specular" mode (which allows materials to retain their specular look) or in a cheaper "directional" mode (materials get a normal-mapped diffuse look). "Non-directional" mode is the cheapest and results in a flat diffuse appearance. All 3 options are available for both baked and realtime lightmaps. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-2c.jpg?itok=Eh1Xf7pP" alt="description"></li>
+</ul></li>
+<li>New Lighting window
+
+<ul>
+<li>Single place to specify lightmapping, GI and scene render (ambient/reflection/fog) settings.</li>
+<li>UI grouped by logical areas.</li>
+<li>When real-time lightmaps are disabled and baked lightmaps enabled, indirect lighting of real-time lights is automatically baked into baked lightmaps. If you don't want this behavior, set indirect lighting to 0.</li>
+</ul></li>
+<li>HDR workflow improvements:
+
+<ul>
+<li>HDR scene view. When main camera is HDR, then scene view rendering is done in HDR too using the same Tonemapper settings as the main camera.</li>
+<li>Support for .hdr and .exr texture formats.</li>
+<li>HDR textures (from .exr/.hdr files) are automatically encoded into RGBM format. You can alter this behavior in advanced texture import settings.</li>
+<li>Reflection Probes</li>
+<li>New "ReflectionProbe" component that captures its surroundings into a cubemap. Cubemap is assigned to Renderers in the proximity from the probe and can be used to produce glossy reflections.</li>
+<li>Reflection probes are baked similar to light probes and are stored as cubemap assets. Specular convolution is applied automatically to achieve high-quality glossy reflections.</li>
+<li>Reflection probes can also be rendered in realtime, with optional timeslicing across multiple frames.</li>
+<li>Added global reflection cubemap in Lighting settings; by default matches the skybox.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-3.jpg?itok=kX9M5yAi" alt="description"></p>
+
+<p>Reflection Probes</p>
+
+<ul>
+<li>Skybox and ambient improvements:
+
+<ul>
+<li>New scenes are now set with directional light, procedural skybox and a reflection probe by default.</li>
+<li>Added "Skybox/Procedural" shader that allows setting up simple skies easily.</li>
+<li>Built-in Skybox shaders now support HDR (RGBM encoded) textures.</li>
+<li>Skybox materials can be assigned by drag-and-drop on the background in the Scene View.</li>
+<li>Cubemap textures can be assigned to skybox by drag-and-drop on the background in the Scene View. Material with Skybox/Cubed shader is created automatically.</li>
+<li>Improved inspector preview &amp; thumbnails of Skybox materials.</li>
+<li>Ambient lighting automatically matches to a skybox. This behavior can be turned off by specifying ambient colors explicitly in Lighting settings.</li>
+</ul></li>
+</ul>
+
+<p><a href="https://storage.googleapis.com/unity3d_files/public/sites/default/files/graphics-4.jpg"><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/developer_profile_thumb/public/graphics-4.jpg?itok=GWlrIIEs" alt="description"></a></p>
+
+<p>Skybox and ambient improvements</p>
+
+<ul>
+<li>New "Deferred Shading" rendering path:
+
+<ul>
+<li>Single pass, multiple-rendertarget G-buffer shading.</li>
+<li>Fully supported by the new Standard shader.</li>
+<li>Overriding of DeferredShading (and DeferredLighting) shaders is in the UI now, under GraphicsSettings. Possible to even exclude the shaders from game build, in case you don't need them at all.</li>
+<li>Surface shaders can generate code for new Deferred Shading rendering path. All 4.x builtin shaders also got support for that.</li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-5.jpg?itok=bP_fU9hB" alt="description"></p>
+
+<p>Deferred G-buffer</p>
+
+<ul>
+<li>Improved and extended cubemap workflow.
+
+<ul>
+<li>Renamed “Reflection” texture import type to “Cubemap”. Automatic detection of the mapping mode for spherical, cylindrical and 6 image layouts; removed 2 obscure spherical mappings which were rarely used.</li>
+<li>Textures imported as cubemaps can use texture compression now!</li>
+<li>Added specular and diffuse convolution options to cubemap textures.</li>
+<li>Cubemap inspector was improved, can now show alpha channel &amp; mipmaps properly; also understands RGBM encoded HDR cubemaps.</li>
+<li>Improved seamless cubemap edge fixup.</li>
+<li>Moved old Cubemap menu entry from Assets into Assets | Legacy. Instead to import cubemap textures use “Cubemap” type in texture importer settings.</li>
+</ul></li>
+<li>Meshes:
+
+<ul>
+<li>More than two UV coordinates! Up to 4 UVs are imported from model files; and Mesh class gained uv3 &amp; uv4.</li>
+<li>Non-uniformly scaled meshes no longer incur any memory cost or performance hit. Instead of being scaled on the CPU they are scaled and lit correctly in shaders.</li>
+<li>MeshRenderer has a new additionalVertexStreams property for per-instance mesh data overrides. For example just vertex color for one instance. This is currently used by Enlighten for per-instance UVs.</li>
+</ul></li>
+<li>SpeedTree integration: <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/speedtree.jpg?itok=9w9CXSnf" alt="description">
+
+<ul>
+<li>SpeedTree models (.SPM files) now can be recognized, imported and rendered by Unity. The workflow is very similar to other mesh formats like FBX.</li>
+<li>SpeedTree features like smooth LOD transition, billboards, wind animation and physics colliders are fully supported by specialized SpeedTree shaders.</li>
+<li>SpeedTree models are selectable as tree prototypes on terrain.</li>
+</ul></li>
+<li>Frame Debugger. See how exactly frame is rendered by stepping through draw calls. See <a href="http://blogs.unity3d.com/2014/07/29/frame-debugger-in-unity-5-0/">http://blogs.unity3d.com/2014/07/29/frame-debugger-in-unity-5-0/</a></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-6.jpg?itok=I-hr90yH" alt="description"></p>
+
+<p>Frame Debugger</p>
+
+<ul>
+<li>Added scriptable "Command Buffers" for more extensible rendering pipeline.
+
+<ul>
+<li>Create command buffers ("draw mesh, set render target, ...") from a script, and set them up to be executed from inside camera rendering.</li>
+<li>Command buffers can be executed from a bunch of places during rendering, e.g. immediately after deferred G-buffer; or right after skybox; etc. See this blog post: <a href="http://blogs.unity3d.com/2015/02/06/extending-unity-5-rendering-pipeline-command-buffers/">http://blogs.unity3d.com/2015/02/06/extending-unity-5-rendering-pipeline-command-buffers/</a></li>
+</ul></li>
+</ul>
+
+<p><img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-7.jpg?itok=ZxP9eROX" alt="description"></p>
+
+<p>Blurred refraction implemented through command buffers</p>
+
+<ul>
+<li>Shadows: <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-8.jpg?itok=6bjrx6eL" alt="description">
+
+<ul>
+<li>Much better directional light soft shadows (5x5 PCF filter replaces the old screenspace blur).</li>
+<li>Ability to control directional light shadow cascade split ratios in Quality Settings; and added a shadow cascade scene view visualization mode. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/graphics-9.jpg?itok=xMurprUF" alt="description"></li>
+<li>Replaced "cast shadows" checkbox in Renderer component with a popup. Additional modes: Two Sided - casts two-sided shadows even from single-sided geometry; Shadows Only - cast shadows, but make the object invisible otherwise.</li>
+<li>In Forward rendering, directional light shadows are computed from camera's depth texture instead of a separate "shadow collector" rendering pass. Saves a bunch of draw calls, especially when depth texture is needed for image effects anyway.
+
+<ul>
+<li>This means that ShadowCollector shader passes aren't used for anything; you can just remove them if you had any.</li>
+<li>Camera’s DepthTexture is not generated using shader replacement anymore. Now it is generated using same shaders as used for shadowmap rendering (ShadowCaster pass types). Camera-DepthTexture.shader is not used for anything now.</li>
+<li>Normal-offset shadows to help reduce self-shadowing artifacts (“normal bias” setting on Light). Manually written shaders should use TRANSFER_SHADOW_CASTER_NORMALOFFSET in the vertex shader, which is similar to the old TRANSFER_SHADOW_CASTER but it requires v.normal to be present.</li>
+<li>Most platforms now internally use floating point (RFloat) format for point light shadows, instead of custom encoded ARGB32 format. Saves shader instructions and has better precision.</li>
+</ul></li>
+</ul></li>
+<li>Particles: Added a Circle emitter (with an option to specify an arc) and one-way Edge emitter.</li>
+<li>LOD Group was improved. A "fade mode" can be set on each level and a value of "how current LOD be blended/faded to the next LOD" will be passed to shader in unity_LODFade.x.</li>
+</ul>
+
+<h4>iOS</h4>
+
+<ul>
+<li>Support deep plugin folder structure.</li>
+<li>Support for XIB launch screens.</li>
+<li>Xcode manipulation API for editor scripts, and rewritten Xcode project generator.</li>
+<li>iOS 64-bit support via IL2CPP scripting backend. You can switch to it in Player Settings.</li>
+<li>Metal graphics API support. Picked automatically on eligible devices. Can be controlled in Player Settings.</li>
+</ul>
+
+<h4>Linux &amp; SteamOS</h4>
+
+<ul>
+<li>Gamepad configuration via Steam Big Picture mode (See upgrade guide).</li>
+<li>Gamepad hot plugging.</li>
+<li>Includes default configurations for several common gamepads.</li>
+</ul>
+
+<h4>Physics</h4>
+
+<ul>
+<li>PhysX 3 integration!
+
+<ul>
+<li>Better performance on multi-core processors, and especially on mobile. See <a href="http://physxinfo.com/news/11297/the-evolution-of-physx-sdk-performance-wise/">http://physxinfo.com/news/11297/the-evolution-of-physx-sdk-performance-wise/</a></li>
+<li>Moving static colliders does not cause performance penalty anymore.</li>
+<li>Better simulation quality, e.g. stacking stability.</li>
+<li>Cleaner codebase, which does not contain some of the long standing issues.</li>
+<li>See <a href="http://blogs.unity3d.com/2014/07/08/high-performance-physics-in-unity-5/">http://blogs.unity3d.com/2014/07/08/high-performance-physics-in-unity-5/</a></li>
+</ul></li>
+<li>2D physics:
+
+<ul>
+<li>Added ConstantForce2D, PointEffector2D, AreaEffector2D, PlatformEffector2D and SurfaceEffector2D components. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/physics-1.jpg?itok=l6QbO1GP" alt="description"></li>
+<li>Added Physics2D.IsTouching, IsTouchingLayer and Collider2D.IsTouching, IsTouchingLayer methods.</li>
+<li>All 2D colliders now have a 2D ‘offset’ property that replaces the ‘center’ property on BoxCollider2D and CircleCollider2D. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/physics-2.jpg?itok=FueX1j-8" alt="description"></li>
+</ul></li>
+<li>Added Rigidbody.maxDepenetrationVelocity to make possible to tune the velocity of the colliding rigidbodies when they are pushing each other away.</li>
+<li>Added TerrainData.thickness to control the thickness of TerrainColliders.</li>
+<li>Add Cloth.ClearTransformMotion method to allow teleportation of cloth instances.</li>
+<li>Exposed WheelCollider.sprungMass to C# as a read-only property. Sprung mass can have a wide range of applications like being able to configure suspension springs using natural frequency &amp; damping ratio or having custom forces added to suspension based on the weight supported by particular wheels.</li>
+</ul>
+
+<h4>Scripting</h4>
+
+<ul>
+<li>Auto-update obsolete Unity API usage in scripts &amp; assemblies. Majority of API upgrades are done automatically, see this post for details: <a href="http://blogs.unity3d.com/2014/06/23/unity5-api-changes-automatic-script-updating/">http://blogs.unity3d.com/2014/06/23/unity5-api-changes-automatic-script-updating/</a></li>
+</ul>
+
+<h4>Shaders</h4>
+
+<ul>
+<li>New built-in "Standard" shader. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/shaders-1.jpg?itok=Opt13CS-" alt="description">
+
+<ul>
+<li>Physically based shader, suitable for most everyday surfaces (metals, plastics, wood, stone etc.).</li>
+<li>Comes in both “metallic workflow” and “specular workflow” variants.</li>
+<li>Introduce detail normalmaps and ambient occlusion support.</li>
+<li>Support two modes of alpha blending - physically plausible “Transparent” mode (suitable for glass, ice, etc) and “Fade” mode which allows to shade fading out objects and decals.</li>
+<li>Features driven by what you enable in the inspector (e.g. when no normal map assigned, the shader will internally use a faster variant without a normal map).</li>
+<li>Approximate and optimized path for mobile &amp; shader model 2.0.</li>
+<li>This is a default shader for newly created objects now. Most of Unity 4.x shaders were moved to “Legacy” shader popup menu.</li>
+<li>Surface shaders can also use the same physically based BRDF (Standard and StandardSpecular lighting functions).</li>
+</ul></li>
+<li>Build-time stripping of unused shader features, and shader variant compilation improvements.
+
+<ul>
+<li>Added #pragma shader_feature; similar to multi_compile but unused ones are removed from the game builds. If no materials use a particular shader feature variant, shader code for it is not included into game data.</li>
+<li>#pragma shader_feature can be provided just one parameter, e.g. #pragma shader_feature FANCY_ON. This expands to two shader variants (without and with the parameter defined).</li>
+<li>Can specify vertex- or fragment-only shader variants. For example, #pragma shader_feature_vertex A B C will add 3x more shader variants, but to the vertex shader only.</li>
+<li>Underscore-only names in shader_feature and multi_compile are treated as "dummy" and don't consume shader keyword names. Useful for defining default shader behavior.</li>
+<li>Shader variants for unused lightmap modes aren’t included into build. E.g. if you don't use directional lightmaps in any of your scenes, then shader variants that handle directional lightmaps will be removed from game build data. No need to manually add "nolightmap" and friends to shader code now.</li>
+</ul></li>
+<li>Single CGPROGRAM block can target multiple "shader models" at once. For example, you can base it for SM2.0, but have fancier multi_compile variants that require SM3.0. Syntax:
+
+<ul>
+<li>#pragma target 3.0 // base is SM3.0</li>
+<li>#pragma target 4.0 FOO BAR // FOO or BAR require SM4.0</li>
+</ul></li>
+<li>Custom Shader GUI can now be defined by implementing the IShaderGUI interface instead of deriving from MaterialEditor. Using this approach makes the custom shader GUI show within the inspector for Substance materials.</li>
+</ul>
+
+<h4>Standard Assets</h4>
+
+<ul>
+<li>A new suite of Standard Assets including cameras, first and third person controllers, car controller, aeroplane controller and sample particle systems.</li>
+<li>A cross platform input helper.</li>
+<li>New mobile control prefabs based on the new UI system.</li>
+<li>Image effects have been converted to C#.</li>
+<li>New sample project based on the Standard assets shows how to best utilize them.</li>
+</ul>
+
+<h4>Unity Download Assistant</h4>
+
+<ul>
+<li>As part of optimizing download, we're shipping Unity 5 as multiple installers. The Download Assistant lets the user select which components to download and install.</li>
+<li>The individual installers can be downloaded separately and installed silently, as described in the documentation.</li>
+</ul>
+
+<h4>WebGL</h4>
+
+<ul>
+<li>WebGL support: a new target in the build player window!</li>
+<li>Currently marked as “Preview” state; official support for latest Firefox &amp; Chrome.</li>
+<li>Uses the same il2cpp scripting backend as 64-bit iOS.</li>
+<li>See blog post: <a href="http://blogs.unity3d.com/2014/04/29/on-the-future-of-web-publishing-in-unity/">http://blogs.unity3d.com/2014/04/29/on-the-future-of-web-publishing-in-unity/</a></li>
+</ul>
+
+<h3>Changes</h3>
+
+<h4>2D</h4>
+
+<ul>
+<li>It's no longer possible to have multiple sprites with same name in Sprite Editor</li>
+<li>UnityEditor.Sprites.DataUtility.GetSpriteMesh and GetSpriteIndices functions are now deprecated. Use Sprite.vertices, Sprite.uv and Sprite.triangles instead.</li>
+</ul>
+
+<h4>AI</h4>
+
+<ul>
+<li>NavMesh bake settings: Removed width/height inaccuracy and allow to set voxel size instead.</li>
+<li>NavMesh data format has changed - you need to rebuild the NavMesh to use it!</li>
+<li>NavMeshLayer is replaced with NavMeshArea: old API is deprecated, area types are now stored in ProjectSettings/NavMeshLayers.asset.</li>
+<li>NavMeshObstacle supports two basic shapes - Capsule and Box, for both carving and avoidance.</li>
+<li>Setting destination on a NavMeshAgent doesn't resume the agent after calling Stop; call Resume explicitly to resume the agent.</li>
+<li>Setting NavMeshAgent.nextPosition will update transform immediately if NavMeshAgent.updatePosition is true. This makes it consistent with the existing baseOffset and Move API.</li>
+<li>Use smaller navmesh tile partitioning to improve baking and carving speed.</li>
+<li>When NavMeshAgent.updatePosition is false - moving the transform position doesn't affect the internal agent position.</li>
+<li>When NavMeshAgent.updatePosition is changed to true from false the transform position is moved to the internal agent position.</li>
+</ul>
+
+<h4>Android</h4>
+
+<ul>
+<li>Disabled hidden input keyboard.</li>
+<li>Dropped support for non-NEON CPU devices (e.g. Tegra 2). This gives a significant performance boost to Mecanim and PhysX among other things.</li>
+<li>User resolution now gets swapped when the orientation is changed.</li>
+<li>Default framebuffer format switched from RGBX to RGBA.</li>
+<li>WebCamTexture is no longer supported on Gingerbread (2.3) devices.</li>
+<li>Switched default from being a NativeActivity to a regular Java Activity. This should make the default Activity more compatible with 3rdparty Android frameworks.</li>
+</ul>
+
+<h4>Animation</h4>
+
+<ul>
+<li>Added Animator.HasState to be able to query if an animator has a certain State.</li>
+<li>Added console warning when an IK function is called when the Animator is not in the IK pass</li>
+<li>Animator with Apply root motion ON will always be affected by physic gravity when playing a clip without any root motion curve.</li>
+<li>Animator Tool deleting a layer or parameter can now be done with delete key.</li>
+<li>AnimationUtility.SetAnimationClipSettings now public</li>
+<li>Can now transition to self (State or StateMachine). <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-9.jpg?itok=UQehptUG" alt="description"></li>
+<li>Changed profiling detail to see more information for the Animator evaluation pipeline.</li>
+<li>Renamed Animator.GetCurrent/NextAnimationClipState to Animator.GetCurrent/NextAnimatorClipInfo.</li>
+<li>In the character transform hierarchy, if a transform doesn't belong to the skeleton, then we preserve it as it is while doing optimization.</li>
+<li>Moved AvatarMask to the Animations namespace.</li>
+<li>Moved GameObjectUtility.OptimizetransformHierarchy from Editor code to Runtime class AnimatorUtility.OptimizetransformHierarchy.</li>
+<li>Transform scale now blends linear instead of exponential. It allows blending with scale = 0.</li>
+<li>Changed Culling Mode for the Animator. We now have “Always Animate”, “Cull Update Transforms” (was Based on Render) and “Cull Completely”.</li>
+</ul>
+
+<h4>Asset Bundles</h4>
+
+<ul>
+<li>New version of WWW.LoadFromCacheOrDownload which can take Hash128 as version.</li>
+<li>Rename AssetBundle.Load<strong><em>() to AssetBundle.LoadAsset</em></strong>().</li>
+<li>Rename AssetBundle.LoadAll() to AssetBundle.LoadAllAssets().</li>
+<li>Provide AssetBundle.LoadAllAssetsAsync() which loads all assets asynchronously.</li>
+<li>Provide AssetBundle.LoadAssetWithSubAssets***() which loads the asset with the sub assets.</li>
+<li>Provide AssetBundle.AllAssetNames() to return all the assets in the assetBundle.</li>
+<li>Support type tree incremental build check.</li>
+</ul>
+
+<h4>Asset Import</h4>
+
+<ul>
+<li>Unify global scale while importing FBX models.</li>
+</ul>
+
+<h4>Asset Management</h4>
+
+<ul>
+<li>Resources.LoadAssetAtPath is no longer available outside of the Editor.</li>
+</ul>
+
+<h4>Audio</h4>
+
+<ul>
+<li>AudioClip.isReadyToPlay is now obsolete and replaced by AudioClip.loadState.</li>
+<li>AudioSettings.outputSampleRate and AudioSettings.speakerMode can now only be read from, because setting it required a complete restart of the sound system and therefore losing state of all non disk-based AudioClips and filters. SetDSPBufferSize has been declared obsolete for the same reason.</li>
+<li>The hardware, loopable and compressionBitrate properties of AudioImporter are now obsolete.</li>
+</ul>
+
+<h4>BlackBerry</h4>
+
+<ul>
+<li>Removed Author ID and Author ID override from publishing settings.</li>
+<li>Removed obsolete "BB10" scripting targets from API. Please use "BlackBerry" instead.</li>
+</ul>
+
+<h4>Editor</h4>
+
+<ul>
+<li>Apply build target switch from -buildTarget before initial domain load.</li>
+<li>Creating, duplicating or instantiating (prefab) in editor generates unique name between siblings. Does not affect renaming, re-parenting, scripting or playmode.</li>
+<li>Editor always runs in background when a debugger is attached.</li>
+<li>EditorApplication.NewScene() creates a scene that has a Main Camera, a Directional Light, a default Skybox set and has Enlighten enabled by default. If you need a new scene with no GameObjects in it use EditorApplication.NewEmptyScene().</li>
+<li>If standalone is current build target, do a full build target switch when setting EditorUserBuildSettings.selectedStandaloneTarget.</li>
+<li>It is now recommended to derive from ShaderGUI instead of deriving from MaterialEditor to make custom gui for shaders. This ensures that custom shader gui works properly together with the Substance Material Editor (Check the docs for ShaderGUI).</li>
+<li>Merged two scene view render mode dropdowns into one.</li>
+<li>New bug reporter</li>
+<li>Players always run in background when "Script Debugging" is enabled.</li>
+<li>Prefab instance objects are no longer stored as part of the scene file.</li>
+<li>Recognize more build target names with -buildTarget switch and remove 32bit/64bit switch for "standalone".</li>
+<li>Remove warning if using Destroy/DestroyImmediate on objects that are still in the load queue and have not been woken up yet.</li>
+<li>Removed “Make MMO” button from Edit menu. ;)</li>
+<li>Renamed "Enable HW Statistics" player setting to "Disable Analytics".</li>
+<li>Replace EditorUtility.UnloadUnusedAssets() to UnloadUnusedAssetsImmediate().</li>
+<li>TextMesh and MeshFilter components are not allowed to exist on the same GameObject.</li>
+<li>When manipulating preview object in Material inspector camera will rotate around the object instead of rotating the object itself, this was needed so you can see different reflections from different angles.</li>
+</ul>
+
+<h4>Fonts</h4>
+
+<ul>
+<li>Font.textureRebuildCallback has been renamed to Font.textureRebuilt and is now a static event of type Action. Font.textureRebuildCallback continues to work but has been deprecated. This change cannot be upgraded automatically by the script updater.</li>
+</ul>
+
+<h4>Graphics</h4>
+
+<ul>
+<li>Added GL.invertCulling property; obsoleted old GL.SetRevertBackfacing function.</li>
+<li>Camera.pixelWidth and Camera.pixelHeight now return int, not float.</li>
+<li>Changed behavior of what happens with textures that are too large for the GPU to handle, and they don't have mipmaps. Now such textures are displayed in blue color. Before, some platforms were downscaling them in some cases; other platforms were leaving them as garbage; others were crashing.</li>
+<li>DX11: Uses CPU rendering (WARP device) when running in batch mode without a GPU; can also request WARP with "-force-driver-type-warp" command line argument.</li>
+<li>GLES: Replaced 16bit depth buffer support with the ability to completely disable depth and stencil buffers.</li>
+<li>Image Effects:
+
+<ul>
+<li>All built-in image effects were rewritten from JavaScript to C#. You probably want to delete old files and import the fresh Effects package if you want the latest version.</li>
+<li>Removed old Glow image effect; use Bloom or Bloom(optimized) instead.</li>
+</ul></li>
+<li>Light and Reflection Probes are enabled on Renderer components by default.</li>
+<li>Made SystemInfo.graphicsPixelFillrate obsolete (it was not being maintained to cover new GPUs, and was not working on most platforms anyway). Now it always returns -1, just like it used to for unknown GPUs.</li>
+<li>OnPreRender script callback is called before rendering camera's depth texture now.</li>
+<li>Renamed HDR_LIGHT_PREPASS_ON shader keyword to UNITY_HDR_ON (now the keyword is always set when camera is HDR).</li>
+<li>Renamed VertexLit and DeferredLighting rendering paths to "Legacy" names.</li>
+<li>RenderTexture.Create now actually does nothing if RenderTexture is already created, just like documentation always said :)</li>
+<li>Replaced the built-in sphere and capsule meshes with versions that are better suited for lightmapping. Because the topology has changed both UV1 and UV2 are now different.</li>
+<li>Setting Mesh.colors keeps the colors in float format instead of converting to bytes. This allows you to store higher-precision color values on meshes. Note that it will use more memory so if that is a concern use Mesh.colors32 instead.</li>
+<li>Skybox geometry was changed for cubemapped and other single-pass skybox shaders. Now instead of a big cube, it's a big and somewhat tessellated sphere, with more polygons near horizon. Allows computing things per-vertex in skybox shaders for performance.</li>
+<li>Removed TextureUsageMode and TextureImportInstructions editor classes.</li>
+</ul>
+
+<h4>iOS</h4>
+
+<ul>
+<li>Added specialized ViewControllers for fixed screen orientation. Added methods to AppController to override to provide custom ones.</li>
+<li>An animated splash screen with a Unity logo is shown for non-Pro license users by the engine itself. Static pre-splash screens can be customized by all users.</li>
+<li>Automatic Reference Counting (ARC) is enabled.</li>
+<li>Changed the way UI integration works. Now there are specialized ViewController's for fixed orientation. Also made custom UI integration easier - both for simple and complicated cases (e.g. if you have portrait unity content in landscape ViewController, script side and _unityView.content orientation will return portrait, while AppController's interface orientation will be landscape). For more details check comments in Classes/UI/UnityAppController+ViewHandling.h in trampoline</li>
+<li>createUnityViewImpl was deprecated and removed (assert will be fired if you implement this method). Override createUnityView instead.</li>
+<li>createViewHierarchyImpl was deprecated and removed (assert will be fired if you implement this method). Override willStartWithViewController instead.</li>
+<li>createViewHierarchy was deprecated and removed. Use createUI instead if you had it called from custom place.</li>
+<li>Refactored player pausing in the trampoline.</li>
+<li>Default splash screens set to solid color.</li>
+<li>Trampoline now uses clang standard library, C++11 is enabled, iOS 7.0 SDK and Xcode5 are enforced, iOS 6.0 is the minimal version supported.</li>
+<li>Fixed TCP 56000 port in now used by player for script debugging.</li>
+</ul>
+
+<h4>Linux</h4>
+
+<ul>
+<li>Minimum supported version is now Ubuntu 12.04 LTS.</li>
+</ul>
+
+<h4>OS X</h4>
+
+<ul>
+<li>Application.persistentPath will now correctly give you a folder in ~/Application Support instead of ~/Library/Caches.</li>
+<li>Mac OS X Standalone: Data folder has moved to Content/Resources, in accordance with Apple guidelines.</li>
+</ul>
+
+<h4>Physics</h4>
+
+<ul>
+<li>Disabled MonoBehaviours will no longer receive collision or trigger callbacks.</li>
+<li>Expose contactOffset both global and per-shape. This comes to replace Physics.minPenetrationForPenalty that lost its original meaning with the upgrade to PhysX3. Contact offset is the value that directly affects the distance at which PhysX starts generating contacts; when the distance between colliders is less than the sum of their respective contact offsets the contacts are generated. The value is useful when you have fast moving ragdolls and observe the not physically correct behaviour of joints when the colliders they connect penetrate other collision geometry.</li>
+<li>Expose enablePreprocessing on joints. Having this flag unset basically lets PhysX to ignore some of the broken joint constraints in complicated configurations; otherwise such constraints may produce huge impulses that lead to "explosions". A typical usecase would be when upgrading a PhysX-powered Unity 4 2D game where you have 2 rotations frozen on each Rigidbody and joints are attached to some of them.</li>
+<li>Expose projections on CharacterJoint to help with stretching of limbs. Joint projection is a technique that once enabled makes sure the joint constraints are not violated for more than a tolerance value by adjusting the connected bodies' pose so that they it is always within tolerance. This is not a physical process (it may loose energy) and comes with some performance cost, but can serve as a good last resort in challenging configurations where otherwise ragdolls explode or overstretch.</li>
+<li>Make CharacterController ignore any child &amp; sibling colliders</li>
+<li>Physics.maxAngularVelocity has been removed as it is non-functional in PhysX 3.3. You can still use Rigidbody.maxAngularVelocity.</li>
+</ul>
+
+<h4>Scripting</h4>
+
+<p>Note: Many scripting changes should be handled automatically by our new API upgrade tool, see <a href="http://blogs.unity3d.com/2014/06/23/unity5-api-changes-automatic-script-updating/">http://blogs.unity3d.com/2014/06/23/unity5-api-changes-automatic-script-updating/</a></p>
+
+<ul>
+<li>AddComponent(string) is removed. Use AddComponent() instead.</li>
+<li>Added generic version of Object.Instantiate (has been in the docs since 3.5 but not exposed in the API before).</li>
+<li>Application.RegisterLogCallback() and RegisterLogCallbackThreaded() have been deprecated and replaced by two new events Application.logMessageReceived and Application.logMessageReceivedThreaded. This allows for multiple subscribers.</li>
+<li>C# compiler defaults script encoding to UTF8.</li>
+<li>Deprecated Component.active property has been removed.</li>
+<li>GameObject.SampleAnimation() moved to AnimationClip.SampleObject().</li>
+<li>'Metro' keyword was replaced to 'WSA' in most APIs, for ex., BuildTarget.MetroPlayer became BuildTarget.WSAPlayer, PlayerSettings.Metro became PlayerSettings.WSA. Defines in scripts like UNITY_METRO, UNITY_METRO_8_0, UNITY_METRO_8_1 are still there, but along them there are defines UNITY_WSA, UNITY_WSA_8_0, UNITY_WSA_8_1.</li>
+<li>ParticleSystem.safeCollisionEventSize changed to ParticleSystem.GetSafeCollisionEventSize().</li>
+<li>Removed quick property accessors, like .rigidBody, .rigidbody2D, .camera, .light, .animation, .constantForce, .renderer, .audio, .networkView, .guiTexture, .collider, .collider2D, .particleSystem, .particleEmitter, .guiText, .hingeJoint for modularization. Instead, use GetComponent to get references.</li>
+<li>Removed obsolete graphics APIs: Camera.mainCamera (use Camera.main), Camera.GetScreenWidth (use Screen.width), Camera.GetScreenHeight (use Screen.height), Camera.DoClear, Camera.isOrthoGraphic (use Camera.orthographic), Camera.orthoGraphicSize (use Camera.orthographicSize), Renderer.Render, Graphics.SetupVertexLights, obsolete Graphics.DrawMesh overloads (use DrawMeshNow), RenderTexture.SetBorderColor, Screen.GetResolution (use currentResolution), Mesh.uv1 (use uv2 instead), SkinnedMeshRenderer.skinNormals, LightmapData.lightmap (use lightmapFar instead).</li>
+<li>Removed SystemInfo properties deviceName, deviceVendor, deviceVersion and supportsVertexProgram. Use graphicsDeviceName, graphicsDeviceVendor, graphicsDeviceVersion instead. Vertex programs are always supported.</li>
+<li>TerrainData.physicMaterial changed to TerrainData.GetPhysicMaterial() and TerrainData.SetPhysicMaterial().</li>
+</ul>
+
+<h4>Shaders</h4>
+
+<ul>
+<li>All opaque &amp; skybox built-in shaders and surface shaders now output 1.0 into the alpha channel. This means that image effects that used "alpha as fake HDR" (e.g. old Glow from Unity 1.x days) will not work with them anymore. Use “keepalpha” surface shader option to keep the old behavior.</li>
+<li>Alpha blended surfaces do NOT automatically have "Alphatest Greater 0" in generated shader code.</li>
+<li>Built-in default "gray" shader texture is color space aware now.</li>
+<li>Built-in functionality for directional lightmaps, dynamic Enlighten GI and soft shadows all require shader model 3.0 now.</li>
+<li>Built-in lightmaps (unity_Lightmap etc.) are declared in UnityShaderVariables.cginc now. If you had them declared in your own shader code, you might need to remove them (we'll try to do that automatically).</li>
+<li>Fog handling in shaders was changed.
+
+<ul>
+<li>For surface shaders and fixed function shaders, nothing to do. Can add "nofog" to surface shader #pragma line to explicitly make it not support fog.</li>
+<li>For manual vertex/fragment shaders, fog does not happen automagically now. You need to add #pragma multi_compile_fog and fog handling macros to your shader code. Check out built-in shader source, for example Unlit-Normal how to do it.</li>
+</ul></li>
+<li>Improved error messages for some shader compilation errors.</li>
+<li>Removed some fixed-function shader features (use vertex &amp; fragment shaders instead). This makes per-draw-call CPU overhead slightly lower across all platforms.
+
+<ul>
+<li>Removed TexGen. If you have old Projector shaders, they might be using this; upgrade to 4.5/5.0 projector shaders.</li>
+<li>Removed texture combiner matrix transforms, i.e. "matrix" command inside a SetTexture.</li>
+<li>Removed signed add (a+-b), multiply signed add (a_b+-c), multiply subtract (a_b-c), dot product (dot3, dot3rgba) SetTexture combiner modes.</li>
+<li>SetTexture stage count is limited to 4 on all platforms.</li>
+</ul></li>
+<li>Renamed "RenderFX/Skybox cubed" and "RenderFX/Skybox" shaders to "Skybox/Cubemap" and "Skybox/6 Planes".</li>
+<li>Renamed unity_LightmapIndScale variable to unity_DynamicLightmapScale</li>
+<li>Some shader compilers have changed:
+
+<ul>
+<li>Mixing partially fixed function &amp; partially programmable shaders (e.g. fixed function vertex lighting &amp; pixel shader; or a vertex shader and texture combiners) is not supported anymore. It was never working on mobile, consoles or DirectX 11 anyway. This required changing behaviour of Reflective/VertexLit shader to not do that - it lost per-vertex specular support; on the plus side it now behaves consistently between platforms.</li>
+<li>Direct3D 9 shader compiler was switched from Cg 2.2 to HLSL, the same compiler that's used for D3D11. This fixes a bunch of issues where Cg was generating invalid D3D9 shader assembly code; and generally produces slightly more efficient shaders. However, HLSL is slightly more picky about syntax; in general you have to do same shader fixes for D3D9 as for D3D11 now (e.g. UNITY_INITIALIZE_OUTPUT for “out” structures).</li>
+<li>On desktop OpenGL, shaders are always compiled into GLSL instead of ARB_vertex/fragment_program target now. You no longer need to write "#pragma glsl" to get to features like vertex textures or derivative instructions. All support for ARB_vertex/fragment_programs is removed.</li>
+</ul></li>
+</ul>
+
+<h4>Shadows</h4>
+
+<ul>
+<li>All built-in shadow shaders use backface culling now. Use “two sided” cast shadows option if you do not need backface culling.</li>
+<li>Shadows on D3D9 require "native shadowmap" support in the driver now (pretty much all systems that can do shadows have that, so this should be fairly invisible). Upside: less shader variants are included into game builds now.</li>
+<li>Shadows on iOS+GLES2.0 require GL_EXT_shadow_samplers now. This means iPhone4 / iPodTouch4 will not support realtime shadows anymore. Upside: less shader variants and faster shader loading times.</li>
+<li>Removed screenspace directional light shadow blur (PCF 5x5 is used now).
+
+<ul>
+<li>Removed shadow softness &amp; softness fade from Light.</li>
+<li>Normal-based shadow bias defaults to 0.4 for lights now</li>
+</ul></li>
+<li>When using oblique camera projection, shadows are disabled now.</li>
+</ul>
+
+<h4>Web Player</h4>
+
+<ul>
+<li>Removed WWW.LoadUnityWeb API. Load additional unity web file from website script code.</li>
+<li>Windows Store Apps</li>
+<li>Removed support for C++ Visual Studio projects.</li>
+</ul>
+
+<h3>Improvements</h3>
+
+<h4>2D</h4>
+
+<ul>
+<li>Added Sprite.pivot getter.</li>
+<li>Sprite geometry can now be overridden using Sprite.OverrideGeometry(Vector2[] vertices, UInt16[] triangles).</li>
+<li>SpritePacker: Atlas texture name will now also contain the atlas name.</li>
+<li>The new AssetPostprocessor.OnPostprocessSprites(Texture2D texture, Sprite[] sprites) is called immediately after OnPostprocessTexture when sprites are generated.</li>
+</ul>
+
+<h4>AI</h4>
+
+<ul>
+<li>Carving navmesh supports carving the detailed tessellation. Fixes height discontinuities when an undulating region is carved</li>
+<li>Expose pathfinding iteration limit, and avoidance prediction time to script API</li>
+<li>In Editor the "Show Avoidance" option for NavMeshAgent will show the sampled velocities for avoidance calculation</li>
+<li>New icons for navmesh asset and components</li>
+<li>Warn if agent and obstacle components are placed on the same GameObject</li>
+<li>Warn if navmesh slope bake setting is unreasonable.</li>
+</ul>
+
+<h4>Android</h4>
+
+<ul>
+<li>"Android TV Compatibility" checkbox which enables Android TV compatibility checks at build time.</li>
+<li>Hardware upscaling for Screen.SetResolution().</li>
+<li>isGame setting for Android TV and Android 5.0 devices</li>
+<li>JDK detection. Build fails if only JRE is present.</li>
+<li>Made VRAM estimation somewhat more correct.</li>
+<li>PlayFullScreenMovie now supports FullScreenMovieScalingMode.AspectFill.</li>
+<li>Public Java API for attaching custom rendering surfaces.</li>
+<li>Reconfiguring antialiasing or changing display framebuffer properties should no longer result in a GL context loss.</li>
+<li>Reduced system memory usage.</li>
+<li>Support for Android TV banners.</li>
+<li>Support for MouseDrag event.</li>
+<li>VSync improvements: using Choreographer on JellyBean+ to get more stable time; and using VSync time when available to hit stable 30FPS when "Every other vblank" is on.</li>
+<li>WWW responseHeaders now contain STATUS key.</li>
+</ul>
+
+<h4>Animation</h4>
+
+<ul>
+<li>Added AnimationEvent.animatorInfo and AnimationEvent.animationInfo for Event fired by Animator.</li>
+<li>Added "Edit" button for imported AnimationClip that selects the ModelImporter with proper clip <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-10.jpg?itok=DXIma7A1" alt="description"></li>
+<li>Added helpbox on StateMachine Transitions</li>
+<li>Added reset functions to Animator State and Animator Transition</li>
+<li>Added RuntimeAnimatorController.animationClips property. It returns all the clips in the controller</li>
+<li>Added tooltips to animation transition settings + added foldout group for settings.</li>
+<li>Always display numeric values for Transition's duration, offset and exitTime.</li>
+<li>Better error message on default Blendtree parameters</li>
+<li>Can now drag and drop FBX files directly in the StateMachine Graph</li>
+<li>Can now drag AnimatorController directly on GameObject, it will created an Animator component if needed.</li>
+<li>Clicking on the blend tree background will select the top blend node</li>
+<li>Copy/paste/duplicate keyboard shortcuts work.</li>
+<li>Display Animator stats in inspector: Clip count, curve count, etc. <img src="https://storage.googleapis.com/unity3d_files/public/sites/default/files/styles/original/public/animation-11.jpg?itok=7_-ycJdI" alt="description"></li>
+<li>Don't show contextual menu when adding transition to empty StateMachine</li>
+<li>Double clicking on a State with an imported AnimationClip now shows the Animation Import Settings in the Inspector</li>
+<li>HelpBox in inspector when root node position/rotation is controller by curves</li>
+<li>Improved computation of Pivot weight</li>
+<li>Improved humanoid retargeting. The differences between Generic and Humanoid animation are now less than 0.001 normalized meter and 0.1 degrees on end points.</li>
+<li>Improved performance when ModelImporter has many AnimationClips</li>
+<li>In the AnimationClip importer, proper support for 0 duration clips</li>
+<li>ModelImporter remembers foldout state</li>
+<li>Ordered Interruption UI is disabled when in Next State</li>
+<li>Persisted the Settings foldout through a static variable.</li>
+<li>Runtime access to Animator's parameters (Animator.parameters property).</li>
+<li>States can now be renamed on synchronized layers</li>
+<li>Support the case that both SkinnedMeshRenderer and Animator are on the same GameObject (optimised mode).</li>
+<li>Transition Solo and Mute are now undoable.</li>
+<li>Trigger parameters now have different UI to distinguish them from Bool parameters.</li>
+</ul>
+
+<h4>Asset Import</h4>
+
+<ul>
+<li>Added AssetPostProcessor.OnPreProcessAnimation, this new callback is called just before animation clips are created.</li>
+<li>Added ModelImporter.defaultClipAnimations (list of ModelImportClipAnimation based on TakeInfo) and ModelImporter.importedTakeInfos (list of TakeInfo from the file).</li>
+<li>Support large bitmaps importing (&gt;4Gb in size)</li>
+<li>Update PVRTC texture compressor.</li>
+<li>Updated FBX SDK to 2015.1: better performance; fixes various rare crashes and issues when importing some Collada, OBJ, 3DS files; fixed reversed normals in some DXF files.</li>
+</ul>
+
+<h4>Asset Management</h4>
+
+<ul>
+<li>Allow to access files with long path (more than 260 characters) on Windows.</li>
+</ul>
+
+<h4>Audio</h4>
+
+<ul>
+<li>Added more descriptive error message when FMOD fails to initialise on Windows because of sound card drivers configured to give applications exclusive mode access.</li>
+<li>AudioSources now take up fewer resources. Previously this caused problems when importing projects with a large number of AudioSource contained in prefabs.</li>
+<li>Improved audio importer interface to be make options more clear</li>
+<li>Increased default virtual voice count from 100 to 512 and made it user-configurable through project settings.</li>
+<li>Removed 3D property in AudioClip and moved all 3D audio functionality to the AudioSource.
+
+<ul>
+<li>Renamed AudioSource.panLevel to AudioSource.spatialBlend. This property now controls the 2D / 3D mode of sound playback through this AudioSource. There is no longer a mode toggle, but a continuous interpolation between the two states.</li>
+<li>Renamed AudioSource.pan to AudioSound.panStereo. This is to remove confusion about the nature of this property. AudioSource.panStereo pans the audio signal into the left or right speakers. This happens before spatial panning is applied and can be applied in conjunction with 3D panning.</li>
+</ul></li>
+</ul>
+
+<h4>Blackberry</h4>
+
+<ul>
+<li>Added "Add Attached Device" to the debug token creation window.</li>
+<li>Application.systemLanguage now differentiates between Chinese Simplified and Chinese Traditional appropriately.</li>
+<li>Registration now uses BlackBerry's 10.2 registration system. Currently registered systems do not need to re-register.</li>
+</ul>
+
+<h4>Documentation</h4>
+
+<ul>
+<li>Default language for code snippets in the Scripting Reference is C#, with many more examples in C# available, with Javascript as a secondary language, and Boo removed.</li>
+<li>Localized documentation available in Russian, Spanish and Japanese (currently based on 4.6 docs and over time 5.0).</li>
+<li>Improved handling of namespaces, generics and interfaces.</li>
+<li>API history improved with information about obsolete members.</li>
+</ul>
+
+<h4>Editor</h4>
+
+<ul>
+<li>Added 8192 maximum texture size option in import settings.</li>
+<li>Added deferred diffuse/specular/smoothness/normals scene view rendering modes.</li>
+<li>Added GetCurrentGroupName() and SetCurrentGroupName() to allow overriding the automatic undo name generation</li>
+<li>Added Gizmos.DrawMesh and DrawWireMesh (the meshes drawn are pickable too).</li>
+<li>Added support for importing textures from PVRv3, ASTC, KTX file formats.</li>
+<li>Added virtual function ScriptableWizard.DrawWizardGUI for customizing GUI of derived wizard classes.</li>
+<li>Added warning on exiting play mode when objects have been spawned into the scene from OnDestroy().</li>
+<li>Asset Store: The asset store window is now much faster, more responsive, and looks better.</li>
+<li>Camera inspector shows camera's depth texture mode. Also, scene view camera makes sure to match main camera's depthTextureMode.</li>
+<li>Drag-and-drop assigns material to a specific part of the mesh now. Holding Alt key will assign material to all the parts of the mesh.</li>
+<li>EditorStyles.helpBox is now exposed</li>
+<li>Ensure controls are not rendered with focus state if the EditorWindow they are in does not have focus.</li>
+<li>Expose RenderTexture color format in the inspector, just like with depth format.</li>
+<li>Exposed AssetPreview.SetPreviewTextureCacheSize ().</li>
+<li>Finished builds will be shown in OS X notification center when Editor in the background.</li>
+<li>Frame Selected (F key over scene view) now takes point/spot light range into account.</li>
+<li>Improved build times for textures and AudioClips</li>
+<li>Improved searching for class names in different namespaces and across different user assemblies.</li>
+<li>Improved UI display names in Player Settings</li>
+<li>License: Activate from command-line.</li>
+<li>License: Added -returnlicense command line option, which returns the currently active license and quits the editor.</li>
+<li>License: A progress bar will be shown during returning or releasing a license.</li>
+<li>LightmapParameters now has an icon</li>
+<li>LightmapSnapshot now has an icon</li>
+<li>MaterialEditor improvements
+
+<ul>
+<li>Show a foldout arrow for Material inspectors inlined on gameobjects to make it clear that they can be expanded/collapsed.</li>
+<li>Added TexturePropertyMiniThumbnail(): Draw a property field for a texture shader property that only takes up a single line height. The thumbnail is shown to the left of the label. Clicking the thumbnail will show a large preview info window.</li>
+<li>Added GetTexturePropertyCustomArea():. Returns the free rect below the label and before the large thumb object field. Is used for e.g. tiling and offset properties.</li>
+<li>Added TextureScaleOffsetProperty(): Draws tiling and offset properties for a texture.</li>
+<li>Texture scaling and offset values can now be dragged.</li>
+</ul></li>
+<li>Optimization of Hierarchy Window</li>
+<li>Prevent tooltips from showing while dragging.</li>
+<li>Tag editor facelift by removing the empty tag and using Reorderable list to draw tags and layers.</li>
+<li>When browsing for a location to create or open a project, the dialog starts at the location where a project was last created or opened.</li>
+<li>When saving scenes, overwrite existing scene file only after successful save.</li>
+<li>Windows Editor: Native child windows have their title set to the GUIView/EditorWindow class name.</li>
+<li>Unity will output a proper error regarding incompatible CPU architectures on Mac OS X when failing to load native libraries. For ex., You cannot load 32 bit native libraries on 64 bit Editor.</li>
+</ul>
+
+<h4>Fonts</h4>
+
+<ul>
+<li>Added easier APIs to access OS Fonts (Font.GetOSInstalledFontNames and Font.CreateDynamicFontFromOSFont).</li>
+<li>Added new APIs to get font metrics if you want to implement your own font rendering: Font.ascent, Font.lineheight, new fields in CharacterInfo (old fields in CharacterInfo are deprecated).</li>
+<li>Optimized texture rebuilds to happen less often.</li>
+</ul>
+
+<h4>Graphics</h4>
+
+<ul>
+<li>Added "#pragma exclude_renderers nomrt" for platforms not supporting multiple render targets (MRTs).</li>
+<li>Added Camera.onPreCull, onPreRender, onPostRender delegates.</li>
+<li>Added RenderTextureFormat.ARGB2101010 and Shadowmap formats.</li>
+<li>Added Shader.IsKeywordEnabled API.</li>
+<li>Added SystemInfo.graphicsMultiThreaded API.</li>
+<li>Added Texture2D.SetPixels32 overload that accepts offset and dimensions.</li>
+<li>All baked and realtime lightmapping computations are now done in linear space, this makes lighting between gamma &amp; linear space look much closer. When using pure lightmaps, it should in fact look very similar.</li>
+<li>Allow SkinnedMeshRenderer to accept non-skinned meshes.</li>
+<li>DDS importer can import Float, Half and 11.11.10 format .dds textures now.</li>
+<li>Dynamic batching can batch non-uniform scaled objects together when normals/tangents are unused. Helps with shadow caster batching, and unlit shaders.</li>
+<li>Image Effects: Added Threshold tweak to SunShafts, removed legacy "alpha as mask".</li>
+<li>Image Effects: GlobalFog image post-processing effect was rewritten. Now it has "distance fog" (matches what is set in lighting settings), and optional "height fog" (linearly increasing fog density below specified height).</li>
+<li>Increased maximum number of simultaneous render targets (MRT) to 8 on capable platforms.</li>
+<li>Light intensity now behaves consistently between linear and gamma space rendering mode. Lights in linear mode can now have much higher intensity. The light intensity is now defined to be in gamma space, hence in linear rendering it is converted to linear space when passed to the shader. (In linear space the maximum effective light intensity is now 97 while previously it was 8).</li>
+<li>Lightmaps &amp; baked probes compressed with RGBM now have an effective range of 5 in gamma space or 32 in linear space. This reduces RGBM compression artifacts for lightmaps. Emissive surfaces for enlighten are encoded with a range of 8 in gamma space and 97 in linear space.</li>
+<li>Meshes: Mesh compression will now also do lossy compression of vertex colors.</li>
+<li>Meshes: Added "keep quads" mesh import option; useful for DX11/Console tessellation shaders.</li>
+<li>Optimized per-object light culling in forward rendering by using multiple CPU cores better.</li>
+<li>Overhauled stats window to be more compact and profiler rendering stats to be more comprehensive.</li>
+<li>Reduced memory consumption when loading textures on mobile devices.</li>
+<li>Rendering code optimized to reduce amount of material SetPass calls. Light probes and lightmap UV transform state changes are now internally applied via MaterialPropertyBlocks without requiring a full SetPass. This reduces cost on the main thread to send commands to the render thread, and on the the render thread the driver overhead is reduced.</li>
+<li>Scene View: Can drag a cubemap onto empty space in the scene view to assign it as a skybox.</li>
+<li>Skinned meshes use less memory by sharing index buffers between instances.</li>
+<li>Support for more shader keywords (128, up from 64).</li>
+</ul>
+
+<h4>iOS</h4>
+
+<ul>
+<li>Added debug labels for OpenGL objects, useful in Xcode frame capture debugging.</li>
+<li>Allow to set compile flags for already existing files in Xcode API</li>
+<li>Better support for Unity view size changes from native side.</li>
+<li>Enabled basic background processing.</li>
+<li>Expose font directories to the trampoline</li>
+<li>Game controller button pressure is now also exposed as axis (float) value.</li>
+<li>Implement a way to select iOS framework dependencies for native plugins.</li>
+<li>Improved performance of adding large number of files to Xcode project</li>
+<li>Optimized Texture2D.LoadImage performance for PNG and JPG files.</li>
+<li>Tweaked external RenderSurface API to make a bit more sense and be more concise.</li>
+</ul>
+
+<h4>Linux</h4>
+
+<ul>
+<li>Added Input.IsJoystickPreconfigured for querying 5.0 Linux gamepad detection.</li>
+<li>Monitor selection</li>
+<li>Set popupwindow mode via Motif borderless hint when supported</li>
+<li>Support XDG-compliant path overrides.</li>
+</ul>
+
+<h4>Networking</h4>
+
+<ul>
+<li>WWW: Populate .bytes and .text on non-200 response.</li>
+</ul>
+
+<h4>Performance</h4>
+
+<ul>
+<li>Improved multithreaded job system:
+
+<ul>
+<li>Culling &amp; shadow caster culling is multithreaded now.</li>
+<li>Internally multithreaded parts (culling, skinning, mecanim, ...) are more efficient now via some lockless magic.</li>
+<li>Temporary memory allocations done by some jobs are more efficient now.</li>
+</ul></li>
+<li>Improved loading performance. More work has been offloaded to the loading thread, reducing the overhead of asynchronous loading on the main thread.</li>
+<li>Object.Instantiate performance has been improved.</li>
+<li>Mecanim optimizations:
+
+<ul>
+<li>Optimized Animator Enable(), 2x speed on complex controllers.</li>
+<li>Optimized Animator memory usage per instance, 2x smaller on complex controllers.</li>
+<li>Improved performance for Animator Tool.</li>
+</ul></li>
+<li>Optimized memory usage and runtime performance when serializing objects with backward compatibility (type-tree) enabled.</li>
+<li>Optimized texture importing performance.</li>
+<li>Static batching performance is improved in many cases.</li>
+<li>Updated occlusion culling (Umbra) version; contains improvements for mobile Umbra culling performance, and improves occlusion culling robustness in some cases.</li>
+</ul>
+
+<h4>Physics</h4>
+
+<ul>
+<li>Adaptive force is now optional (disabled by default).</li>
+<li>Changed default cloth coefficient values, and added info boxes to cloth editor</li>
+<li>Cloth constraint editing UI has been replaced by a more intuitive UI inside the Scene View.</li>
+<li>Cloth; exposed sleep force parameter to tune minimum force after which cloth will start sleeping.</li>
+<li>Cloth; exposed tethers flag to improve cloth simulation quality.</li>
+<li>Cloth inspector is now much faster and capable of dealing with meshes of any vertex count</li>
+<li>Exposed a function ConfigureVehicleSubsteps in WheelCollider to make it possible for developers to customise vehicle sub-stepping. This helps setting up heavy vehicles, that require different amount of sub-steps to simulate wheels correctly.</li>
+<li>Make scaling mesh colliders cheaper, by not creating a new mesh with scaling applied to it with every scale change.</li>
+<li>Redesigned WheelCollider gizmo to show more relevant information.</li>
+<li>Removed internal lock in PhysXRaycast, particles should now be able to process raycasts in multithreaded mode.</li>
+<li>Show inconsistent hinge joint constraints in inspector</li>
+<li>Updated default values for WheelCollider as the old ones did not make any sense with new PhysX.</li>
+</ul>
+
+<h4>Players</h4>
+
+<ul>
+<li>Add -show-screen-selector command line option for Linux and Windows.</li>
+<li>Cursor management cleanup
+
+<ul>
+<li>Screen.lockCursor has become Cursor.lockState</li>
+<li>Screen.showCursor has become Cursor.visible</li>
+<li>Added ConfineCursor state to confine cursor to game window (Linux/Windows)</li>
+<li>Cursor lock state and cursor visibility state are now mutually independent.</li>
+</ul></li>
+</ul>
+
+<h4>Plugins</h4>
+
+<ul>
+<li>Unity will now verify that plugins don’t collide with each other before building to player. Previous behavior was that you would need to wait until all the scenes were built, and you would only then see that plugin with same filename is trying to overwrite another plugin.</li>
+<li>(Windows Store Apps/Windows Phone): when picking placeholder plugins only plugins with matching file names as the original plugin will be shown</li>
+</ul>
+
+<h4>Profiler</h4>
+
+<ul>
+<li>Added total and per frame GC allocated bytes to the Memory chart.</li>
+<li>Image Effects have profiling blocks with the script name in them, instead of a generic "ImageEffect".</li>
+<li>Improved accuracy of reported AudioSources in the scene when working with AudioSources in prefabs.</li>
+<li>Search field for filtering the results in the treeview.</li>
+<li>Stop collecting GPU data when GPU Profiler chart is closed. Defaults to being closed for performance reasons.</li>
+<li>Stop collecting profiler's data on Player's side if recording is disabled.</li>
+</ul>
+
+<h4>Scripting</h4>
+
+<ul>
+<li>64-bit platforms will now accept managed DLLs compiled specifically for x64.</li>
+<li>Added defines for UNITY_EDITOR_64/32, UNITY_5.</li>
+<li>Added disposable scope helpers for Begin/End pairs for GUI, GUILayout, EditorGUI and EditorGUILayout.</li>
+<li>Added formatting overloads to Debug.Log*.</li>
+<li>Added generic overloads for AssetBundle.Load*.</li>
+<li>All GetComponent paths got much faster, especially GetComponent.</li>
+<li>GetComponent family of functions now supports interfaces as generic argument.</li>
+<li>Improve error messages reported by IL2CPP by including managed source code information when it is available.</li>
+<li>Math: Added SphericalHarmonicsL2 scripting struct.</li>
+<li>Support serialization of all primitive types.</li>
+</ul>
+
+<h4>Shaders</h4>
+
+<ul>
+<li>Added [NoTilingOffset] property attribute; hides tiling &amp; offset fields in texture property UI.</li>
+<li>Added [Gamma] property attribute; allows Float and Vector properties to be flagged for automatic gamma correction. Tagged Float and Vector properties will function the same way as Color properties do - gamma correction will be applied, if necessary, before sending values to the GPU.</li>
+<li>Added atmospheric thickness and sky tint controls to Skybox (procedural) shader; also visual appearance in gamma space matches that of linear now.</li>
+<li>Added exposure slider to "Skybox/Cubemap" and "Skybox/6 Planes" shaders.</li>
+<li>Added MaterialPropertyDecorators. Similar to MaterialPropertyDrawers, but you can add many of them on a shader property. Added built-in decorators: [Space], [Header(text)].</li>
+<li>Added rotation and exposure controls to Skybox (6-sided) and Skybox (cubemap) shaders.</li>
+<li>Added SHADER_TARGET define that's based on "#pragma target" version. E.g. it will be 30 for SM3.0.</li>
+<li>Added UNITY_NO_LINEAR_COLORSPACE define; defined on platforms that never have Linear color space.</li>
+<li>Better comments in generated surface shader code. Better error messages when surface shader lighting functions aren't consistent.</li>
+<li>Better handling of texture*Lod for OpenGL ES 2.0. On devices that don't support it, the generated shader code will automatically do a biased mip lookup approximation.</li>
+<li>Built-in Fog works on all platforms now (includes WP8/WinRT/consoles).</li>
+<li>Cleaned up shadow macros for shaders (UNITY_DECLARE_SHADOWMAP, UNITY_SAMPLE_SHADOW). On platforms that always have "native shadow maps" (e.g. DX11), there's no need for SHADOWS_NATIVE keyword to be present for these macros to do the right thing. On platforms that don't have native shadow maps (e.g. some GLES2.0 devices, Xbox360), these macros will do comparison of texture &amp; depth manually.</li>
+<li>Existing user surface shaders with custom lighting functions work with Non-Directional (baked and realtime) and Directional (baked) lightmap types. These lighting functions need to be updated to use the UnityGI structure to take advantage of all the new lightmap types and reflection probes.</li>
+<li>Improved "compile and show code" functionality in shader inspector. Now has dropdown to select custom set of platforms to compile shaders for. And shows a progress bar while compiling shader variants for display.</li>
+<li>Improved importing performance, in-editor loading performance and reduced imported file sizes for shaders with really large variant counts.</li>
+<li>Information about texture format decoding (LDR, dLDR, RGBM, Normals) is passed in %TextureName%_HDR shader constant.</li>
+<li>Made it possible to use stencil buffer during deferred shading/lighting g-buffer passes, to some extent. Stencil reference value coming from shader/material will be combined (binary or) with Unity-supplied reference value.</li>
+<li>Massively improved shader loading performance, and reduced memory consumption.
+
+<ul>
+<li>By default, internal shader variants are only loaded when actually needed (typically a lot of shader variants are never actually needed).</li>
+<li>Added ShaderVariantCollection asset type for ability to manually preload/warmup shader variants, to avoid hiccups later on. This is like Shader.WarmupAllShaders, done in a better way.</li>
+<li>Editor can track shaders &amp; their variants used in scene or play mode, and create ShaderVariantCollection out of them (button in Graphics Settings).</li>
+<li>Graphics Settings have a list of ShaderVariantCollection assets to preload at game startup. Can also warmup them from a script.</li>
+</ul></li>
+<li>Optimized shader compilation performance for OpenGL/ES platforms</li>
+<li>Optimized shader importing performance, particularly for surface shaders with many multi_compile/shader_feature variants.</li>
+<li>Shaders no longer apply a 2x multiply of light intensity. Instead lights are automatically upgraded to be twice as bright. This creates more consistency and simplicity in light rigs. For example a directional light shining on a white diffuse surface will get the exact color of the light.
+
+<ul>
+<li>The upgrade does not affect animation, thus if you have an animated light intensity value you must change your animation curves or script code and make them 2x as large to get the same look.</li>
+<li>You might have to adjust your shaders to remove a 2x multiply. This is only the case if you define your own lighting function, in the case of surface shaders this is usually not the case. So most content will not require the change. In most cases the shader code looks like this:
+
+<ul>
+<li>c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten * 2); --&gt; c.rgb = s.Albedo * _LightColor0.rgb * (diff * atten);</li>
+</ul></li>
+</ul></li>
+<li>Skybox shaders (including "Skybox/Procedural") get direction and color of the main light passed in the shader constants.</li>
+<li>Surface shaders allow more texture interpolators, when targeting shader model 4.0+ (up to 32).</li>
+<li>Surface shaders can use the UnityGI structure in their lighting functions. UnityGI contains light from all lightmap types, light probes and reflection probes. The built-in Lambert and BlinnPhong were updated to use it as well.</li>
+<li>Surface shaders use up slightly less samplers on DX11-like platforms. Added UNITY_SAMPLE_TEX2D_SAMPLER helper macro to read a texture, while using sampler from another one.</li>
+<li>Surface shaders using UnityGI and alpha transparency default to alpha premultiply mode (alpha:premul). Otherwise the default is alpha:blend.</li>
+</ul>
+
+<h4>Substance</h4>
+
+<ul>
+<li>Consolidation of Substance binary data prior to runtime use now has a much lower peak memory footprint.</li>
+</ul>
+
+<h4>Terrain</h4>
+
+<ul>
+<li>Added API GetTreeInstance()/SetTreeInstance()/treeInstanceCount on TerrainData class for fast tree updating.</li>
+<li>Added "Keep existing trees" option when mass-placing trees.</li>
+<li>Improved rendering performance when tree imposters are requested to be rendered.</li>
+<li>New terrain materials. You now have 4 options to choose from:
+
+<ul>
+<li>Built-in Standard. PBR material that uses the “standard” lighting model. This is the default option for newly created terrains.</li>
+<li>Built-in Legacy Diffuse. This is the legacy built-in terrain material from Unity 4.x and before. It uses Lambert (diffuse term only) lighting model and has optional normal map support.</li>
+<li>Built-in Legacy Specular. This built-in material uses BlinnPhong (diffuse and specular term) lighting model and has optional normal map support.</li>
+<li>Custom. Use a custom material of your choice to render the terrain.</li>
+</ul></li>
+</ul>
+
+<h4>Version Control</h4>
+
+<ul>
+<li>Add shortcut for submit and cancel in submit dialog. Default keyboard focus to textarea when opening submit window.</li>
+<li>Merging: Improve conflict output to console</li>
+<li>Merging: Improve premerge by rewriting all of left, right and base.</li>
+</ul>
+
+<h4>Windows</h4>
+
+<ul>
+<li>Standalone and webplayer: Input subsystem processes touch messages via WM_TOUCH. Previously it worked with Windows-simulated mouse events.</li>
+<li>Windows Phone 8/Windows Store Apps</li>
+<li>Added GetMethod() and GetProperty() to WinRTLegacy.TypeExtensions.</li>
+<li>Added System.IO.Directory, System.IO.File, System.IO.FileStream, WinRTLegacy.IO.StreamReader, WinRTLegacy.IO.StreamWriter classes to WinRTLegacy</li>
+<li>Shadows on windows mobile devices now work just like on iOS/Android - no cascaded shadow maps (i.e. not "too slow on mobile" anymore).</li>
+<li>Significantly improved performance of passing System.Type objects to UnityEngine (for example, GetComponent is affected)</li>
+<li>UnityPlayer.dll now contains version info.</li>
+<li>Windows Phone 8: Geolocator initialization code removed from Visual Studio project files. When overwriting existing 4.x projects please remove redundant code.</li>
+</ul>
+
+<h4>Windows Store Apps</h4>
+
+<ul>
+<li>Added Directory, DirectoryInfo, File, FileStream replacements to WinRTLegacy.</li>
+<li>Added support for linear color space.</li>
+<li>Added OnFileActivated handler in App.xaml.[cs/cpp].</li>
+<li>Added UnityEngine.WSA.Application.advertisingIdentifier.</li>
+<li>Building on top of existing project will now check if a project being overwritten is compatible with newly built one.</li>
+<li>Chinese Traditional and Simplified languages are now detected and reported, instead of always returning generic Chinese.</li>
+<li>Handheld class added.</li>
+<li>PlayerPrefs will be saved whenever application goes into suspend mode.</li>
+<li>Use joysticks in addition to Xbox 360 controllers, but you have to enable HumanInterfaceDevice capability in PlayerSettings. Note: this capability is not visible in Package.appxmanifest UI interface in Visual Studio.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<h4>2D</h4>
+
+<ul>
+<li>Sprite name can't be empty, or contain characters that are not supported in assets when created from Sprite Editor.</li>
+</ul>
+
+<h4>AI</h4>
+
+<ul>
+<li>Fix for avoidance sampling being one frame delayed - resulting in error message: nei.params.priority &gt;= ag.params.priority.</li>
+<li>Fix crash when calling NavMeshManager::Triangulate without baked data</li>
+<li>Fix crash when navmesh is removed from disk when in use</li>
+<li>Fix crash when OffMeshLink component has "AutoUpdate" enabled - but no endpoint transforms assigned.</li>
+<li>Fix issue where auto-generated offmeshlinks were generated only at the origin.</li>
+<li>Fix issue where baking navmesh for a duplicated scene would destroy the original scenes navmesh</li>
+<li>Fix issue where obstacles and other agents wouldn't be avoided correctly by NavMeshAgents. The fix can cause the agents to avoid other agents more than before. You can reduce the avoidance prediction time (NavMesh.avoidancePredictionTime) to tune down the avoidance.</li>
+<li>Fix issue where using navmesh built with "Height Mesh" enabled would sometimes crash Unity.</li>
+<li>Fix memory leak after navmesh baking of terrain meshes.</li>
+<li>Fix problem where any change in rotation or scale would trigger re-carving regardless of specified move-threshold.</li>
+<li>Fix regression where NavMeshAgent velocity would always have zero y-component.</li>
+<li>More robust raycast. Fixes occasional wrong height when raycast terminates at navmesh edge.</li>
+<li>Navmesh is loaded before agents are created in additively loaded scenes - no need to wait one frame</li>
+<li>Offmesh link drop arrow is not connected to navmesh with big heights</li>
+<li>Prevent path query to invalid/infinity positions.</li>
+</ul>
+
+<h4>Android</h4>
+
+<ul>
+<li>Compensate for polygon shader Offset bug on Mali 400 GPU.</li>
+<li>Fixed auto rotation, Input.acceleration and gyroscope when using a non-native activity</li>
+<li>Fixed fullscreen switch when called in Awake or Start in the first scene.</li>
+<li>Fixed leak when using ActivityIndicator.</li>
+<li>Fixed manifest detection for Android library project plugins</li>
+<li>Limited support for anti-aliasing in OpenGL ES 2.0 to devices that support anti-aliased FBOs</li>
+<li>Fixed resource leak when using antialiased RenderTexture with OpenGL ES 3</li>
+<li>Fixed script compilation errors when regular .js file is present in Assets/Plugins/Android/assets</li>
+<li>Fixed SDK auto-update</li>
+<li>Fixed Water4 standard asset rendering on some devices.</li>
+<li>Fixed audio playback when non-stereo mode selected (by forcing stereo).</li>
+<li>Internet reachability check now returns proper value if switching in and out of airplane mode.</li>
+<li>Project folder is no longer locked by adb after entering play mode in the editor.</li>
+<li>Reporting correct screen orientation even if OS refused to apply requested orientation.</li>
+</ul>
+
+<h4>Animation</h4>
+
+<ul>
+<li>Animation Clip is now available immediately after being created automatically for GUI</li>
+<li>Fixed bug where Avatar mask wasn't appliedcorrectly to animation clip preview in the model importer.</li>
+<li>Fixed bug where Blending pivot wasnot scaled correctly. It mainly affected AvatarPreview gizmo display. It did not affect runtime eval.</li>
+<li>Builtin materials are now editable in animation mode. The animation is stored on the clip not the material.</li>
+<li>Changing a child blend tree will now update objects using that blend tree in the scene.</li>
+<li>Changing Animator.applyRootMotion while playing will no longer reset the controller's state machine.</li>
+<li>Delayed the graph rebuild when deleting transitions to fix a bug when deleting multiple transitions.</li>
+<li>Fixed bug where deleting a transition would delete a layer.</li>
+<li>Fixed various crashes, especially on malformed data values.</li>
+<li>Fixed UI issues: UI not updating after undo, curves flickering in some cases, rename overlays not shown, applying body mask in import settings, preview sometimes changing values, blend shape previews and so on.</li>
+<li>Fixed adding child to new BlendTree not showing up in graph</li>
+<li>Fixed animation events executed incorrectly on mirrored states.</li>
+<li>Fixed Animation not playing in previewer for Generic</li>
+<li>Fixed Animation transition causing undefined movement (even with "apply root motion" disabled)</li>
+<li>Fixed Animator.Play that did not work after Recording</li>
+<li>Fixed Animator.Play() and Animator.CrossFade() playing the animator state at requested time 't + deltaTime' when it should be 't'.</li>
+<li>Fixed AnimationClip with manually-created root motion curves with wrong Class type causes crashes</li>
+<li>Fixed Blend tree adjust time scale for animation clip without speed, you should get a warning when there is no speed available to compute the time scale</li>
+<li>Fixed Blend tree compute threshold. if there is not enough data to compute the threshold you should get a warning.</li>
+<li>Fixed BlendTree that had child AnimationClip with the same name.</li>
+<li>Fixed bug where an Avatar mask used for humanoid clip import was not setup with all human transform checked.</li>
+<li>Fixed Characters stretch out during a transition interrupted by another transition</li>
+<li>Fixed computation of Homogenous Speed in BlendTree with clips that have no speed</li>
+<li>Fixed dependency of sprites in AnimationClip, sprites are missing when the game object with sprite Animation is loaded from Assetbundle.</li>
+<li>Fixed drag of AnimationClip on GameObjet that has an AnimatorController.</li>
+<li>Fixed evaluation of Curves with only one key.</li>
+<li>Fixed Event evaluation when mirroring states.</li>
+<li>Fixed feet pivot weight blending. Feet pivot weight was affected by blended clips even when their weights were very small</li>
+<li>Fixed Humanoid going to relax pose on transition to state with no clip on 2nd sync layer</li>
+<li>Fixed Humanoid rig playing animations differently than generic rig.</li>
+<li>Fixed layer switching performance issue.</li>
+<li>Fixed linear scale blending for additive layers.</li>
+<li>Fixed multiple AnimationEvents at time 0 that were only firing the first AnimationEvent.</li>
+<li>Fixed "Not Initialized" displayed on an Animator with valid Controller.</li>
+<li>Fixed OnStateMachineEnter and OnStateMachineExit callbacks not being called.</li>
+<li>Fixed packed NPOT sprite textures</li>
+<li>Fixed Rect Transform z component not being animated</li>
+<li>Fixed root motion still moving even if Root Transform Position(XZ) is baked.</li>
+<li>Fixed several issues with Animation Events (event not fired, fired twice).</li>
+<li>Fixed StateMachineEnter/Exit not being called on multi-layer component</li>
+<li>Fixed transition error when a state had a speed of zero.</li>
+<li>Fixed Transition previewer for very short clips.</li>
+<li>Fixed UnloadNonDirtyStreams to correctly handle stream with destroyed objects.</li>
+<li>Fixed unsynced AnimatorStateInfo and AnimatorClipInfo.</li>
+<li>Generic Root Motion will be used for an additional Layer when no Mask is specified.</li>
+<li>Prevented deletion of root blendTree in the BlendTree graph.</li>
+<li>Prevented adding legacy animation to Mecanim.</li>
+<li>Prevented creation of cycles in Blend Trees.</li>
+<li>Propagated Animator invalidation on modification to AnimatorOverrideController to fix a crash when changing speed.</li>
+<li>Rebakes euler angle curves on sample rate change.</li>
+<li>Fixed Root Motion failing for very short clips.</li>
+</ul>
+
+<h4>Asset Bundles</h4>
+
+<ul>
+<li>Asset Bundle Export performance increase.</li>
+<li>AssetBundle.LoadAll***() now only return the game object without the first component.</li>
+<li>Fixed crash if user passes "./" as output path when building AssetBundles.</li>
+<li>Fixed possible crash while loading multiple AssetBundles simultaneously.</li>
+<li>Fixed the typo in .manifest file</li>
+<li>Remove duplicate objects when building with BuildAssetBundleExplicitAssetNames(). Also output more meaningful log information for assetBundle object.</li>
+</ul>
+
+<h4>Asset Import</h4>
+
+<ul>
+<li>Added ability to retry operation on write error when importing assets.</li>
+<li>Added warning messages when paths to assets are invalid</li>
+<li>Append required .fontsettings extension if needed in GenerateEditableFont</li>
+<li>Check texture format that can be assigned the TextureImporter</li>
+<li>Fixed AssetDatabase.ImportPackage fail when path to package has platform path separators.</li>
+<li>Fixed crash when included blend shapes and needed to be split because of size.</li>
+<li>Fixed crash when upgrading metadata files</li>
+<li>Fixed import of empty .txt files.</li>
+<li>Fixed import of Maya files with set driven keys.</li>
+<li>Fixed problem when importing models with no diffuse color specified.</li>
+<li>Fixed problems with animation importing incorrectly due to mirror/negative scale.</li>
+<li>Support the manifest file in text importer.</li>
+</ul>
+
+<h4>Asset Management</h4>
+
+<ul>
+<li>Added warning when using AssetDatabase.Load* function with an absolute path</li>
+<li>Fix assets unload during load level operation</li>
+<li>Fixed crash while loading scene Unity with mecanim animation and skinnedmesh filter.</li>
+<li>Fixed invalid cache state after cancelling WWW download.</li>
+<li>Fix the "input objects must be of exact same type" error message</li>
+<li>Prefabs: Fix crash if using DestroyImmediate() on prefab instance objects during prefab instantiation.</li>
+<li>Prefabs: Fix crash when accessing physics component properties during OnValidate(). This includes a general change in behavior for OnValidate() calls during prefab instantiation and undos such that it follows the same order as when loading from disk.</li>
+<li>Prefabs including monobehaviours with missing scripts should not display a warning if the monobehaviour has been deleted on the prefab instance.</li>
+<li>Resources.Load will now correctly return NULL when there is no Object of the desired type with that name (instead of returning an object with a different type if it exists)</li>
+<li>Serialization: Added ability to do automatic fix of invalid references to scripts in scene file (to valid registered scripts)</li>
+<li>Serialization: Added error message with file information if SerializedFile header is corrupted</li>
+<li>Serialization: Fixed bug that caused build corruption when serializing volatile fields.</li>
+<li>Serialization: Fixed bug that caused build corruption when serializing classes for which a generic version exists</li>
+<li>Serialization: Fixed the error message when removing an object in a custom inspector</li>
+<li>Serialization: Fixed windows Layout loading if script for previously opened custom window is absent</li>
+</ul>
+
+<h4>Audio</h4>
+
+<ul>
+<li>AudioClip.SetData no longer prints out error messages when writing data at a position that will cause wrapping.</li>
+<li>Calling AudioClip.SetData causes a crash fixed</li>
+<li>Fixed a bug where the audio system stopped working when a game object had an AudioSource, an AudioListener and a custom audio filter attached. The system now outputs a warning as the custom audio filter can only be assigned to one Audio component at a time.</li>
+<li>Fixed Crash when exposing a parameter of an effect that was added to a group</li>
+<li>Fixed for regression where component effects are on the AudioListener cause a crash</li>
+<li>Fix importing Tracker files so that by default, they are set to load Compressed In Memory. This is also now configurable.</li>
+<li>Fixed leaking audio resources when having AudioSources within a Prefab</li>
+<li>Prevent data-race condition in AudioManager</li>
+<li>Prologic DTS can now be selected as an audio output.</li>
+<li>Remove exposed parameters correctly when deleting and effect that has exposed parameters in it.</li>
+<li>Stability fix for custom audio filters placed on the AudioListener.</li>
+<li>When audio clip was set to Load In Background project crashed on Android immediately</li>
+</ul>
+
+<h4>Blackberry</h4>
+
+<ul>
+<li>Event.shift and Event.alt now work as expected.</li>
+</ul>
+
+<h4>Build Pipeline</h4>
+
+<ul>
+<li>Don't include inactive EditorOnly objects in builds.</li>
+</ul>
+
+<h4>Cache Server</h4>
+
+<ul>
+<li>Fix "CacheServer Asset validation failed" error messages while Unity is importing project.</li>
+<li>Fix editor crash when enabling the Cache Server in preferences with empty address.</li>
+</ul>
+
+<h4>Core</h4>
+
+<ul>
+<li>Fix crash when initializing Light from prefab object during scene loading.</li>
+<li>Fix the bug that loading from cache returns false.</li>
+<li>Fixed data race in memory allocators.</li>
+<li>Runtime: Error message is now shown if you try to add a component of invalid type</li>
+<li>Runtime: Fix Time.realtimeSinceStartup being wrong during Awake calls in initial level load.</li>
+<li>Runtime: GameObject.FindObject nolonger stops and returns null if first match is an inactive game object.</li>
+</ul>
+
+<h4>Debugging</h4>
+
+<ul>
+<li>Allow evaluation of methods with string literal parameters.</li>
+<li>Don't interrupt user waits (e.g. ManualResetEvent).</li>
+<li>Fix setting breakpoints in generic method implementations.</li>
+<li>Fix some instances of debugger freezing or hanging.</li>
+</ul>
+
+<h4>Editor</h4>
+
+<ul>
+<li>Added "-force-gl-ref" cmd-line option support for the OSX Editor.</li>
+<li>Added link to editor settings when sprite packer is disabled</li>
+<li>Animation Window refreshed when tabbed into</li>
+<li>AnimationState.time is updated when scrubbing animation in the AnimationWindow.</li>
+<li>Audio preview is refreshed after import settings are changed</li>
+<li>CanvasGroup methods were not getting registered in the UI module, resulting in MissingMethodExceptions</li>
+<li>Changing framerate in animation window now repositions animation events correctly</li>
+<li>Cloth inspector to support multi-editing</li>
+<li>Color picker code now has correct color space conversion and is now working accurately.</li>
+<li>Confined cursor mode doesn't confine cursor to last active editor pane</li>
+<li>Create a new project upgrade warning system that does not depend on serialized files or version control.</li>
+<li>Deleting an asset does not make deleted objects from other assets appear again.</li>
+<li>Disallow empty names for sprites</li>
+<li>Don't ignore assets whose names contain "StreamingAssets"</li>
+<li>Don't immediately hide popup windows when there are unity windows on secondary screen on OSX</li>
+<li>Don't let user rename GameObjects with HideFlags.NotEditable set</li>
+<li>Drag-and-drop does not accept simple Renderers as a valid target for assigning skybox material.</li>
+<li>Editor no longer freezes when scene view camera is really far from origin</li>
+<li>Empty animation window no longer increases CPU usage</li>
+<li>Ensure correct waking order of components when duplicating a GameObject.</li>
+<li>Ensure screen width and height in player settings is at least 1</li>
+<li>Expose static methods from context objects to JS.</li>
+<li>Fixed an occasional crash when reimporting shaders.</li>
+<li>Fixed assetBundle search filter doesn't work correctly.</li>
+<li>Fixed assert when loading scene containing reference to one of its objects that no longer exist.</li>
+<li>Fixed asserts when displaying multiple objects in inspector preview.</li>
+<li>Fix asset when using hideFlags to make objects persist after exiting play mode.</li>
+<li>Fixed audio source priority slider showing "–" when editing multiple objects</li>
+<li>Fixed AudioSourceInspector.cs throwing null refs on UndoRedoPerformed</li>
+<li>Fixed broken inspector setup with multiple inspectors when shaders are using custom editors</li>
+<li>Fixed changing loaded level index before OnApplicationQuit message when exiting play mode.</li>
+<li>Fixed clipping of multi-line text in text fields.</li>
+<li>Fixed confirmation dialog "Losing Prefabs" shown twice when trying to delete child object</li>
+<li>Fixed console errors when inspecting player settings in debug view.</li>
+<li>Fixed crash occasionally happens when you create a prefab. Related to the object sorting in the prefab.</li>
+<li>Fixed crash when executing a menu item from a static constructor.</li>
+<li>Fixed crash when maximizing game view on OSX.</li>
+<li>Fixed crash when removing components from a prefab, but prefab instances would have depending components.</li>
+<li>Fixed crash when script name is longer than 32 characters.</li>
+<li>Fixed crash with corrupted scene when having invalid references in the list of transform children.</li>
+<li>Fixed custom cursors to properly update in OS X editor.</li>
+<li>Fixed custom PropertyDrawer being called with wrong SerializedProperty when property is inside a nested class.</li>
+<li>Fixed double firing of playmodeStateChanged</li>
+<li>Fixed Edge Collider 2D sometimes not showing handles</li>
+<li>Fixed editor errors when undoing the insertion of a new LOD level in LOD group.</li>
+<li>Fixed error spam: "GUI Error: You are pushing more GUIClips than you are popping .." when setting cam.targetTexture = null in OnPostRender.</li>
+<li>Fixed exceptions happening when a read-only plugin is used.</li>
+<li>Fixed font corruption after asset import.</li>
+<li>Fixed freeze during Editor startup when using input devices with large number of emulated buttons (some wireless mouses)Fixed GameObject not selectable by label icon</li>
+<li>Fixed freeze on floating-point exception</li>
+<li>Fixed Import Package window being broken due to illegal characters in path</li>
+<li>Fixed incorrect fade group animation in player settings</li>
+<li>Fixed inspector rendering when a script changes RenderTexture.active.</li>
+<li>Fixed isPlayingOrWillChangePlaymode to work as expected.</li>
+<li>Fixed keyboard shortcuts (home/end/page up/page down) in object selector</li>
+<li>Fixed Mac Editor Projects with hidden folders inside Assets are usable again</li>
+<li>Fixed many texture/mesh related error messages to ping the source object that caused it.</li>
+<li>Fixed material inspector could collapse its controls by clicking on the header. Controls are now always visible.</li>
+<li>Fixed memory leak when calling 'Object.Destroy' and returning to edit mode.</li>
+<li>Fixed meshes getting lost if they only lived in the scene and only were referenced by a mesh collider.</li>
+<li>Fixed missing header for state machine behaviours</li>
+<li>Fixed navigation keyboard shortcuts in object selector</li>
+<li>Fixed NullReferenceException from uninitialized icon if CurveEditor is shown before Inspector</li>
+<li>Fixed NullReferenceException when Tools.viewTool is queried outside OnGUI</li>
+<li>Fixed numeric accuracy of transform coordinates when copy/pasting or duplicating objects.</li>
+<li>Fixed occasional crash/hang on exit.</li>
+<li>Fixed page down in object selector on Windows</li>
+<li>Fixed position of GUI elements in inspector when using PropertyDrawers.</li>
+<li>Fixed possible corruption of editor window rendering in OS X Editor.</li>
+<li>Fixed possible crash when placing prefabs with child objects.</li>
+<li>Fixed projectsettings.asset serialization error</li>
+<li>Fixed property list in Animation Controller editor allowing to drag invalid element from bottom of list.</li>
+<li>Fixed race condition in memory allocation system.</li>
+<li>Fixed rename overlay is not removed when undoing</li>
+<li>Fixed Skybox components not taken into account in camera preview popup</li>
+<li>Fixed so TextMesh text field uses TextArea instead of single text field</li>
+<li>Fixed Sprite Editor crash when docked to top of the layout</li>
+<li>Fixed stack traces not being generated correctly.</li>
+<li>Fixed text corruption in TextMesh components when reimporting fonts.</li>
+<li>Fixed that text fields in an unfocused window could break another windows textfield if busy repainting</li>
+<li>Fixed tooltips not always showing up when they should.</li>
+<li>Fixed typing into the search field between transition animations for Add Component menu</li>
+<li>Fixed unparenting when deleting object in Editor once OnDestroy is called</li>
+<li>Fixed updating color fields in material inspector to work when warnings are displayed.</li>
+<li>Fixed user cannot close a custom editor window from a previous project.</li>
+<li>Fixed utility windows always loading last width &amp; height if larger than requested width &amp; height.</li>
+<li>Fixed when mouse was not processed in the Editor in play mode after building Android or iOS.</li>
+<li>Fixed Windows Editor not showing progress over taskbar icon, when doing initial project import.</li>
+<li>Fixed Windows Editor unresponsive to user's input in some tablets.</li>
+<li>Folders named "something.unity" will be listed as folders and not scenes in a search</li>
+<li>FPS controls now only affects the active scene view</li>
+<li>I18n: Issues with Asian Input Method Editors inside the Windows version of the Editor.</li>
+<li>I18n: Issues importing assets when their path/asset/component names contain Asian characters.</li>
+<li>I18n: Issues storing/retrieving strings from PlayerPrefs when PC is set to Asian locale.</li>
+<li>I18n: Editor crashes on start-up if computer / user / project name contains Asian characters.</li>
+<li>IMGUI: Fixed crash when using GUI.Window recursively.</li>
+<li>IMGUI: Fixed line spacing when multiple sizes are used in text markup</li>
+<li>IMGUI: Fixed renaming of existing controls using GUI.SetNextControlName.</li>
+<li>IMGUI: ContextClick events are now never received by in-game GUIs (as documented, the event is editor only).</li>
+<li>Initialize Scene View 2D mode correctly when upgrading from version</li>
+<li>Input.mousePosition now returns correct position when called in Awake and Start in the editor</li>
+<li>Make key combinations ignore Caps Lock key.</li>
+<li>No more errors after applying new preset in the curve editor</li>
+<li>Object Picker is now able to show a hierarchy of sub assets (used for AudioMixerGroups for now).</li>
+<li>Opened scene will no longer be accidentally marked as modified.</li>
+<li>Opening multiple locked inspectors works</li>
+<li>OSX corner resize gizmo doesn't block input when not shown.</li>
+<li>Packages: Fix importing package with long paths on Windows</li>
+<li>Particles: Fixed particles that are out of view casting incorrect shadows.</li>
+<li>Particles: Fixed systems using Distance emission not stopping correctly.</li>
+<li>Particles: ParticleSystem will no correctly remove any of its particles and reset its emitter state when being deactivated.</li>
+<li>Prevent each script from opening in a new Visual Studio instance.</li>
+<li>Prevent MinMaxSlider getting into error state when clicking in the thumb area</li>
+<li>Prevent right clicking on controls behind preview window</li>
+<li>Reduce serialization depth limit warnings</li>
+<li>Remove unsupported OSX menu items (Start Dictation &amp; Special Characters)</li>
+<li>Removing curve in animation window doesn't remove other curves with similar name</li>
+<li>Reverting a prefab no longer fails if two added components depends on each other.</li>
+<li>Select Dependencies operation no longer breaks editor fonts</li>
+<li>Shadows working correctly when zoomed in animation preview window</li>
+<li>Show at most one error when attempting to deleting multiple components</li>
+<li>Sprite name was emptied when copy pasting position etc. values on editor</li>
+<li>Swatches in the Color Picker tool are now gamma corrected when using linear colour space.</li>
+<li>Synchronize EditorUserBuildSettings.selectedStandaloneTarget when switching build targets with SwitchActiveBuildTarget() or -buildTarget.</li>
+<li>Tooltips use current skin instead always using light skin</li>
+<li>Warn in Lighting window UI when a skybox with nonsensical shader is used</li>
+<li>Will exit play mode when switching build platform.</li>
+<li>Unity crashes while adding component to destroyed object.</li>
+<li>Undoing changes in the Animator throws an error.</li>
+<li>Use unique sprite name when creating new sprites manually</li>
+</ul>
+
+<h4>Fonts</h4>
+
+<ul>
+<li>Fixed a bug where regenerating font textures might miss needed characters from the last frame.</li>
+<li>Fixed fallback to default font for characters missing in customs fonts on platforms without OS font access.</li>
+</ul>
+
+<h4>Graphics</h4>
+
+<ul>
+<li>Camera.RenderToCubemap will correctly work with AA render texture.</li>
+<li>D3D11: Fixed an issue which caused some objects not be rendered if shadows are enabled in the scene on feature level 9.x</li>
+<li>Deferred Lighting is disabled for oblique camera projections; falls back to forward rendering now. Before, it was just not working properly, without a proper fallback.</li>
+<li>DX11, fixed GL.Clear when we have MRTs (only first target was cleared before).</li>
+<li>Fixed HDR support for SunShafts image effect.</li>
+<li>Fixed incorrect warning about NPOT texture filtering</li>
+<li>Fixed occasional crash on creating and immediately deleting particle renderer.</li>
+<li>Fixed RenderTextureFormat.Default and DefaultHDR only working with RenderTexture.GetTemporary(), not with permanent RenderTextures.</li>
+<li>Fixed shadow caster culling for orthographic cameras.</li>
+<li>Fixed Skybox not rendering with some edge cases of supported vs. not supported shaders</li>
+<li>Fixed Texture2D.EncodeToPNG being very slow for large images. E.g. for 4096x4096 image, it's now almost 10x faster!</li>
+<li>Fixed "Tiled GPU perf. warning" in editor resulting in poor performance.</li>
+<li>Fixed warning thrown on saving scene by mark the meshes as DontSave</li>
+<li>GI: Fixed tetrahedralization issues with small floating point differences in probe positions.</li>
+<li>GLES: Fixed rendering bug that occurs when native rendering plugin calls glViewport</li>
+<li>Image Effects: Fixed some ImageEffectOpaque effects making later alpha blended geometry not render with correct Z-buffer.</li>
+<li>Make sure to never use soft particles when in orthographic camera, since depth-based fadeout does not work there.</li>
+<li>OpenGL: Detected cases on Windows when no OpenGL drivers are installed and exit properly.</li>
+<li>OpenGL: Don't force texture/shader reload when changing resolution (breaks baked lighting, etc.)</li>
+<li>OpenGL: Fixed GLSL fragment shader incorrectly tagged as a Fixed Function pipeline shader.</li>
+<li>OpenGL: Fixed RenderTextures on Windows 64-bit standalone using OpenGL.</li>
+<li>OpenGL ES: Enforce RGB normal maps even if source texture have alpha.</li>
+<li>OpenGL ES: Some performance improvements by removing redundant GL API calls.</li>
+<li>Rendering: Fix crash when closing Standalone player in DX11 render mode.</li>
+<li>Rendering: Fix memory leak when dynamic geometry chunk did not add any vertices.</li>
+<li>Rendering: Fixed crash when reading font's metadata for a font without style info.</li>
+<li>Shadows: Fixed flickering/inconsistent shadows when light culling masks cause more than one light to be "main light" in forward rendering.</li>
+<li>Shadows: Fixed shadowmaps being re-rendered when using deferred shading with some forward-shaded objects.</li>
+<li>Shadows: Fixed some cases where alpha-tested shadow caster objects were wrongly batched together, even if they used different textures.</li>
+<li>Shadows: Fixed spot light shadow bias to be more sensible. Was highly non-linear before.</li>
+<li>Tint calculation in Skybox shaders is done more properly when in Linear color space now.</li>
+</ul>
+
+<h4>iOS</h4>
+
+<ul>
+<li>Check whether an ad is loaded in ADInterstitialAd.Show()</li>
+<li>Correctly implement Marshal.Copy for arrays.</li>
+<li>Delete newlines when pasting into single line edit boxes</li>
+<li>Disable informational warnings on non-development build</li>
+<li>Don't pass touches through iOS keyboard's toolbar</li>
+<li>Don't spam the console log with GameKit stuff on release builds</li>
+<li>Fixed GetLoadedDylibs to not to include the app exe in the results</li>
+<li>Fixed Info.plist append</li>
+<li>Fixed launch screen support</li>
+<li>Fixed memory leaks related to UTF8String.</li>
+<li>Fixed project append</li>
+<li>Fixed random crash when changing orientation by 180 degrees</li>
+<li>Fixed severe visual issues when setting Screen.orientation when autorotation is disabled</li>
+<li>Fixed special character treatment in Info.plist</li>
+<li>Fixed splashscreens for landscape orientation on iOS 7 and newer</li>
+<li>Fixed visual issue in Player settings</li>
+<li>Fixed wrong frame buffer size on iPhone 6+</li>
+<li>Ignore SIGPIPE signal which is thrown by broken sockets</li>
+<li>Improved iOS device name detection.</li>
+<li>Made advertisement ID calls dynamic to avoid App Store rejections.</li>
+<li>Report size of assemblies after bytecode stripping</li>
+<li>Support multiple permission types in {Request,Has}UserAuthorization</li>
+<li>Use new remote notification API on iOS 8</li>
+<li>Use separate font metadata caches for each iOS version</li>
+<li>Workaround for iOS 8.0 GameController API crash bug</li>
+</ul>
+
+<h4>IL2CPP</h4>
+
+<ul>
+<li>Correctly handle the Duv_Un IL opcode with signed arguments to prevent an error from IL2CPP like this: "Unexpected types used with Div_Un opcode. Types are Int32 and Int32"</li>
+<li>Correctly throw a managed exception when an array is created with a negative size.</li>
+<li>Handle custom attributes on events correctly.</li>
+<li>UnityEngine.dll methods that are targets of UI events are no longer incorrectly stripped</li>
+<li>Write proper include directives for all fields of marshaled structures or classes.</li>
+</ul>
+
+<h4>Installers</h4>
+
+<ul>
+<li>Windows: No longer specifying the "Editor" subfolder of path when installing Unity.</li>
+<li>Windows: Uninstall MonoDevelop when uninstalling Unity.</li>
+</ul>
+
+<h4>Linux</h4>
+
+<ul>
+<li>Call OnApplicationQuit callbacks for all methods of quitting the player.</li>
+<li>Constrain size of screen selector banner image.</li>
+<li>Filter aspect ratios in screen selector.</li>
+<li>Fix hotspot desynchronization with custom cursors when hiding/reshowing.</li>
+<li>Fixed spotlight shadow filtering on Linux - now uses hardware PCF just like Win/Mac.</li>
+<li>Improve system language detection.</li>
+</ul>
+
+<h4>MonoDevelop</h4>
+
+<ul>
+<li>Fixed exception when resolving symbolic breakpoints.</li>
+<li>Fixed issue with Cmd+A (Select All) keyboard shortcut not working correctly on OSX after using the main menu.</li>
+<li>Fixed “jumping cursor” issue.</li>
+<li>Fixed opening the same file twice in MonoDevelop.</li>
+<li>Updated versions of Mono/GTK used, fixing scrolling issues with some mice.</li>
+</ul>
+
+<h4>Networking</h4>
+
+<ul>
+<li>WWW on local file system can accept non-ASCII filenames on Windows.</li>
+</ul>
+
+<h4>OS X</h4>
+
+<ul>
+<li>Mac OS X Standalone: Fix crash changing if resolution in batch mode.</li>
+<li>Mac OS X Standalone: IME Input now works in the 64-bit Standalone player.</li>
+</ul>
+
+<h4>Physics</h4>
+
+<ul>
+<li>Cloth: fixed cloth exploding for any non-trivial model imported from FBX.</li>
+<li>Cloth: fixed rotation being applied twice</li>
+<li>Cloth: improved simulation quality, fixed a bug where cloth simulation would be dramatically affected by fps</li>
+<li>Collider.Raycast will now not hit disabled colliders</li>
+<li>ConstantForce2D torque should be in degrees not radians.</li>
+<li>Prevented negative values being set for CharacterController.stepOffset.</li>
+<li>Enabled flag on CharacterController now correctly keeps its state.</li>
+<li>Fixed cloth vertices renderer (was rendering vertices rotated in editor mode)</li>
+<li>Fixed crash when applying force to inactive Rigidbody</li>
+<li>Fixed crash when doing a Raycast() on a collider that failed initialization</li>
+<li>Fixed explosion force when position is inside collider's world AABB.</li>
+<li>Fixed HingeJoint spring's targetPosition range that was incorrect.</li>
+<li>Fixed Physics.IgnoreCollision</li>
+<li>Fixed regression where property changes in the editor did not update the 2D collider in the scene view.</li>
+<li>Fixed rotation mode combo for ConfigurableJoint.</li>
+<li>Fixed terrain colliders returning sharedMaterial == null</li>
+<li>Fixed that TransformChanged events could re-create the Cloth component, even though the component was already cleaned up.</li>
+<li>Implement Undo for Cloth editor.</li>
+<li>Make sure explicit inertia tensor is not reset when modifying colliders</li>
+<li>Send OnControllerColliderHit on collisions with another CharacterController reliably.</li>
+<li>Set default physic material properties to match values in PhysX SDK</li>
+<li>Support sending OnTriggerExit when collider is deactivated or destroyed</li>
+<li>WheelCollider: fixed a bug where attachedRigidbody would be equal to null</li>
+<li>WheelCollider: fixed a bug where editor would crash soon if you use sliders to tune WheelCollider properties.</li>
+<li>WheelCollider: fixed wrong behaviour after changing mass of parent rigidbody</li>
+</ul>
+
+<h4>Scripting</h4>
+
+<ul>
+<li>Ensure all children receive broadcast messages even if the transform hierarchy changes during a callback from the message.</li>
+<li>Fixed adding EllipsoidParticleEmitter / MeshParticleEmitter components</li>
+<li>Fixed crash if a MonoBehaviour was created in MonoBehaviour OnDisable.</li>
+<li>Fixed crash in callback</li>
+<li>Fixed crash when calling DestroyImmediate in MonoBehaviour constructor</li>
+<li>Fixed crash when calling user log callback from a non-main thread</li>
+<li>Fixed exceptions being thrown when calling Object.FindObjectsOfType().</li>
+<li>Fixed ExclusiveAddressUse socket flag on windows</li>
+<li>Fixed for some debugger freezes / crashes while debugging on OS X and Windows.</li>
+<li>Fixed internal compiler error when script defines are duplicated</li>
+<li>Fixed process querying on OSX</li>
+<li>Fixed some cases when using a class name that collides with an internal class name in a different namespace (e.g. BuildSettings)</li>
+<li>Fixed StackOverflowException handling on 64-bit Windows</li>
+<li>Fixed webplayer not auto-starting as requested when calling BuildPlayer with Windows-style paths.</li>
+<li>Invoking DllImport from various threads, should be thread-safe now.</li>
+</ul>
+
+<h4>Shaders</h4>
+
+<ul>
+<li>Better error message when a shader is using properties that clash with built-in Unity global properties.</li>
+<li>Fixed _CameraToWorld and _WorldToCamera matrices being wrong while rendering into a cubemap, or when custom camera.worldToCameraMatrix is set.</li>
+<li>Fixed DirectX 11 shader compilation when Unity is installed in a path with non-ascii characters.</li>
+<li>Fixed hlsl-to-glsl translation problem with expressions that initialize a matrix with a scalar (float3x3 m = 0).</li>
+<li>Fixed issue with generated projects (.csproj) sometimes not having a reference to UnityEngine.UI.dll</li>
+<li>Fixed legacy Diffuse Detail shader when in linear color space.</li>
+<li>Fixed loading of some GLSLPROGRAM shaders with preprocessor macros on OpenGL ES</li>
+<li>Fixed "Maximum number of shader keywords" error in editor resulting in really bad build-time performance.</li>
+<li>Fixed some cases where surface shader compiler was producing error about "too many texture interpolators" with no further details.</li>
+<li>Fixed surface shader compilation bug where keywords like "nolightmap novertexlights" were not properly excluding all needed variants.</li>
+<li>Fixed surface shader compilation bug with some combinations of #pragma multi_compile / shader_feature.</li>
+<li>Fixed unnecessary truncation of float constants on GLSL platforms.</li>
+</ul>
+
+<h4>Substance</h4>
+
+<ul>
+<li>Emissive outputs assigned to _EmissionMap shader slots now correctly trigger the emissive effect when the material is loaded.</li>
+<li>Fix case where the editor-side Substance cache data would not be reused when it should.</li>
+<li>Fix crash in standalone builds when loading a SBSAR with both BakeAndDiscard instances and non-baked instances.</li>
+<li>Fix crash when inspecting baked ProceduralTextures.</li>
+<li>Fix texture corruption issue in standalone builds where modifying an input value and calling RebuildTextures() on a ProceduralMaterial with image inputs and whose outputs have been read from cache would result in black textures being generated.</li>
+<li>Grayscale image inputs are now supported.</li>
+<li>ProceduralMaterials only referred to by their outputs and not by their attached material now load properly.</li>
+</ul>
+
+<h4>Terrain</h4>
+
+<ul>
+<li>Custom material's shader keywords now will be correctly applied.</li>
+<li>Doing vertex snapping for terrain objects no longer crashes the editor.</li>
+<li>Fixed assertion when loading a scene with TerrainData objects embedded.</li>
+<li>Fixed broken tree colliders.</li>
+<li>Fixed corrupted rendering when being edited.</li>
+<li>Fixed crash when importing detail meshes with float color channel.</li>
+<li>Fixed "m_UniqueThreadAllocator-&gt;GetAllocatedMemorySize() == 0" error after "Mass Place Trees".</li>
+<li>Fixed some memory leaks.</li>
+<li>Tree imposters lighting is now matched with lighting on mesh trees.</li>
+</ul>
+
+<h4>Version Control</h4>
+
+<ul>
+<li>Add missing icon for incoming changesets.</li>
+<li>Auto connect when connection is dropped.</li>
+<li>Correct local/remote args for diff tool.</li>
+<li>Do not print a warning when saving scene and file is not opened for edit unless necessary.</li>
+<li>Fixed case handling on Windows when downloading files.</li>
+<li>Fixed editor crash on loading terrain with corrupted detail layers.</li>
+<li>Make it possible to retry a hanging connect while connecting.</li>
+</ul>
+
+<h4>Web Player</h4>
+
+<ul>
+<li>Correctly verify generic reference type constraint for generic parameter with type constraint which is a reference type.</li>
+</ul>
+
+<h4>Windows Player</h4>
+
+<ul>
+<li>Deployment Management: Simpler "Force Single Instance" error message on Windows</li>
+<li>Deployment Management: Fix StandalonePlayer launched from UNC path</li>
+<li>DirectX 11: Mip mapped cubemaps now work correctly on feature level 9.x. This fixes the smoothness setting in the standard shader.</li>
+<li>DirectX 11: Unity will now correctly detect if hardware doesn't support a particular cubemap size, and will try to skip higher mip maps instead of failing to upload the cubemap at all.</li>
+<li>Fixed fullscreen player sometimes disappearing behind other windows on startup.</li>
+<li>Return the correct value from PlayerPrefs::SetString</li>
+<li>Windows 10 reports SystemInfo.operatingSystem string properly.</li>
+</ul>
+
+<h4>Windows Phone</h4>
+
+<ul>
+<li>Windows Phone 8.1: Enabling location capability no longer causes a crash.</li>
+<li>Windows Phone 8: Tap count is now correctly calculated when using multiple fingers.</li>
+<li>Windows Phone/Windows Store Apps: Generic list of structs is now properly serialized.</li>
+<li>Windows Store Apps/Windows Phone: added support for animating script variables that are members of structs.</li>
+<li>Windows Store Apps/Windows Phone: fixed sprite animation on GUI elements</li>
+<li>Windows Phone 8.1: Enabling "Human Interface Device" capability in player settings no longer makes Unity generate invalid application certificate.</li>
+<li>Windows Phone 8.1: Fixed Handheld.Vibrate().</li>
+<li>Windows Phone: Fixed Handheld.PlayFullscreenMovie().</li>
+<li>Windows Phone 8.0: Fixed GUI text rotation when device is in landscape orientation and rendering to a render texture.</li>
+<li>Windows Phone 8.0: Fixed image effects when device is in landscape orientation.</li>
+<li>Windows Phone 8.0: Trying to access webcam without appropriate capabilities in application manifest will no longer constantly throw exceptions.</li>
+<li>Windows Phone 8.0: Fixed Unity generating invalid references in Visual Studio project, debug configuration.</li>
+<li>Windows Phone: Texture2D.ReadPixels now works correctly in landscape modes.</li>
+<li>Windows Phone: fix crash on application exit when location is enabled</li>
+<li>Windows Store/Phone: Cloth.coefficients now work correctly</li>
+<li>Windows Store Apps/Windows Phone: You can now render to cubemaps on DX11 9.x feature levels.</li>
+<li>Windows Store/Phone: Depth render textures are not really supported on DX11 9.x feature levels, but previously they were wrongly claimed to be supported.</li>
+<li>Windows Phone/Windows Store Apps: Gyroscope.gravity returns same values as other platforms. It used to be inverted before.</li>
+<li>Windows Phone 8: Camera.ViewportToWorldPoint returns correct value in orthographic view.</li>
+<li>Windows Store Apps/Windows Phone: fix taking detailed memory sample in profiler</li>
+<li>Windows Phone 8: setting keyboard text just after creating it will not be in vain anymore.</li>
+<li>Windows Store Apps / WIndows Phone 8: Matrix4x4 will be correctly serialized</li>
+<li>Windows Store Apps/Windows Phone: fix profiler not working after reopening the editor</li>
+<li>Windows Store Apps/Windows Phone: better error messages when AssemblyConverter fails to resolve type.</li>
+<li>Windows Store Apps/Windows Phone: fix AssemblyConverter failing on struct from unprocessed or system assemblies</li>
+</ul>
+
+<h4>Windows Store Apps</h4>
+
+<ul>
+<li>Added missing defines UNITY_WSA, UNITY_WSA_8_0/UNITY_WSA_8_1 in generated Assembly-CSharp-* projects.</li>
+<li>Fixed building Universal apps in batch mode</li>
+<li>Fixed crash when WebcamTexture is destroyed</li>
+<li>Fixed errors in the editor when player settings are open and upgrading scripts or switching platform</li>
+<li>Fixed high CPU when Unity is paused</li>
+<li>Fixed issue when App bar couldn't be open with mouse right-click while Independent Input source is enabled.</li>
+<li>Fixed mouse callbacks</li>
+<li>Fixed native plugin not included in generated Visual Studio solution</li>
+<li>Fixed serialization error when serializing object derived from System.Object and Compilation Overrides are set to .NET Core.</li>
+<li>Fixed SerializationWeaver failure when scripts reference classes in plugins</li>
+<li>Fixed UnityScript breaking exported solution with SDK 8.0</li>
+<li>Native plugins now properly added to generated solution</li>
+<li>Unity now regenerate test certificate, if it was deleted, rather than failing to build project.</li>
+<li>runInBackground checkbox will now warn about wack failure that it might cause.</li>
+<li>UNITY_WINRT_8_1 and UNITY_WINRT_8_0 will be correctly defined now.</li>
+<li>Unity will now store certificate path as a relative path, so when project is moved to another PC, it will be still found.</li>
+<li>When building player files are now copied directly to destination directory bypassing staging area, reduces project size when submitting a bug</li>
+<li>You can now use HashAlgorithm &amp; MD5CryptoServiceProviders classes in C# files compiled against .NET Core.</li>
+</ul>
+
+<h3>Known Issues</h3>
+
+<ul>
+<li>New Substance features introduced by Substance Designer 5.0 are not yet supported inside Unity.</li>
+<li>On Windows 7, system dialog (File Open/File save) and homescreen/project launcher window, the editor in the background doesn't redraw properly when the window is dragged around</li>
+<li>WebGL: If you set up a UI Event to trigger a method on a class which is not a MonoBehaviour, and that method is not invoked elsewhere from your code, then the method may be stripped, and the event will fail. The workaround is to explicitly call the method in some place in your code to make sure it won't be stripped.</li>
+<li>Windows Player: -parentHWND doesn't work (will return in patch release).</li>
+<li>Enabling GPU panel in profiler, and stopping or closing the profiler, will result in the editor almost stalling while printing many error messages. A workaround is to close the GPU panel before closing or stopping the profiler. Will be fixed in patch release</li>
+<li>Animation :Copy/Pasting States or StateMachines will not copy it’s StateMachineBehaviours they will be shared between the copies. Will be fixed in patch release.</li>
+<li>Animation: Panning with alt-click does not work in the BlendTree graph. Will be fixed in patch release.</li>
+</ul>
+

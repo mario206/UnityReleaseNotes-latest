@@ -1,0 +1,1571 @@
+<h3>Improvements</h3>
+
+<ul>
+<li>macOS/iOS/tvOS: Allow developers to use Xcode's manual signing paradigm by specifying a provisioning profile in Player Settings.</li>
+<li>VR: Updated Oculus to version 1.11.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>Android: Fixed a crash when doing simultaneous SceneManager.LoadSceneAsync and Resources.Load. (782183)</li>
+<li>Android: Fixed an incorrect behaviour with Application.persistentDataPath. (854214)</li>
+<li>Android: Fixed an issue whereby the projects without audio stopping the external audio sources. (807983)</li>
+<li>Android: Fixed case of audio stutter when launching Android player from a notification on the lockscreen. (818174)</li>
+<li>Android: Play audio from background applications at the original volume when it is not muted.</li>
+<li>Asset Bundles: Fixed asset bundle load progress reported by AssetBundleLoadFromAsyncOperation. (880965)</li>
+<li>Asset Bundles: Fixed the assetBundle property of AssetBundleCreateRequest so that it stalls instead of returning null when the bundle is not yet ready. (824009)</li>
+<li>Asset Pipeline: Fixed an issue where asset and timestamp maps could get out of sync. (668043,&nbsp;837519)</li>
+<li>Audio: Fixed an issue which prevented streaming audio loading on 32-bit Apple devices which were upgraded to iOS 10. (832578)</li>
+<li>Build Pipeline: VR Splash Screen texture will no longer be included when building a project for a non-VR platform. (853979)</li>
+<li>Build player: Reverted the change, which saved relative paths for build target but introduced issues for targets that needed to browse for folders instead of files (webGL, etc). (829898)</li>
+<li>Cache Server: Batch builds do not fail if the Cache Server is unreachable. (840009)</li>
+<li>Cache Server: Fix for Cache Server Preferences where it would sometimes use the wrong server address when connecting. (775982)</li>
+<li>Cache Server: Paths passed to the cache server may now include spaces in OSX (enclose these paths with double-quotes). (780150)</li>
+<li>Cache Server: Properly implemented 'Last Resource Used' caching of files. (782662)</li>
+<li>Core: Fixed an issue which was causing hangs in the job system when running on certain platforms with a low number of cores e.g. older Windows Phones, UWP dual core machines. (791434)</li>
+<li>Editor: Fixed the logType passed to LogCallback in the event of an unhandled exception. (814160)</li>
+<li>Editor: Tweaked the output of the generated Visual Studio solution file to better match Visual Studio standard format to fix problems opening Unity generated projects with Rider GUI. (833866)</li>
+<li>Graphics: D3D9- Internal resolves no longer result in a drawn pixel such as a single white pixel when using deferred mode. (728324)</li>
+<li>Graphics: Fixed a crash that occurred when loading models from AssetBundles with Tangents set to Calculate Legacy. (865666)</li>
+<li>Graphics: Fixed a crash when deleting a Shader that is used by some Materials in the scene. (851359)</li>
+<li>Graphics: Fixed a crash when switching scenes whilst reflection probes are updating. (832595)</li>
+<li>Graphics: Fixed memory leak when instantiating materials (e.g. via renderer.material). (851689)</li>
+<li>Graphics: Fixed potential lock when in fullscreen exclusive mode and minimising/maximising screen. (837783)</li>
+<li>Graphics: Fixed selection of objects in Scene View if the scene contains reflective water. (769758)</li>
+<li>Graphics: Fixed the issue of Lighting preview windows not rendering correctly on Mac's with retina displays. (836815)</li>
+<li>IL2CPP: A call to GetCurrentMethod in a generic method should return the generic method definition, not the inflated generic instance method. (840596)</li>
+<li>IL2CPP: Fixed a crash that could occur in the player when a virtual method was called on a value type and that value type implemented an interface which had an overload of that virtual method. (849701)</li>
+<li>IL2CPP: Fixed stacktraces on iOS when Link Time Optimization (LTO) was enabled in the build. (845666)</li>
+<li>IL2CPP: Implemented the array SetValue method for arrays of nullable types. (849072)</li>
+<li>IL2CPP: Prevented a compiler error in generated C++ code when calling Interlocked.CompareExchange from some managed code. (847838)</li>
+<li>IL2CPP: Prevented a stack overflow exception in the player at run time when an infinitely nested generic method is used. (845174)</li>
+<li>IL2CPP: Return an empty array from GetGenericArguments when it is called on a MethodInfo object from a non-generic method. Previously the runtime incorrectly threw an assert in this case. (838259)</li>
+<li>iOS: Added Taiwanese language support. (853532)</li>
+<li>iOS: Fixed an issue where the keyboard could lose focus when rotating the device. (814493)</li>
+<li>iOS: Fixed background applications sound muting after running unity application. (828762)</li>
+<li>iOS: Fixed several crashes with regards to WWW and WebRequest. (852363, 814365, 823587)</li>
+<li>iOS: Fixes language support to differentiate between traditional and simplified Chinese. (677623)</li>
+<li>Mac Editor: Fixed a crash when using Build and Run for iOS projects. (836165)</li>
+<li>Mac Editor: Fixed editor hanging if app was already running in Xcode 7.x when using Build and Run. (843181)</li>
+<li>Mono: Prevent GetHostEntry from throwing a SocketException on Windows when the machine is not connected to any network. (840534)</li>
+<li>Networking: Skip proxy check when using the "file://" protocol.</li>
+<li>Prefabs: Fixed an issue where a prefab instance could be incorrectly marked inactive when first loading a scene. (801761)</li>
+<li>Scripting: Fixed MonoDevelop build errors when building UnityScript and Boo projects. (850350)</li>
+<li>Shadows: Fixed a memory leak and assert when shadows are cast from lights with specific properties and in a specific scene setup. (764734)</li>
+<li>UI: Fixed Sprite Packer not packing sprites with ETC1 when compressing sprites for android. (845448)</li>
+<li>UI: Fixed threading problem when computing bounds which could lead to an infinite loop in the UI system. (846096)</li>
+<li>UI: Fixed Transparency not being applied to UI Elements if ETC1 compression is used combined with having specified a Packing Tag. (721071)</li>
+<li>WebGL: Fixed crash when user writes a file using custom ArrayBuffer. (847853)</li>
+<li>WebPlayer: Fixed compression settings for WebPlayer when building from command line. (813101)</li>
+<li>Windows Store Apps: Fixed Unity C# projects when there was dependency among them. (855881)</li>
+<li>Windows Store: Fixed a crash in multi scene system caused by internal managers being garbage collected. (821570)</li>
+<li>Windows Store: Fixed a rare hang when alt tabbing during level load. (856362)</li>
+</ul>
+
+<h3>New Fix in 5.3.8f2</h3>
+
+<ul>
+<li>WebPlayer: Make sure that IME is enabled only when focused on a text field on Windows (891264)</li>
+</ul>
+
+<p>Revision: 0c7e33ff9c0e</p>
+
+<p>Note that this is an updated version of 5.3.8f1 with revision 9886e74732cf, with only one fix for (891264)</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>DX11: Improved texture upload performance for compressed, floating point ant RGBA32 formats. (812350)</li>
+<li>IL2CPP: Added an option to link.xml files to ignore missing assemblies.</li>
+<li>iOS: Added iPhone 7 and 7+ entries to the device enum.</li>
+<li>Networking: Ping implementation for IPv6.</li>
+<li>VR: Update Oculus GearVR to version 1.7.1.</li>
+<li>VR: Update Oculus to version 1.9.</li>
+<li>Windows Store: Windows Extension SDK references will now be automatically added to Assembly-CSharp projects.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>2D: Fixed an assert message "importer.GetNPOTScale() == TextureImporter::kNPOTKeep" showing when creating sprites in Advanced mode. Creating sprites now ignores TextureImporter's non power of two settings if the texture is already a power of two. (800914, 802831)</li>
+<li>AI: Fix for regression where a pushed passive NavMeshAgent would sometimes move to its origin after navmesh carving. (830443)</li>
+<li>AI: Fixed an issue where NavMeshAgent remaining distance property would be wrong right after setting the agent destination to the same polygon. (822015)</li>
+<li>AI: Fixed an issue where NavMeshAgent would sometimes teleport right after NavMeshObstacle carving. (822362)</li>
+<li>Android: Audio - Fixed glitches on GearVR audio when Best Latency is selected. (811963)</li>
+<li>Android: Fix for crash on returning from Handheld.PlayFullScreenMovie. (811880)</li>
+<li>Android: Fixed a crash on Android when using the Frame Debugger. (824107)</li>
+<li>Android: Fixed an issue where projects without audio could stop external audio sources. (807983)</li>
+<li>Android: Fixed build time regression when using the rResources folder. (808752)</li>
+<li>Android: Fixed device screen clear bug on Vivante GC1000 GPUs andwhen using OpenGL ES 2.0GLES2 API. (754003)</li>
+<li>Animation: Deleting an Override controller that was previously set as the runtime controller no longer resets the animator state machine memory.</li>
+<li>Animation: Fixed a crash when changing AnimatorOverrideController during interrupted transition. (823410)</li>
+<li>Animation: Fixed an issue where having animations with a mixed number of bones in a controller, and having Write Defaults to false would throw errors. (769505)</li>
+<li>Animation: Fixed thea crash when triggering a newly created animation clip at runtime. (824596)</li>
+<li>Animation: Fixed the OverrideController memory leak.</li>
+<li>API Updater: Fixed a crash when updating Boo/UnityScript scritpts with empty "else" blocks. (769445)</li>
+<li>API Updater: Fixed crashes / issues with paths containing either "exe" or "dll" in any part other than the file extension. (809268)</li>
+<li>Asset Management: Assets added using AssetDatabase.AddObjectToAsset will no longer change their name when the project is saved. (811596)</li>
+<li>AssetBundles: Fixed thean issue that error sometimes happens when LoadAssetAsync and UnloadUnusedAsset is called before prefab is instantiated. (822393)</li>
+<li>AssetBundles: Fixed an issue where calling Resources.UnloadUnusedAssets while loading an AssetBundle with AssetBundleRequest.LoadAssetAsync caused an error &amp;and stopped the asset from being loaded properly (803481, 807275)</li>
+<li>AssetBundles: Fixed AssetBundle.LoadFromFile usage with Application.streamingAssetsPath on Android. (763293)</li>
+<li>Audio: Fixed a crash when/after building for standalone with empty project with several audio clips. (812396)</li>
+<li>Audio: Fixed a memory leak when quickly loading and unloading lots of audio assets. (832271)</li>
+<li>Cache Server: Fixed an issue where cache server could crash due to unhandled EEXIST error when creating directory. (821680)</li>
+<li>Camera: Fixed an issue where rectviewport rect was ignored when using SetTargetBuffers. (814152)</li>
+<li>Core: Added support for loading serialized files stored with 5.5.0a4.</li>
+<li>Core: Assets added using AssetDatabase.AddObjectToAsset will no longer change their name when the project is saved. (811596)</li>
+<li>D3D11: Take into account ColorSpace (linear/gamma) when capturing screenshots. (832996)</li>
+<li>Deployment: Enabling free license users to access experimental builds. (778656)</li>
+<li>DX11: Fixed bad GPU skinning interaction with tessellation shaders, crashesd some drivers. (813805)</li>
+<li>DX11: Take color space (linear/gamma) into account when capturing screenshots. (832996)</li>
+<li>Editor Tests: Added first pass assemblies to be picked up by the editor tests runner. (819175)</li>
+<li>Editor: Exceptions from PostProcessBuild callbacks now properly introduce errors to the build. (793567)</li>
+<li>Editor: Fixed a crash when registering undo for a null object. (779052)</li>
+<li>Editor: Fixed an issue where 'sub-assets' could appear in the wrong order in the Editor or change order when saving. (775290)</li>
+<li>Editor: Fixed an issue where a project with no Library folder could raise a warning stating that the project was made before 5.0. (796046, 778891)</li>
+<li>Editor: Fixed an issue where ColorPicker color was darker than the actual color picked in Linear color space. (708582)</li>
+<li>Editor: Fixed Cef focus issue caused by multiple webview refreshes. (816585)</li>
+<li>Editor: Fixed crash when trying to connect a GameObject to a prefab with no root GameObject set. (808080)</li>
+<li>Editor: Fixed issue where objects in Inspector Preview appeared darker in Linear color space.</li>
+<li>Editor: Fixed sa crash caused by leading and/or trailing slashes in MenuItem names. (771779)</li>
+<li>Editor: Fixed the recursive directory copy problemsituation. (748499)</li>
+<li>Editor: Fixed editor not starting properly Javascript PackageManager now supports with UNC paths on Windows. (764857)</li>
+<li>Fixed HoloLens touch injection for flat apps.</li>
+<li>Editor: Fixed syntax error in user-agent header string generated by API requests within Unity web views.</li>
+<li>GI: Fixed a crash in Reflection Probe component when multiple scenes are used. (811241)</li>
+<li>GI: Fixed an issue whereby the bake got stuck if the object was positioned far from the origin. (775153)</li>
+<li>Graphics: Don't re-upload textures to the graphics device when a quality change is requested and the pixel data is unavailable. This applies to textures loaded from asset bundles unloaded with AssetBundle.Unload (false). (793679)</li>
+<li>Graphics: Fixed a couple of bugs in the CPU mipmap generation (2D &amp; 3D) for floating point texture formats: RHalf, RFloat, RGHalf, RGFloat, RGBAHalf, RGBAFloat. (798702, 810632)</li>
+<li>Graphics: Fixed a crash in the Editor when material and shader properties weren't updated correctly. (812576)</li>
+<li>Graphics: Fixed a crash that would in some cases happen after Material.CopyPropertiesFromMaterial. (821208)</li>
+<li>Graphics: Fixed a crash when blend shape value is changed for an object with cloth component. (710633)</li>
+<li>Graphics: Fixed crashes on very large texture imports. (801677)</li>
+<li>Graphics: Use Renderer::GetTransform() when calculating local AABB so that static batched renderers return the reference transform correctly. (813671)</li>
+<li>Graphics: Correctly unregister external native textures.</li>
+<li>GUI: Fixed an issue where GUI::DrawTexture appeared darker than GUI::DrawTextureWithTexCoords when in Linear color space. (828145)</li>
+<li>IL2CPP: Allow now Monitor.TryEnter to correctly obtain a previously taken lock that has been released, which did not work in some cases. (815783)</li>
+<li>IL2CPP: Corrected some calls to HasValue on nullable types, which could return true when the nullable does not have a value. (819647, 821614)</li>
+<li>IL2CPP: Corrected some calls to HasValue on nullable types, which could return true when the nullable does not have a value. (819647)</li>
+<li>IL2CPP: Corrected the behavior of the is operator when used with a struct embedded in a parent generic class. (820071)</li>
+<li>IL2CPP: Corrected the stack state handling during code conversion for some box opcodes. (826624)</li>
+<li>IL2CPP: Fixed IPEndPoint on IPv6 network. (807653)</li>
+<li>IL2CPP: Fixed the poor performance of string.Intern(). (821418)</li>
+<li>IL2CPP: Generate C++ code properly now for two structs that contain arrays of each other as fields. (813962)</li>
+<li>IL2CPP: Generate proper C++ code for some cases involving array parameters passed by reference. (818966)</li>
+<li>IL2CPP: Prevent a stack overflow during code conversion which can occur for mutli-dimensional arrays with generic types. (815722)</li>
+<li>IL2CPP: Properly marshal delegates when they are fields of a struct. (812570)</li>
+<li>IL2CPP: Removed an unnecessary assert when GC.Collect(1) is called. The call will still have no impact though. (834376)</li>
+<li>IL2CPP: Rename the types.h file to be il2cpp-string-types.h to avoid the possibility of is conflicted with a user-defined header file. (818102)</li>
+<li>IL2CPP: Use the no-strict-overflow flag to compile generated C++ code on gcc and clang based compilers so that we match the integer overflow behavior of C#. (834633)</li>
+<li>IL2CPP/Windows Store: Allow non-blocking sockets to work properly on 64-bit builds. (791721)</li>
+<li>IL2CPP/XBboxOne: Prevent the C++ compiler from crashing while compiling the IL2CPPCompilerCalculateTypeValues.cpp file for some projects. This file was just too large in these cases, so IL2CPP will notw generate multiple smaller files instead. (805892)</li>
+<li>Input: Mouse position is now updated but not clamped on wWindows when outside of game window. (827851)</li>
+<li>Input: Work around an issue where cursor would disappear on touch based devices like Surface Pro 4. (817286)</li>
+<li>iOS: Added missing iOSTargetOSVersion enum entries. (826595)</li>
+<li>iOS: Building from GUI now uses a project relative path if the location is under the project folder (369773)</li>
+<li>iOS: Corrected the default setting for bitcode on the XCTest target to fix a linker error. (824979)</li>
+<li>iOS: Disabled certain Xcode debugging features in the project template causing memory usage to grow. (800209)</li>
+<li>iOS: Fixed a crash due to linker error in simulator on startup in some cases certain Unity releases. (796762)</li>
+<li>iOS: Fixed a crash when killing the app while a WWW Rrequest was in flight. (811959, 815928)</li>
+<li>iOS: Fixed an issue where InputField.onEndEdit was called from an active InputField. (791844)</li>
+<li>iOS: Fixed an issue where Touch.deltaTime was incorrectly returning zero when device had been on for approximately 30 days or more. (809752)</li>
+<li>iOS: Fixed an issue with App store submissions with Xcode 8 when application is not using camera APIs (WebCamTexture).</li>
+<li>iOS: Fixed iOS 10 simulator crash. (817335)</li>
+<li>iOS: Fixed on-screen keyboard input for Chinese (Simplified) Pinyin 10 Key keyboard.</li>
+<li>iOS: Fixed simulator crashes when device was rotated. (791063)</li>
+<li>iOS: Fixed the appearance of apps freezing when locking/unlocking the device. (820863)</li>
+<li>iOS: Fixed the run loop mode warning on iOS 10 devices.</li>
+<li>iOS: Names for new iOS devices when selecting Unity Remote device. (815735)</li>
+<li>Kernel: Fixed a crash resulting from redo after revert. (717587)</li>
+<li>Kernel: Fixed a crash resulting from undo after reverting prefab. (804333)</li>
+<li>Kernel: Fixed rounding error so Mathf.MoveTowardsAngle always reaches target angle. (790724)</li>
+<li>Linux Standalone: Fixed an issue where pressing 'Alt' incorrectly reset Input.mousePosition. (816514)</li>
+<li>Linux: Fallback to NET_WM_ICON for setting custom player icon. (735709)</li>
+<li>Mono: Corrected a number of possible hangs with SSL sockets when the Unity Editor entered and exited the play mode. These hangs often showed up in the AuthenticateAsClient method. (759719, 759191, 733920)</li>
+<li>Mono: Fixed a crash in compute_class_bitmap when using reflection. (822063, 816232)</li>
+<li>Mono: Fixed a crash in find_method_in_metadata which can occur on startup. (763583)</li>
+<li>Mono: Use an IPv4 address (if one exists) before an IPv6 address for .NET remoting connections. (826526)</li>
+<li>Mono/IL2CPP: Corrected a rare deadlock in the C# lock implementation. (827984)</li>
+<li>Networking: Fixed starting a server cashes on libwebsocket_service_fd. (810289)</li>
+<li>Networking: ReliableFragmented channel stops working after client has disconnected, then reconnects. (810551, 810692)</li>
+<li>OS X: Fixed HTTPS support for WWW/UnityWebRequest when Mac App Store receipt validation is on. (820523)</li>
+<li>OS X: Fixed memory leak in joystick input handling code. (797793)</li>
+<li>OS X: Fixed Screen.currentResolution.refreshRate being always 0. (764330)</li>
+<li>OS X Player: The OSX standalone player now allows to switch out of the application by using Cmd+Tab when running in fullscreen mode. (798133)</li>
+<li>OS X: Fixed a crash when building for OS X in certain circumstances to do with paths to splash screen and icon. (770034)</li>
+<li>Particles: Fixed an issue where playing the scene with more than 270 particle prefabs caused a crash. (813872)</li>
+<li>Plugins: Fixed an issue where DLL plugins with non-lowercase extensions cause the architecture platforms panel not to be displayed. (805669)</li>
+<li>Prefabs: Fixed some issues and crashes related to undo-ing the creation of prefabs and prefab connections. (808187, 790220, 816014)</li>
+<li>Shaders: Fixed frac(constant) sometimes being mis--compiled. (825235)</li>
+<li>Shaders: Fixed shader compiler bug which could have caused errors in GLSL shaders that might crash the GPU on OSX.</li>
+<li>Shaders: Fixed some cases of inout struct variables with COLOR semantic members wrongly translating into GLES2.0. (720704)</li>
+<li>Shaders: Fixed transparent shader writing into DepthNormals texture, because material sometimes cache RenderType setting. (806751)</li>
+<li>Shaders: Fixed UNITY_APPLY_FOG not working as expected if an expression is passed as fog coordinate. (822553)</li>
+<li>Textures: Correctly unregister external native textures.</li>
+<li>Tizen: Fixed a problem with UnityPluginLoad() not working.</li>
+<li>tvOS: Fixed 2nd stage splash screen. (777937)</li>
+<li>tvOS: Fixed allowed scripting implementations and architectures in player settings.</li>
+<li>UAP: Fixed an incorrect resolution being reported when the composition scale changed and the game window was minimized. (832104)</li>
+<li>UAP: Fixed the incorrect language being returned when system language was Spanish(Argentina). (820162)</li>
+<li>UI: Fixed a memory leak caused by IntermediateRendererstemporary renderer objects not being cleaned up. (819470)</li>
+<li>UI: Fixed a race condition in UI mesh processing leading to rare crashes. (797645)</li>
+<li>UI: Fixed a random crash in SyncElement caused by unknown parent canvas.</li>
+<li>UI: Fixed an issue with animating canvas properties not applying. (809374, 825435)</li>
+<li>UI: Fixed an issue with Canvas sorting order being incorrect under certain cases. (821727)</li>
+<li>UI: Fixed issue where Canvas/UI appeared darker when camera was disabled and color space was set to Linear. (797560, 633000)</li>
+<li>UI: Fixed issue with OnPointerEnter event firing after touch ends.</li>
+<li>UI: Fixed the issue with double rendering of world canvas in the Editor. (803901)</li>
+<li>UnityWebRequest: Fixed a possible freeze when using custom download handler script. (820517)</li>
+<li>VCS: Fixed a problem when moving folders in the project view end up with errors and inconsistent state between local file state and VCS state. (714707)</li>
+<li>VCS: Stop a C++ method being called during C# constructor and serialization (which is a scripting warning as it is unsafe to do this).</li>
+<li>VR: Fixed a crash at startup on GearVR if Focus is lost very close to the time or the app starting.</li>
+<li>VR: Fixed a crash when an invalid Oculus plugin is used. Throws warning instead. (803937)</li>
+<li>VR: Fixed different particle shader transparencies between editor and build when splash screen is active. (806810)</li>
+<li>VR: Fixed HoloLens touch injection for flat apps.</li>
+<li>VR: Removed an audio output warning when Unity Audio is Disabled. (826132)</li>
+<li>WebGL: Fixed asset bundles memory usage at loading time, preventing some content to run on 32-bit browsers. (812567, 829765)</li>
+<li>WebGL: Fixed browser lock-up when profiling. (759492)</li>
+<li>WebGL: Fixed Code Blob memory leak.</li>
+<li>WebGL: UnityWebRequest.downloadProgress now returns the actual progress as opposed to 0. (775178)</li>
+<li>WebRequest: Fixed a possible freeze when using custom download handler script. (820517)</li>
+<li>WebRequest: Allow empty headers as that is in general valid.</li>
+<li>WebRequest: Allow setting Accept-Encoding header from scripting at users own risk. (825429)</li>
+<li>WebRequest: More correctly follow the HTTP Specification for sending POST data during a Redirect. (814388)</li>
+<li>Windows Standalone: Custom image will be correctly shown in screen selector dialog when building to directory with non-english letters. (801951)</li>
+<li>Windows Standalone: Fixed a regression where "touch up" events would be lost when occurring outside window bounds. (803319)</li>
+<li>Windows Store: Fixed a bug where mouse scroll wheel was returning inverted values. (813683)</li>
+<li>Windows Store: Fixed a potential crash on Xbox One when retrieving advertising id.</li>
+<li>Windows Store: Fixed a rare deadlock when recursively calling InvokeOnAppThread and InvokeOnUIThread many times.</li>
+<li>Windows Store: Fixed an assert that happened on startup on Xbox One in debug builds.</li>
+<li>Windows Store: Fixed touch screen keyboard input not working on UWP. (808700)</li>
+<li>Windows Store: Fixed Unity PDB files not getting included into built .appxsym package. (831144)</li>
+<li>Windows Store: Fixed Xbox Live SDK not being automatically referenced by C# scripts if installed on the machine</li>
+<li>Windows Store: Gamepads (with UsagePage/Usage 0x0001/0x0005) will correctly connect to an application now. Usually these are device connected via bluetooth. Previously only joysticks (with UsagePage/Usage 0x0001/0x0004) would connect. You can check UsagePage/Usage of the device by right clicking Properties on the device-&gt;Hardware-&gt;HID-compliant game controller-&gt;Properties-&gt;Details-&gt;Hardware Ids. For ex., gamepads will contain an item "HID_DEVICE_UP:0001_U:0005) . You might need to delete Package.appxmanifest, because there's a new item for HID device. (816582)</li>
+<li>Windows Store: UnityEvent.Remove listener will work correctly when .Net Native is enabled. Previously events were not removed as expected. (827748)</li>
+<li>Windows Store: When updating Windows Phone 8 application to Windows Phone 8.1/10.0, player prefs will be auto updated if the following condition is met - UnityPlayer.upp file exist, but playerprefs.dat file doesn't exist in LocalFolder. (810622)</li>
+<li>Windows: Added safety check when receive new window size with zero values, make minimum value 1, otherwise functions like CreateDepthStencilView will fail.</li>
+<li>Windows: System resolution or orientation changes are now detected and responded to accordingly. (825230)</li>
+<li>WWW: Make Dispose asynchronous to prevent freeze or performance drop, as it might be costly. (782109)</li>
+</ul>
+
+<p>Revision: c347874230fb</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Android: Symbols for release libraries are now available in PlaybackEngines/AndroidPlayer/Variantions/*/Release/Symbols.</li>
+<li>Audio: Added ability to transition AudioMixer snapshots by scaled and unscaled time.</li>
+<li>Audio: Added virtualization of audio effects. For audio sources that are virtual because they have been culled due to low audibility or priority, attached effect components or spatializers are now also bypassed in order to save CPU use. The new behaviour is on by default, but can be turned off in the audio project settings.</li>
+<li>Audio: Audio clip waveform preview now displays the actual format used for compression when the default format isn’t available on a certain platform.</li>
+<li>Audio: Audio clips with the "Streaming" load type are no longer preloaded. This is done to reduce the number of open file handles in scenes referencing a large number of streamed clips. The behaviour is not affected except for a slight increase in playback delay of this type of audio clips.</li>
+<li>Audio: Fixed audio clip waveform preview rendering sync issues after import, and improved the way the waveforms are being rendered to be more dynamic and reveal more detail.</li>
+<li>Audio: Moved Preload Audio Data to the platform-specific settings section. The previous location was confusing as it was shown grayed-out in the inspector with a checkmark that depended on all overrides.</li>
+<li>Audio: SystemInfo now includes supportsAudio info.</li>
+<li>GI: Added a version number to the Lighting Data asset. Give the user a nice error message if their Lighting Data is out of date.</li>
+<li>Graphics: Documentation for Display API.</li>
+<li>iOS: Update Build and Run to work with Xcode 8</li>
+<li>Lighting: Improved an error message about invalid data when baking probes.</li>
+<li>Runtime-Other: Added diagnostic option to cmdline arguments -debugallocator [1/2] which helps to identify memory access issues in the engine on Windows and OSX x64 platforms.</li>
+<li>Runtime: During crashes even if the stack walking is aborted with error (RtlLookupFunctionEntry returned NULL function. Aborting stack walk), Unity will display stripped stack trace instead of displaying zero stack frames.</li>
+<li>Shaders: Removed an outdated comment in UnityStandardCore.cginc</li>
+<li>VR: Updated to Oculus Version 1.5.</li>
+<li>VR: Updated to version 1.4 of the Oculus API.</li>
+<li>WebSocket: Improved memory allocation and socket writing procedure (fixed not expected connection closing)</li>
+<li>Windows Store: Expanded UnityEngine.WSA.Cursor.SetCustomCursor, if you pass 0 to this function, it will restore the cursor to arror icon. (791792)</li>
+<li>Windows Store: Improved 'NULL != certificate' errors, it will now provide a human readable message why it failed to create a certificate. (792507)</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>2D: Generate sprite mesh correctly for sprite with outline data after changing texture's max size setting. (778825)</li>
+<li>AI: Fixed a crash when inspecting NavMeshAgent.pathEndPosition in MonoDevelop. (767948)</li>
+<li>Analytics: Fixed a NullReferenceException when stores inform Unity IAP of purchase events without providing metadata for the purchased product.</li>
+<li>Android: Abandon/Request audio focus on pause/resume. (796242)</li>
+<li>Android: Application.temporaryCachePath and Application.persistentDataPath always return external paths starting KITKAT. (789870)</li>
+<li>Android: Audio - Fixed an issue where the application would not regain audio focus after a notification. (796242)</li>
+<li>Android: Audio - Fixed audio latency in GearVR regression. (789398)</li>
+<li>Android: Buildpipe - Don't check for passwords if exporting project. (746248)</li>
+<li>Android: Buildpipe - Don't merge manifests if exporting project. (746248)</li>
+<li>Android: Buildpipe - Remove mdb files from release build. (781657)</li>
+<li>Android: Editor - Fixed an issue where it was impossible to push to devices running Android N Preview. (790236)</li>
+<li>Android: Fixed a crash related to the main context not being an Activity. (751102)</li>
+<li>Android: Fixed an issue where Indonesian and Hebrew weren't properly recognized by SystemInfo. (793738)</li>
+<li>Android: Fixed an issue where normals are not correctly oriented on some Adreno models. (769275)</li>
+<li>Android: Fixed an issue where Unity would emit "Unknown event structure (0)" to the log several times per second. (792351)</li>
+<li>Android: Fixed clip() in ES3 shaders on some Adreno GPUs. (808817, 805086, 801150)</li>
+<li>Android: Fixed deployment to devices with unknown OpenGL ES target.</li>
+<li>Android: Fixed high memory usage of RenderTexture.GetTemporary. (786289)</li>
+<li>Android: Fixed the case where RenderTexture was released on resume after sleep. (784822, 792574)</li>
+<li>Android: Fixed the issue of game freezing when changing resolution with Screen.SetResolution. (802824)</li>
+<li>Android: JNI - Throw correct exception when method not found by reflection. (782985)</li>
+<li>Android: Pause choreographer when activity is paused to fix CPU usage of Unity apps when the app is in background. (770093)</li>
+<li>Android: Screen.dpi always returns densityDpi now. (796182)</li>
+<li>Android: Tegra 2: Application no longer crashes if UnitySendMessage is called during initialization. (696580)</li>
+<li>Android: Workaround for broken texture swizzles on Android 6 Mali GPUs. (788821)</li>
+<li>Animation: Fixed a performance issue on AnimatorOverrideController rebind. (779058)</li>
+<li>Animation: Fix for animation stopping before reaching designated position. (790261)</li>
+<li>Animation: Fixed an animation event firing twice when controller is set by a script and an instantaneous transition is trigger in the same frame. (800268)</li>
+<li>Animation: Fixed a crash when changing playable controller in animator in game mode. (778887)</li>
+<li>Animation: Fixed rotation values set in inspector restricted to [0,360] degrees when recording animation. (786827)</li>
+<li>Animation: Fixed an issue where Changing culling modes during runtime would not take effect correctly (761215)</li>
+<li>AssetBundle: Fixed the crash when calling AssetBundle.LoadAllAssetAsync() on a streamed scene asset bundle. (780836)</li>
+<li>AssetBundle: Fixed the error message when accessing the main asset. (789840)</li>
+<li>AssetBundle: Fixed the issue that AssetBundle.name is empty. (791273)</li>
+<li>AssetBundle: Fixed the issue that failed to asynchronously load the object with script that had the same name as other assets in a bundle. (780289)</li>
+<li>AssetBundle: Fixed the issue that ScriptableObject data types in asset bundle variants lose references in scenes. (787112)</li>
+<li>AssetBundles: Added detailed info to print build size stats for normal asset bundles. (768965)</li>
+<li>AssetBundles: Check if we support the previous active build target before restoring. (778258)</li>
+<li>AssetBundles: Fixed default compression for WebGL and WebPlayer targets (799652)</li>
+<li>AssetBundles: Fixed intermittent crash due to thread-safety issues. (780836, 761626)</li>
+<li>AssetBundles: Fixed the issue that AssetBundleManifest.GetAllDependencies returned bundle itself as dependency. (780252)</li>
+<li>AssetBundles: Fixed the issue that old asset bundles were not removed to free space. (786259)</li>
+<li>Asset Management: Fixed a crash when undoing replacement of transform on prefab instance (780356)</li>
+<li>Audio: "Failed to initialize spatializer" warning message no longer appears when Spatializer Plugin is set to "None". (740603)</li>
+<li>Audio: Audio Profiler no longer shows "wrong" information when using Spatialization. (758064)</li>
+<li>Audio: AudioMixer.GetFloat() and SetFloat() now work without needing to restart Unity. (632169)</li>
+<li>Audio: AudioSource: Fixed issue whereby Doppler Level didn't work when used with custom spatializer plugins. (782248)</li>
+<li>Audio: Fixed case of component effect appearing disabled on play and becoming enabled again after pressing pause and then play. (772946)</li>
+<li>Audio: Fixed case of Unity crashing when the Disable Audio option was selected in Project Settings. (763036)</li>
+<li>Audio: Fixed crash when disabling component which uses OnAudioFilterRead. (784887)</li>
+<li>Audio: Fixed handling of default DSP buffer size. Previously, once the buffer size was changed to something other than Default latency, changing it back to Default latency had no effect.</li>
+<li>Audio: Fixed issue where AudioListener with two custom scripts crashed when reinitializing the sound system. (781566)</li>
+<li>Audio: Fixed issue where the Audio Lowpass Frequency curve moved in the wrong direction in the AudioSource curve view. (775328)</li>
+<li>Audio: Fixed issue whereby adding an effect in the mixer with bypass effects enabled didn't rechain the component effect back properly. (771825)</li>
+<li>Audio: Fixed issue whereby the memory profiler did not report AudioClip memory correctly. The memory allocated by AudioClips was wrongly accumulated under AudioManager.</li>
+<li>Audio: Fixed mixer reverb effects getting cut off early in standalone builds. (760985)</li>
+<li>Audio: Fixed random mixup between internal direct and reverb signal connections which could cause AudioSources to interfere and become silent under certain conditions. (718344)</li>
+<li>Audio: Large numbers of streaming audio clips no longer cause crashes in batch mode. (731177)</li>
+<li>Audio: Low Pass Filter now works on Audio Listener. (732854)</li>
+<li>Audio: Microphone.IsRecording(null) no longer returning true even when no devices were available. (715257)</li>
+<li>Audio: Native audio plugin SDK: Fixed dspbuffersize having a value of 0 when default buffer size settings are selected.</li>
+<li>Audio: Preloaded sounds now allow calling GetData in Start().</li>
+<li>Audio: Project browser now updates after a change has been applied in the AudioImporterInspector.</li>
+<li>Audio: Sounds marked as Play On Awake are now shown in Audio profiler.</li>
+<li>Audio: Use of 'Best Performance' DSP buffer size results in crash (788521)</li>
+<li>Build Pipeline: Updated build window to allow case insensitive file extensions.</li>
+<li>Camera: Stop silently disabling cameras that have non-existing target display set on them. (798640)</li>
+<li>Compute: Fixed compute shaders being reimported upon active build target changes more often than they should be. (786943)</li>
+<li>Documentation: Updated documentation for Resources.UnloadAsset to document the 5.x behaviour which is different to 4.6 behaviour. (747347)</li>
+<li>Director: Fixed a crash-on-exit related to DirectorManager::OnShutdownBeforeObjectCleanup (801482)</li>
+<li>DX11: Fixed a rare crash in Texture2D.ReadPixels. (791635)</li>
+<li>Editor: Fix for password not hidden in editor.log. (789493)</li>
+<li>Editor: Fixed activate license failure if user switch user before activation. (806648)</li>
+<li>Editor: Fixed an issue causing unnecessary script compilation, and improved compilation error handling (804864)</li>
+<li>Editor: Fixed an issue where custom windows could be removed when encountering errors in user editor scripts. (804139)</li>
+<li>Editor: Fixed an issue where the Editor would freeze if the user attempted to import a model without normals when the selected graphics API is OpenGL 2. (798576)</li>
+<li>Editor: Fixed an issue with script assembly dependencies, which could cause custom windows to be disabled by user script compilation errors. (791288)</li>
+<li>Editor: Fixed a crash when entering or exiting play mode while having a GameObject with a missing script reference. (769033, 769504)</li>
+<li>Editor: Fixed ETC1/AlphaSplit UI option not appearing under TextureImporter &gt; Advanced mode. (782204)</li>
+<li>Editor: Fixed an exception when renaming script outside of the editor. (776880)</li>
+<li>Editor: Fixed an exception when dragging non-regular textures (e.g. from DDS files) into scene view. (789841)</li>
+<li>Editor: Fixed an issue where preferences in Windows registry were not being terminated correctly. (780900)</li>
+<li>Editor: Fixed a regression where switching platforms while using Cache Server could take much longer than previously. (789845)</li>
+<li>Editor: Fixed: No auto license updates since Unity 5.1. (784401)</li>
+<li>ETC1: Fixed ETC1 variant getting stripped out from android build. (795931)</li>
+<li>General: Fixed a crash in the callstack symbolication code that meant Unity could crash while generating crash reports during engine startup and shutdown (799469)</li>
+<li>GI: "Error adding system: Data not available." thrown when building specific scene setup (725776)</li>
+<li>GI: Cleanup realtime reflection probe pool between level loads. (795429)</li>
+<li>GI: Enabled L2 spherical harmonics for light probes and use the correct light probes SH axes and scaling (rebaking light probes required). Makes objects lit by lightprobes match static lightmapped objects. Upgraded Enlighten to SDK-3.02.UN1.50384. (760728)</li>
+<li>GI: Fixed ambient probe update when ground and/or equator color changed. (797822)</li>
+<li>GI: Fixed an issue which would caused GI textures to be packed incorrectly.</li>
+<li>GI: Fixed error when baking light probes: "Error adding Enlighten probe set: Failed to allocate probe set." (803088)</li>
+<li>GI: Fixed some cases of additive scene loading not merging lightmaps properly. (790530)</li>
+<li>GI: Fixed static batching not working when Lightmap Static and Use Light Probes options were both enabled in a Renderer in manual GI mode. (797235)</li>
+<li>GI: Updated Enlighten to version 3.02.UN2.51359. Fixes output of incorrect light probe spherical harmonics L2 coefficients in certain situations. This was caused by un-initialized memory. (804898)</li>
+<li>GI/MSE: Fixes an issue when switching to lighting settings of a different scene. (749008)</li>
+<li>Global Illumination: Fixed out-of-sync indices of Lightmaps when unloading additively loaded scenes while others are disabled. (784391)</li>
+<li>Graphics: Fixed s deferred rendering issue on AMD GPU with OSX. (736754, 788007)</li>
+<li>Graphics: Fixed Display.main not always being Display.displays[0] in multi-display configurations. (785131)</li>
+<li>Graphics: Fixed s GPU Skinning performance issue each time the mesh becomes visible (some buffers were re-created without a good reason). (782095)</li>
+<li>Graphics: Fixed s potential memory leak with timesliced realtime reflection probes.</li>
+<li>Graphics: Fixed some cases of incorrectly "Releasing Render Texture that is set as Camera.targetTexture", resulting in losing Camera.targetTexture. For e.g. in case of device resume after sleep on iOS/Android, context-loss on DirectX or changing Emulation Layer in the Editor. (784822, 794090, 759483)</li>
+<li>IAP: Fixed IAP IStoreListener.ProcessPurchase method not being called if Unity IAP was informed of a purchase for a product which was not requested during initialisation.</li>
+<li>IL2CPP: Corrected an exception during code generation with the NPOI library. (809995)</li>
+<li>IL2CPP: Corrected the packing for some C# struct definitions with explicit layout. (804767)</li>
+<li>IL2CPP: Fixed a crash that can occur during XML serialization with the .NET 2.0 profile. (802014)</li>
+<li>IL2CPP: Fixed a crash which can occur during the iteration of enum values cast as a list of System.Object values. (800496)</li>
+<li>IL2CPP: Fixed try/catch handling when filter type includes generic parameters. (805846)</li>
+<li>IL2CPP: IL2CPP crash caused by incorrectly calculated stack bottom (796528)</li>
+<li>IL2CPP: Implemented Process.GetCurrentProcess on some platforms and provide a useful error message where it was not possible to implement. (797495)</li>
+<li>IL2CPP: Implemented the "Allocated Objects" performance counter in the "Mono Memory" category. (784128)</li>
+<li>IL2CPP: Load the stack value as unsigned for the conv.r.un opcode in IL. (787701)</li>
+<li>IL2CPP: Now allow allocation of a pinned GC handle to a null value. (803910)</li>
+<li>IL2CPP: Prevent a crash in FieldInfo.GetValue. (797649)</li>
+<li>IL2CPP: Prevent a possible deadlock on PS4. (800301)</li>
+<li>IL2CPP: Return the correct value for the HasValue property of nullable types on the stack. (806644)</li>
+<li>IL2CPP: Support IPv6 addresses for LocalEndPoint and RemoteEndPoint properties of the .NET Socket class. (802618)</li>
+<li>IL2CPP/PS4: Corrected the exception "System.Net.Sockets.SocketException: System call failed" which could occur when UDP sockets were used. (809864)</li>
+<li>Inspector: Selecting a scene asset no longer shows "Message" and "Is Warning" fields in the inspector.</li>
+<li>iOS: Don't install Unity plugin unnecessarily. This caused killing of Xcode whenever the previous build was done with different version of Unity. (711986)</li>
+<li>iOS: Enabled incremental build for il2cpp by default for old projects. (792932)</li>
+<li>iOS: Fixed a couple of Metal and Cloud support related small memory leaks (800915, 807370)</li>
+<li>iOS: Fixed the leak of thread handles and associated resources in UnityEngine.Ping (804440)</li>
+<li>iOS: Fixed a crash on iOS when 60 fps app is going to background. (788428)</li>
+<li>iOS: Fixed a crash when releasing WebRequest components. (792606)</li>
+<li>iOS: Fixed a shader compiler generating invalid metal shaders. (761082)</li>
+<li>iOS: Fixed apps from hanging when a long running script is triggered from backgrounding (805240)</li>
+<li>iOS: Fixed a crash when Abort was called on UnityWebRequest before downloading had begun. (790833)</li>
+<li>iOS: Fixed a crash when calling WWW.Dispose. (803206)</li>
+<li>iOS: Fixed a crash when scrolling multiline input field on some devices. (792062)</li>
+<li>iOS: Fixed iOS plugin settings. (772570)</li>
+<li>iOS: Fixed an issue where generating too many WWW requests or UnityWebRequests at once would cause the app to lock up. (782592)</li>
+<li>iOS: Fixed OnApplicationPause not being called when PlayFullScreenMovie stops/starts (765574, 744380)</li>
+<li>iOS: Fixed a possible value change for WebCamTexture.size after calling GetPixels() methods.</li>
+<li>iOS: Fixed the alignment of certain ARM64 functions which fixed a warning when building with Xcode. (775240)</li>
+<li>iOS: Fixed UnityWebRequest.isError being set incorrectly when there is no internet connection (746309)</li>
+<li>iOS: Quarantine LZ4 symbols. This caused AppStore rejections in any submission that referenced WatchConnectivity.framework&nbsp;. (774472)</li>
+<li>iOS: Removed unneeded il2cpp files that increase build size. (790853)</li>
+<li>iOS: Set correct value in Xcode when "Target minimum iOS version" player setting is set to 9.0. (785021)</li>
+<li>iOS: Set missing texel size for WebCamTexture textures. (799572)</li>
+<li>iOS: Support building to directory with non-existing parent. (757618)</li>
+<li>iOS/IL2CPP: Allow proper managed stack traces for iOS projects build on Unity Cloud Build. (808292)</li>
+<li>iOS/IL2CPP: Corrected managed stack traces which could have one incorrect frame when a NullReferenceException occurred. (789160)</li>
+<li>iOS/IL2CPP: Fixed an error in generated C++ code due to duplicate extern declarations when an extern method in C# is overloaded. (808536)</li>
+<li>Job Queue: Fixed issue where a deadlock could occur inside the job system in very rare situations. (741295)</li>
+<li>License: Fixed broken link to buy Pro version. (803795)</li>
+<li>License: Fixed license page alert bar missing issue. (803806)</li>
+<li>Lines/Trails: Fixed the issue where hadow casting line renderers could cause visual glitches. (788714)</li>
+<li>LOD: Fixed unreachable code warnings when distance == selection.maxDistance. (783219)</li>
+<li>Mecanim: Fixed crash in CopyAnimationNodeState. (796226)</li>
+<li>Metal: Fixed rendering of masked contents on GUI layer. (802534)</li>
+<li>Metal: Perform frame buffer clear more effectively (809347)</li>
+<li>Model Importer: Fixed a crash when importing .obj and .fbx files with malformed or duplicate vertex data. (794783)</li>
+<li>Mono: Added MD4, SHA384 and SHA512 signature verification to X.509 certificates. (763536)</li>
+<li>Mono: Do not allocate during each call to UdpClient::Receive when socket security is not enabled. (763848)</li>
+<li>Mono: Fixed AOT code generation for Linq.First, Linq.FirstOrDefault, Linq.Last, Linq.LastOrDefault, Linq.Single, and Linq.SingleOrDefault.</li>
+<li>Mono: Handle marshaling properly of a class with a fixed size array field and a base class with multiple fields. (793415)</li>
+<li>Multidisplay: Fixed changing primary monitor still opens scene in first. (789572)</li>
+<li>Multiplayer: Cleaned up the connection containing StateUpdate channel can cause crash.</li>
+<li>Multiplayer: Fixed: Calling NetworkDiscovery.StopBroadcast() and NetworkServer.Reset() crashes editor. (761566)</li>
+<li>Multiplayer: NetworkTransport.SetBroadcastCredentials&nbsp;crashes unity. (794054)</li>
+<li>Multiplayer: ReliableFragmented channel can drop data. (788808)</li>
+<li>Multiplayer: WebSockets: Fixed crash on NetworkClient.SendByChannel call. (760104)</li>
+<li>Networking: Adding parameter ConnectionConfig.WebSocketReceiveBufferMaxSize (bytes) for manually increasing webSocket buffer and preventing disconnect with log message """"*** sending new, pending truncated **"""". (791362)</li>
+<li>Networking: Fixed an issue of different error-messages when setting 65535 and 65537 to m_MaxDefaultConnections in HostTopology. (788877)</li>
+<li>Networking: Fixed an issue whereby calling&nbsp; NetworkDiscovery.StopBroadcast() and NetworkServer.Reset()&nbsp; crashes editor. (761566)</li>
+<li>Networking: Fixed System.Net.NetworkInformation.Ping on recent versions of OSX. (801973)</li>
+<li>OpenGL: Fixed broken rendering on GLCore Windows editor. (799708)</li>
+<li>OpenGL: Fixed bufinfo op handling. (780820)</li>
+<li>OpenGL: Fixed gl_PrimitiveIDIn in geometry shaders. (786278)</li>
+<li>OpenGL: Fixed possible crash on machines with several different GPUs, if binary shader cache was used from a mismatching GPU.</li>
+<li>OpenGL: Fixed skinning issues on OSX. (790740)</li>
+<li>OpenGL: Fixed various shader translation (for GLCore/GLES3) issues. Atomic operations on RWByteAddressBuffers, vertex-to-fragment inputs not being float4/half4 sized, geometry shaders where first input is not a SV_POSITION, tessellation shaders that were making some drivers not happy. (774657, 768041, 794455)</li>
+<li>OpenGLES: Fixed crash and reflection probes corruption on A9 chipsets (OpenGLES2.0). (794660,&nbsp;790555,&nbsp;737693)</li>
+<li>OpenGLES: Fixed crash and reflection probes corruption on A9 chipsets (OpenGLES3.0) (794660)</li>
+<li>OpenGLES: Fixed crash triggered by attempting to set a texture parameters with an uninitialized texture dimension. This was affecting the rendering of the splash screen. (806540, 805897)</li>
+<li>OSX Editor: Fixed UI text rendering on Radeon HD 4000 series and older AMD GPUs. (783713)</li>
+<li>OSX: Add IPv6 support for WWW (804483)</li>
+<li>OSX: Correctly determine native resolution for full screen applications. (775210)</li>
+<li>OSX: Fixed a crash when -nographics is used without -batchmode. (796870)</li>
+<li>OSX: Fixed rare crashes when using WWW from multiple threads. (801759)</li>
+<li>OSX: Fixed icons in batch mode builds. (707886)</li>
+<li>OSX: Fixed infrequent crashes in Screen Selector. (787233,&nbsp;793518)</li>
+<li>OSX: Fixed the missing menu bar in Windowed mode OS X mac standalone (799420)</li>
+<li>OSX: Fixed SSL protocol support on 32-bit OSX standalone. (696234)</li>
+<li>Particles: Added Undo support when auto reparenting sub emitters. (544444)</li>
+<li>Particles: Bounds are not updated after moving whole particle. (791794)</li>
+<li>Particles: Fixed a regression when stopping particles and moving them offscreen before they die. (793747)</li>
+<li>Particles: Fixed an issue where mesh particles are not being scaled when in world space. (772199)</li>
+<li>Particles: Fixed collisions not being calculated in-between editor updates. (489509)</li>
+<li>Particles: Fixed a culling regression bug when starting particles offscreen. (793458)</li>
+<li>Particles: Fixed sorting when using local space particles. (780867)</li>
+<li>Particles: Fixed the issue where calling Stop on offscreen particle systems would instantly destroy them. (793476)</li>
+<li>Particles: Fixed the issue where pivot offset on stretched billboard particles was being applied incorrectly. (793101)</li>
+<li>Particles: Fixed the issue where pivot offset was incorrectly inverted on the Y axis. (790480)</li>
+<li>Particles: Start delay is only applied when the system time is 0. (754270)</li>
+<li>Physics: Exposed Rigidbody.solverVelocityIterationCount and Physics.solverVelocityIterationCount to help stabilize bounce behavior on impacts. (768279)</li>
+<li>Physics: Toggling 'Rigidbody2D.IsKinematic' in the Inspector during play-mode now correctly changes the body-type. (806089)</li>
+<li>Prefabs: Fixed an issue with serialising objects with 64 bit file IDs, which could cause prefabs to become corrupt. (767793)</li>
+<li>Samsung TV: UnityEngine.Ping has been fixed and will no longer report permissions issues. (788483)</li>
+<li>Scene Management: Fixed serialization of SceneSetup.</li>
+<li>Scene Management: Prevented adding a scene multiple times to the scene list via click and drag. (775666)</li>
+<li>Scripting: Avoid allocating GC memory during Coroutine iteration. (784481)</li>
+<li>Scripting: Do not allocate for a MethodInfo.Invoke on a method with no parameters. (780377)</li>
+<li>Scripting: Fixed deadlock in Editor on re-entering play mode when using ThreadPool. (791026, 771710)</li>
+<li>Shaders: Fixed confusing behavior where Material's render queue would be overridden, when changing a shader on it. (791704)</li>
+<li>Shaders: Fixed crash during shader warmup in some cases. (775067, 780644)</li>
+<li>Shaders: Fixed crash that sometimes happens after deleting a shader, while materials are still trying to use it. (785905)</li>
+<li>Shaders: Fixed HLSL bitcast operations on fixed/half types not always translated into OpenGL/ES properly. (776808)</li>
+<li>Shaders: Fixed possible editor scene view picking crash, after reimporting shader with a GrabPass. (744588)</li>
+<li>Shaders: Fixed reflection probe box projection not being accurate on large polygons. (787136, 801535)</li>
+<li>Substance: Avoid re-generating ProceduralMaterials twice when switching color space.</li>
+<li>Substance: Fixed a crash in VisibleIf expression evaluation caused by looking up an input by label instead of by identifier. (779560)</li>
+<li>Substance: Fixed a crash when undoing a modification of the shader assigned to a ProceduralMaterial . (781118)</li>
+<li>Substance: Fixed an error when loading package file containing an old version of a substance file. (790491)</li>
+<li>Substance: Fixed baked ProceduralTextures being serialized without their baked data. (776052)</li>
+<li>Substance: Fixed GetProceduralXYZ returning 0 when used with an input's label instead of its identifier. (762285)</li>
+<li>Substance: Fixed normal maps textures being incorrectly processed when used as image inputs to a ProceduralMaterial.</li>
+<li>Substance: Fixed ProceduralMaterials being stuck in "Generating..." state when leaving playmode as they are being computed. (779574)</li>
+<li>Substance: Fxed "Mismatched LayoutGroup.Repaint" error message appearing in console when assigning a ProceduralMaterial to a mesh. (780071)</li>
+<li>Substance: Now warn the user when an input of a BakeAndDiscard ProceduralMaterial is being set at runtime.</li>
+<li>Substance: ProceduralTextures being cached to disk/flash now have their size correctly taken into account when querying Caching.spaceOccupied.</li>
+<li>Substance: Speed up the processing of BakeAndDiscard materials when loading scenes. (776803)</li>
+<li>Terrain: Fixed a crash when the asset of trees painted on the terrain is deleted from the project. (770290)</li>
+<li>Terrain: Fixed an issue where modifying terrain settings in the Inspector didn't properly dirty the scene and might cause potential data loss. (774962)</li>
+<li>Terrain: Fixed backlit SpeedTree leaves not being correct in deferred shading. (790798)</li>
+<li>Terrain: Fixed crash loading corrupted terrain. (757741)</li>
+<li>Terrain: TerrainData.heightmapResolution, SetDetailResolution(), alphamapResolution and baseMapResolution now prints warning messages if the supplied argument is out of range. (771032)</li>
+<li>Tizen: Fixed a problem that is an object moves to the center by force sometimes when device is rotated.</li>
+<li>tvOS: Fixed support for default font of Unity (Arial). (776115)</li>
+<li>tvOS: Fixed tvOS player support depending on iOS support native libraries.</li>
+<li>tvOS: Removed "Prepare iOS for recording" from tvOS player settings, which was breaking full screen movie playing. (790589)</li>
+<li>UI: Added missing call to SetParentCanvas at CanvasRenderer::CanvasHierarchyChanged. (764711)</li>
+<li>UI: Fixed the crash and flickering issues caused by sorting grid. (794539, 792837)</li>
+<li>UI: Fixed NullReferenceException when deleting object with 2D RectMask component from scene. (766771)</li>
+<li>UI: Fixed occasional crashes when modifying elements of non-Overlay Canvases. (774423)</li>
+<li>UI: Fixed race condition between UI system and UI jobs. In rare cases could cause a crash. Added asserts to help identify any future race conditions in the UI system. (794360)</li>
+<li>UI: Fixed RectMask2D clipping incorrectly when nested canvases are present. (782957)</li>
+<li>UI: Fixed World Space Canvas not being rendered on render textures. (790264, 799386, 795880)</li>
+<li>UnityAnalytics: Fix for Game Observer input touches GC alloc based on forum post. And not send extract appRunning event during scene change.</li>
+<li>UnityWebRequest: [IL2CPP] Fix for app crash when using custom DownloadHandlerScript with preallocated buffer for UnityWebRequest. (796163)</li>
+<li>UnityWebRequest: Fixed: CORS request blocked due to x-unity-version header. (784422)</li>
+<li>UnityWebRequest: Fixed: DownloadHandlerScript.CompleteContent is not called. (786293)</li>
+<li>UnityWebRequest: Fixed an issue where UnityWebRequest.error returned inconsistent results after Abort was called. (790840)</li>
+<li>UnityWebRequest: Fixed an issue whereby Unity was not responding when trying to quit in headless mode. (790610)</li>
+<li>UnityWebRequest: Hard EXC_BAD_ACCESS crash from AsyncOperation. (800964)</li>
+<li>UnityWebRequest: Make headers case insensitive, in order to better match RFC 2616 semantics.</li>
+<li>VCS: Fixed the PlasticSCM connection problems on OSX 10.11 and OSX 10.10. (776804)</li>
+<li>VCS: Fixed an issue where Cache Server failed to validate prefab created from script. (793780)</li>
+<li>VCS: Updated VCS plugins from Bitbucket with improved support for IPv6 server connections on Windows and OSX and SSL server connections on Windows, OSX and Linux. (800289)</li>
+<li>VR: Added support for DirectX12 to Oculus VRDevice.</li>
+<li>VR: Audio device no longer switches when an unused usb audio device is removed.</li>
+<li>VR: Fixed Oculus VRNode values on the first frame.</li>
+<li>VR: Fixed splash screen hitching during level load on Oculus Rift and Gear VR.</li>
+<li>VR: GearVR apps render their splash screens directly to the HMD compositor to fix hitching issue</li>
+<li>VR: GearVR Context creation updated.</li>
+<li>VR: GearVR no longer renders splash image directly to the HMD's compositor until updated version of Oculus plugin is available.</li>
+<li>VR: Oculus Plugin Signing for Non-Development builds.</li>
+<li>VR: Only disable rendering for stereo cameras when VR Focus is lost and RunInBackground is true. (807442)</li>
+<li>VR: Re-enable rendering when Disabling VR after losing VRFocus. (807454)</li>
+<li>VR: Reduced delay when returning VRFocus. Should no longer be a static image for a second or two.</li>
+<li>VR: Remove black bar from side of game view by correcting for occlusion mask. (802122)</li>
+<li>WebGL: Ensure GC is run after scene load to clear WeakReferences. (783291)</li>
+<li>WebSockets: Make Incoming buffer configurable: ConnectionConfig.WebSocketReceiveBufferMaxSize param. (791362)</li>
+<li>Windows Standalone: Launcher will correctly display unicode symbols for input bindings. (507878)</li>
+<li>Windows Store: Accelerometer Events will be correctly returned on ARM platforms Case (802112)</li>
+<li>Windows Store: Added command line argument -dontConnectAcceleratorEvent, which could help to solve issues with XAML controls used together with Unity.</li>
+<li>Windows Store: Correctly specify RootNamespace when generating Visual Studio projects for il2cpp backend, fixes Windows Runtime metadata validation test in WACK. (792473)</li>
+<li>Windows Store: Do not overwrite solution file when building on top. (790408)</li>
+<li>Windows Store: Fix System.FormatException in MainPage.xaml.cs Case (802990)</li>
+<li>Windows Store: Fixed a crash which happened when serializing objects which have the first field be an array or a list on .NET scripting backend. (799560)</li>
+<li>Windows Store: Fixed a memory leak which leaked ~5 KB of memory per frame. (805830)</li>
+<li>Windows Store: Fixed an issue where plugins marked for .NET scripting backend were still being used even if building to il2cpp scripting backend or vice versa. (810753)</li>
+<li>Windows Store: Fixed an issue where user couldn't enter @ symbol with touch screen keyboard when Spanish language is selected. (792589)</li>
+<li>Windows Store: Fixed an issue which sometimes caused "The referenced script on this Behaviour is missing!" after unloading unused assets while maintaining indirect references on the MonoBehaviours on .NET scripting backend. (804163)</li>
+<li>Windows Store: Fixed an issue with generics, causing access reduction exception at runtime. (790319)</li>
+<li>Windows Store: Fixed DisconnectedException while pluging/unplugin joystick from usb multiple times. (778842)</li>
+<li>Windows Store: Fixed enlighten crash on startup when Unity splash was used. (810310)</li>
+<li>Windows Store: fixed issues with UnityEngine.Networking when using Unity C# projects (774164, 795784)</li>
+<li>Windows Store: Fixed manifest generation for StoreLogo, when only scale-100 image is available. (775624)</li>
+<li>Windows Store: Fixed Screen.orientation sometimes reporting incorrect value on startup. (792618)</li>
+<li>Windows Store: generate code in exported solution to properly setup initial orientations, in order to avoid rotation on startup on Windows 10 (804583)</li>
+<li>Windows Store: Load first scene after Unity splash screen is over. (767548)</li>
+<li>Windows Store: NetworkTransport.ConnectEndPoint will work correctly on UWP (required by secure sockets), note this function will not work on older Windows Store SDKs. (786277)</li>
+<li>Windows Store: SystemInfo.supportsVibration will return correct value on Windows Phone 8.1/10.0 Case (804156)</li>
+<li>Windows Store: Workaround a driver bug in Lumia 950, the screen was flickering when navigation bar was spawning or de-spawning. Basically we replace ID3D11DeviceContext::ClearDepthStencilView (which corrupts stencil buffer somehow) with a full screen quad draw call which clears depth/stencil. (790537)</li>
+<li>Windows Store: WWW.responseHeaders will return STATUS header the same way as other platforms Case (801998)</li>
+<li>WWW: Fixed potential crash when multiple simultaneous downloads failed. (786999)</li>
+</ul>
+
+<p>Revision: 29055738eb78</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Android: IL2CPP - Stripping of symbols and debug info is now enabled by default. Development builds still have symbols which makes for a slightly larger binary.</li>
+<li>Asset Bundles: Added offset argument to AssetBundle.CreateFromFile and AssetBundle.LoadFromFile methods.</li>
+<li>Asset Bundles: Output the CRC value for the manifest asset bundle.</li>
+<li>Asset Management: Introduced AssetDatabase.GetAssetDependencyHash method which returns the hash of all the dependencies of an asset.</li>
+<li>Cluster Rendering: Improved cluster networking layer and reduced instability while using cluster input.</li>
+<li>Graphics: Dynamic batching was reintroduced for particles, lines and trails. (766802)</li>
+<li>IL2CPP: Reduce the binary size and build time for projects which make use of many C# attributes.</li>
+<li>iOS: Added a compile flag in the trampoline code in order to allow disable the filtering of emoji characters.</li>
+<li>iOS: Added device support for iPhone SE and iPad Pro 9.7".</li>
+<li>OpenGL: ComputeBuffer now uses the same data layout as Direct3D whenever automatically translated shaders are used. Therefore no more special layout handling for ComputeBuffer.SetData/GetData is needed based on the graphics API and any such user code should be removed. The only exception is with manually written GLSL shaders. In that case the OpenGL data layout rules must be taken into account.</li>
+<li>Networking: Added support for IPv6 networks in UdpClient. (767741)</li>
+<li>VR: Updated Oculus API and plugin to version 1.3.2. Downloading 1.3.2 OVRPlugin from Oculus is no longer necessary.</li>
+<li>Windows Store: On IL2CPP scripting backend, Unity players are now shipped as DLLs rather than static libraries. This significantly reduces platform support module installation size as well as decreases generated C++ code linking time.</li>
+</ul>
+
+<h3>Changes</h3>
+
+<ul>
+<li>Android: IL2CPP - Full debug version of IL2CPP libraries are stored in Temp/StagingArea/Il2Cpp/Native.</li>
+<li>OpenGL: ComputeBuffer data layout changes to match Direct3D; see Improvements section for details.</li>
+<li>Installer: Updated EULA.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>Analytics: Fixed a rare crash. Only occurs when analytics is on and importing a complete project from asset store with analytics off.</li>
+<li>Android: Audio - Fixed OpenSL output not selected when default buffer size selected. (784899)</li>
+<li>Android: Buildpipe - Don't make use of preview SDK tools installed. (788040)</li>
+<li>Android: Buildpipe - Fixed AAPT errors on project export. (786918)</li>
+<li>Android: Buildpipe - Fixed AAR plugin and resource issues on exported projects. (765396)</li>
+<li>Android: Disabled Debug markers on PowerVR Series5 devices due to driver issues. (780958)</li>
+<li>Android: Fix for EGL_BAD_NATIVE_WINDOW error on resume. (747898)</li>
+<li>Android: Fix for GPU skinning on Adreno GPUs. (763755)</li>
+<li>Android: Fix for syncing to low framerate with VSync off. (777167)</li>
+<li>Android: Fixed a crash in the Development build for some Android devices with PowerVR GPUs (e.g. Asus Memo Pad). (787491)</li>
+<li>Android: Fixed blending with background on Unity splash screen.</li>
+<li>Android: Fixed crash on Nvidia Shield tablet. (765744)</li>
+<li>Android: Fixed crash when loading scenes intermittently. (751530)</li>
+<li>Android: Fixed immersive mode switching off on some KitKat devices when pressing volume buttons. (779338)</li>
+<li>Android: Fixed incorrect width/height when changing orientation after changing anti-aliasing settings. (771542)</li>
+<li>Android: Fixed potential crash when using WWW without having Internet permission (also affects use of Unity Analytics). (779877)</li>
+<li>Android: Fixed potential race condition in atomic operations on ARM processors.</li>
+<li>Android: Fixed Standard Shader lighting issue caused by half-precision overflow on Mali GPUs. (761744)</li>
+<li>Android: Fixed value of trackingEnabled.</li>
+<li>Android: Workarounds for OpenGL ES 3 shader compiler problems on Adreno GPUs. (777617)</li>
+<li>Animation Window: Fixed Null Reference Exception in Curve Editor. (775565)</li>
+<li>Animation Window: Disabled animation sampling of an optimized game object hierarchy in the animation window. (753270)</li>
+<li>Animation Window: Fixed custom components not appearing in the Add Property menu of the Animation Window. (760809, 759069)</li>
+<li>Animation Window: Fixed selection loss in animation window when pasting keyframes. (715416)</li>
+<li>Animation: Fixed a crash related to exposed skeleton. (784942)</li>
+<li>Animation: Fixed a crash when importing an animation where a whole curve was corrupted. (774052)</li>
+<li>Animation: Fixed a performance issue for AnimatorOverrideController rebind. (779058)</li>
+<li>Animation: Fixed an issue where instantiating a prefab with an Animator Component for the first time took longer than the subsequent times. (771609)</li>
+<li>Animation: Fixed an issue where rotation curves would be created as Euler curves by default when using the Animation Component. (772668)</li>
+<li>Animation: Fixed an issue where the scale was not working in editor on GameObject with OptimizeGameObject. (774484)</li>
+<li>Animation: Fixed animation event inheriting from ScriptableObject not getting triggered. (762952)</li>
+<li>Animation: Fixed crash when an animation key tried to activate a game object which had animator attached to it. (786873)</li>
+<li>Animation: Fixed crash when calling Animator.Update(0) in an AnimationEvent. (783821)</li>
+<li>Animation: Fixed crash when GameObject with Animator is instantiated in StateMachineEnter/Exit. (770045)</li>
+<li>Animation: Fixed crash when shutting down standalone app with Script Playables. (775677)</li>
+<li>Animation: Fixed error message in console while optimizing animation hierarchy from the inspector. (775773)</li>
+<li>Animation: Fixed issue where Animation was distorted when animated object was scaled and Optimize Game Objects was selected. (766898, 758322)</li>
+<li>Animation: Fixed scale value getting zeroed when removing scale curve components in AnimationWindow. (689644)</li>
+<li>APIUpdater: Fixed AssemblyUpdater crash when verifying WSA / Windows Phone assemblies. (767506)</li>
+<li>APIUpdater: Fixed ScriptUpdater crash when processing Boo / UnityScript containing Hash literals. (769880)</li>
+<li>Asset Bundles: Fixed issue where WWW.LoadFromCacheOrDownload would not take into account space on device, and could hang. (762829)</li>
+<li>Asset Bundles: Fixed the error messages when building variant asset bundles. (769858)</li>
+<li>Asset Bundles: Fixed an issue where unloading an asset bundle with animated objects (legacy animation) during play mode crashes the editor. (775822)</li>
+<li>Asset Bundles: Added back scene asset bundles compression statistics. (768965)</li>
+<li>Asset Bundles: Fixed a crash while loading asset bundle asynchronously. (747800)</li>
+<li>Asset Bundles: Fixed a potential crash when decompressing corrupted LZMA bundles. (782773)</li>
+<li>Asset Bundles: Fixed Compress Assets On Import setting ignored when switching platform (762739)</li>
+<li>Asset Bundles: Fixed CreateFromMemory not working with "." in filenames. (734216)</li>
+<li>Asset Import: Fixed a crash on FBX import in some rare circumstances. (768846)</li>
+<li>Asset IMport: Fixed issue where changing date modified on directory meta file caused all files below that directory to be reprocessed. This was also affecting VCS. (756559)</li>
+<li>Audio: Don't try to load any sounds when Unity audio is disabled. (776044, 763036)</li>
+<li>Audio: Fixed an issue where Low Pass Filter didn't work on Audio Listener. (732854)</li>
+<li>Batch mode: Fixed an issue where BuildPlayer calls might cause compilation errors to be logged in subsequent runs. (703290, 786195)</li>
+<li>Cache Server: Upgraded the node.js version 0.12.7. (760234)</li>
+<li>Compute: Do not log warnings/errors when current build target does not support compute shaders.</li>
+<li>Core: Added stacktrace for logging statements and exceptions called on threads. (697872, 633905)</li>
+<li>Core: ArgumentCache.TidyAssemblyTypeName is now alloc-free if the type name is already clean. (738249)</li>
+<li>Core: Fixed crash when scaling prefab with mesh that is not read/write enabled. (766019)</li>
+<li>Core: When exporting a package with scene's dependencies, checkboxes are available next to folder icon. (752733)</li>
+<li>Core: WWW.responseHeaders is now a case-insensitive Dictionary, as per RFC2616 spec. (770155)</li>
+<li>D3D11: Fixed a deadlock which would occur when trying to restore focus to a minimized standalone player running in Fullscreen Exclusive mode. (523691)</li>
+<li>D3D11: Fixed exclusive mode window reactivation issues after focus has been lost. (788555)</li>
+<li>D3D11: Fixed some rare crashes on memory constrained systems (log would contain resource creation failure messages).</li>
+<li>D3D9: Player loop will now be processed in the background again when the graphics device is lost (Windows are locked, window is minimized, etc.). (752626)</li>
+<li>Editor: Fix for core assemblies not being reloaded after encountering errors in user scripts. (750423)</li>
+<li>Editor: Added support for resizing the height of the preferences window. (763313)</li>
+<li>Editor: Adjusted the width of the 'Build Settings' window so that it properly display its contents, even if support for some of the players is not currently available. (728634)</li>
+<li>Editor: Files with invalid names can no longer be dragged into a project. (663994)</li>
+<li>Editor: Fixed a crash that could happen when animation window is open, and playmode is entered. (696623)</li>
+<li>Editor: Fixed a crash when locking cursor from constructor or static initializer. (765466)</li>
+<li>Editor: Fixed a crash when padding ASTC texture when building from command line. (759288)</li>
+<li>Editor: Fixed an inconsistency between visible and hidden meta file modes, where empty folders were recreated in 'visible' mode. (588531)</li>
+<li>Editor: Fixed an issue that could cause scenes containing prefab instances with driven transforms to immediately become dirty. (709639)</li>
+<li>Editor: Fixed an issue that was causing transformations to be modified when entering and subsequently coming back from play mode. (759115)</li>
+<li>Editor: Fixed an issue where compression wasn't being applied in calls to BuildPipeline.BuildStreamedSceneAssetBundle(). (781866)</li>
+<li>Editor: Fixed an issue where unloaded scenes were removed from hierarchy after exiting playmode. (769613)</li>
+<li>Editor: Fixed an issue with dragging a Sprite/Texture2D into the inspector causing a PolygonCollider2D to use it even though it is not dropped on the component editor itself. (778125, 780607)</li>
+<li>Editor: Fixed changing order of components not getting saved. It now also support undo. (764986)</li>
+<li>Editor: Fixed crash on launch if "metadata" folder is deleted before launching. (746964)</li>
+<li>Editor: Fixed newly installed Unity command line activation issue. (790345)</li>
+<li>Editor: Fixed performance issue in Sprite Inspector. (709059)</li>
+<li>Editor: Fixed Target Support module download URLs in Build Settings.</li>
+<li>Editor: Fixed the asset importer error when calling Refresh() during an assembly import. (730559)</li>
+<li>Editor: Fixed WebViewWindow's freed memory access. (775366)</li>
+<li>Editor: Fixed wrong error message when returning license via command line. (784727)</li>
+<li>Editor: Fixed an issue when logging off and opening the Service Window would be missing. (781863)</li>
+<li>Editor: If a read only file or folder is duplicated, the read only status is no longer duplicated. (730245)</li>
+<li>Editor: Improved error messages for unsupported target platform in batch mode. (782752)</li>
+<li>Editor: Now show alert popover for invalid serial format. (775898)</li>
+<li>Editor: Remove SelectionBase from LOD Group. (763231)</li>
+<li>Editor: Sped up importing of some Fonts by updating progress bar less often than "crazy often".</li>
+<li>Editor: Fixed access to destroyed window during shutdown. (775244)</li>
+<li>Editor: Fixed access violation in some editor GUIView operations. (769833)</li>
+<li>GI: Fixed incorrect normal mapping on Directional Specular lightmaps; shader code was not matching up what Enlighten was baking. (755421, 766533, 766546, 779696, 756020, 780025)</li>
+<li>GI: Clamped DynamicGI.indirectScale to allowed range. (664953)</li>
+<li>GI: Disabled LightProbeGroup components no longer display visualization in the scene view. (662572)</li>
+<li>GI: Fixed errors when using baked lightmaps &amp; multi-scene editing. (753822)</li>
+<li>GI: Fixed realtime GI texture coordinates sometimes going wrong on static-batches meshes. (743273)</li>
+<li>GI: Fixed some cases of scenes not referencing the correct lighting data asset after bake. (757575)</li>
+<li>GI: Improved wording of various Enlighten error messages.</li>
+<li>GI: Now properly initialize baked scenes in some code paths to avoid error on console. (753822)</li>
+<li>GI: Upgraded to Enlighten3.02p4. Fixes direct lighting getting baked into lightmap (697565). Fixes a precision issue and out-of-bounds texture access in baking, which could lead to a crash in the Final Gather stage. (767110)</li>
+<li>GI: Changing Reflection Probe component positioning in the inspector makes realtime probe black. (653592)</li>
+<li>GI: Fixed a Reflection Probe baking issue when multiple scenes are used in a project.</li>
+<li>GI: Fix for baking a scene with objects added before saving the scene not being included in the result. (728610)</li>
+<li>GI: Fixed a crash when building reflection probe data on specific scenes containing Canvas elements. (767560, 763045)</li>
+<li>Graphics: Fixed a glitch in Crunch format compressed non-alpha texture after using sprite packer. (774638, 768171)</li>
+<li>Graphics: Fixed internal profiler for static batching on Android, iPhone and Windows Store. (769539)</li>
+<li>Graphics: Fixed material index not being used when calling Graphics.DrawMeshNow with rotation. (765378)</li>
+<li>Graphics: Fixed MovieTexture crash when loading a video with no audio stream.</li>
+<li>Graphics: Fixed potential crash in SetGpuProgramName.</li>
+<li>Graphics: Fixed static batching errors when meshes have additional vertex data streams with mismatching vertex count. (775261)</li>
+<li>Graphics: Fixed TrailRenderer showing a gap between current position and the last update. (779129)</li>
+<li>Graphics: Upgrading a shader with a DX11 [annotation] at the start of the file now doesn't crash. (766992)</li>
+<li>IL2CPP: Correct an intermittent crash when Environment.GetCommandLineArguments is called. (775804)</li>
+<li>IL2CPP: Emit proper C++ code for COM marshaling of methods that have at least one parameter that cannot be marshaled. (789905)</li>
+<li>IL2CPP: Fixed a rare deadlock during Resources.UnloadUnusedAssets. (756912)</li>
+<li>IL2CPP: Fixed an intermittent crash in the experimental memory profiler. (776152)</li>
+<li>IL2CPP: Fixed an issue with Socket.Select and IL2CPP where a socket could be reported as being in an error state when it should have been reported as being in a write state. (759488)</li>
+<li>IL2CPP: Generate C++ code to properly handle circular references for field types in unsafe C# code. (780472)</li>
+<li>IL2CPP: Generate proper C++ code for a C# class with the StructLayout attribute when its base class does not have a StructLayout attribute. (767367)</li>
+<li>IL2CPP: Generate proper C++ code for a method that is marked as both an internal call and a runtime call. (781439)</li>
+<li>IL2CPP: Generate proper C++ code for the OnSerialize method injected by UNET in classes deriving from NetworkProximityChecker. (786499)</li>
+<li>IL2CPP: Generate proper C++ code for the p/invoke wrapper for a delegate that accepts another delegate as an output parameter. (778146)</li>
+<li>IL2CPP: Generated proper C++ code for assemblies compiled with Visual Studio when a method returning an IntPtr returns an integer value. (787687)</li>
+<li>IL2CPP: Improved message for PathTooLongException being encountered in IL2CPP. (717343)</li>
+<li>IL2CPP: Increased maximum heap size.</li>
+<li>IL2CPP: Now correctly return the remote end point from a UDP socket receive call in an IPv6 network. (767741)</li>
+<li>IL2CPP: Now generate proper code for COM marshaling of a struct that contains a field of type object array. (781921)</li>
+<li>IL2CPP: Prevent a compile error in the generated C++ code due to a missing header when we generic exception type is used in a catch statement. (776087)</li>
+<li>IL2CPP: Properly handle numeric conversion from an unsigned integer to floating point types in some edge cases. (780659)</li>
+<li>IL2CPP: Properly handle type casts and check for value type arrays when they are casted to generic collection interfaces. (782653)</li>
+<li>IL2CPP: Support proper default marshaling of string parameters and return values when the CharSet attribute is provided on a method with a value of Unicode. (692653)</li>
+<li>IL2CPP: Throw informative exception when MonoPInvokeCallback delegate type is incompatible with target method signature. (732438)</li>
+<li>Input: Input.mousePosition is no longer clamped to the client area on windows standalone, the last position is kept instead. (769666)</li>
+<li>iOS: Added Xcode 7.3 Build &amp; Run support.</li>
+<li>iOS: Allow IPv6 to work on iOS with the .NET 2.0 profile. (730146)</li>
+<li>iOS: Allow third party plugins that use PLCrashReporter library. (768572)</li>
+<li>iOS: Apple Pencil pressure will now be exposed the same way 3D Touch pressure already is.</li>
+<li>iOS: Do not export non-prefixed freetype2 symbols now. (778668)</li>
+<li>iOS: Ensure asset bundles are not flagged for iCloud backup by default upon download. (771597)</li>
+<li>iOS: Ensure that our symbols are not overridden by user libraries. (774685)</li>
+<li>iOS: Fixed a crash when playing a scene in the Editor with an iOS device attached as a Unity Remote. (771132)</li>
+<li>iOS: Fixed GLES error 0x0506 and various graphics corruption when using WebCam textures. (763342)</li>
+<li>iOS: Fixed incompatible pointer cast warning in trampoline. (776105)</li>
+<li>iOS: Fixed memory leak when using On Demand Resources. (776528)</li>
+<li>iOS: Fixed support for non-native resolutions in GLES 2. (779738)</li>
+<li>iOS: Fixed the incorrect ABI for int64 types on iOS. (774544)</li>
+<li>iOS: Fixed UnityWebRequest hanging on responses &gt; 64k when using a custom DownloadHandlerScript. (780329)</li>
+<li>iOS: Made Social.ShowLeaderboardUI to show the leaderboards tab, instead of achievements tab. (777596)</li>
+<li>iOS: Pause application on GameCenter dialogs on tvOS. (767633)</li>
+<li>iOS: Switching between different input fields will not leave input accessory fields on screen. (775710)</li>
+<li>iOS: TouchInputModule and StandaloneInputModule will now handle all touch phases preventing unwanted module switches. (764054)</li>
+<li>iOS/IL2CPP: Prevent unnecessary changes to the timestamps of the libil2cpp headers during a build. This allows incremental builds to work correctly in Xcode.</li>
+<li>iOS/tvOS: AdSupport is now removed from Default Frameworks and needs to be explicitly selected under Framework Dependencies in Platform Settings if required. (732878)</li>
+<li>iOS/tvOS: Fixed a regression which caused artefacts when using GLES2 Graphics API. (785036)</li>
+<li>JsonUtility: Fixed EditorJsonUtility throwing MissingMethodException (769085)</li>
+<li>Linux: Don't query displays when running in nographics mode.</li>
+<li>Linux: Exit with nice message instead of crashing when GPU/driver doesn't meet minimum requirements. (777564, 783842)</li>
+<li>Linux: Fixed a crash when stereoscopic mode is requested on non-stereoscopic display. (784075)</li>
+<li>Linux: Fixed an occasional crash when creating texture properties.</li>
+<li>Mac Editor: Added functionality in order to prevent the processing of folders that contain the ".unity" extension, as this was causing the editor to crash when executing in batch mode. (761639)</li>
+<li>MacDownloadAssistant: Fixed window focus issue after security prompt.</li>
+<li>Mac Editor: Fixed UI text rendering on Radeon HD 4000 series and older AMD GPUs. (783713)</li>
+<li>Mac Editor: Application.version now returns the application's version. It no longer returns Application.unityVersion. (764054)</li>
+<li>MemoryProfiler: Added toggle to exclude references in detailed memory dump to reduce memory footprint used. (783527)</li>
+<li>Mono: Fixed GC related test instability in OSX Editor. (777945)</li>
+<li>Mono: Make the Personal folder be the same on all profiles. (776268)</li>
+<li>Networking: Fixed issue with SyncList change callback where the old value was given there instead of the updated one. (774970)</li>
+<li>Networking: Fixed problem when transferring data via reliable sequenced QoS channel could lose messages in "bad" network conditions. (781177)</li>
+<li>Networking: Fixed problem where HostTopology.MessagePoolSizeGrowthFactor was ignored. (773411)</li>
+<li>Networking: Fixed WebGL client unable to free connections in NetworkServer when using WebSocket. (768030)</li>
+<li>OpenGL: Fixed a bunch of compute shader structured buffer access corner case issues. (767348)</li>
+<li>OpenGL: Fixed invalid shader code generation when using gl_PrimitiveID or bitFieldInsert().</li>
+<li>OpenGL: Fixed mislocated fragment shader default float precision. Now also basing the default precision on actual GPU capabilities. (763638)</li>
+<li>OpenGL: Fixed multiple simultaneous append/consume compute buffers usage.</li>
+<li>OpenGL: Fixed rendering when Graphics.Blit is being called after WaitForEndOfFrame. (784880)</li>
+<li>OpenGL: Shader compiler, added unused global uniform pruning.</li>
+<li>OpenGL: Shader compiler, avoid temporary variable name collisions. (780831)</li>
+<li>OpenGL: Shader compiler, fixed shader translation bugs. (782514)</li>
+<li>OpenGL/ES: Fixed GPU profiler on Android for Tegra 2/3/4 devices. (776539)</li>
+<li>Particles: Do not restart simulation when becoming visible, and use bigger timesteps, to reduce performance spikes. (765905)</li>
+<li>Particles: Fixed a case where if OnWillRenderObject renders, it breaks the main scene. (773226)</li>
+<li>Particles: Fixed a crash caused when using Inherit Velocity Module. (783433)</li>
+<li>Particles: Fixed a crash when material is missing and mesh colors are requested. (774931)</li>
+<li>Particles: Fixed a crash when using SubEmitters with separate rotation axes. (757377)</li>
+<li>Particles: Fixed an issue where the Material Property Blocks not working with mesh particles. (776143)</li>
+<li>Particles: Fixed batching issues when using multiple cameras in the same position. (788023)</li>
+<li>Particles: Fixed culling when using SetParticles. (496494)</li>
+<li>Physics: Cloth deletes MeshRenderer component when entering playmode fixed. (769137)</li>
+<li>Physics: Disabling cloth component doesn't seem to really disable it fixed. (669622)</li>
+<li>Physics: Ensure that OnTriggerExit2D is not called when changing Rigidbody2D.isKinematic property.</li>
+<li>Physics: Fix for Collision2D.relativeVelocity being reported with incorrect values. (758422)</li>
+<li>Physics: Fixed an issue for 2D collider: line &amp; ray casting not detecting initial overlapped state.</li>
+<li>Physics: Fixed an issue with Box2D changes slowing the editor down when lots of changes are made without entering play-mode. (777591)</li>
+<li>Physics: Fixed cloth issue where adding cloth to an object throws GetLocalizedString error. (769136)</li>
+<li>Physics: Provide feedback to allow working around crashes occurring when input meshes contain invalid vertices. (766891)</li>
+<li>Physics2D: Fix to ensure that changing a Collider2D property via the inspector doesn't reset the OnCollision or OnTrigger state back to 'Enter'. (786032)</li>
+<li>Physics2D: Fixed a problem where both AreaEffector2D and PointEffector2D scaled-up forces for each additional collider on a rigidbody. (780257)</li>
+<li>Physics2D: Fixed a problem where constantly changing an Effector2D collider would mean that no contacts were ever processed stopping the effector from working.</li>
+<li>Prefabs: Implemented OnWillSaveAssets callback when applying prefabs. (754351)</li>
+<li>Profiler: Fixed a crash when adding data from thread which was started during a frame. (758264)</li>
+<li>Resources: Enable warnings for and prevent crashes and memory corruptions when non-assets, or non-unloadable assets are tried to be unloaded through Resources.UnloadAsset in release builds. (767120)</li>
+<li>Samsung TV: Enabled a "Show Unity Splash Screen" check box on Samsung TV's PlayerSettings.</li>
+<li>Samsung TV: Fixed multiple crashes on the NT14U TV that would prevent games from launching.</li>
+<li>SpeedTree: Fixed "GetLocalizedString is not allowed to be called" error message when using the Tree Editor. (779965)</li>
+<li>Terrain: Fixed crash when exiting Editor after creating TerrainData with HideAndDontSave flag. (780365)</li>
+<li>Tizen: Fixed issue deploying after upgrading to the Tizen 2.4rev4 SDK. (743653)</li>
+<li>tvOS: Enabled game controller in tvOS on-screen keyboard. (776446)</li>
+<li>tvOS: Fixed a bug that caused splash screen properties being not applied. (775008)</li>
+<li>tvOS: Fixed a crash when calling OnDemandResourcesRequest.Dispose() in a coroutine.</li>
+<li>tvOS: Fixed build targeting tvOS 9.2 with Xcode 7.3 beta. (770115)</li>
+<li>tvOS: Separated tvOS SDK and OS version settings from iOS. (749311)</li>
+<li>UI: Fix for child UI elements not being rendered when scaling World Space Canvas from zero. (768807)</li>
+<li>UI: Fixed ArgumentOutOfRange exception sometimes being thrown when editing InputField on mobile. (762080)</li>
+<li>UI: Fixed dropdown destroy coroutine being started when the component is not active. (758873)</li>
+<li>UI: Fixed issue with crash due to dirty renderer being in the dirty list after being destroyed. (764711)</li>
+<li>UI: Fixed issue with double rendering of canvas on Vive VR.</li>
+<li>UI: Fixed object culling when unparenting from a mask type. (740604)</li>
+<li>UI: Fixed Selectable not handling when the EventSystem is null. (788037)</li>
+<li>UI: Fixed setting Input Field text when in Decimal/Integer with invalid values.</li>
+<li>UI: Setting Input field text through script will now be validated.</li>
+<li>UnityWebRequest: Downgrade to HTTP GET on 302 and 303 redirect codes (751798)</li>
+<li>UnityWebRequest: Honor negative redirectLimit. (751794)</li>
+<li>UWP: Build &amp; Run will correctly work with Universal Windows 10 Apps. (771326)</li>
+<li>UWP: Screen.currentResolution will return desktop resolution when application is in windowed mode. (771541)</li>
+<li>VisualStudio: Fixed a crash that could sometimes happen when opening Visual Studio.</li>
+<li>VR: Fixed an issue with incorrect Render Texture size being used. Most notable with deferred rendering.</li>
+<li>VR: VRFocus now respects RunInBackground. Run In Background value of true will now disable rendering if VRFocus is lost.</li>
+<li>WebGL: Fixed SimpleWebServer bug causing 'Uncaught incorrect header check'. (770266)</li>
+<li>Wii U: Added crash fixes, memory efficiency and 16-bit texture support.</li>
+<li>Wii U: Fixed issues causing known crashes.</li>
+<li>Windows: SystemInfo.deviceModel will now report model name and manufacturer. (784466)</li>
+<li>Windows Standalone: P/Invoke will work correctly with native libraries which reference other native libraries, if those libraries are located in the same directory. (776918)</li>
+<li>Windows Store: Assembly-CSharp-firstpass will no longer reference itself. (775216)</li>
+<li>Windows Store: Correctly generate Visual Studio namespace when product name contains ' symbol. an underscore will be used instead. (754102)</li>
+<li>Windows Store: Disable Generate C# option when scripting backend is set to il2cpp. (775344)</li>
+<li>Windows Store: Files located in Assets\Resources won't end up in generated Assembly-CSharp-firstpass project, but will be correctly placed in Assembly-CSharp project.</li>
+<li>Windows Store: Fixed $(OutDir) and $(IntDir) paths for generated IL2CPP Visual Studio solutions which prevented appx bundles to build correctly.</li>
+<li>Windows Store: Fixed a rare crash at startup related to serialization on debug mode. (778905)</li>
+<li>Windows Store: Fixed an assert happening during mesh compression.</li>
+<li>Windows Store: Fixed an exception while marshalling UnityEngine.NavMeshTriangulation.</li>
+<li>Windows Store: Fixed an issue with populating visual assets (tiles, logos, etc.) to Visual Studio solution (correct file names, manifest entries) and check format consistency (JPEG vs PNG). (775592, 775624, 777575, 777580)</li>
+<li>Windows Store: Fixed Build &amp; Run for Universal 8.1 solution. (789538)</li>
+<li>Windows Store: Fixed generics related AssemblyConverter failure and give better error messages. (762780)</li>
+<li>Windows Store: Fixed incorrect orientation of extended splash screen on Windows Phone 8.1. (770092)</li>
+<li>Windows Store: Fixed marshaling of UnityEngine.HumanDescription, previously the field hasTranslationDoF was not mashaled at all.</li>
+<li>Windows Store: Fixed marshaling of UnityEngine.SplatPrototype, previously fields specularMetallic, smoothness were not marshaled, because of this sometimes terrain would be rendered incorrectly. (786889)</li>
+<li>Windows Store: Fixed Screen.orientation returning AutoRotation on startup. (787522)</li>
+<li>Windows Store: Fixed stacktraces on IL2CPP scripting backend. (781907)</li>
+<li>Windows Store: Fixed Tab key duplication in XAML controls when Unity input is enabled. (775931)</li>
+<li>Windows Store: Fixed www.error return result, previously it would return only an error code, now it will also contain error message returned by the server.</li>
+<li>Windows Store: Having many generic types in the project no longer makes .NET Native compiler run out of memory.</li>
+<li>Windows Store: Help SerializationWeaver find references which have Windows SDK specified when building to Universal 8.1. (781994)</li>
+<li>Windows Store: Hindi characters will show up correctly, Nirmala UI from Windows fonts will be used. (779136)</li>
+<li>Windows Store: Package.appxmanifest for Universal Windows 10 Apps will be produced correctly when protocol for association launching is specified. (780971)</li>
+<li>Windows Store: RuntimeInitializeOnLoadMethod will work correctly. (777878)</li>
+<li>Windows Store: Screen.SetResolution will correctly work on Windows Phone 10. (773877)</li>
+<li>Windows Store: Slightly fix generated Assembly-CSharp* projects to fix "System.BadImageFormatException: Duplicate type with name 'UnityEngine.Internal.$FieldNamesStorage' .. " (781935)</li>
+<li>Windows Store: EventType.ScrollWheel is now properly detected. (784975)</li>
+<li>Windows Store: The maximum amount of characters for short name for tiles will be 40 now. (789439)</li>
+<li>Windows Store/IL2CPP: Allow the MapFileParser utility to handle input and output files with paths containing non-ASCII characters. (779968)</li>
+<li>Windows Store/IL2CPP: Fixed a crash on windows when using asynchronous socket APIs (.BeginSend/.BeginReceive/etc). (771883)</li>
+<li>Windows: Fixed standalone Windows player position when bigger than primary monitor. (760215)</li>
+<li>WindowsDownloadAssistant: Fixed setting VisualStudio 2015 as Unity script editor.</li>
+<li>WindowsDownloadAssistant: Fixed the bug which was freezing installation UI during bad network connection. (732955)</li>
+</ul>
+
+<p>Revision: 960ebf59018a</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Android: Audio; don't select OpenSL output if the native device params are too bad for fast path (fixes audio issues on some buggy devices).</li>
+<li>Android: Buildpipe; updated SDK tools requirements for the Editor.</li>
+<li>Android: Editor; added Marshmallow to the list of APIs.</li>
+<li>Android: IL2CPP; use Android NDK x64 on x64 Windows Editor.</li>
+<li>Android: Soft Input; get rid of hardcoded text color, switch to Light theme.</li>
+<li>Editor: Added warning dialog if there is any version difference between editor and last project save.</li>
+<li>Metal: Add -force-metal switch to force Metal rendering on OSX/iOS.</li>
+<li>OpenGL Core: A whole bunch of fixes, particularly on Macs. See Fixes list below.</li>
+<li>Scripting: introduced global define UNITY_5_3_OR_NEWER, which can be used for conditionally compile code that is compatible only with Unity 5.3 or newer.</li>
+<li>Win / OSX Standalone: Add -hideWindow command line option to launch standalone applications with the window hidden.</li>
+<li>Windows: Added a new command line argument for standalone builds: -window-mode. Options: borderless, exclusive. It lets users override the default fullscreen window behavior.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>2D: Changing Rigidbody2D.gravityScale while a Rigidbody2D.MovePosition is in progress now works. (762771)</li>
+<li>2D: Ensure Joint2D auto-configuration still works if joint is added from script (765870)</li>
+<li>2D: Ensure that a TargetJoint2D added via script allows collisions with static colliders. (763922)</li>
+<li>2D: Stop Rigidbody2D with Interpolation being placed at world origin for a single update upon start. (764769)</li>
+<li>Analytics: Fixed unreliable event sending (especially AppStart) on WebGL. (770316)</li>
+<li>Android: Added support for Vivante OpenGL ES 3 driver. (738821, 758155)</li>
+<li>Android: Fixed alignment crash on some Android ARM devices. (768974)</li>
+<li>Android: Fixed an issue where Ping wouldn't work in release mode. (734124)</li>
+<li>Android: Fixed black screen or crash during startup on old PVR devices (Samsung Galaxy S I9000). (762875)</li>
+<li>Android: Fixed bug in Texture.GetPixels for ETC compressed textures. (759195)</li>
+<li>Android: Fixed rendering artifacts when using native plugins and multithreaded renderer. (772171)</li>
+<li>Android: Fixed rendering on Vivante GPUs on Android 4.3 and older. (712890, 771890)</li>
+<li>Android: IL2CPP; fixed build errors on NDK paths with whitespaces. (763447)</li>
+<li>Android: IL2CPP; fixed crash on second startup after installation. (766698)</li>
+<li>Android/IL2CPP; prevent a crash in the garbage collector when it attempts to scan a section of memory used for the code that may have been unmapped by the OS. (755201)</li>
+<li>Animation: Fixed a crash when animating lights using the legacy Animation component. (772260)</li>
+<li>Animation: Prevent crashes when clips are null for animations extracted from asset bundles whose dependencies have not loaded. (756463)</li>
+<li>API Updater: Fixed "Sequence contains more than one matching element" crash. (760684)</li>
+<li>API Updater: Fixed crash upon assembly resolution failures. (743463)</li>
+<li>Asset Bundles: Only reimport when setting asset bundle name if cache server is connected. (714661)</li>
+<li>AssetBundles: BuildAssetBundles will switch back to the original active build target when finished. (759142)</li>
+<li>Audio: Disabled sound manager watch dog. (774356)</li>
+<li>Core: Fixed an issue asynchronously loading a prefab with a large amount of assets. (771882)</li>
+<li>Core: Fixed some errors with recently deleted objects (in WWWDelayCall; ClearPersistentDirty call; editor CEF integration).</li>
+<li>Editor: Don't call OnLevelWasLoaded on the first scene when entering play mode. (759231)</li>
+<li>Editor: Fix for clustering allocation while navigating. (747856)</li>
+<li>Editor: Fixed a crash when selecting some prefabs. (766469)</li>
+<li>Editor: Fixed an issue that made GameObjects disappear from the Editor if they have an associated editor script that made use of DontDestroyOnLoad. (754127)</li>
+<li>Editor: Fixed an issue when opening a scene from the Project Browser while in playmode it resulted in that scene being loaded even after going out of playmode. (767728)</li>
+<li>Editor: Fixed misleading texture decompression warning in graphics emulation. (760112)</li>
+<li>Editor: Fixed startup when Unity is in a path with non-ASCII characters. (765159)</li>
+<li>Editor: Fixed the issue of GUI.Windows background not being tinted by GUI.colors anymore. (756004)</li>
+<li>Editor: Fixed the issue of marking scene dirty when creating prefab by dragging from Hierarchy window to Project. (758409)</li>
+<li>Editor: Fixed the issue of marking the scene dirty when pressing the apply button on a prefab instance. (757027)</li>
+<li>Global Illumination: Fixed crash in some scene loading scenarios. (768849)</li>
+<li>Global Illumination: Fixed crash when building lighting with a specific scene setup. (767222)</li>
+<li>Global Illumination: Fixed light probes not being used anymore in Standalone when a scene without light probes was loaded with Additive mode. (767161)</li>
+<li>Global Illumination: Fixed multi-scene baking. (751599)</li>
+<li>Global Illumination: Fully repaint inspectors after baking reflection probes; some previews were not updating before. (663992)</li>
+<li>Global Illumination: When compositing the directional lightmap removed the clamping on the w-component of the generated pixels.</li>
+<li>Graphics: Added profiler markers on async texture loading waits.</li>
+<li>Graphics: Fixed .ogv movie files with stream markers beyond 16kb not imported correctly. (772013)</li>
+<li>Graphics: Fixed "Trying to reload asset from disk that is not stored on disk" error when non-persistent objects are attempted to be reloaded from disk. (752613)</li>
+<li>Graphics: Fixed a synchronization problem that was causing texture data not to be properly updated when changing quality settings at runtime. (752613)</li>
+<li>Graphics: Fixed an issue where GrabPass could get source texture wrongly offset in some cases. (75508, 726067)</li>
+<li>Graphics: Fixed an issue where setting a material's shader to null would crash the editor. (771292)</li>
+<li>Graphics: Fixed an issue where TrailRenderer would randomly vanish/flicker. (740580)</li>
+<li>Graphics: Fixed crash in SetGpuProgramName which could happen when the program isn't supported by the target graphics hardware (found on Android) . (772958)</li>
+<li>Graphics: Fixed GenerateSecondaryUVs crashes on some meshes.</li>
+<li>Graphics: Fixed MovieTextures sometimes being black in Mac Standalone (64 or Universal builds). (765928)</li>
+<li>Graphics: Prevent Projectors from accepting invalid clip planes from a script. (506089, 535548)</li>
+<li>Graphics/DX11: Fixed compute shader resource hazards found in certain cases when binding the same resource SRV and UAV on pixel and compute shader stages. (542251)</li>
+<li>IL2CPP: Avoid crash when constructing error message. (770081)</li>
+<li>IL2CPP: Correctly sort unsigned integers via the Array.Sort method. (774085)</li>
+<li>IL2CPP: Prevent generated C++ code from failing to compile with errors like "error: use of undeclared identifier 'L_5'" in some cases. (773713, 768010)</li>
+<li>IL2CPP: Properly marshal formatted classes (762883, 746313)</li>
+<li>IL2CPP: Properly parse binary text assets. (771835)</li>
+<li>iOS Metal: Fixed performance regression when doing in-frame clear (GL.Clear or command buffer Clear). (775362)</li>
+<li>iOS: Fixed redirect for WWW. (723960)</li>
+<li>Linux: Fixed MSAA in non-upscaled windows, force window recreation when requirements change for player window attributes.</li>
+<li>Linux/GLCore: Fixed one more instance of render. (775575)</li>
+<li>Mecanim: Fixed an issue with Animation clip length for bundled clip. (753888)</li>
+<li>Mecanim: Fixed AnimationClip.SampleAnimation memory leak. (760612)</li>
+<li>Mecanim: Fixed Animator with statemachine behaviour runtime compile error not firing callback on the right SMB. (756129)</li>
+<li>Mecanim: Fixed assert when using Animator.MatchTarget.</li>
+<li>Mecanim: Fixed long start play mode for scene with lots of controller. (769964)</li>
+<li>Mecanim: Fixed StateMachineBehaviours on layer not being called properly. (765141)</li>
+<li>Mono: Added IPv6 support on Windows. (767741)</li>
+<li>Networking: Fixed a crash due to wrong initialization of connection.</li>
+<li>Networking: Fixed an issue where ack didn't reset with connection resetting which lead to reliable traffic stale. (775226)</li>
+<li>Networking: Removed annoying "Attempt to send to not connected connection" message. (775222)</li>
+<li>Networking: Removing "no free events for message" as annoying. (775225)</li>
+<li>Networking: Send Error: val &gt; 0 on user disconnect, results in memory write violation and editor crash. (754510)</li>
+<li>OpenGL Core: Fixed twitching and incorrect rendering with skinning and UI components on GLCore + Mac + NVIDIA. (773476, 775275, 767857, 766778)</li>
+<li>OpenGL Core: Fixed fullscreen mode when not using native resolution and using MSAA on Mac AMD GPUs. (775428, 776470)</li>
+<li>OpenGL Core: Fixed fullscreen MSAA support with linear color space rendering. (774558, 774216)</li>
+<li>OpenGL Core: Fixed Graphics API switching to OpenGL. (762687)</li>
+<li>OpenGL Core: Fixed occasional game view flipping with image effects in the editor. (760196)</li>
+<li>OpenGL Core: Fixed dynamic geometry performance issues on Mac + NVIDIA.</li>
+<li>OpenGL Core: Fixed stretched game view with some image effects in Mac editor. (757536, 757866)</li>
+<li>OpenGL Core: Workaround for Nvidia shader compiler bug on OS X, affecting SSAO shader. (756028)</li>
+<li>OpenGL Core/ES: Fixed scalar uniform handling in the shader translator. (772167)</li>
+<li>OpenGL Core/ES: Fixed wrong shader code generation when redirecting variables, was affecting FastBloom shader. (772434)</li>
+<li>OpenGL Core/ES: Shader compiler, fixed invalid uniform access in certain corner cases. (767343)</li>
+<li>OpenGL ES: Fixed non-shadowmap depth textures on some devices. (768916)</li>
+<li>OpenGL: Fixed point size support using GLSL PROGRAM snippets. (763875)</li>
+<li>Particles: Fixed a culling regression, when particle systems leave the screen and come back. (773673)</li>
+<li>Particles: Fixed error message due to default bounding box. (767419)</li>
+<li>Physics: Fixed a PhysX crash issue in PxsCCDContext::updateCCD experienced by some VR applications. (776187)</li>
+<li>Profiler: Fixed crash when adding data from thread which was started during a frame. (758264)</li>
+<li>Profiler: Fixed hang when EndSample did not have a matching BeginSample. (770225)</li>
+<li>Shaders: Added support to the compute shader compiler to handle bools inside structures.</li>
+<li>Shaders: Fixed Standard shader in some rare cases outputing NaN as pixel shader result. (766806)</li>
+<li>Shadows: Fixed shadows disappearing for some off-screen shadows casters. (761152)</li>
+<li>Substance: All inputs are now applied to a ProceduralMaterial on the first RebuildTextures() call after the material's textures have been read from cache. Previously, only the modified inputs were applied.</li>
+<li>Substance: Fixed Editor freeze upon instantiation of resource. (771650)</li>
+<li>Substance: Fixed broken detection and assignment of shader keywords resulting in wrong appearance of ProceduralMaterials in scenes when the ProceduralMaterial was not opened in the Inspector (some shader keywords were enabled when they should not).</li>
+<li>Substance: Fixed cache hashing and management issue which could cause the cache to be considered valid again after having been invalidated (often seen after calling Resources.UnloadUnusedAssets()).</li>
+<li>Substance: Fixed loading of files with special characters in their paths or names.</li>
+<li>Substance: Fixed rare crash caused by using the wrong size when uploading ProceduralTextures.</li>
+<li>Substance: Fixed upgrading UNITY 4.x project data, legacy shaders should now be used for these old projects instead of being incorrectly replaced by the Standard shader. (765510)</li>
+<li>Tizen: Fixed error about copying whitelists while building on Windows. (773614)</li>
+<li>UI: Fixed exceptions upon assembly/type resolution failures. (770048)</li>
+<li>UI: Fixed memory leak where dirty renderers on a disabled canvas would still get added to the dirty list causing crashes on clear. (773533)</li>
+<li>UI: Fixed sorting issue where gird based depth sorting would fail to recognize overlapping unbatchable items. (770804)</li>
+<li>UI: Stopped raycast from traversing up the hierarchy when a canvas with override sorting is encountered.</li>
+<li>UI: Vertical alignment of text sometimes appearing higher than expected. (760753)</li>
+<li>Unity Ads: Updated to 1.5.6 version (fixes crash on Android 4.1 and earlier).</li>
+<li>VR: Restart the VR Device if the Oculus Service fails.</li>
+<li>Wii U: Fixed a crash on secondary error confirmation. (767206)</li>
+<li>Windows Store: Fixed exported VS project failing to build for non-x86 CPU when there is a managed assembly in the project that's been compiled for x86. (770931)</li>
+<li>Windows Store/IL2CPP: Fixed game crashing when its name is exactly 20 characters long. (769835)</li>
+<li>Windows Store/IL2CPP: Fixed intellisense in generated Il2CppOutputProject to be able to correctly resolve Windows 10 headers. (771765)</li>
+<li>Windows Store/IL2CPP: Fixed failing to build on top of a previous build when target directory is read-only. (766764)</li>
+<li>Windows Store/IL2CPP: Graphics plugins now work. (770941)</li>
+<li>Windows Store/IL2CPP: Reduced the amount of linker warnings when building.</li>
+<li>Windows: Fixed Application.persistentDataPath when Product Name contains invalid path character. (756152)</li>
+<li>Windows: Fixed unnecessary symbols exported for Windows Standalone Player executable. This was making some Nvidia drivers wrongly pick up integrated GPU instead of discrete one on some systems.</li>
+<li>XBoxOne/IL2CPP: Allow a call to Guid.NewGuid to work correctly. (769711)</li>
+</ul>
+
+<h3>Known Issues</h3>
+
+<ul>
+<li>Windows Store: Build might fail when Visual Assets (tiles, store icons, etc.) are set in player settings. Workaround is to leave them empty and fill in Visual Studio.</li>
+</ul>
+
+<p>Revision: fdbb5133b820</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>GI: Optimized GISceneManager.Update in order to take less processor time on scene start (769044).</li>
+<li>Graphics: D3D11 native plugin API now supports obtaining native texture type underpinning a RenderBuffer. (752855)</li>
+<li>IL2CPP: Removed warnings from generated C++ code when compiling with clang.</li>
+<li>Smart TV: Correspond 2016 TV's fonts and remote controller.</li>
+<li>Substance: A FreezeAndReleaseSourceData() method was added to the ProceduralMaterial class. This renders the ProceduralMaterial immutable and releases some of the underlying data to decrease the memory footprint. To release even more of the underlying data, it is necessary to call Resources.UnloadUnusedAssets() afterwards. Once frozen, the ProceduralMaterial cannot be cloned, its ProceduralTextures cannot be rebuilt, nor its inputs be set.</li>
+<li>VR: Mask invisible pixels so GPU time is not wasted near screen edges (Oculus SDK 1.0+).</li>
+</ul>
+
+<h3>Changes</h3>
+
+<ul>
+<li>Audio/Scripting: An optimization was reverted while fixing (739224) and (761360) which would cause memory to once again be allocated during audio callbacks.</li>
+<li>BlackBerry: Removed BlackBerry option from build player settings window.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>2D: Fixed memory leak when applying changes to sprite. (754282)</li>
+<li>2D: Occlusion Culling works correctly with X/Y flipped SpriteRenderers. (760062)</li>
+<li>Android: Fixed internal profiler on Gear VR. (741003)</li>
+<li>Android: Fixed missing styles.xml files. (768027)</li>
+<li>Android: Fixed remote frame debugger. (742199)</li>
+<li>Android: Marshmallow - Added the possibility to disable the permission dialog by adding metadata to the activity.</li>
+<li>Android: Mono - Fixed crash on startup with Unity Ads when stripping is enabled. (755510)</li>
+<li>Android: Timeout no longer happens when an application is sent to the background. (738843)</li>
+<li>Animation: Fixed a crash when changing OverrideController on Animator with no Avatar. (741043)</li>
+<li>Animation: Fixed a crash where assigning an override controller with no controller to override. (764778)</li>
+<li>Animation: Fixed changing Animator.runtimeAnimatorController while in play mode crashing the editor. (731237)</li>
+<li>Animation: Fixed Euler angles on rotation causing Transform to be set to NaN in some cases. (759408, 760759)</li>
+<li>AssetBundle: Change to use natural sorting when listing the AssetBundle names. (736556)</li>
+<li>AssetBundle: Fixed loading error for asset bundles built with DisableWriteTypeTree flag. (756567)</li>
+<li>AssetBundle: Fixed the hash collision when building AssetBundles. (716166)</li>
+<li>AssetBundle: Fixed the issue that LoadAsset(name) returns null if a bundle contains a prefab and another asset with the same name. (743704)</li>
+<li>AssetBundle: Loading multiple invalid asset bundles fails correctly now. (756198)</li>
+<li>AssetBundles: Fixed AssetBundle.CreateFromFile retaining file descriptor. - The previous fix was incomplete. (715753)</li>
+<li>Audio: Fixed mixer reverb effects getting cut off early in standalone builds. (760985)</li>
+<li>Audio: Avoid random crashes when using audio callbacks in scripts. (739224, 761360)</li>
+<li>Core: Fixed crash when game object that is a child of a missing prefab is deleted. (757799)</li>
+<li>Core: Improved the error message when build data files are corrupted or from a mismatched version.</li>
+<li>Core: Make sure persistent transforms are not added to the active scene when running in a player. (758058)</li>
+<li>Editor: Fixed issue of a new scripts created in Editor folder if Unity installation path contains "test" word. (761664)</li>
+<li>Editor: Fixed a bug where Undo recording would insert property modification on the prefab asset if it was being edited in the inspector. (711720)</li>
+<li>Editor: Fixed crash when entering playmode if LoadScene was called during Awake or Start. (756409, 760459)</li>
+<li>Editor: Fixed crash when replacing prefabs with Alt button pressed. (753176)</li>
+<li>Editor: Fixed editor freeze when picking in scene with many overlapping game objects. (730441)</li>
+<li>Editor: Fixed freeze/crash on project startup when async upload buffer is set too small. (754704)</li>
+<li>Editor: Fixed game object duplicates on play when reference to that game object is set in another scene. (750117)</li>
+<li>Editor: It is now possible to replace a prefab asset with a different prefab asset. (761995)</li>
+<li>Frame Debugger: Even when it was not used, it was creating some overhead in development standalone builds. Reduced that.</li>
+<li>GI: Fix for lightmaps in linear lighting mode looking different between the player and editor. (724426)</li>
+<li>GI: Fix for LoadLevel in the player causing lightmaps to become brighter when in Linear mode. (728595, 738173)</li>
+<li>GI: Fixed brightly coloured (green/red/white/blue) pixels appearing in the directional lightmap caused by interpolation from invalid indirect lightmap data. Note: Need to clear the GI cache and rebake to get the fixed lightmaps. (765205, 734187)</li>
+<li>GI: Fixed missing Ambient when "Baked GI" is disabled and "Ambient GI" is set to Baked. (756506)</li>
+<li>Graphics: Fixed a crash in the editor when switching graphics API from a non-DX9 API e.g. DX11. (740782)</li>
+<li>Graphics: Fixed an issue where Standard shader using directional lightmaps could output NaN to the framebuffer. This would usually blow up when using HDR rendering with Bloom.</li>
+<li>Graphics: Fixed building shaders correctly for WebGL in AssetBundles. (746302)</li>
+<li>Graphics: Fixed crash when calling Graphics.DrawMesh with null material. (756849)</li>
+<li>Graphics: Fixed crash when using GL.Begin quad rendering with non-multiple-of-4 vertex count. (761584)</li>
+<li>Graphics: Fixed video memory leak in the splash screen animation.</li>
+<li>Graphics: Fixed occasional Movie Texture crash with multiple movies present. (753593, 764084)</li>
+<li>Graphics: Fixed profiling related information (SetGpuProgramName) performance issue in development player builds.</li>
+<li>Graphics: Fixed rendering of deferred reflections when last object rendered before them had negative scale. (757330)</li>
+<li>Graphics: Fixed skinned mesh memory leak. (760665)</li>
+<li>Graphics: In Editor OpenGL ES 2.0 emulation increase max cubemap size to 1024 (from 512). (650870)</li>
+<li>Graphics: Reduced framerate spikes where culling system could sometimes stall for several ms while waiting for jobs.</li>
+<li>Graphics: Textures imported as cubemaps now are properly marked as non-readable if import option says so. Saves memory! (724664)</li>
+<li>IL2CPP: Avoid crash on IL2CPP when searching for attributes. (766208)</li>
+<li>IL2CPP: Avoid double allocation of memory for multi-dimensional arrays. (766168)</li>
+<li>IL2CPP: Fixed performance regression in LivenessState calculation. The performance is back to where it was prior to 5.3.2p2.</li>
+<li>IL2CPP: Fixed an occasional crash when capturing managed heap when parts of it are not committed.</li>
+<li>IL2CPP: Fixed Array.Copy when destination array type is wider than source array type (e.g. int[] -&gt; long[]). (741166)</li>
+<li>IL2CPP: Fixed Stfld/Ldfld opcode usage generated by MS C# compiler. (761530)</li>
+<li>IL2CPP: Fixed Unity IAP on Android with IL2CPP. (761763)</li>
+<li>IL2CPP: Generate proper C++ code for marshaling wrappers of methods that have System.Guid as a parameter type. (766642)</li>
+<li>IL2CPP: Implemented support for Assembly.GetReferencedAssemblies and Module.GetTypes() (724547)</li>
+<li>IL2CPP: Properly marshal arrays of four-byte bool values. (767334)</li>
+<li>IL2CPP: Raised NullReferenceException when Ldvirtftn instruction had a null target. (766208)</li>
+<li>iOS: Added missing icon for iPad Pro. (755415)</li>
+<li>iOS: Fix for WWW deadlock. (759480)</li>
+<li>iOS: Fixed a crash triggered by deactivating an input while app is going into background. (760747)</li>
+<li>iOS: Fixed an issue where attached controllers were not found. (761326)</li>
+<li>iOS: Fixed application freeze on iphone4 when rotating device. (761684)</li>
+<li>iOS: Fixed code completion for iOS Editor Extensions. (759212)</li>
+<li>iOS: Handheld.PlayFullScreenMovie only allows playing one movie at a time.</li>
+<li>iOS: Notify Transport that we finished receiving data so we can mark the buffer as complete when we get an error. (761361)</li>
+<li>iOS: While entering background/foreground, improve player pause/resume handling to check if external parties (like video player) currently manage the paused state. (534752)</li>
+<li>iOS/IL2CPP: Prevent a managed exception on 64-bit builds during some array creation operations which has the message "ArgumentException: Destination array was not long enough. Check destIndex and length, and the array's lower bounds". (765910)</li>
+<li>iOS/OSX: Fixed SIMD math, which fixes skinning on iOS and source code compilation on OSX. (754816)</li>
+<li>iOS/Video: AVKit based player didn't show "done" button on iOS 8+. (736756)</li>
+<li>iOS/Video: Fixed MPMoviePlayer error handling for invalid files.</li>
+<li>iOS/Video: Improved MPMoviePlayer/AVKit orientation and view controller handling. (746018, 729470)</li>
+<li>iOS/Video: Scaling mode behaviour fixes for iPad Pro. (745346)</li>
+<li>iOS/Xcode: Added .tbd extension support.</li>
+<li>Linux: Fixed flickering/corrupted rendering with OpenGL Core. (770160)</li>
+<li>Linux: Fixed non-native-resolution fullscreen rendering with OpenGL Core. (763944)</li>
+<li>Mono: Corrected a crash in mono_string_to_utf8_checked when Marshal.StructureToPtr is called from managed code. (759459)</li>
+<li>Mono: Resolved intermittent crash caused by a race condition that occurs when using managed threads.</li>
+<li>MSE: Fixed the issue that calling SceneManager.LoadScene** while exiting playmode causes scene unremovable from the hierarchy. (756218)</li>
+<li>MSE: Fixed the issue that SceneManager.sceneCountInBuildSettings gives 0 until entering play mode. (754925)</li>
+<li>Networking: Fixed issue where NetworkManager doesn't become "ready" if online scene is set and offline scene is not. (734218)</li>
+<li>Networking: Fixed issue where OnStartAuthority is called twice on hosts. (748967)</li>
+<li>Networking: SyncLists now only send updates when values change. (738047)</li>
+<li>OpenGL Core: Various bug fixes to the shader compiler; often resulting in better performance for complex image effect shaders.</li>
+<li>OpenGL Core: Fixed random crashes on compute shader dispatch. (761412)</li>
+<li>Particles: Ensure consistent direction between 3D and 1D rotation. (760830)</li>
+<li>Particles: Fix for terrains ignoring collision layers. (763041)</li>
+<li>Particles: Fixed a collision crash. (757969)</li>
+<li>Particles: Fixed IsFinite error spam with particles and second camera. (756786)</li>
+<li>Particles: Fixed issue where particle system doesn't play if method is called via Invoke. (757461)</li>
+<li>Particles: Fixed issue where particle system is stopped and cleared and after that it won't play when simulation space is set to local. (756971)</li>
+<li>Particles: Fixed issue where particles are not drawn in the correct order on rotated particle systems. (696610)</li>
+<li>Particles: Fixed issue where ParticleSystem.IsAlive() always returns True for particle systems with longer duration. (755677)</li>
+<li>Particles: Fixed issue whereby particles systems are not looping correctly. (756742)</li>
+<li>Particles: Fixed particle culling issues. (764701)</li>
+<li>Particles: Fixed support for negative inherit velocity values. (758197)</li>
+<li>Particles: Fixed the issue of particles disappearing after going offscreen and returning. (759502)</li>
+<li>Particles: Fixed wrong culling of some particle objects caused by incorrect bounds calculation due to parent scaling. (723993)</li>
+<li>Particles: Fixed: particle system not playing when triggered via Event Trigger. (756725)</li>
+<li>Particles: Fixed: particle system only playing once. (756194)</li>
+<li>Particles: Particles are now emitted with the correct position//rotation when using a Skinned Mesh Renderer or Mesh Renderer as shape. (745121)</li>
+<li>Physics: Fixed center of mass and inertia tensor being reset after game object was reactivated. (765300)</li>
+<li>Physics: Rigidbodies without non-trigger colliders can. have custom center of mass and inertia tensor again (763806)</li>
+<li>Renderdoc: When making a RenderDoc capture from editor UI, make sure to include the whole frame including user script updates.</li>
+<li>Scripting: Fixed issue that causes UnityScript to incorrectly detect some methods return type. (754405)</li>
+<li>Scripting: Prevent the Particle System from being stripped if the Particle System Renderer is used and engine code stripping is enabled. (761784)</li>
+<li>Shaders: Fixed a shader compiler crash if a compute shader declares a samplerstate that didn't match the naming scheme.</li>
+<li>Shadows: Changed light shadows near plane minimum bound to either 1% of range or 0.1, whichever is lower.</li>
+<li>Shadows: Fixed "half of scene all in shadows" artifacts in some scene/camera setups. (743239)</li>
+<li>Smart TV: Fixed a problem to show custom splash screen.</li>
+<li>Sprites: Occlusion Culling works correctly with X/Y flipped SpriteRenderers. (760062)</li>
+<li>Substance: Fixed corner cases of outputs not being impacted by any input not being generated. (754556, 534658, 762897)</li>
+<li>Tizen: Fixed cursor initially starting in the wrong position on screen. (740180)</li>
+<li>Tizen: Fixed OpenGL crashing issues on the Z300F.</li>
+<li>Tizen: Input field will no longer show&nbsp; when return is pressed on an empty entry. (740172)</li>
+<li>Tizen: System permissions that are not required are no longer requested.</li>
+<li>tvOS: Fixed build error with Xcode trampoline. (767645)</li>
+<li>tvOS: Fixed Game Center score reporting due to incorrect API check. (755395)</li>
+<li>UI: Fixed "Trying to add (Layout Rebuilder for) Content (UnityEngine.RectTransform) for layout rebuild while we are already inside a layout rebuild loop." error. (739376, 740617)</li>
+<li>UI: Fixed flickering/texture swapping issues. (753423, 758106)</li>
+<li>UI: Fixed issue with incorrect accent calculation for non-dynamic fonts. (747512)</li>
+<li>Upgrades: Delete the installed Playback Engines and Documentation before upgrading Unity. (756818)</li>
+<li>VR: Dynamically switch to headset's audio output / input driver (Oculus SDK 1.0+).</li>
+<li>VR: Fixed audio redirection in standalone builds (Oculus SDK 1.0+).</li>
+<li>VR: Fixed crash when trying to enter play mode when the Plugin was not loaded or the Oculus runtime was not installed. (759841)</li>
+<li>VR: Fixed Skybox clipping issues. (755122, 717989, 734122)</li>
+<li>VR: Fixed VR Focus and VR ShouldQuit not respecting notifications when the Device was disconnected.</li>
+<li>VR: Fixed VR Splash screen color precision.</li>
+<li>WebGL: Corrected the following compiler error which might occur in generated C++ code: "error: non-constant-expression cannot be narrowed from type 'uintptr_t' (aka 'unsigned int') to 'il2cpp_array_size_t' (aka 'int') in initializer list [-Wc++11-narrowing]". (767744)</li>
+<li>Windows Store : Building from Unity will no longer overwrite project.json file if it was modified in solution. (765876)</li>
+<li>Windows Store : When building from Unity files in Visual Studio solution will not be overwritten if identical. (759735)</li>
+<li>Windows Store: Fixed a "MdilXapCompile failed" error when trying to build Visual Studio project for Windows Phone 8.1. This used to happen when the Unity game had over 8000 classes across all assemblies. (762582)</li>
+<li>Windows Store: Fixed a crash when loading C# type from plugin which was not included in the final build. (765893)</li>
+<li>Windows Store: Fixed a crash which happened on "Windows N" versions when using IL2CPP scripting backend. (760989)</li>
+<li>Windows Store: Fixed a rare crash in ARM linker (fatal error LNK1322: cannot avoid potential ARM hazard (QSD8960 P1 processor bug) in section #) when using IL2CPP scripting backend. (766755)</li>
+<li>Windows Store: Fixed an issue which caused small tiles get copied to Visual Studio solution incorrectly for Windows Phone 8.1 SDK. (762926)</li>
+<li>Windows Store: Fixed anti-alising when calling Screen.SetResolution on Universal Windows 10 Apps/.</li>
+<li>Windows Store: Fixed Application.Quit() when using D3D project type or IL2CPP scripting backend. (764378)</li>
+<li>Windows Store: Fixed error "Task 'ExpandPriContent' failed." which occurred when trying to build an application package with IL2CPP scripting backend when using default Unity icons. (764632)</li>
+<li>Windows Store: Fixed Visual studio graphics debugger crashing when trying to debug Windows Phone 8.1 projects.</li>
+<li>Windows Store: Mouses and touches will work correctly after locking/unlocking the screen. (768929)</li>
+<li>Windows Store: Screen.Resolution(x, y, true) will no longer ignore width and height, so you can set your desired resolution on Universal Windows 10 Apps.</li>
+<li>Windows Store: Screen.resolutions will return a valid value. (748845)</li>
+<li>WinRT/IL2CPP: Allow native DLLs to be loaded both with and without the .dll extension. (760041)</li>
+<li>XboxOne: Fixed a bug with YUY2 processing on the XboxOne.</li>
+<li>XboxOne/IL2CPP: Fixed a problem compiling generated C++ files when there is a space in the path to the project directory. (768193)</li>
+</ul>
+
+<p>Revision: 910d71450a97</p>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Compute: Improved compute shader import times, particularly on Windows. Since 5.1 we were always compiling them for GL4.3+GLES3.1 too, while most people only need DX11. (706098)</li>
+<li>Editor: Added link to learn more about Unity Cloud Build in the Build Player window.</li>
+<li>Editor/Scenes: Add Scene.GetRootGameObjects() to return the root game objects of the scene.</li>
+<li>Editor/Scenes: Add SceneManager.CreateScene() API to allow creating new empty scene at runtime.</li>
+<li>GI: Light probes and ambient (everything with SH calculations) match ground truth more closely now. (754898)</li>
+<li>IL2CPP: Optimize method prologues for code size and incremental builds.</li>
+<li>iOS: Added bitcode support. (752178)</li>
+<li>iOS/IL2CPP: Added support for Xcode 7.3 (don't use __declspec attributes).</li>
+<li>Samsung TV: Added support for 2016 TVs.</li>
+<li>Tizen: Now supports tizenstore URL protocol to open up Tizen store pages.</li>
+<li>tvOS: Enable Dynamic GI.</li>
+<li>VR: Applications that lost focus no longer throttle the CPU.</li>
+</ul>
+
+<h3>Changes</h3>
+
+<ul>
+<li>iOS: Enable bitcode support by default.</li>
+<li>Editor/Scenes: Prevent calling some Editor mode only APIs on EditorSceneManager from play mode, including EditorSceneManager.OpenScene, EditorSceneManager.SaveScene etc.</li>
+<li>Editor/Scenes: Prevent calling some play mode only APIs on SceneManager from Editor mode, including SceneManager.LoadLevel, SceneManager.LoadLevelAsync etc.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+<li>Android: Fixed crash when loading many asset bundles. (743739)</li>
+<li>Android: Fixed crash in Cloth vertex buffer setup. (750362)</li>
+<li>Android: Fixed NullReferenceException on x86 devices running Android 5.0 or newer.</li>
+<li>Animation: Fixed an issue with stepped keys having the wrong value. (745139)</li>
+<li>Animation: Fixed animation events not firing on the last frame of a looping animation. (745781)</li>
+<li>Animation: Fixed crash when deleting all Euler keys in animation curve. (754373)</li>
+<li>Animation: Fixed Crossfade called subsequently not properly interrupting transition. (753866)</li>
+<li>API Updater: Fixed possible crashes in script updater when resolving types.</li>
+<li>AssetBundles: Fixed AssetBundle.CreateFromFile retaining file descriptor. (715753)</li>
+<li>AssetBundles: Fixed excessive memory usage when decompressing asset bundles with many objects inside.</li>
+<li>AssetBundles: Fixed memory leak when loading asset bundles with LZMA compression.</li>
+<li>AssetBundles: Fixed possible asset bundle caching error when starting multiple downloads with an empty cache.</li>
+<li>AssetBundles: Fixed the asset bundle reading bug when compressed data could be read as uncompressed.</li>
+<li>Core: '~' folders were no longer ignored in projects; fixed. (687655)</li>
+<li>DX11: Improved performance in GPU bound scenarios. (747492)</li>
+<li>DX11: Fixed wrong VRAM detection on some Intel GPUs, resulting in shadows not being rendered.</li>
+<li>DX11/XB1: Fixed FP16 static batched mesh vertex compression to actually work there, was always decompressing to FP32 before.</li>
+<li>Editor: Display console platform doc items in the help menu, when console docs are present, but the main documentation is not installed. (754108)</li>
+<li>Editor: Fixed MissingMethodException when using some APIs from UnityEngine.WSA namespace.</li>
+<li>Editor: Make right and left arrow select next/previous parent for fast expand/collapse in hierarchy views. (752821)</li>
+<li>Editor/Scenes: Fixed a crash when trying to get the root count on an invalid Scene. (752423)</li>
+<li>Editor/Scenes: Fixed loading new unsaved scene during playmode using Application.LoadLevel(index) or SceneManager.LoadScene(index). (751923)</li>
+<li>Editor/Scenes: Fixed the issue that script association was lost when another scene was loaded. (748904)</li>
+<li>Editor/Scenes: Fixed the issue that the unloaded scenes would be removed from the hierarchy when entering playmode, if they were first in the hierarchy.</li>
+<li>Editor/Scenes: Now make sure inspector in ActiveEditorTracker for MonoBehaviours are not garbage collected. The ActiveEditorTracked manages the objects itself. (753550)</li>
+<li>Editor/Scenes: Throw null reference exception if SerializedObject has been disposed. (752599)</li>
+<li>Global Illumination: Enlighten; fixed an issue where Unity crashed if scene was unloaded before it got a chance to fully load. (740808, 747666)</li>
+<li>Global Illumination: Fixed light probes / skybox ambient being wrong in some cases, 5.3 regression. (754898)</li>
+<li>Graphics: More consistency between editor &amp; player when setting up color space sRGB write modes. (754487)</li>
+<li>Graphics: Fixed an issue where enabling vertex compression for positions could result in geometry not being rendered. (754928)</li>
+<li>Graphics: Realtime reflection probes in some cases did not have trilinear filtering properly set on them; fixed. (752879)</li>
+<li>Graphics: Fixed crash when setting shader properties.</li>
+<li>IL2CPP: Do not incorrectly free blittable arrays marshaled as [In,Out] parameters. (760943)</li>
+<li>IL2CPP: Ensure that the header file for a type defined in a different assembly is included when that type is used for a method parameter. (755088)</li>
+<li>IL2CPP: Ensure thread ID is valid for all threads. (691038)</li>
+<li>IL2CPP: Fixed an issue that caused a crash in Class::IsSubclassOf. (752737), (751428)</li>
+<li>IL2CPP: Fixed double.Parse with InvariantCulture. (752197)</li>
+<li>IL2CPP: Fixed ExecutionEngineException being thrown on System.Reflection.MonoProperty::GetterAdapterFrame. (737529)</li>
+<li>IL2CPP: Fixed StateMachineBehaviour messages not being executed if stripping is enabled. (753610)</li>
+<li>IL2CPP: Forward declare a type and marshaled type in the method declarations header for marshaling methods so that the order of includes does not matter. (756447)</li>
+<li>IL2CPP: Implemented out marshaling for arrays correctly. (752153)</li>
+<li>IL2CPP: Implemented support for MetadataToken property on the following types: FieldInfo, EventInfo, MethodInfo, ConstructorInfo, PropertyInfo, Type, and Module. (670027)</li>
+<li>IL2CPP: Implemented the Thread::Abort and Thread::ResetAbort methods. This should allow a Socket to be closed properly while another thread is waiting in a call to Accept or Connect on that socket. (746822)</li>
+<li>IL2CPP: Prevent a NotImplementedException exception from occurring in il2cpp.exe when the Unbox opcode is used with certain generics. This usually occurs when an assembly is built with Visual Studio. (758926)</li>
+<li>IL2CPP: Properly cleanup when a native thread is cancelled rather than exiting normally. (749988, 733609)</li>
+<li>IL2CPP: Provide a proper argument for instance methods on value types invoked via a delegate. (750153)</li>
+<li>IL2CPP: Removed an unnecessary Box used to null check before calling a virtual method.</li>
+<li>iOS: Added font containing Lao characters to the fallback list. (750357)</li>
+<li>iOS: Added Xcode 7.2 to iOS plugin compatibility list. (750311)</li>
+<li>iOS: Duplicate another image layer when not all are defined. (749289)</li>
+<li>iOS: Fixed Apple Pencil position reporting on iPad Pro.</li>
+<li>iOS: Hindi characters are displayed now. (725558)</li>
+<li>iOS/IL2CPP: Correct stack traces in exception messages, which could sometimes miss managed frames. (754539)</li>
+<li>iOS/IL2CPP: Fire all GC profiler events. Fixed GC data in internal profiler.</li>
+<li>iOS/tvOS: Build all object files with correct SDK. (755365)</li>
+<li>Linux: Fixed a corner case where tearing would occur on some window managers even with VSync enabled.</li>
+<li>Mecanim: Fixed a bug where Euler rotations would be retained in scene after scrubbing animation. (754562)</li>
+<li>Mecanim: Fixed a bug where Euler rotations would not work in Legacy Animations. (752955)</li>
+<li>Mecanim: Fixed a bug where lights would not be animated in Legacy mode. (753595)</li>
+<li>Mecanim: Fixed a bug where RectTransform couldn't be animated in Legacy. (752847)</li>
+<li>Metal: Wrongly claimed to support DXT1/DXT5 texture formats on iOS, and ETC on Mac.</li>
+<li>Mono: Preserve non-volatile XMM registers across calls on 64-bit Windows during JIT compilation. (691466)</li>
+<li>Networking: Added a 'connecting' state and cancel button to NetworkManagerHUD UI to prevent multiple attempts to connect at the same time. (748936)</li>
+<li>Networking: Fixed 'recursion depth exceeded' error for complex NetworkBehaviour scripts. (757766)</li>
+<li>Networking: Fixed ClientScene object list being wrong after host migration. (746011)</li>
+<li>Networking: Fixed NetworkAnimator not working for non-player objects (755391)</li>
+<li>Networking: Fixed NetworkServer.SendToAll sends the message to the host twice. (756153)</li>
+<li>Networking: Fixed SyncEvent regression issue. (755450)</li>
+<li>Networking: Fixed SyncList updates don't use a configurable network channel. (745795)</li>
+<li>Networking: Fixed UI that allowed host migration to be enabled for WebGl platform where it is not supported. (744002)</li>
+<li>Networking: OnStopAuthority called on server when it should not be. (751239)</li>
+<li>Networking: Prevent [Command] functions from accepting NetworkConnection objects as parameters, which causes a UNetWeaver error. (729157)</li>
+<li>Networking: Prevent NetworkIdentity objects from being server-only and local-player-authority at the same time, as this is not a valid configuration. (749338)</li>
+<li>OpenGL Core: Fixed a crash with AMD and NVIDIA on Windows when using RenderTexture with recent drivers.</li>
+<li>OpenGL Core: Fixed a crash with Intel GPUs on Linux.</li>
+<li>OpenGL Core: Fixed shaders with multiple constant arrays.</li>
+<li>OpenGL Core: Fixed text rendering with AMD GPUs on OSX 10.9.</li>
+<li>OpenGL ES: Fixed crashes with new Samsung firmware. (756734, 756754)</li>
+<li>OpenGL ES: Fixed mipmap generation for render textures. (751743)</li>
+<li>OpenGL: Fixed binary shader cache, cache was always disabled. (742591)</li>
+<li>OpenGL (legacy): Added work around buffer state tracking failure.</li>
+<li>Particles: Fixed error message spam on particle systems that have no particles (5.3.1 regression). (755423)</li>
+<li>Physics: Fixed memory corruption/crash when deactivating a collider from inside of OnTriggerStay. (744007)</li>
+<li>Physics: PlatformEffector2D now supports negative scaling on parent Transform. (755612)</li>
+<li>Profiler: Fixed excessive memory usage in development players.</li>
+<li>Samsung TV: Fixed the smarthub button problem.</li>
+<li>Samsung TV: Fixed wrong JPG library access problem.</li>
+<li>Scripting: UnusedByteCodeStripper2 will show a better error message when processing assemblies, so it will be easier to identify offending assembly. (750266)</li>
+<li>Shaders: During surface shader generation, do not initialise non-vector type members of the Input struct i.e. a struct/int/matrix as a member variable of the Input struct. (759336)</li>
+<li>Shaders: Fixed a bug in Standard shader GGX specular term, introduced in 5.3.</li>
+<li>Shaders: More proper environment reflection in Standard shader for very rough surfaces.</li>
+<li>Substance: Fixed a crash when checking/unchecking 'Generate all outputs' or 'Generate mipmaps' on OSX. (752039)</li>
+<li>Substance: Fixed a crash when reimporting SBSARs with multiple material instances on OSX. (751300)</li>
+<li>Substance: Fixed a rare crash that could happen around the destruction of animated ProceduralMaterials. (750442)</li>
+<li>Substance: Fixed console spam about unavailable material properties.</li>
+<li>Substance: Fixed editor stutter when using RebuildTextures on OSX. (663236)</li>
+<li>Substance: Fixed emission color being set to opaque white when resetting a ProceduralMaterial.</li>
+<li>Substance: Fixed textures not properly generated on player awake when affected only by constant inputs. (754556)</li>
+<li>Substance: Output textures from ProceduralMaterials without any input are now always generated.</li>
+<li>tvOS: Fixed missing symbols for simulator builds. (756044)</li>
+<li>tvOS: Fixed rendering path selector in player settings. (753925)</li>
+<li>tvOS: Fixed UnityEngine.Apple.TV.Remote API access in editor.</li>
+<li>UI: Added fix so that the placeholder text is enabled when the InputField is deactivated and the text is empty.</li>
+<li>UI: Fixed crash in some cases after deleting world space Canvas. (740782)</li>
+<li>UI: Removed remaining uses of multiple display system (temporary fix while non-native resolutions are not supported). (741751)</li>
+<li>VR: Fixed Lines &amp; Trail rendering; was offset for one eye. (754068)</li>
+<li>VR: Fixed Render Scale not reverting after being edited in play mode. (731324)</li>
+<li>VR: Fixed VRDevice.isPresent reporting true on first frame if Device was not connected at start. (732236)</li>
+<li>VR: Stereo Cameras correctly respect camera depth when rendering to the game view and HMD. (753256)</li>
+<li>WebGL: Fixed a crash when setting Application.runInBackground, if Strip Engine Code is enabled. (758120)</li>
+<li>WebGL: Prevent browser from processing Arrow Keys. (740182)</li>
+<li>WebGL: Prevent browser from processing Backspace and Tab key presses. (747236)</li>
+<li>Windows Store: Fixed incorrect display of Korean characters on Windows 10 (if Korean language pack is not installed) and Windows Phone 10, Unity will now fallback to "Malgun Gothic" font.</li>
+<li>Windows Store: Fixed Directory.CreateDirectory() for forward slashes. (752546)</li>
+<li>Windows Store: Populate autorotation settings to screen manager. (751207)</li>
+<li>Windows Store: Fixed a build failure (rrw failure) when calling methods with System.Numerics.Matrix4x4 as parameter. (754533)</li>
+<li>Windows Store: Fixed AccessViolationException when initializing matchmaking in UNet. (747549)</li>
+<li>Windows Store: Fixed player crashing on startup on .NET scripting backend. (746301)</li>
+<li>Windows Store: Fixed Screen.SetResolution when upscaling lower resolution to fullscreen, previously you would see a corrupt image on the screen. (756086)</li>
+<li>Windows Store: Fixed TouchScreenKeyboard crashes when it's members are used immediately after Open(). (755473)</li>
+<li>Windows Store: Fixed WheelCollider on x64 (NullReferenceException occurring). (730289)</li>
+<li>Windows Store: RunInBackground option will be respected when application window looses focus, and if enabled, the application will keep updating. Note: if application window is minimized it will be still paused, because OS suspends the application. (759166)</li>
+</ul>
+
+<p>Revision: e87ab445ead0</p>
+
+<h3>Features</h3>
+
+<ul>
+<li>Analytics: Added support for fetching GoogleAdsId via new API RequestAdvertisingIdentifierAsync.</li>
+<li>tvOS: Added Apple TV support. Look for tvOS build target to try it. Enjoy!</li>
+<li>VR: Added support for VR Application Focus. All VR Players are now forced to Run in the background.</li>
+</ul>
+
+<h3>Improvements</h3>
+
+<ul>
+<li>Graphics: Optimized performance of setting up shader blend/depth/raster/stencil states. This is mostly visible when using deferred rendering.</li>
+<li>Graphics: Added client/worker multithreaded rendering support to OS X Metal.</li>
+<li>IL2CPP: Added support for the MethodImplOptions.NoInlining option to prevent methods in the generated C++ code from being inlined.</li>
+<li>iOS: Use new Game Center APIs when possible.</li>
+<li>JsonUtility: Serialize Color32 fields as separate RGBA values instead of a binary blob.</li>
+<li>Networking: Added a warning for NetworkIdentity on child game objects.</li>
+<li>Networking: Added dontListen flag to NetworkServer. This is useful when running in single-player or offline mode, but as a Network Host. RuntimeInitializeOnLoad now fires more consistently when entering playmode in the Editor and playing at Runtime.</li>
+<li>SceneManagement: Added SceneManager.UnloadScene(Scene) making it easier to unload a scene if you already have a reference to it.</li>
+<li>Substance: Substance textures cached to disk/flash are now LZ4-compressed, old caches are discarded.</li>
+<li>Substance: SubstanceImporter.ExportBitmaps is now public.</li>
+<li>Substance: ExportPreset was added to the ProceduralMaterialInspector's context menu.</li>
+<li>Substance: When importing a SBSAR file, the metallic workflow is now picked up by default if the material has the right outputs, even if it also has the right outputs for the specular workflow. Previously, if the material had the right outputs for the metallic and the specular workflows, then the specular workflow would be selected.</li>
+<li>VR: Optimized Oculus to start CPU work for next frame while Rendering the current frame.</li>
+</ul>
+
+<h3>Changes</h3>
+
+<ul>
+<li>Samsung TV: Added Ignore BG Alpha Clear checkbox to Resolution section of Samsung TV player settings. This will disable the clearing of the alpha value for the background fill allowing for blending between Unity's render layer and the layer behind.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<p>Relevant fixes from Unity <a href="/es/unity/whats-new/unity-5.2.4">5.2.4</a> are also included into 5.3.1.</p>
+
+<ul>
+<li>Android: AndroidJNI - fixed crash when no params passed to AndroidJavaProxy with AndroidJNIHelper.debug set to true. (740472, 740023)</li>
+<li>Android: Buildpipe - don't run dex if exporting the project. (746248)</li>
+<li>Android: Buildpipe - don't unpack AARs if exporting the project. (747567)</li>
+<li>Android: Fixed querying for custom permissions on Android Marshmallow. (750227)</li>
+<li>Android: Fixed VRAM calculation on devices with 4GB or more RAM.</li>
+<li>Android: Fixed 5.3 performance regression in dynamic batching. (749690)</li>
+<li>Android: Immersive - fixed black bar in the bottom on Android M and L. (689552, 738518)</li>
+<li>Android: Workaround for OpenGL ES 3.0 shader compiler issues on Adreno 3xx. (735299)</li>
+<li>Animation: Fixed 1st frame of Animation displaying default state of the object. (751714)</li>
+<li>Animation: Fixed AnimationClip dependency collection not working for AnimatorControllers. (717286)</li>
+<li>API Updater: Fixed crashing when checking for obsolete API in assemblies referencing unity extensions. (734221)</li>
+<li>Audio: Fixes issue when modifying exposed parameters in AudioMixer loaded from asset bundle. (734258)</li>
+<li>Core: Fixed multithreading related memory allocations; removes a number of JobAlloc.Overflow instances in profiler.</li>
+<li>Editor: Fix for prefab modifications making the scene dirty immediately after loading. (709639)</li>
+<li>Editor: Fixed restoring Hierarchy View after exiting the Avatar Editor or running Editor tests. (745634)</li>
+<li>Editor: Force reimport all models to ensure that generated lightmap UVs are consistent across platforms. (739787, 745698)</li>
+<li>Editor: Stopped exponential growth of the undo stack when undo-redoing selection changes.</li>
+<li>Editor Webview UI: Right click in text input would show a blank menu on windows 8 and 10. (718718)</li>
+<li>GI: Fixed a problem where Final Gather was always being recomputed.</li>
+<li>GI: Remove CPU cost of Enligten Post Update when there is no realtime GI.</li>
+<li>Graphics: Enabled rendering to cube map faces with multisample AA. (730570, 648624)</li>
+<li>Graphics: Fixed incorrect stripping of vertex streams in certain situations when a mesh has a mixture on lightmapped and non-lightmapped shaders; e.g. the vertex colour stream was previously being incorrectly stripped. (683178, 725562)</li>
+<li>HomeWindow: Fixed Home Window closing after sign-in if cache is empty. (746120)</li>
+<li>HomeWindow: Fixed black screen on 32-bit Windows. (745427, 753800)</li>
+<li>IL2CPP: Allow the [Preserve] attribute to correctly prevent stripping of a method in a nested type. (738356)</li>
+<li>IL2CPP: Avoid compiler error due to duplicate FieldInfo definition.</li>
+<li>IL2CPP: Avoid duplicate data files in iOS packages. (746329)</li>
+<li>IL2CPP: Avoid stack overflow crash due to large allocation with alloca. (739685)</li>
+<li>IL2CPP: Correctly initialize the metadata for default parameter values that are obtained via reflection. (745793, 737565)</li>
+<li>IL2CPP: Fixed race condition during cleanup of threadpool threads. (738232)</li>
+<li>IL2CPP: Fixed an issue which caused "callback cannot take parameters" error message if there was a DLL in the project that inherited from animation state machine classes, but project did not use animation. (743502, 734472)</li>
+<li>IL2CPP: Prevent generated C++ code from including a header file that was not generated when the type which could have been generated in that header is used only in an attribute applied to an assembly. (737996)</li>
+<li>IL2CPP: Properly handle additional, subtraction, and multiplication when the type of the left argument is smaller than the type of the right argument and the result will not fit in the type of the left argument and the result is stored across an IL block. (745691)</li>
+<li>IL2CPP: Provide proper managed stack traces when the C++ compiler inlines method calls. (739956)</li>
+<li>IL2CPP: Set default stack size on iOS to 1MB to match Mono behavior. (733799)</li>
+<li>iOS: Disable the toggle for 'Show Unity Splash Screen' if user does not have a Pro license. (730103)</li>
+<li>iOS: Don't crash when social platform API is used incorrectly. (683359)</li>
+<li>iOS: Don't incorrectly cache social platform local user auth status. (683359)</li>
+<li>iOS: Ensure that game center authentication callback is called once. (643154)</li>
+<li>iOS: Fixed achievement completion banner display. (738722)</li>
+<li>iOS: Fixed crash on iOS 6.0 devices. (747022)</li>
+<li>iOS: Fixed hidden portion of multiline text area so users can view the last line of text. (745175)</li>
+<li>iOS: Fixed ODR progress reporting. (736477)</li>
+<li>iOS: Fixed WWW connection redirect functionality. (723960)</li>
+<li>iOS: Don't override iPod music when corresponding player setting is not set. (734640)</li>
+<li>iOS: Send focus events when entering and exiting game center dialogs. (738720)</li>
+<li>iOS: Update remote notification callback API. (692374)</li>
+<li>iOS: Added workaround for iOS launch screen asset catalog bug. (736683, 739007)</li>
+<li>JsonUtility: Fixed memory leak when FromJson() throws exceptions. (752057)</li>
+<li>Linux: Fixed crash on shutdown.</li>
+<li>Linux: Work around crash when FMOD can't detect available audio drivers.</li>
+<li>Mecanim: Fixed an error in the Animator inspector when selecting multiple files. (743247)</li>
+<li>Mecanim: Fixed Animator.CrossFade failing when already crossfading. (741799)</li>
+<li>Mecanim: Fixed crash when deleting game object with rendering effect during play mode. (742537)</li>
+<li>Mecanim: Fixed Euler angles not being displayed as animated in the transform inspector. (744156)</li>
+<li>MonoDevelop: Display error dialog if GTK# is not installed on Windows. (735412)</li>
+<li>MonoDevelop: Fixed issue with MonoDevelop not starting on OSX if installed in /Applications and user is not admin. (739514)</li>
+<li>Networking: Added check for too-large buffer. (726466)</li>
+<li>Networking: Added error message when [SyncEvent] used with UnityEvent. (737287)</li>
+<li>Networking: Better scene slot handling in NetworkLobbyManager. (733731)</li>
+<li>Networking: Fixed: Can't set registered spawn prefab to null. (730504)</li>
+<li>Networking: Exception in editor for NetworkTransform in preview window. (741974)</li>
+<li>Networking: Fixed LargePacket warning during RelayServer games. (746992)</li>
+<li>Networking: Fixed NetworkHash128.ToString() error when string has embedded zeroes. (738032)</li>
+<li>Networking: Fixed NetworkManager singleton management regression issue. (742033)</li>
+<li>Networking: Fixed numPlayers on NetworkManager. (746022)</li>
+<li>Networking: Fixed slow compilation with many ClientRpc functions. (738517)</li>
+<li>Networking: Fixed SyncLists becoming invalid after host migration. (746006)</li>
+<li>Networking: Fixed SyncLists losing registered callbacks when scene changed. (736052)</li>
+<li>Networking: Fixed UNetWeaver build error when a SyncListStruct contains a field and array of the same type.</li>
+<li>Networking: Fixed UNetWeaver error with 15 SyncVars in a NetworkBehaviour. (749253)</li>
+<li>Networking: Fixed warning message from NetworkAnimator in editor. (740186)</li>
+<li>Networking: Handle script reloads while network is active. This shuts down the network properly, and if there is a NetworkManager, switches to the offline scene.</li>
+<li>Networking: Fixed host migration error when no players. (736702)</li>
+<li>Networking: Fixed log spam when profiler window open after deleting network host. (695592)</li>
+<li>Networking: Fixed network operations stats not resetting when 'clear' is pressed. (738999)</li>
+<li>Networking: NetworkManager HUD updated to not allow MM use. (740634)</li>
+<li>Networking: Scene slots of NetworkLobbyManager broken after project upgrade. (742039)</li>
+<li>Networking: Unable to restart host after reloading scripts while in play mode and running as host. (738167)</li>
+<li>Networking: Wrong item index for SyncList add operation. (736703)</li>
+<li>OpenGL Core: Work around desynchronization of default vertex array with active GL context.</li>
+<li>OpenGL ES: Fixed occasional omitting of precision specification in shaders. (748944)</li>
+<li>Particles: Fixed crashes when deleting meshes used by a particle system. (745282, 745390)</li>
+<li>Particles: Fixed graphical corruption when rendering particle meshes with different vertex sizes.</li>
+<li>Particles: Fixed vertex normals, 5.2 regression. (732483)</li>
+<li>Particles: Fixed scale when in Local billboarding mode. (728663)</li>
+<li>Particles: Improved script API example documentation.</li>
+<li>Particles: Improved particle multi-threading performance.</li>
+<li>Physics: Ensure that Joint2D CollideConnected is correctly upgraded to EnableCollision for all joints. (749797)</li>
+<li>Physics: Fixed an issue where a static trigger collider would not report a contact when moved. (752059)</li>
+<li>Physics: Fixed an issue where collision/trigger callbacks would not report if constantly modifying a Collider2D (that caused it to be regenerated). (752764)</li>
+<li>Plugins: Fixed invalid assert when there's a plugin containing 'UnityEngine.dll' inside its name, e.g. Something.UnityEngine.dll. (752340)</li>
+<li>Samsung TV: Center cursor before locking and then ignore mouse motion event while cursor is locked.</li>
+<li>SceneManagement: Fixed crash caused by loading a scene additively in the same frame as unloading the active scene, if there are no other scenes loaded. (747223)</li>
+<li>SceneManagement: Fixed unloading a scene using the full path.</li>
+<li>Scripting: Log error instead of crashing when Start() like methods are defined as generic. (733194)</li>
+<li>Scripting: OnTransformChildrenChanged message is now correctly sent to both old parent and new parent. (688317, 713431)</li>
+<li>Shadows: Correctly handle custom off-center projection matrices for directional lights. (686520)</li>
+<li>Substance: Changing the random seed of a DoNothing material that has not been generated yet does not cause its textures to be generated anymore.</li>
+<li>Substance: Cloned ProceduralTextures now inherit the color space of the source texture. (738483)</li>
+<li>Substance: Exported preset strings now have a valid package URL, label, and description, and can now be loaded in Substance Player.</li>
+<li>Substance: isProcessing now works correctly for BakeAndDiscard materials and for cloned materials. (740158, 732705)</li>
+<li>Substance: The Substance part of BakeAndDiscard materials could sometimes remain in the standalone builds. (732705)</li>
+<li>TreeEditor: Fixed crash on adding branch nodes under GLCore devices. (741520)</li>
+<li>UI: Fixed color conversion in BatchGenerator when using Linear color space. (730457)</li>
+<li>UI: Fixed issue when instantiating and re-parenting canvases and prefabs. (736161, 742081)</li>
+<li>UI: Fixed dropdown menu not being displayed when Time.timeScale is set to 0.</li>
+<li>UI: Fixed incorrect culling when a MaskableGraphic had a negative scale value inside of a mask.</li>
+<li>UI: Multiple display support disabled on all platforms except WiiU and 3DS. This will be re-enabled once the non-native resolution bug is fixed. (741751)</li>
+<li>UI: Unity GPU profiler now correctly accounts for UI draw calls.</li>
+<li>VR: Fixed a crash when trying to toggle showDeviceView to false before first Update. (749329)</li>
+<li>VR: Fixed an issue where Oculus was starting while building the standalone player while Virtual Reality Supported is true. (748988)</li>
+<li>VR: Fixed an issue where showDeviceView was not caching between runs in the Editor. Now forces to true on play. (750510)</li>
+<li>Windows Phone 8.0: Fixed regression with System.IO classes. (745932)</li>
+<li>Windows Standalone: Fixed Unity Crash on Application.Quit with MultiTouch.</li>
+<li>Windows Store Apps: Added bluetooth capability. (744371)</li>
+<li>Windows Store Apps: Fixed AppCallbacks::UnitySetInput throw ClassNotRegisterred exception on UWP. (736419) Windows Store Apps: Fixed FileStream occasionally failing when writing large data. (745355) Windows Store Apps: Fixed same files referenced by Assembly-CSharp and Assembly-CSharp-firstpass projects. (746296)</li>
+<li>Windows Store Apps: Fixed touch screen keyboard not opening after dismiss via X button. (750396)</li>
+<li>Windows Store Apps: Fixed Unity splash screen not showing. (745415)</li>
+<li>Windows Store Apps: Modify template sources while still in StagingArea, to prevent issues if Visual Studio is open. (741518)</li>
+<li>Windows Store Apps: SpriteState is now correctly serialized. (715720)</li>
+<li>Windows Store Apps: Use current orientations on startup, only populate manifest from Player Settings. (740535)</li>
+<li>Windows Store Apps: When building to SDK 8.1, you no longer need Visual Studio 2013, it's enough to have Visual Studio 2015 with Windows SDK 8.1. (741455)</li>
+<li>Windows Store Apps: On screen keyboard reliability fixes on Windows 10. (744936)</li>
+<li>Windows Store: Fixed HID controllers when targeting Windows 10 SDK.</li>
+<li>Windows Store: Fixed Unity producing invalid Visual Studio project files if Windows 10 SDK 10.0.10586.0 is installed (749600)</li>
+<li>Windows Store: Fixed WinMD references in generated C# projects when building a project with "C# projects" checkbox checked.</li>
+<li>Windows Store: Soft shadows now work correctly on ARM devices with D3D feature level &gt;= 10.0.</li>
+<li>WindowsInstaller: Detect Unity version from the current install path, instead of using the Windows Registry.</li>
+<li>WindowsInstaller: The /D command line option in the Documentation and TargetSupport Installers is correctly handled now. (752093)</li>
+<li>WinRT/IL2CPP: Remove compiler warnings in generated C++ code. (742021)</li>
+</ul>
+
+<p>Revision: cc9cbbcc37b4</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
