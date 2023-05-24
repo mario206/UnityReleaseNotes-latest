@@ -39,7 +39,7 @@ async function main()
     for(var i = 0;i < unityVersions.length;++i){
         var prefix = unityVersions[i] + ".";
         const htmlsDirectory = 'tmp/htmls_' + prefix;
-        //await scrapeUnityReleaseNotes(undefined, htmlsDirectory, prefix);
+        await scrapeUnityReleaseNotes(undefined, htmlsDirectory, prefix);
         await getReleaseNotes(htmlsDirectory,prefix + "md");
     }
 
