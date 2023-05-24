@@ -56,7 +56,7 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
       const index = i * columns + j;
       if (index < sortedUnityVersions.length) {
         const version = sortedUnityVersions[index];
-        const link = `./merge_htmls/${version}.html`;
+        const link = `./merge_htmls/${version}.md`;
         if(j == 0)
         {
           row += "|";
@@ -74,7 +74,7 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
     table += row + '\n';
   }
 
-  var filePath = `./merge_htmls/${sortedUnityVersions[0]}.html`;
+  var filePath = `./merge_htmls/${sortedUnityVersions[0]}.md`;
   const fileContent = await fs.readFile(filePath, 'utf8');
 
   table += fileContent;

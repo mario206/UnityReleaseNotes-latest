@@ -40,7 +40,7 @@ async function main()
         var prefix = unityVersions[i] + ".";
         const htmlsDirectory = 'tmp/htmls_' + prefix;
         //await scrapeUnityReleaseNotes(undefined, htmlsDirectory, prefix);
-        await getReleaseNotes(htmlsDirectory,prefix + "html");
+        await getReleaseNotes(htmlsDirectory,prefix + "md");
     }
 
     const table = await generateSortedUnityVersionsLinksTable(unityVersions);
