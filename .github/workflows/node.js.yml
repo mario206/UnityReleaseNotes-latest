@@ -28,3 +28,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: node main.js
+    
+    - uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+            
