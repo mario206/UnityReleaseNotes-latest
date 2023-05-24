@@ -35,7 +35,7 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
   const sortedUnityVersions = unityVersions.sort(versionNumberCompare);
   const rows = Math.ceil(sortedUnityVersions.length / 5);
   let table = "# UnityReleaseNotes\n"
-  table += `**Last update time : ${getCurrentFormattedTime()} Powered By ChatGPT**\n`
+  table += `**Last update time : ${getCurrentFormattedTime()} Powered By ChatGPT**\n\n`
 
   table += '|-|-|-|-|-|\n|:-:|:-:|:-:|:-:|:-:|\n';
 
