@@ -74,7 +74,8 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
     table += row + '\n';
   }
 
-  var filePath = `./merge_htmls/${sortedUnityVersions[0]}.md`;
+  //var filePath = `./merge_htmls/${sortedUnityVersions[0]}.md`;
+  var filePath = `./merge_htmls/2020.3.md`;
   const fileContent = await fs.readFile(filePath, 'utf8');
 
   table += fileContent;
