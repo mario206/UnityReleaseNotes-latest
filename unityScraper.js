@@ -70,9 +70,9 @@ async function scrapeUnityReleaseNotes(startVersion, directoryPath = 'htmls', pr
     console.error(`URL: ${url}`);
     if (error.response) {
       console.error(`Status: ${error.response.status}`);
-      console.error(`StatusText: ${error.response.statusText}`);
-      console.error('Headers:', error.response.headers);
-      console.error('Data:', error.response.data);
+      //console.error(`StatusText: ${error.response.statusText}`);
+      //console.error('Headers:', error.response.headers);
+      //console.error('Data:', error.response.data);
     }
     await sleep(1000);
   }
