@@ -1,5 +1,5 @@
 # UnityReleaseNotes
-**Last update time : `2023-12-06 17:13:12`	Powered By ChatGPT**
+**Last update time : `2023-12-06 18:13:23`	Powered By ChatGPT**
 
 ## More Unity Versions 
 |&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|
