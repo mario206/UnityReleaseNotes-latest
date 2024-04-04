@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#" class="no-js">
+<head>
+  <meta charset="utf-8" />
+<link rel="dns-prefetch" href="https://components.unity.com" />
+<link rel="preconnect" href="https://components.unity.com" crossorigin />
+<!-- OneTrust Cookies Consent Notice start -->
+
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="a9f5fcb3-4c7f-4bb7-93bf-7607ffbdabe0"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end --><!-- DataLayer Initializer --><script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"event":"dataLayer-initialized","current_language":"en"});</script>
+<!-- End DataLayer Initializer --><!-- Google Tag Manager GTM-5V25JL6 -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.appendChild(j);
+  })(window,document,'script','dataLayer','GTM-5V25JL6');
+</script>
+<!-- End Google Tag Manager -->    <!-- Google Optimize GTM-PPV8KKN and Anti-flicker Script -->
+    <script type="text/javascript">
+    setTimeout(function() {
+      // Only load the script if the conditions are right.
+      if (typeof OnetrustActiveGroups !== 'undefined' && OnetrustActiveGroups.search('C0002') > -1) {
+        var script = document.createElement('script');
+        script.src = 'https://www.googleoptimize.com/optimize.js?id=GTM-PPV8KKN';
+        document.head.appendChild(script);
+      }
+    }, 200);
+    </script>
+    <!-- End Google Optimize and Anti-flicker Script --><style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }</style>
+<meta name="baiduspider" content="noindex" />
+<meta name="description" content="Unity 2021.3.37 download and release notes." />
+<link rel="canonical" href="https://unity.com/releases/editor/whats-new/2021.3.37" />
+<meta property="og:site_name" content="Unity" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://unity.com/releases/editor/whats-new/2021.3.37" />
+<meta property="og:title" content="2021.3.37f1" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@unity" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" hreflang="en" href="https://unity.com/releases/editor/whats-new/2021.3.37" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="author" content="Unity Technologies" />
+  <title>Unity 2021.3.37</title>
+
+  
+
+<link rel="icon" id="favicon-svg" type="image/svg+xml" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.svg?v=4"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://unity.com/themes/contrib/unity_base/images/favicons/apple-touch-icon.png?v=4"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon-32x32.png?v=4"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon-16x16.png?v=4"/>
+<link rel="manifest" href="https://unity.com/themes/contrib/unity_base/images/favicons/site.webmanifest?v=4"/>
+<link rel="mask-icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/safari-pinned-tab.svg?v=4" color="#828282"/>
+<link rel="shortcut icon" href="https://unity.com/themes/contrib/unity_base/images/favicons/favicon.ico?v=4">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="https://unity.com/themes/contrib/unity_base/images/favicons/mstile-144x144.png?v=4"/>
+<meta name="msapplication-config" content="https://unity.com/themes/contrib/unity_base/images/favicons/browserconfig.xml?v=4"/>
+<meta name="theme-color" content="#000000">    <script type="text/javascript">
+      // Duration in milliseconds to wait while the Kameleoon application file is loaded
+      var kameleoonLoadingTimeout = 1000;      window.kameleoonQueue = window.kameleoonQueue || [];
+      window.kameleoonStartLoadTime = new Date().getTime();
+      if (! document.getElementById("kameleoonLoadingStyleSheet") && ! window.kameleoonDisplayPageTimeOut)
+      {
+        var kameleoonS = document.getElementsByTagName("script")[0];
+        var kameleoonCc = "* { visibility: hidden !important; background-image: none !important; }";
+        var kameleoonStn = document.createElement("style");
+        kameleoonStn.type = "text/css";
+        kameleoonStn.id = "kameleoonLoadingStyleSheet";
+        if (kameleoonStn.styleSheet)
+        {
+          kameleoonStn.styleSheet.cssText = kameleoonCc;
+        }
+        else
+        {
+          kameleoonStn.appendChild(document.createTextNode(kameleoonCc));
+        }
+        kameleoonS.parentNode.insertBefore(kameleoonStn, kameleoonS);
+        window.kameleoonDisplayPage = function(fromEngine)
+        {
+          if (!fromEngine)
+          {
+            window.kameleoonTimeout = true;
+          }
+          if (kameleoonStn.parentNode)
+          {
+            kameleoonStn.parentNode.removeChild(kameleoonStn);
+          }
+        };
+        window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
+      }
+    </script>
+    <script type="text/javascript">
+      // Change the value of this URL to point to your own URL, where the iFrame is hosted
+      window.kameleoonIframeURL = "https://unity.com/static/kameleoon_static_file.html";
+      window.kameleoonLightIframe = false;
+      var kameleoonIframeOriginElement = document.createElement("a");
+      kameleoonIframeOriginElement.href = kameleoonIframeURL;
+      window.kameleoonIframeOrigin = kameleoonIframeOriginElement.origin || (kameleoonIframeOriginElement.protocol + "//" + kameleoonIframeOriginElement.hostname);
+      if (location.href.indexOf(window.kameleoonIframeOrigin) != 0)
+      {
+        window.kameleoonLightIframe = true;
+        var kameleoonProcessMessageEvent = function(event)
+        {
+          if (window.kameleoonIframeOrigin == event.origin && event.data.slice && event.data.slice(0,9) == "Kameleoon")
+          {
+            window.removeEventListener("message", kameleoonProcessMessageEvent);
+            window.kameleoonExternalIFrameLoaded = true;
+            if (window.Kameleoon)
+            {
+              eval(event.data);
+              Kameleoon.Analyst.load();
+            }
+            else
+            {
+              window.kameleoonExternalIFrameLoadedData = event.data;
+            }
+          }
+        };
+        if (window.addEventListener)
+        {
+          window.addEventListener("message", kameleoonProcessMessageEvent, false);
+        }
+        var iframeNode = document.createElement("iframe");
+        iframeNode.src = kameleoonIframeURL;
+        iframeNode.id = "kameleoonExternalIframe";
+        iframeNode.style = "float: left !important; opacity: 0.0 !important; width: 0px !important; height: 0px !important;";
+        document.head.appendChild(iframeNode);
+      }
+    </script>
+  <script type="text/javascript" src="//pg7rvdvk4o.kameleoon.eu/kameleoon.js" async="true"></script>
+  <link rel='preload'  media="all"  href="/sites/default/files/css/css_BgtgfwaOnFvJ8pkEHMPw8vLdXufCgxj8YRS-dAlfOHc.css" as='style' onload="this.rel='stylesheet'"  /><noscript><link rel="stylesheet" media="all" href="/sites/default/files/css/css_BgtgfwaOnFvJ8pkEHMPw8vLdXufCgxj8YRS-dAlfOHc.css" /></noscript>
+<link rel='preload'  media="all"  href="/sites/default/files/css/css_hTjM4UFlENEBZ_anIh1J1-t9LaM1Tc7j37IRIiTQANU.css" as='style' onload="this.rel='stylesheet'"  /><noscript><link rel="stylesheet" media="all" href="/sites/default/files/css/css_hTjM4UFlENEBZ_anIh1J1-t9LaM1Tc7j37IRIiTQANU.css" /></noscript>
+<link rel='preload'  media="print"  href="/sites/default/files/css/css_G5lPTin3KcSTI6kNuUbUZCDVWB7RpS8n3gJQGnFUSqY.css" as='style' onload="this.rel='stylesheet'"  /><noscript><link rel="stylesheet" media="print" href="/sites/default/files/css/css_G5lPTin3KcSTI6kNuUbUZCDVWB7RpS8n3gJQGnFUSqY.css" /></noscript>
+<link rel='preload'  media="all"  href="/sites/default/files/css/css_YEeZlpodn9uKzqoFmiq2wflv9CS1oEaK4K0CZVmzPWg.css" as='style' onload="this.rel='stylesheet'"  /><noscript><link rel="stylesheet" media="all" href="/sites/default/files/css/css_YEeZlpodn9uKzqoFmiq2wflv9CS1oEaK4K0CZVmzPWg.css" /></noscript>
+
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/31265","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"blockedVideoOverlay":{"targeting":"\u003Cdiv class=\u0022blocked-video__overlay\u0022\u003E\n  \u003Cdiv class=\u0022blocked-video__message\u0022\u003E\n    This content is hosted by a third party provider that does not allow video views without acceptance of Targeting Cookies. Please set your cookie preferences for Targeting Cookies to yes if you wish to view videos from these providers.\n  \u003C\/div\u003E\n  \u003Ca class=\u0022btn btn-blue targeting blocked-video__button\u0022 href=\u0022\u0022\u003ECookie settings\u003C\/a\u003E\n\u003C\/div\u003E\n","functional":"\u003Cdiv class=\u0022blocked-video__overlay\u0022\u003E\n  \u003Cdiv class=\u0022blocked-video__message\u0022\u003E\n    This content is hosted by a third party provider that does not allow video views without acceptance of Functional Cookies. Please set your cookie preferences for Functional Cookies to yes if you wish to view videos from these providers.\n  \u003C\/div\u003E\n  \u003Ca class=\u0022btn btn-blue functional blocked-video__button\u0022 href=\u0022\u0022\u003ECookie settings\u003C\/a\u003E\n\u003C\/div\u003E\n"},"cms_gtm":["GTM-5V25JL6"],"cms_gtm_optimize":"GTM-PPV8KKN","lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.80000000000000004,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"","preferNative":false,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"unityStoreCurrencySelect":{"label":"Currency","livePlatformUrl":"https:\/\/live-platform-api.prd.ld.unity3d.com\/graphql","activeCurrency":"USD"},"user":{"uid":0,"permissionsHash":"9289a031cad38c746cb12b66a782c7f8ec2c09976ded101243afc1cae72c5d71"}}</script>
+<script src="/sites/default/files/js/js_TTXq1wsxiSpBzH9-xy66WfUn8agLOJkBvqZIim3rLAw.js"></script>
+<script src="https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/geofeed"></script>
+<script src="/sites/default/files/js/js_J6VO6MrzQ6uxEy0aYDQD__gVrYaJSQ0AJXLaeHvIpCk.js"></script>
+
+  <!--[if lt IE 9]><script src="assets/js/html5shiv.min.js"></script><![endif]-->
+</head>
+<body class="unity-brand-header--dark">
+  <!-- Google Tag Manager (noscript) GTM-5V25JL6 -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V25JL6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="master-wrapper" class="clear">
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <div id="block-unityhexagonheader">
+
+  
+    
+
+      
+
+<noscript id="__next_css__DO_NOT_USE__"></noscript>
+<div id="hexagon-header"></div>
+
+  
+</div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+
+
+<section id="main">
+    
+<nav role="navigation" aria-labelledby="block-releasenavigation-menu" id="block-releasenavigation" class="component-subnav">
+  <div class="container">
+    <div class="row">
+                                
+      <h2 class="visually-hidden" id="block-releasenavigation-menu">Release Navigation</h2>
+      
+
+                    
+              <ul>
+              <li>
+        <a href="/releases/editor/qa/lts-releases" data-drupal-link-system-path="node/29036">Latest release</a>
+              </li>
+          <li>
+        <a href="https://docs.unity3d.com/2022.3/Documentation/Manual/WhatsNew2022LTS.html">Release notes</a>
+              </li>
+          <li>
+        <a href="/roadmap/unity-platform" title="Unity Platform Roadmap" data-drupal-link-system-path="node/19648">Roadmap</a>
+              </li>
+          <li>
+        <a href="/releases/editor/beta/guide-beta-testing" title="Beta program" data-drupal-link-system-path="node/25826">Beta program</a>
+              </li>
+        </ul>
+  
+
+
+          </div>
+  </div>
+</nav>
+
+<main class="main">
+  
+
+
+
+  
+<article role="article" id="2021337f1" class="post--release-version">
+  <div class="sections">
+    <div class="section section--layout-section">
+      <div class="container">
+                <div class="row">
+          <div class="col-xs-12 col-md-8 col-lg-9">
+                    <h1>Unity 2021.3.37 </h1>
+
+            
+            
+  <div class="release-date">
+    <div>Released:</div>
+              <div><time datetime="2024-04-02T13:12:43Z">April 2, 2024</time>
+</div>
+          </div>
+<div id="unity-hub-link" class="unity-hub-link">Install this version with <a href="unityhub://2021.3.37f1/3b6005ad5ad6">Unity Hub</a></div><div id="additional-downloads" class="additional-downloads"><h2 class="section-label">Additional downloads</h2>Select the runtime platforms of your choice from the list below (the desktop runtime is included as standard) or, to install the full complement of runtime platforms, use the download assistant installer above.</div>
+      <div>
+              <div>
+  
+  <section id="release-version-downloads-365258--2" class="component-release-version-downloads release-version-downloads view-mode-accordion">
+          
+      <div data-accordion-collapse=collapse class="component-releases-item__show">
+        <div class="col-xs-12 col-md-8 first-md">
+          <div class="component-releases-item__show__inner-header">
+            <h3 class="component-releases-item__title platform-architecture">Windows (X86-64)</h3>
+          </div>
+      </div>
+      </div>
+      <div data-accordion-collapse=show  class="component-releases-item__collapse">
+        <div class="col-xs-12 col-md-8">
+          <div class="component-releases-item__show__inner-header-open ">
+            <h3 class="component-releases-item__title platform-architecture">Windows (X86-64)</h3>
+          </div>
+      </div>
+        <div>
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/Windows64EditorInstaller/UnitySetup64-2021.3.37f1.exe" class="btn btn-blue">Unity Editor  Windows  (X86-64)</a>
+          <div class="component-installers">
+            <h4 class="section-label">Component Installers</h4>
+            <div class="section-content">  <div id="version-download-modules-365219--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Android-Support-for-Editor-2021.3.37f1.exe">Android Build Support</a>
+      </div>
+  <div id="version-download-modules-365222--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-iOS-Support-for-Editor-2021.3.37f1.exe">iOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365225--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-AppleTV-Support-for-Editor-2021.3.37f1.exe">tvOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365228--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Linux-IL2CPP-Support-for-Editor-2021.3.37f1.exe">Linux Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365231--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Linux-Mono-Support-for-Editor-2021.3.37f1.exe">Linux Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365234--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Linux-Server-Support-for-Editor-2021.3.37f1.exe">Linux Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365237--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Mac-Mono-Support-for-Editor-2021.3.37f1.exe">Mac Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365240--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Mac-Server-Support-for-Editor-2021.3.37f1.exe">Mac Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365243--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Universal-Windows-Platform-Support-for-Editor-2021.3.37f1.exe">Universal Windows Platform Build Support</a>
+      </div>
+  <div id="version-download-modules-365246--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-WebGL-Support-for-Editor-2021.3.37f1.exe">WebGL Build Support</a>
+      </div>
+  <div id="version-download-modules-365249--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Windows-IL2CPP-Support-for-Editor-2021.3.37f1.exe">Windows Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365252--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/TargetSupportInstaller/UnitySetup-Windows-Server-Support-for-Editor-2021.3.37f1.exe">Windows Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365255--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://cloudmedia-docs.unity3d.com/docscloudstorage/2021.3/UnityDocumentation.zip">Documentation</a>
+      </div>
+</div>
+          </div>
+        </div>
+      </div>
+      </section>
+</div>
+              <div>
+  
+  <section id="release-version-downloads-365297--2" class="component-release-version-downloads release-version-downloads view-mode-accordion">
+          
+      <div data-accordion-collapse=collapse class="component-releases-item__show">
+        <div class="col-xs-12 col-md-8 first-md">
+          <div class="component-releases-item__show__inner-header">
+            <h3 class="component-releases-item__title platform-architecture">macOS (X86-64)</h3>
+          </div>
+      </div>
+      </div>
+      <div data-accordion-collapse=show  class="component-releases-item__collapse">
+        <div class="col-xs-12 col-md-8">
+          <div class="component-releases-item__show__inner-header-open ">
+            <h3 class="component-releases-item__title platform-architecture">macOS (X86-64)</h3>
+          </div>
+      </div>
+        <div>
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorInstaller/Unity-2021.3.37f1.pkg" class="btn btn-blue">Unity Editor  macOS  (X86-64)</a>
+          <div class="component-installers">
+            <h4 class="section-label">Component Installers</h4>
+            <div class="section-content">  <div id="version-download-modules-365261--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2021.3.37f1.pkg">Android Build Support</a>
+      </div>
+  <div id="version-download-modules-365264--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2021.3.37f1.pkg">iOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365267--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-AppleTV-Support-for-Editor-2021.3.37f1.pkg">tvOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365270--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Linux-IL2CPP-Support-for-Editor-2021.3.37f1.pkg">Linux Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365273--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-2021.3.37f1.pkg">Linux Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365276--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Linux-Server-Support-for-Editor-2021.3.37f1.pkg">Linux Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365279--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Mac-IL2CPP-Support-for-Editor-2021.3.37f1.pkg">Mac Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365282--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Mac-Server-Support-for-Editor-2021.3.37f1.pkg">Mac Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365285--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-2021.3.37f1.pkg">WebGL Build Support</a>
+      </div>
+  <div id="version-download-modules-365288--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2021.3.37f1.pkg">Windows Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365291--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Windows-Server-Support-for-Editor-2021.3.37f1.pkg">Windows Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365294--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://cloudmedia-docs.unity3d.com/docscloudstorage/2021.3/UnityDocumentation.zip">Documentation</a>
+      </div>
+</div>
+          </div>
+        </div>
+      </div>
+      </section>
+</div>
+              <div>
+  
+  <section id="release-version-downloads-365336--2" class="component-release-version-downloads release-version-downloads view-mode-accordion">
+          
+      <div data-accordion-collapse=collapse class="component-releases-item__show">
+        <div class="col-xs-12 col-md-8 first-md">
+          <div class="component-releases-item__show__inner-header">
+            <h3 class="component-releases-item__title platform-architecture">macOS (ARM64)</h3>
+          </div>
+      </div>
+      </div>
+      <div data-accordion-collapse=show  class="component-releases-item__collapse">
+        <div class="col-xs-12 col-md-8">
+          <div class="component-releases-item__show__inner-header-open ">
+            <h3 class="component-releases-item__title platform-architecture">macOS (ARM64)</h3>
+          </div>
+      </div>
+        <div>
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorInstallerArm64/Unity-2021.3.37f1.pkg" class="btn btn-blue">Unity Editor  macOS  (ARM64)</a>
+          <div class="component-installers">
+            <h4 class="section-label">Component Installers</h4>
+            <div class="section-content">  <div id="version-download-modules-365300--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2021.3.37f1.pkg">Android Build Support</a>
+      </div>
+  <div id="version-download-modules-365303--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2021.3.37f1.pkg">iOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365306--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-AppleTV-Support-for-Editor-2021.3.37f1.pkg">tvOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365309--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Linux-IL2CPP-Support-for-Editor-2021.3.37f1.pkg">Linux Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365312--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-2021.3.37f1.pkg">Linux Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365315--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Linux-Server-Support-for-Editor-2021.3.37f1.pkg">Linux Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365318--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Mac-IL2CPP-Support-for-Editor-2021.3.37f1.pkg">Mac Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365321--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Mac-Server-Support-for-Editor-2021.3.37f1.pkg">Mac Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365324--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-2021.3.37f1.pkg">WebGL Build Support</a>
+      </div>
+  <div id="version-download-modules-365327--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2021.3.37f1.pkg">Windows Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365330--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Windows-Server-Support-for-Editor-2021.3.37f1.pkg">Windows Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365333--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://cloudmedia-docs.unity3d.com/docscloudstorage/2021.3/UnityDocumentation.zip">Documentation</a>
+      </div>
+</div>
+          </div>
+        </div>
+      </div>
+      </section>
+</div>
+              <div>
+  
+  <section id="release-version-downloads-365369--2" class="component-release-version-downloads release-version-downloads view-mode-accordion">
+          
+      <div data-accordion-collapse=collapse class="component-releases-item__show">
+        <div class="col-xs-12 col-md-8 first-md">
+          <div class="component-releases-item__show__inner-header">
+            <h3 class="component-releases-item__title platform-architecture">Linux (X86-64)</h3>
+          </div>
+      </div>
+      </div>
+      <div data-accordion-collapse=show  class="component-releases-item__collapse">
+        <div class="col-xs-12 col-md-8">
+          <div class="component-releases-item__show__inner-header-open ">
+            <h3 class="component-releases-item__title platform-architecture">Linux (X86-64)</h3>
+          </div>
+      </div>
+        <div>
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/LinuxEditorInstaller/Unity-2021.3.37f1.tar.xz" class="btn btn-blue">Unity Editor  Linux  (X86-64)</a>
+          <div class="component-installers">
+            <h4 class="section-label">Component Installers</h4>
+            <div class="section-content">  <div id="version-download-modules-365339--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2021.3.37f1.pkg">Android Build Support</a>
+      </div>
+  <div id="version-download-modules-365342--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/LinuxEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-2021.3.37f1.tar.xz">iOS Build Support</a>
+      </div>
+  <div id="version-download-modules-365345--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/LinuxEditorTargetInstaller/UnitySetup-Linux-IL2CPP-Support-for-Editor-2021.3.37f1.tar.xz">Linux Build Support (IL2CPP)</a>
+      </div>
+  <div id="version-download-modules-365348--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/LinuxEditorTargetInstaller/UnitySetup-Linux-Server-Support-for-Editor-2021.3.37f1.tar.xz">Linux Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365351--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Mac-Mono-Support-for-Editor-2021.3.37f1.pkg">Mac Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365354--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Mac-Server-Support-for-Editor-2021.3.37f1.pkg">Mac Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365357--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/LinuxEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-2021.3.37f1.tar.xz">WebGL Build Support</a>
+      </div>
+  <div id="version-download-modules-365360--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-2021.3.37f1.pkg">Windows Build Support (Mono)</a>
+      </div>
+  <div id="version-download-modules-365363--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://download.unity3d.com/download_unity/3b6005ad5ad6/MacEditorTargetInstaller/UnitySetup-Windows-Server-Support-for-Editor-2021.3.37f1.pkg">Windows Dedicated Server Build Support</a>
+      </div>
+  <div id="version-download-modules-365366--2" class="component-version-download-modules version-download-modules view-mode-default">
+          <a href="https://cloudmedia-docs.unity3d.com/docscloudstorage/2021.3/UnityDocumentation.zip">Documentation</a>
+      </div>
+</div>
+          </div>
+        </div>
+      </div>
+      </section>
+</div>
+          </div>
+  <div class="new-to-unity">New to Unity? <a href="https://store.unity.com/">Get started</a></div><div id="release-notes" class="release-notes-section"><h2 class="section-label">Release Notes</h2><div class="release-notes"><h3>Known Issues in 2021.3.37f1</h3>
+
+<ul>
+<li><p>Asset Importers: Unity crashes on strtol_l when importing a specific .obj file
+(<a href="https://issuetracker.unity3d.com/issues/unity-crashes-on-strtol-l-when-importing-a-specific-obj-file">UUM-42697</a>)</p></li>
+<li><p>IAP: [Android] The Player crashes with a &quot;JNI ERROR (app bug)&quot; error when the global reference table gets overflowed by BillingClientStateListener
+(<a href="https://issuetracker.unity3d.com/issues/android-the-player-crashes-with-a-jni-error-app-bug-error-when-the-global-reference-table-gets-overflowed-by-billingclientstatelistener">UUM-55105</a>)</p></li>
+<li><p>IL2CPP: [Android] Crash on Android when AndroidJavaProxy is calling from multiple threads
+(<a href="https://issuetracker.unity3d.com/issues/android-crash-on-android-when-androidjavaproxy-is-calling-from-multiple-threads">UUM-49357</a>)</p></li>
+<li><p>Input: Crash on InputDeviceIOCTL when closing Unity editor
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-inputdeviceioctl-when-closing-unity-editor">UUM-10774</a>)</p></li>
+<li><p>Input: High polling rate mice are causing performance issues (windows, editor)
+(<a href="https://issuetracker.unity3d.com/issues/high-polling-rate-mice-are-causing-performance-issues">UUM-1484</a>)</p></li>
+<li><p>Metal: [iOS] App crashes with out of memory exception in UnityGfxDeviceWorker when starting the app
+(<a href="https://issuetracker.unity3d.com/issues/ios-app-crashes-with-out-of-memory-exception-in-unitygfxdeviceworker-when-starting-the-app">UUM-55488</a>)</p></li>
+<li><p>Platform Audio: Crash on FMOD::CodecMPEG::setPositionInternal when a mobile platform is selected and a specific audio clip is played
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-fmod-codecmpeg-setpositioninternal-when-a-mobile-platform-is-selected-and-a-specific-audio-clip-is-played">UUM-62086</a>)</p></li>
+<li><p>uGUI: Canvas is drawn twice to the same render target when rendering into camera with render texture output
+(<a href="https://issuetracker.unity3d.com/issues/canvas-is-drawn-twice-to-the-same-render-target-when-rendering-into-camera-with-render-texture-output">UUM-23063</a>)</p></li>
+<li><p>Universal RP: Objects are invisible in Scene view when using Wireframe Shading Mode
+(<a href="https://issuetracker.unity3d.com/issues/objects-are-invisible-in-scene-view-when-using-wireframe-shading-mode">UUM-36914</a>)</p></li>
+<li><p>WebRequest: UnityWebRequest crashes if invoked when player is quitting
+(<a href="https://issuetracker.unity3d.com/issues/unitywebrequest-crashes-if-invoked-when-player-is-quitting">UUM-63150</a>)</p></li>
+</ul>
+
+<h3>2021.3.37f1 Release Notes</h3>
+
+<h4>Features</h4>
+
+<ul>
+<li><p>Editor: Added .xcframework plugins support.</p></li>
+<li><p>Package: Added Apple privacy manifest in moderation package.</p></li>
+<li><p>Version Control: New tab view to list and manage locks.</p></li>
+</ul>
+
+<h4>Changes</h4>
+
+<ul>
+<li><p>Android: Updated Android Gradle Plugin to 4.2.2 &#40;from 4.0.1&#41;.</p></li>
+<li><p>Build System: Bee is now using <code>&amp;lt;RestoreAdditionalProjectSources&amp;gt;</code> instead of <code>&amp;lt;RestoreSources&amp;gt;</code> in C&#35; Project files to reference Default Nuget Packages sources.  This will prevent issues where Bee was disregarding Nuget packages configuration files.  Please refer to &#91;Microsoft's Configuring Nuget Behavior Documentation&#93;&#40;https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior&#35;nuget-defaults-file&#41; to control nuget sources in your build environments.
+(BUILD-417)</p></li>
+<li><p>Editor: AnimationEvent and NamedAnimationEvent Nodes icon changed in favor of the AnimationClip icon instead of the Animation Component icon.</p></li>
+<li><p>Services: Updated text on the project link screen.</p></li>
+<li><p>XR: The Oculus XR Plugin package has been updated to 3.4.0.</p></li>
+</ul>
+
+<h4>Fixes</h4>
+
+<ul>
+<li><p>2D: Fixed exception error when slicing Sprite after an Undo.
+(<a href="https://issuetracker.unity3d.com/issues/automatic-slice-type-produces-different-results-and-argumentoutofrangeexception-index-was-out-of-range-must-be-non-negative-and-less-than-the-size-of-the-collection-dot-error-is-thrown-when-it-was-previously-undone">UUM-62818</a>)</p></li>
+<li><p>2D: Fixed Freeform Lights causing random values to be deterministic.
+(<a href="https://issuetracker.unity3d.com/issues/same-values-are-being-generated-if-using-a-random-function-when-freeform-light-2d-light-is-in-the-scene">UUM-65629</a>)</p></li>
+<li><p>Android: Fixed freeze when opening Icons section of Player Settings.
+(<a href="https://issuetracker.unity3d.com/issues/android-editor-freezes-when-opening-the-icon-section-of-player-settings">UUM-61146</a>)</p></li>
+<li><p>Android: Fullscreen mediaplayer autoresume.
+(UUM-57153)</p></li>
+<li><p>Android: Provide control over Unity killing external ADB instances, there's a new option in Preferences-&amp;gt;External Tools-&amp;gt;Kill External ADB instances.
+(<a href="https://issuetracker.unity3d.com/issues/android-editor-terminates-the-adb-connections-when-an-emulator-is-running-in-android-studio">UUM-56519</a>)</p></li>
+<li><p>Android: Provide user friendly dialog if application install fails due previous app installation, but with different signature. The dialog will ask you if you want to remove previous attempt before attempting to install again.
+(UUM-65655)</p></li>
+<li><p>Android: Show warning when Input Handling is set to Both, since Both is not supported on Android and can cause both - input and performance issues.
+(UUM-65273)</p></li>
+<li><p>Asset Pipeline: Fixed security issue with LZ4 library.
+(UUM-35753)</p></li>
+<li><p>Build Pipeline: Fixed a regression where mesh components are stripped if its shader is made of UsePass only references.
+(<a href="https://issuetracker.unity3d.com/issues/uv1-data-is-lost-during-assetbundle-build-when-optimize-mesh-data-is-on">UUM-57201</a>)</p></li>
+<li><p>Build Pipeline: Fixed an issue where a build would not behave correctly when using StreamingAssets folder or file names ending with a <code>~</code>.
+(<a href="https://issuetracker.unity3d.com/issues/build-fails-when-an-untracked-subfolder-is-deleted-from-streamingassets-folder">UUM-48097</a>)</p></li>
+<li><p>Build Pipeline: Fixed the build failure when we switch the platform and build player are called together.
+(<a href="https://issuetracker.unity3d.com/issues/android-burst-android-ndk-not-installed-build-error-thrown-when-using-switchactivebuildtarget-buildtargetgroup-dot-android-dot">UUM-54379</a>)</p></li>
+<li><p>Documentation: Fixed description for AudioSource.GetDSPBufferSize by pointing to the correct DSP buffer size setting.
+(UUM-52557)</p></li>
+<li><p>Documentation: Fixed descriptions for AudioImporter public methods to reflect an updated list of options for platform strings.
+(UUM-52593)</p></li>
+<li><p>Documentation: Fixed enum descriptions for FFTWindow to show correct formulas.
+(UUM-51065)</p></li>
+<li><p>Editor: Added support for LinkerFlagsFile.
+(<a href="https://issuetracker.unity3d.com/issues/player-fails-to-build-and-fatal-error-lnk1120-1-unresolved-externals-error-is-thrown-when-using-linker-flags-file-flag">UUM-64176</a>)</p></li>
+<li><p>Editor: Adjusted IL2CPP IDE command line generation to include AdditionalIl2CppArgs.
+(<a href="https://issuetracker.unity3d.com/issues/visual-studio-fails-to-build-solution-when-using-the-linker-flags-file-in-a-project">UUM-64177</a>)</p></li>
+<li><p>Editor: Bug fix for Crash on NSException when the display dialog contains a long message containing multibyte characters which are clipped when the message is abbreviated by ellipses.
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-nsexception-when-the-display-dialog-contains-a-long-message-containing-multibyte-characters-which-are-clipped-when-the-message-is-abbreviated-by-dot-dot-dot">UUM-62757</a>)</p></li>
+<li><p>Editor: Capitalize the compiler generated name of serialized field.
+(<a href="https://issuetracker.unity3d.com/issues/applying-the-serializefield-attribute-to-the-field-generated-by-the-property-doesnt-capitalize-it-in-the-inspector">UUM-45789</a>)</p></li>
+<li><p>Editor: Color picker preview can now sample from the menu bar and the dock area.
+(<a href="https://issuetracker.unity3d.com/issues/macos-color-picker-preview-is-not-updating-after-moving-cursor-over-the-the-os-menu-bar-while-using-eyedropper-tool">UUM-52823</a>)</p></li>
+<li><p>Editor: Crash fix when CreateExternalTexture uses non compatible format.
+(<a href="https://issuetracker.unity3d.com/issues/dx12-crash-with-multiple-stack-traces-when-creating-an-external-texture">UUM-44947</a>)</p></li>
+<li><p>Editor: Documentation links have been fixed for Visual Scripting MonoBehaviours.
+(<a href="https://issuetracker.unity3d.com/issues/the-button-open-reference-leads-to-the-non-existent-webpage-when-clicking-it-on-any-visual-scripting-component">UVSB-2475</a>, <a href="https://issuetracker.unity3d.com/issues/broken-documentation-for-visual-scripting-scene-variables">UVSB-2496</a>)</p></li>
+<li><p>Editor: Editor: ObjectPool counter returns wrong count if returning instance to full pool.
+(<a href="https://issuetracker.unity3d.com/issues/wrong-number-is-returned-when-using-target-dot-pool-dot-countactive-in-objectpool-if-objects-are-destroyed">UUM-49060</a>)</p></li>
+<li><p>Editor: Fixed a bug where orgs would not show for guest users in the UGS Project Linking Window.
+(UUM-66543)</p></li>
+<li><p>Editor: Fixed a bug where the second player input device controlled all objects when using InputSystem event nodes.
+(<a href="https://issuetracker.unity3d.com/issues/the-second-input-device-controls-both-inputs-when-functionality-is-created-using-visual-scripting-graph">UVSB-2499</a>)</p></li>
+<li><p>Editor: Fixed a crash when trying to import too much mesh vertex blend shape data.
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-mono-find-jit-info-ext-when-resolving-artifacts">UUM-53148</a>)</p></li>
+<li><p>Editor: Fixed case where closing a docked window could result in overlapping sibling windows.
+(<a href="https://issuetracker.unity3d.com/issues/the-editor-ui-becomes-broken-when-any-window-of-the-custom-layout-is-closed">UUM-41817</a>)</p></li>
+<li><p>Editor: Fixed Deep Profiling Support label is labeled differently depending on if Development Build is enabled.
+(<a href="https://issuetracker.unity3d.com/issues/deep-profiling-support-is-labeled-differently-depending-on-if-development-build-is-enabled-or-disabled-in-build-settings">UUM-61605</a>)</p></li>
+<li><p>Editor: Fixed incorrect duplicate menu items being removed when menu system is updated.
+(<a href="https://issuetracker.unity3d.com/issues/crash-when-creating-not-existing-menuitem">UUM-14958</a>)</p></li>
+<li><p>Editor: Fixed unrelated Objects/Metadata that showed up assigned to samples in the CPU Timeline view and were repeating the data from the last sample in the thread &amp;amp; frame that had valid Object/Metadata information associated with it.
+(<a href="https://issuetracker.unity3d.com/issues/unrelated-objects-slash-metadata-are-assigned-to-samples-past-the-last-one-with-valid-object-slash-metadata-information-as-observed-in-cpu-usage-timeline">UUM-66592</a>)</p></li>
+<li><p>Editor: Fixed Xcode selection in Build Profiles window for iOS platform &#40;&quot;Other&quot; option&#41;.
+(UUM-64007)</p></li>
+<li><p>Editor: Items with a very long name will no longer make the arrow indicator disappear in Add Component dropdown popup.
+(<a href="https://issuetracker.unity3d.com/issues/the-indicator-is-not-shown-for-expandable-menus-when-opening-a-submenus-in-the-add-component-menu">UUM-60655</a>)</p></li>
+<li><p>Editor: Overrides inside a managed reference didn't appear as Read Only when using Show Overrides.
+(<a href="https://issuetracker.unity3d.com/issues/show-overrides-doesnt-display-prefab-overrides-as-read-only-when-they-are-inside-managed-references">UUM-65819</a>)</p></li>
+<li><p>Editor: Per-platform formats on the TextureImporter will default to the platform default if not initialized properly.
+(<a href="https://issuetracker.unity3d.com/issues/unset-attribute-in-preset-importer-causes-same-attribute-in-imported-assets-to-use-0-even-if-that-is-invalid">UUM-33166</a>)</p></li>
+<li><p>Editor: Updated the EditorToolbar to allow for a VisualElement based VersionControl Toolbar Button to resolve the button being misaligned.
+(<a href="https://issuetracker.unity3d.com/issues/main-unity-toolbar-unity-version-control-control-isnt-aligned-to-all-other-controls">UUM-36270</a>)</p></li>
+<li><p>Editor: Updated the FBX SDK version to 2020.3.4.
+(<a href="https://issuetracker.unity3d.com/issues/silicon-modelimporter-dot-import-takes-a-long-time-when-opening-a-project-in-batch-mode">UUM-60185</a>)</p></li>
+<li><p>Graphics: Fixed crash when importing an unsupported 2x2 mipmapped, BC-compressed asset created in an older version of Unity.
+(<a href="https://issuetracker.unity3d.com/issues/non-power-of-4-bc1-texture-fallback-code-can-lead-to-a-crash-with-some-textures">UUM-48520</a>)</p></li>
+<li><p>Graphics: Fixed possible null ref when there is corrupted occlusion tome data that may lead to a crash.
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-rendererscene-initializeumbra-when-opening-a-project">UUM-30735</a>)</p></li>
+<li><p>Graphics: Prevent swizzling of  ARGB32 format.
+(<a href="https://issuetracker.unity3d.com/issues/graphics-dot-copytexture-produces-inaccurate-results-when-using-argb32-textures-with-vulkan-graphics-api">UUM-45872</a>)</p></li>
+<li><p>Graphics: Support requesting a DXT compressed texture using ImageConversion.LoadImage and Texture2D.LoadImage on Android.
+(<a href="https://issuetracker.unity3d.com/issues/quest-texture2d-dot-loadimage-returns-false-when-the-format-is-dxt1-slash-5">UUM-52927</a>)</p></li>
+<li><p>HDRP: Fixed shader compilation issues related to ternary operater misuse.
+(UUM-66198)</p></li>
+<li><p>IL2CPP: Fixed correctness of lock statement on ARM architectures under high contention.
+(UUM-65254)</p></li>
+<li><p>IL2CPP: Fixed crash when calling special Array Set/Get/Address methods via reflection.
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-il2cpp-vm-runtime-invokewiththrow-in-the-player-when-system-dot-reflection-dot-methodbase-dot-invoke-null-object-is-called">UUM-64457</a>)</p></li>
+<li><p>IL2CPP: Fixed MemoryMappedFile on posix systems to query page size from the system, instead of hardcoding it.
+(<a href="https://issuetracker.unity3d.com/issues/ios-ioexception-is-thrown-when-offset-is-not-aligned-to-page-size">UUM-54598</a>)</p></li>
+<li><p>IL2CPP: Prevent additional IL2CPP arguments that contains --compiler-flags or --linker-flags from overriding the default values for these arguments. Instead combine them and pass them to the compiler or linker.
+(UUM-59355)</p></li>
+<li><p>IL2CPP: Updated zlib to v 1.3.1.
+(UUM-64803)</p></li>
+<li><p>iOS: Fixed AppDomain.UnhandledException not invoked before crashing due to unhandled exception when using &quot;Fast but no exceptions&quot; scripting calls.
+(<a href="https://issuetracker.unity3d.com/issues/appdomain-dot-unhandledexception-is-not-called-before-the-app-crashes-when-using-scriptcalloptimization-on-mobile-devices">UUM-62773</a>)</p></li>
+<li><p>iOS: Fixed potential memory leak when reallocating memory.
+(UUM-64048)</p></li>
+<li><p>macOS: Fixed memory spikes when macOS player is offscreen or minimized.
+(<a href="https://issuetracker.unity3d.com/issues/os-freezes-when-playing-build-and-if-the-qualitysettings-dot-vsynccount-setting-is-set-and-switching-windows">UUM-30049</a>)</p></li>
+<li><p>macOS: Fixed resolution change in fullscreen mode when it has been changed via System Settings.
+(UUM-64959)</p></li>
+<li><p>Mono: Fixed issue where custom client and server certificates were not correctly being validated by HttpClient.
+(UUM-57031)</p></li>
+<li><p>Package: Fixed a bug in moderation package where initialization would fail on certain occasion.</p></li>
+<li><p>Package Manager: Fixed the issue where 299 error is thrown when launching a project where UPM packages on Asset Store are installed.
+(<a href="https://issuetracker.unity3d.com/issues/package-manager-error-while-getting-product-update-details-failed-to-parse-response-code-299-aborted-request">UUM-62647</a>)</p></li>
+<li><p>Particles: Fixed an issue where using GPU instanced mesh particles could result in visual corruption.
+(<a href="https://issuetracker.unity3d.com/issues/legacy-particle-systems-with-mesh-gpu-instancing-can-show-visual-corruption-in-certain-conditions">UUM-64297</a>)</p></li>
+<li><p>Profiler: Fixed an issue whereby the Physics2D module did not display counters in the Profiler.
+(<a href="https://issuetracker.unity3d.com/issues/the-physics-2d-profiler-module-does-not-display-the-information-about-processed-physics-in-the-scene-when-profiling-the-application-as-a-development-build">UUM-57758</a>)</p></li>
+<li><p>Scripting: Scripting: Corrected crashes due to excessive use of thread local data slots.
+(<a href="https://issuetracker.unity3d.com/issues/android-crash-on-slash-data-slash-app-slash-com-dot-defaultcompany-dot-webviewandroid-7upuhqo4grf2kpmrmcjrdg-equals-equals-slash-lib-slash-arm64-slash-libxul-dot-so-libxul-dot-so-offset-0x518000-on-android-devices-when-using-webview">UUM-58965</a>)</p></li>
+<li><p>Shaders: Fixed code generated for Texture.Load with offset.
+(<a href="https://issuetracker.unity3d.com/issues/compute-shader-texture2d-dot-load-with-a-non-zero-offset-does-not-work-when-using-macos">UUM-56574</a>)</p></li>
+<li><p>SRP Core: Fixed DebugUI.Button not working in Rendering Debugger runtime UI.
+(<a href="https://issuetracker.unity3d.com/issues/debugui-dot-button-does-not-invoke-action-when-clicked">UUM-65457</a>)</p></li>
+<li><p>Terrain: Now checks the bounds in ComputeDetailInstanceTransforms to avoid crashing.
+(<a href="https://issuetracker.unity3d.com/issues/crash-on-terraindatascriptinginterface-computedetailinstancetransforms-when-calling-computedetailinstancetransforms-with-incorrect-parameter-values">UUM-27936</a>)</p></li>
+<li><p>uGUI: Fixed bug that dirties prefab upon opening it when configured with a layout group + content size fitter.
+(<a href="https://issuetracker.unity3d.com/issues/content-size-fitter-component-causes-an-opened-prefab-to-become-dirty-and-require-saving-without-having-been-modified">UUM-19577</a>)</p></li>
+<li><p>uGUI: When Interacting with Occluded Button Areas using UGUI and GraphicRaycaster, the clickability is now consistent.
+(<a href="https://issuetracker.unity3d.com/issues/ugui-and-graphicraycaster-inconsistent-clickability-when-interacting-with-occluded-button-areas">UUM-60672</a>)</p></li>
+<li><p>UI Elements: Added a way to opt out of asset monitoring on specific editor windows to avoid performance issues with panels that contain many VisualElements.
+(UUM-60233)</p></li>
+<li><p>UI Elements: Fixed the disabled ListView's footer styling.
+(UUM-61636)</p></li>
+<li><p>UI Elements: Made the ListView's toggle focus state to match IMGUI.
+(<a href="https://issuetracker.unity3d.com/issues/treeview-child-display-toggle-styling-becomes-reversed-when-clicking-and-dragging-it">UUM-37800</a>)</p></li>
+<li><p>UI Toolkit: Fixed attribute overrides when it's multiple levels deep in the Hierarchy in the UI Builder.
+(<a href="https://issuetracker.unity3d.com/issues/cannot-override-uxml-attributes-when-its-multiple-levels-deep-in-the-hierarchy">UUM-59501</a>)</p></li>
+<li><p>UI Toolkit: Fixed elements size when a new control is dragged onto the UI Builder hierarchy.
+(<a href="https://issuetracker.unity3d.com/issues/resizing-the-ui-builders-viewport-window-doesnt-shrink-the-elements-in-it-when-new-ui-builder-elements-are-added">UUM-61553</a>)</p></li>
+<li><p>UI Toolkit: UI Toolkit: Fixed &quot;margin: auto&quot; applied even when the visual Element has it's Display is set to none.
+(<a href="https://issuetracker.unity3d.com/issues/visualelement-is-applying-margin-auto-even-when-display-is-set-to-none">UUM-40647</a>)</p></li>
+<li><p>UI Toolkit: UI Toolkit: The ScrollView now stops a touch scroll at a greater velocity, thus eliminating the &quot;trail off&quot; effect.
+(<a href="https://issuetracker.unity3d.com/issues/scroll-offset-is-framerate-dependent-when-scrolling-with-velocity-in-the-device-simulator">UUM-58479</a>)</p></li>
+<li><p>UI Toolkit: UI Toolkit: The ScrollView touch scroll inertia now behaves similarly across multiple framerates.
+(<a href="https://issuetracker.unity3d.com/issues/uitoolkit-scrollview-element-speed-is-unaffected-by-scroll-deceleration-rate-when-the-element-is-about-to-completely-stop">UUM-59847</a>)</p></li>
+<li><p>Universal Windows Platform: &quot;FormatException: The input is not a valid Base-64 string&quot; is thrown when setting EditorUserBuildSettings.windowsDevicePortalUsername.
+(<a href="https://issuetracker.unity3d.com/issues/formatexception-the-input-is-not-a-valid-base-64-string-is-thrown-when-setting-editoruserbuildsettings-dot-windowsdeviceportalusername">UUM-58808</a>)</p></li>
+<li><p>Universal Windows Platform: A customized &quot;Package.appxmanifest&quot; is overwritten when building the project for UWP.
+(<a href="https://issuetracker.unity3d.com/issues/a-customized-package-dot-appxmanifest-is-overwritten-when-building-the-project-for-uwp">UUM-64455</a>)</p></li>
+<li><p>Version Control: Ensured branch creations start from the latest changeset.</p></li>
+<li><p>Version Control: Fixed Diff option unavailable for .prefab.</p></li>
+<li><p>Version Control: Fixed DropdownField not working properly on a ModalUtility window on MacOS.</p></li>
+<li><p>Version Control: Fixed finding changes operation being firing constantly.</p></li>
+<li><p>Version Control: Fixed issue with existing checkout operations locking the workspace.</p></li>
+<li><p>Version Control: Fixed layout error when switching checkout status in the inspector.</p></li>
+<li><p>Version Control: Fixed typo in locks tooltip.</p></li>
+<li><p>Version Control: Fixed UI error when opening and closing multiple closable tabs.</p></li>
+<li><p>Version Control: Pending Changes context menu had the view file history greyed out for asset+meta.</p></li>
+<li><p>Version Control: Preconfigured date format was not recognized as a valid DateTime.</p></li>
+<li><p>Version Control: Removed obsolete content in package documentation.</p></li>
+<li><p>Version Control: Replaced &quot;plasticscm.com&quot; by a &quot;https://unity.com/solutions/version-control&quot; in the package.json.</p></li>
+<li><p>Version Control: Reviewed initialization and application lifecycle.</p></li>
+<li><p>Version Control: Unable to expand added item list after collapsing.</p></li>
+<li><p>Video: Error &quot;0xc00d36b4 while reading&quot; is being thrown when turning on Transcode in the Import Settings of Video Clip Assets.
+(<a href="https://issuetracker.unity3d.com/issues/error-0xc00d36b4-while-reading-is-being-thrown-when-turning-on-transcode-in-the-import-settings-of-video-clip-assets">UUM-56816</a>)</p></li>
+<li><p>Video: The &quot;loopPointReached&quot; event is continuously triggered when a Video Clip with looping and skip-on-drop disabled restarts playback after reaching the end.
+(<a href="https://issuetracker.unity3d.com/issues/the-looppointreached-event-is-continuously-triggered-when-a-video-clip-with-looping-and-skip-on-drop-disabled-restarts-playback-after-reaching-the-end">UUM-64804</a>)</p></li>
+<li><p>WebGL: Fixed the name files as hashes feature and corresponding integration test.
+(UUM-35863)</p></li>
+<li><p>WebGL: Removed &quot;The PlayerLoop has been called recursively.&quot; error message spam.
+(UUM-55075)</p></li>
+</ul>
+
+<h4>Package changes in 2021.3.37f1</h4>
+
+<h4>Packages updated</h4>
+
+<ul>
+<li><p>com.unity.2d.aseprite: <a href="https://docs.unity3d.com/Packages/com.unity.2d.aseprite@1.1//changelog/CHANGELOG.html">1.1.1</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.2d.aseprite@1.1//changelog/CHANGELOG.html">1.1.2</a></p></li>
+<li><p>com.unity.collab-proxy: <a href="https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.2//changelog/CHANGELOG.html">2.2.0</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.3//changelog/CHANGELOG.html">2.3.1</a></p></li>
+<li><p>com.unity.ide.rider: <a href="https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0//changelog/CHANGELOG.html">3.0.27</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0//changelog/CHANGELOG.html">3.0.28</a></p></li>
+<li><p>com.unity.services.core: <a href="https://docs.unity3d.com/Packages/com.unity.services.core@1.12//changelog/CHANGELOG.html">1.12.2</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.services.core@1.12//changelog/CHANGELOG.html">1.12.4</a></p></li>
+<li><p>com.unity.services.qos: <a href="https://docs.unity3d.com/Packages/com.unity.services.qos@1.2//changelog/CHANGELOG.html">1.2.1</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.services.qos@1.3//changelog/CHANGELOG.html">1.3.0</a></p></li>
+<li><p>com.unity.services.wire: <a href="https://docs.unity3d.com/Packages/com.unity.services.wire@1.2//changelog/CHANGELOG.html">1.2.2</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.services.wire@1.2//changelog/CHANGELOG.html">1.2.3</a></p></li>
+<li><p>com.unity.visualscripting: <a href="https://docs.unity3d.com/Packages/com.unity.visualscripting@1.9//changelog/CHANGELOG.html">1.9.1</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.visualscripting@1.9//changelog/CHANGELOG.html">1.9.2</a></p></li>
+<li><p>com.unity.xr.oculus: <a href="https://docs.unity3d.com/Packages/com.unity.xr.oculus@3.3//changelog/CHANGELOG.html">3.3.0</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.xr.oculus@3.4//changelog/CHANGELOG.html">3.4.0</a></p></li>
+<li><p>com.unity.dt.app-ui: <a href="https://docs.unity3d.com/Packages/com.unity.dt.app-ui@1.0//changelog/CHANGELOG.html">1.0.1</a> &amp;#x2192; <a href="https://docs.unity3d.com/Packages/com.unity.dt.app-ui@1.0//changelog/CHANGELOG.html">1.0.2</a></p></li>
+</ul></div></div>
+  <div class="changeset">
+    <div>Changeset:</div>
+              <div>3b6005ad5ad6</div>
+          </div>
+<div class="thirdparty-notices"><h4 class="thirdparty-notices-heading" id="third-party-notices">Third Party Notices</h4>
+<span class="thirdparty-notices-description">For more information please see our <a target="_blank" href="https://support.unity.com/hc/en-us/sections/15724082604820-Open-Source-Software-Licenses">Open Source Software Licenses FAQ on the Unity Support Portal</a></span></div>
+<ul class="prev-next-release-nav"><li class="prev"><a href="/releases/editor/whats-new/2021.3.36"><span class="visually-hidden">Previous Release</span></a></li><li class="next"><a href="/releases/editor/whats-new/2022.1.0"><span class="visually-hidden">Next Release</span></a></li></ul>
+
+                  </div>
+
+          <div class="col-xs-12 col-md-4 col-lg-3">
+            <div class="release-sidebar">
+              <div class="dropdown">
+                <div class="label">
+                  Unity 2021.3.37
+                </div>
+                <div class="views-element-container"><div class="block-stable-releases js-view-dom-id-845be7e4b6ae962f5628d583d47875aa5c809c58f9753c1cdda453f48d190b73">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="releases-item-list">
+  
+  <ul>
+
+          <li><a href="/releases/editor/whats-new/2023.2.16" title="2023.2.16">Unity 2023.2.16</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.15" title="2023.2.15">Unity 2023.2.15</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.14" title="2023.2.14">Unity 2023.2.14</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.13" title="2023.2.13">Unity 2023.2.13</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.12" title="2023.2.12">Unity 2023.2.12</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.11" title="2023.2.11">Unity 2023.2.11</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.10" title="2023.2.10">Unity 2023.2.10</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.9" title="2023.2.9">Unity 2023.2.9</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.8" title="2023.2.8">Unity 2023.2.8</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.7" title="2023.2.7">Unity 2023.2.7</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.6" title="2023.2.6">Unity 2023.2.6</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.5" title="2023.2.5">Unity 2023.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.4" title="2023.2.4">Unity 2023.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.3" title="2023.2.3">Unity 2023.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.2" title="2023.2.2">Unity 2023.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.1" title="2023.2.1">Unity 2023.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2023.2.0" title="2023.2.0">Unity 2023.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.20" title="2023.1.20">Unity 2023.1.20</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.19" title="2023.1.19">Unity 2023.1.19</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.18" title="2023.1.18">Unity 2023.1.18</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.17" title="2023.1.17">Unity 2023.1.17</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.16" title="2023.1.16">Unity 2023.1.16</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.15" title="2023.1.15">Unity 2023.1.15</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.14" title="2023.1.14">Unity 2023.1.14</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.13" title="2023.1.13">Unity 2023.1.13</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.12" title="2023.1.12">Unity 2023.1.12</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.11" title="2023.1.11">Unity 2023.1.11</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.10" title="2023.1.10">Unity 2023.1.10</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.9" title="2023.1.9">Unity 2023.1.9</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.8" title="2023.1.8">Unity 2023.1.8</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.7" title="2023.1.7">Unity 2023.1.7</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.6" title="2023.1.6">Unity 2023.1.6</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.5" title="2023.1.5">Unity 2023.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.4" title="2023.1.4">Unity 2023.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.3" title="2023.1.3">Unity 2023.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.2" title="2023.1.2">Unity 2023.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.1" title="2023.1.1">Unity 2023.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2023.1.0" title="2023.1.0">Unity 2023.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.22" title="2022.3.22">Unity 2022.3.22</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.21" title="2022.3.21">Unity 2022.3.21</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.20" title="2022.3.20">Unity 2022.3.20</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.19" title="2022.3.19">Unity 2022.3.19</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.18" title="2022.3.18">Unity 2022.3.18</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.17" title="2022.3.17">Unity 2022.3.17</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.16" title="2022.3.16">Unity 2022.3.16</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.15" title="2022.3.15">Unity 2022.3.15</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.14" title="2022.3.14">Unity 2022.3.14</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.13" title="2022.3.13">Unity 2022.3.13</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.12" title="2022.3.12">Unity 2022.3.12</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.11" title="2022.3.11">Unity 2022.3.11</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.10" title="2022.3.10">Unity 2022.3.10</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.9" title="2022.3.9">Unity 2022.3.9</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.8" title="2022.3.8">Unity 2022.3.8</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.7" title="2022.3.7">Unity 2022.3.7</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.6" title="2022.3.6">Unity 2022.3.6</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.5" title="2022.3.5">Unity 2022.3.5</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.4" title="2022.3.4">Unity 2022.3.4</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.3" title="2022.3.3">Unity 2022.3.3</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.2" title="2022.3.2">Unity 2022.3.2</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.1" title="2022.3.1">Unity 2022.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/2022.3.0" title="2022.3.0">Unity 2022.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.21" title="2022.2.21">Unity 2022.2.21</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.20" title="2022.2.20">Unity 2022.2.20</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.19" title="2022.2.19">Unity 2022.2.19</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.18" title="2022.2.18">Unity 2022.2.18</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.17" title="2022.2.17">Unity 2022.2.17</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.16" title="2022.2.16">Unity 2022.2.16</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.15" title="2022.2.15">Unity 2022.2.15</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.14" title="2022.2.14">Unity 2022.2.14</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.13" title="2022.2.13">Unity 2022.2.13</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.12" title="2022.2.12">Unity 2022.2.12</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.11" title="2022.2.11">Unity 2022.2.11</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.10" title="2022.2.10">Unity 2022.2.10</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.9" title="2022.2.9">Unity 2022.2.9</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.8" title="2022.2.8">Unity 2022.2.8</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.7" title="2022.2.7">Unity 2022.2.7</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.6" title="2022.2.6">Unity 2022.2.6</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.5" title="2022.2.5">Unity 2022.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.4" title="2022.2.4">Unity 2022.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.3" title="2022.2.3">Unity 2022.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.2" title="2022.2.2">Unity 2022.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.1" title="2022.2.1">Unity 2022.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2022.2.0" title="2022.2.0">Unity 2022.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.24" title="2022.1.24">Unity 2022.1.24</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.23" title="2022.1.23">Unity 2022.1.23</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.22" title="2022.1.22">Unity 2022.1.22</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.21" title="2022.1.21">Unity 2022.1.21</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.20" title="2022.1.20">Unity 2022.1.20</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.19" title="2022.1.19">Unity 2022.1.19</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.18" title="2022.1.18">Unity 2022.1.18</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.17" title="2022.1.17">Unity 2022.1.17</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.16" title="2022.1.16">Unity 2022.1.16</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.15" title="2022.1.15">Unity 2022.1.15</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.14" title="2022.1.14">Unity 2022.1.14</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.13" title="2022.1.13">Unity 2022.1.13</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.12" title="2022.1.12">Unity 2022.1.12</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.11" title="2022.1.11">Unity 2022.1.11</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.10" title="2022.1.10">Unity 2022.1.10</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.9" title="2022.1.9">Unity 2022.1.9</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.8" title="2022.1.8">Unity 2022.1.8</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.7" title="2022.1.7">Unity 2022.1.7</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.6" title="2022.1.6">Unity 2022.1.6</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.5" title="2022.1.5">Unity 2022.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.4" title="2022.1.4">Unity 2022.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.3" title="2022.1.3">Unity 2022.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.2" title="2022.1.2">Unity 2022.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.1" title="2022.1.1">Unity 2022.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2022.1.0" title="2022.1.0">Unity 2022.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.37" title="2021.3.37">Unity 2021.3.37</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.36" title="2021.3.36">Unity 2021.3.36</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.35" title="2021.3.35">Unity 2021.3.35</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.34" title="2021.3.34">Unity 2021.3.34</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.33" title="2021.3.33">Unity 2021.3.33</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.32" title="2021.3.32">Unity 2021.3.32</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.31" title="2021.3.31">Unity 2021.3.31</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.30" title="2021.3.30">Unity 2021.3.30</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.29" title="2021.3.29">Unity 2021.3.29</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.28" title="2021.3.28">Unity 2021.3.28</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.27" title="2021.3.27">Unity 2021.3.27</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.26" title="2021.3.26">Unity 2021.3.26</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.25" title="2021.3.25">Unity 2021.3.25</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.24" title="2021.3.24">Unity 2021.3.24</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.23" title="2021.3.23">Unity 2021.3.23</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.22" title="2021.3.22">Unity 2021.3.22</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.21" title="2021.3.21">Unity 2021.3.21</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.20" title="2021.3.20">Unity 2021.3.20</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.19" title="2021.3.19">Unity 2021.3.19</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.18" title="2021.3.18">Unity 2021.3.18</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.17" title="2021.3.17">Unity 2021.3.17</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.16" title="2021.3.16">Unity 2021.3.16</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.15" title="2021.3.15">Unity 2021.3.15</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.14" title="2021.3.14">Unity 2021.3.14</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.13" title="2021.3.13">Unity 2021.3.13</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.12" title="2021.3.12">Unity 2021.3.12</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.11" title="2021.3.11">Unity 2021.3.11</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.10" title="2021.3.10">Unity 2021.3.10</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.9" title="2021.3.9">Unity 2021.3.9</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.8" title="2021.3.8">Unity 2021.3.8</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.7" title="2021.3.7">Unity 2021.3.7</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.6" title="2021.3.6">Unity 2021.3.6</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.5" title="2021.3.5">Unity 2021.3.5</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.4" title="2021.3.4">Unity 2021.3.4</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.3" title="2021.3.3">Unity 2021.3.3</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.2" title="2021.3.2">Unity 2021.3.2</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.1" title="2021.3.1">Unity 2021.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/2021.3.0" title="2021.3.0">Unity 2021.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.19" title="2021.2.19">Unity 2021.2.19</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.18" title="2021.2.18">Unity 2021.2.18</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.17" title="2021.2.17">Unity 2021.2.17</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.16" title="2021.2.16">Unity 2021.2.16</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.15" title="2021.2.15">Unity 2021.2.15</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.14" title="2021.2.14">Unity 2021.2.14</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.13" title="2021.2.13">Unity 2021.2.13</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.12" title="2021.2.12">Unity 2021.2.12</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.11" title="2021.2.11">Unity 2021.2.11</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.10" title="2021.2.10">Unity 2021.2.10</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.9" title="2021.2.9">Unity 2021.2.9</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.8" title="2021.2.8">Unity 2021.2.8</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.7" title="2021.2.7">Unity 2021.2.7</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.6" title="2021.2.6">Unity 2021.2.6</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.5" title="2021.2.5">Unity 2021.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.4" title="2021.2.4">Unity 2021.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.3" title="2021.2.3">Unity 2021.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.2" title="2021.2.2">Unity 2021.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.1" title="2021.2.1">Unity 2021.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2021.2.0" title="2021.2.0">Unity 2021.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.28" title="2021.1.28">Unity 2021.1.28</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.27" title="2021.1.27">Unity 2021.1.27</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.26" title="2021.1.26">Unity 2021.1.26</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.25" title="2021.1.25">Unity 2021.1.25</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.24" title="2021.1.24">Unity 2021.1.24</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.23" title="2021.1.23">Unity 2021.1.23</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.22" title="2021.1.22">Unity 2021.1.22</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.21" title="2021.1.21">Unity 2021.1.21</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.20" title="2021.1.20">Unity 2021.1.20</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.19" title="2021.1.19">Unity 2021.1.19</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.18" title="2021.1.18">Unity 2021.1.18</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.17" title="2021.1.17">Unity 2021.1.17</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.16" title="2021.1.16">Unity 2021.1.16</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.15" title="2021.1.15">Unity 2021.1.15</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.14" title="2021.1.14">Unity 2021.1.14</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.13" title="2021.1.13">Unity 2021.1.13</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.12" title="2021.1.12">Unity 2021.1.12</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.11" title="2021.1.11">Unity 2021.1.11</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.10" title="2021.1.10">Unity 2021.1.10</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.9" title="2021.1.9">Unity 2021.1.9</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.7" title="2021.1.7">Unity 2021.1.7</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.6" title="2021.1.6">Unity 2021.1.6</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.5" title="2021.1.5">Unity 2021.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.4" title="2021.1.4">Unity 2021.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.3" title="2021.1.3">Unity 2021.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.2" title="2021.1.2">Unity 2021.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.1" title="2021.1.1">Unity 2021.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2021.1.0" title="2021.1.0">Unity 2021.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.48" title="2020.3.48">Unity 2020.3.48</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.47" title="2020.3.47">Unity 2020.3.47</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.46" title="2020.3.46">Unity 2020.3.46</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.45" title="2020.3.45">Unity 2020.3.45</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.44" title="2020.3.44">Unity 2020.3.44</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.43" title="2020.3.43">Unity 2020.3.43</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.42" title="2020.3.42">Unity 2020.3.42</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.41" title="2020.3.41">Unity 2020.3.41</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.40" title="2020.3.40">Unity 2020.3.40</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.39" title="2020.3.39">Unity 2020.3.39</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.38" title="2020.3.38">Unity 2020.3.38</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.37" title="2020.3.37">Unity 2020.3.37</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.36" title="2020.3.36">Unity 2020.3.36</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.35" title="2020.3.35">Unity 2020.3.35</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.34" title="2020.3.34">Unity 2020.3.34</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.33" title="2020.3.33">Unity 2020.3.33</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.32" title="2020.3.32">Unity 2020.3.32</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.31" title="2020.3.31">Unity 2020.3.31</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.30" title="2020.3.30">Unity 2020.3.30</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.29" title="2020.3.29">Unity 2020.3.29</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.28" title="2020.3.28">Unity 2020.3.28</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.27" title="2020.3.27">Unity 2020.3.27</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.26" title="2020.3.26">Unity 2020.3.26</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.25" title="2020.3.25">Unity 2020.3.25</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.24" title="2020.3.24">Unity 2020.3.24</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.23" title="2020.3.23">Unity 2020.3.23</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.22" title="2020.3.22">Unity 2020.3.22</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.21" title="2020.3.21">Unity 2020.3.21</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.20" title="2020.3.20">Unity 2020.3.20</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.19" title="2020.3.19">Unity 2020.3.19</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.18" title="2020.3.18">Unity 2020.3.18</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.17" title="2020.3.17">Unity 2020.3.17</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.16" title="2020.3.16">Unity 2020.3.16</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.15" title="2020.3.15">Unity 2020.3.15</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.14" title="2020.3.14">Unity 2020.3.14</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.13" title="2020.3.13">Unity 2020.3.13</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.12" title="2020.3.12">Unity 2020.3.12</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.11" title="2020.3.11">Unity 2020.3.11</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.10" title="2020.3.10">Unity 2020.3.10</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.9" title="2020.3.9">Unity 2020.3.9</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.8" title="2020.3.8">Unity 2020.3.8</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.7" title="2020.3.7">Unity 2020.3.7</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.6" title="2020.3.6">Unity 2020.3.6</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.5" title="2020.3.5">Unity 2020.3.5</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.4" title="2020.3.4">Unity 2020.3.4</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.3" title="2020.3.3">Unity 2020.3.3</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.2" title="2020.3.2">Unity 2020.3.2</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.1" title="2020.3.1">Unity 2020.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/2020.3.0" title="2020.3.0">Unity 2020.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.7" title="2020.2.7">Unity 2020.2.7</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.6" title="2020.2.6">Unity 2020.2.6</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.5" title="2020.2.5">Unity 2020.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.4" title="2020.2.4">Unity 2020.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.3" title="2020.2.3">Unity 2020.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.2" title="2020.2.2">Unity 2020.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.1" title="2020.2.1">Unity 2020.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2020.2.0" title="2020.2.0">Unity 2020.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.17" title="2020.1.17">Unity 2020.1.17</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.16" title="2020.1.16">Unity 2020.1.16</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.15" title="2020.1.15">Unity 2020.1.15</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.14" title="2020.1.14">Unity 2020.1.14</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.13" title="2020.1.13">Unity 2020.1.13</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.12" title="2020.1.12">Unity 2020.1.12</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.11" title="2020.1.11">Unity 2020.1.11</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.10" title="2020.1.10">Unity 2020.1.10</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.9" title="2020.1.9">Unity 2020.1.9</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.8" title="2020.1.8">Unity 2020.1.8</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.7" title="2020.1.7">Unity 2020.1.7</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.6" title="2020.1.6">Unity 2020.1.6</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.5" title="2020.1.5">Unity 2020.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.4" title="2020.1.4">Unity 2020.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.3" title="2020.1.3">Unity 2020.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.2" title="2020.1.2">Unity 2020.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.1" title="2020.1.1">Unity 2020.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2020.1.0" title="2020.1.0">Unity 2020.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.40" title="2019.4.40">Unity 2019.4.40</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.39" title="2019.4.39">Unity 2019.4.39</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.38" title="2019.4.38">Unity 2019.4.38</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.37" title="2019.4.37">Unity 2019.4.37</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.36" title="2019.4.36">Unity 2019.4.36</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.35" title="2019.4.35">Unity 2019.4.35</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.34" title="2019.4.34">Unity 2019.4.34</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.33" title="2019.4.33">Unity 2019.4.33</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.32" title="2019.4.32">Unity 2019.4.32</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.31" title="2019.4.31">Unity 2019.4.31</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.30" title="2019.4.30">Unity 2019.4.30</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.29" title="2019.4.29">Unity 2019.4.29</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.28" title="2019.4.28">Unity 2019.4.28</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.27" title="2019.4.27">Unity 2019.4.27</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.26" title="2019.4.26">Unity 2019.4.26</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.25" title="2019.4.25">Unity 2019.4.25</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.24" title="2019.4.24">Unity 2019.4.24</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.23" title="2019.4.23">Unity 2019.4.23</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.22" title="2019.4.22">Unity 2019.4.22</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.21" title="2019.4.21">Unity 2019.4.21</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.20" title="2019.4.20">Unity 2019.4.20</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.19" title="2019.4.19">Unity 2019.4.19</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.18" title="2019.4.18">Unity 2019.4.18</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.17" title="2019.4.17">Unity 2019.4.17</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.16" title="2019.4.16">Unity 2019.4.16</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.15" title="2019.4.15">Unity 2019.4.15</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.14" title="2019.4.14">Unity 2019.4.14</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.13" title="2019.4.13">Unity 2019.4.13</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.12" title="2019.4.12">Unity 2019.4.12</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.11" title="2019.4.11">Unity 2019.4.11</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.10" title="2019.4.10">Unity 2019.4.10</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.9" title="2019.4.9">Unity 2019.4.9</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.8" title="2019.4.8">Unity 2019.4.8</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.7" title="2019.4.7">Unity 2019.4.7</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.6" title="2019.4.6">Unity 2019.4.6</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.5" title="2019.4.5">Unity 2019.4.5</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.4" title="2019.4.4">Unity 2019.4.4</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.3" title="2019.4.3">Unity 2019.4.3</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.2" title="2019.4.2">Unity 2019.4.2</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.1" title="2019.4.1">Unity 2019.4.1</a></li>
+          <li><a href="/releases/editor/whats-new/2019.4.0" title="2019.4.0">Unity 2019.4.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.15" title="2019.3.15">Unity 2019.3.15</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.14" title="2019.3.14">Unity 2019.3.14</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.13" title="2019.3.13">Unity 2019.3.13</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.12" title="2019.3.12">Unity 2019.3.12</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.11" title="2019.3.11">Unity 2019.3.11</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.10" title="2019.3.10">Unity 2019.3.10</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.9" title="2019.3.9">Unity 2019.3.9</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.8" title="2019.3.8">Unity 2019.3.8</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.7" title="2019.3.7">Unity 2019.3.7</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.6" title="2019.3.6">Unity 2019.3.6</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.5" title="2019.3.5">Unity 2019.3.5</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.4" title="2019.3.4">Unity 2019.3.4</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.3" title="2019.3.3">Unity 2019.3.3</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.2" title="2019.3.2">Unity 2019.3.2</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.1" title="2019.3.1">Unity 2019.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.0" title="2019.3.0">Unity 2019.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.0-1" title="2019.3.0">Unity 2019.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.0-0" title="2019.3.0">Unity 2019.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.3.0-2" title="2019.3.0">Unity 2019.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.21" title="2019.2.21">Unity 2019.2.21</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.20" title="2019.2.20">Unity 2019.2.20</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.19" title="2019.2.19">Unity 2019.2.19</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.18" title="2019.2.18">Unity 2019.2.18</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.17" title="2019.2.17">Unity 2019.2.17</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.16" title="2019.2.16">Unity 2019.2.16</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.15" title="2019.2.15">Unity 2019.2.15</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.14" title="2019.2.14">Unity 2019.2.14</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.13" title="2019.2.13">Unity 2019.2.13</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.12" title="2019.2.12">Unity 2019.2.12</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.11" title="2019.2.11">Unity 2019.2.11</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.10" title="2019.2.10">Unity 2019.2.10</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.9" title="2019.2.9">Unity 2019.2.9</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.8" title="2019.2.8">Unity 2019.2.8</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.7" title="2019.2.7">Unity 2019.2.7</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.6" title="2019.2.6">Unity 2019.2.6</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.5" title="2019.2.5">Unity 2019.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.4" title="2019.2.4">Unity 2019.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.3" title="2019.2.3">Unity 2019.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.2" title="2019.2.2">Unity 2019.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.1" title="2019.2.1">Unity 2019.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2019.2.0" title="2019.2.0">Unity 2019.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.14" title="2019.1.14">Unity 2019.1.14</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.13" title="2019.1.13">Unity 2019.1.13</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.12" title="2019.1.12">Unity 2019.1.12</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.11" title="2019.1.11">Unity 2019.1.11</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.10" title="2019.1.10">Unity 2019.1.10</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.9" title="2019.1.9">Unity 2019.1.9</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.8" title="2019.1.8">Unity 2019.1.8</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.7" title="2019.1.7">Unity 2019.1.7</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.6" title="2019.1.6">Unity 2019.1.6</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.5" title="2019.1.5">Unity 2019.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.4" title="2019.1.4">Unity 2019.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.3" title="2019.1.3">Unity 2019.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.2" title="2019.1.2">Unity 2019.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.1" title="2019.1.1">Unity 2019.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.0" title="2019.1.0">Unity 2019.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2019.1.0-0" title="2019.1.0">Unity 2019.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.36" title="2018.4.36">Unity 2018.4.36</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.35" title="2018.4.35">Unity 2018.4.35</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.34" title="2018.4.34">Unity 2018.4.34</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.33" title="2018.4.33">Unity 2018.4.33</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.32" title="2018.4.32">Unity 2018.4.32</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.31" title="2018.4.31">Unity 2018.4.31</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.30" title="2018.4.30">Unity 2018.4.30</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.29" title="2018.4.29">Unity 2018.4.29</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.28" title="2018.4.28">Unity 2018.4.28</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.27" title="2018.4.27">Unity 2018.4.27</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.26" title="2018.4.26">Unity 2018.4.26</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.25" title="2018.4.25">Unity 2018.4.25</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.24" title="2018.4.24">Unity 2018.4.24</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.23" title="2018.4.23">Unity 2018.4.23</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.22" title="2018.4.22">Unity 2018.4.22</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.21" title="2018.4.21">Unity 2018.4.21</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.20" title="2018.4.20">Unity 2018.4.20</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.19" title="2018.4.19">Unity 2018.4.19</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.18" title="2018.4.18">Unity 2018.4.18</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.17" title="2018.4.17">Unity 2018.4.17</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.16" title="2018.4.16">Unity 2018.4.16</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.15" title="2018.4.15">Unity 2018.4.15</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.14" title="2018.4.14">Unity 2018.4.14</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.13" title="2018.4.13">Unity 2018.4.13</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.12" title="2018.4.12">Unity 2018.4.12</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.11" title="2018.4.11">Unity 2018.4.11</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.10" title="2018.4.10">Unity 2018.4.10</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.9" title="2018.4.9">Unity 2018.4.9</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.8" title="2018.4.8">Unity 2018.4.8</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.7" title="2018.4.7">Unity 2018.4.7</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.6" title="2018.4.6">Unity 2018.4.6</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.5" title="2018.4.5">Unity 2018.4.5</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.4" title="2018.4.4">Unity 2018.4.4</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.3" title="2018.4.3">Unity 2018.4.3</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.2" title="2018.4.2">Unity 2018.4.2</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.1" title="2018.4.1">Unity 2018.4.1</a></li>
+          <li><a href="/releases/editor/whats-new/2018.4.0" title="2018.4.0">Unity 2018.4.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.14" title="2018.3.14">Unity 2018.3.14</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.13" title="2018.3.13">Unity 2018.3.13</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.12" title="2018.3.12">Unity 2018.3.12</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.11" title="2018.3.11">Unity 2018.3.11</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.10" title="2018.3.10">Unity 2018.3.10</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.9" title="2018.3.9">Unity 2018.3.9</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.8" title="2018.3.8">Unity 2018.3.8</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.7" title="2018.3.7">Unity 2018.3.7</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.6" title="2018.3.6">Unity 2018.3.6</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.5" title="2018.3.5">Unity 2018.3.5</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.4" title="2018.3.4">Unity 2018.3.4</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.3" title="2018.3.3">Unity 2018.3.3</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.2" title="2018.3.2">Unity 2018.3.2</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.1" title="2018.3.1">Unity 2018.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.0" title="2018.3.0">Unity 2018.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.3.0-0" title="2018.3.0">Unity 2018.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.21" title="2018.2.21">Unity 2018.2.21</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.20" title="2018.2.20">Unity 2018.2.20</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.19" title="2018.2.19">Unity 2018.2.19</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.18" title="2018.2.18">Unity 2018.2.18</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.17" title="2018.2.17">Unity 2018.2.17</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.16" title="2018.2.16">Unity 2018.2.16</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.15" title="2018.2.15">Unity 2018.2.15</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.14" title="2018.2.14">Unity 2018.2.14</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.13" title="2018.2.13">Unity 2018.2.13</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.12" title="2018.2.12">Unity 2018.2.12</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.11" title="2018.2.11">Unity 2018.2.11</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.10" title="2018.2.10">Unity 2018.2.10</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.9" title="2018.2.9">Unity 2018.2.9</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.8" title="2018.2.8">Unity 2018.2.8</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.7" title="2018.2.7">Unity 2018.2.7</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.6" title="2018.2.6">Unity 2018.2.6</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.5" title="2018.2.5">Unity 2018.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.4" title="2018.2.4">Unity 2018.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.3" title="2018.2.3">Unity 2018.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.2" title="2018.2.2">Unity 2018.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.1" title="2018.2.1">Unity 2018.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.0" title="2018.2.0">Unity 2018.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.2.0-0" title="2018.2.0">Unity 2018.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.9" title="2018.1.9">Unity 2018.1.9</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.8" title="2018.1.8">Unity 2018.1.8</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.7" title="2018.1.7">Unity 2018.1.7</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.6" title="2018.1.6">Unity 2018.1.6</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.5" title="2018.1.5">Unity 2018.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.4" title="2018.1.4">Unity 2018.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.3" title="2018.1.3">Unity 2018.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.2" title="2018.1.2">Unity 2018.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.1" title="2018.1.1">Unity 2018.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.0" title="2018.1.0">Unity 2018.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2018.1.0-0" title="2018.1.0">Unity 2018.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.40" title="2017.4.40">Unity 2017.4.40</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.39" title="2017.4.39">Unity 2017.4.39</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.38" title="2017.4.38">Unity 2017.4.38</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.37" title="2017.4.37">Unity 2017.4.37</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.36" title="2017.4.36">Unity 2017.4.36</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.35" title="2017.4.35">Unity 2017.4.35</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.34" title="2017.4.34">Unity 2017.4.34</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.33" title="2017.4.33">Unity 2017.4.33</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.32" title="2017.4.32">Unity 2017.4.32</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.31" title="2017.4.31">Unity 2017.4.31</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.30" title="2017.4.30">Unity 2017.4.30</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.29" title="2017.4.29">Unity 2017.4.29</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.28" title="2017.4.28">Unity 2017.4.28</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.27" title="2017.4.27">Unity 2017.4.27</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.26" title="2017.4.26">Unity 2017.4.26</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.25" title="2017.4.25">Unity 2017.4.25</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.24" title="2017.4.24">Unity 2017.4.24</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.23" title="2017.4.23">Unity 2017.4.23</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.22" title="2017.4.22">Unity 2017.4.22</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.21" title="2017.4.21">Unity 2017.4.21</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.20" title="2017.4.20">Unity 2017.4.20</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.19" title="2017.4.19">Unity 2017.4.19</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.18" title="2017.4.18">Unity 2017.4.18</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.17" title="2017.4.17">Unity 2017.4.17</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.16" title="2017.4.16">Unity 2017.4.16</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.15" title="2017.4.15">Unity 2017.4.15</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.14" title="2017.4.14">Unity 2017.4.14</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.13" title="2017.4.13">Unity 2017.4.13</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.12" title="2017.4.12">Unity 2017.4.12</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.11" title="2017.4.11">Unity 2017.4.11</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.10" title="2017.4.10">Unity 2017.4.10</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.9" title="2017.4.9">Unity 2017.4.9</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.8" title="2017.4.8">Unity 2017.4.8</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.7" title="2017.4.7">Unity 2017.4.7</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.6" title="2017.4.6">Unity 2017.4.6</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.5" title="2017.4.5">Unity 2017.4.5</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.4" title="2017.4.4">Unity 2017.4.4</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.3" title="2017.4.3">Unity 2017.4.3</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.2" title="2017.4.2">Unity 2017.4.2</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.1" title="2017.4.1">Unity 2017.4.1</a></li>
+          <li><a href="/releases/editor/whats-new/2017.4.0" title="2017.4.0">Unity 2017.4.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.3.1" title="2017.3.1">Unity 2017.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/2017.3.0" title="2017.3.0">Unity 2017.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.3.0-0" title="2017.3.0">Unity 2017.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.3.0-1" title="2017.3.0">Unity 2017.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.5" title="2017.2.5">Unity 2017.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.4" title="2017.2.4">Unity 2017.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.3" title="2017.2.3">Unity 2017.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.2" title="2017.2.2">Unity 2017.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.1" title="2017.2.1">Unity 2017.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.0-1" title="2017.2.0">Unity 2017.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.0" title="2017.2.0">Unity 2017.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.2.0-0" title="2017.2.0">Unity 2017.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.5" title="2017.1.5">Unity 2017.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.4" title="2017.1.4">Unity 2017.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.3" title="2017.1.3">Unity 2017.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.2" title="2017.1.2">Unity 2017.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.1" title="2017.1.1">Unity 2017.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.0-0" title="2017.1.0">Unity 2017.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.0-1" title="2017.1.0">Unity 2017.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/2017.1.0" title="2017.1.0">Unity 2017.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.7" title="5.6.7">Unity 5.6.7</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.6" title="5.6.6">Unity 5.6.6</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.5" title="5.6.5">Unity 5.6.5</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.4" title="5.6.4">Unity 5.6.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.3" title="5.6.3">Unity 5.6.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.2" title="5.6.2">Unity 5.6.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.1" title="5.6.1">Unity 5.6.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.0-0" title="5.6.0">Unity 5.6.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.0-1" title="5.6.0">Unity 5.6.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.6.0" title="5.6.0">Unity 5.6.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.6" title="5.5.6">Unity 5.5.6</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.5" title="5.5.5">Unity 5.5.5</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.4" title="5.5.4">Unity 5.5.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.3" title="5.5.3">Unity 5.5.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.2" title="5.5.2">Unity 5.5.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.1" title="5.5.1">Unity 5.5.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.0" title="5.5.0">Unity 5.5.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.0-0" title="5.5.0">Unity 5.5.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.5.0-1" title="5.5.0">Unity 5.5.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.6" title="5.4.6">Unity 5.4.6</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.5" title="5.4.5">Unity 5.4.5</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.4" title="5.4.4">Unity 5.4.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.3" title="5.4.3">Unity 5.4.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.2" title="5.4.2">Unity 5.4.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.1" title="5.4.1">Unity 5.4.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.0" title="5.4.0">Unity 5.4.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.0-0" title="5.4.0">Unity 5.4.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.4.0-1" title="5.4.0">Unity 5.4.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.8" title="5.3.8">Unity 5.3.8</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.7" title="5.3.7">Unity 5.3.7</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.6" title="5.3.6">Unity 5.3.6</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.5" title="5.3.5">Unity 5.3.5</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.4" title="5.3.4">Unity 5.3.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.3" title="5.3.3">Unity 5.3.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.2" title="5.3.2">Unity 5.3.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.1" title="5.3.1">Unity 5.3.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.0" title="5.3.0">Unity 5.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.0-0" title="5.3.0">Unity 5.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.3.0-1" title="5.3.0">Unity 5.3.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.5" title="5.2.5">Unity 5.2.5</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.4" title="5.2.4">Unity 5.2.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.3" title="5.2.3">Unity 5.2.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.2" title="5.2.2">Unity 5.2.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.1" title="5.2.1">Unity 5.2.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.0-1" title="5.2.0">Unity 5.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.0" title="5.2.0">Unity 5.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.2.0-0" title="5.2.0">Unity 5.2.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.5" title="5.1.5">Unity 5.1.5</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.4" title="5.1.4">Unity 5.1.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.3" title="5.1.3">Unity 5.1.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.2" title="5.1.2">Unity 5.1.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.1" title="5.1.1">Unity 5.1.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.0-1" title="5.1.0">Unity 5.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.0" title="5.1.0">Unity 5.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.1.0-0" title="5.1.0">Unity 5.1.0</a></li>
+          <li><a href="/releases/editor/whats-new/5.0.4" title="5.0.4">Unity 5.0.4</a></li>
+          <li><a href="/releases/editor/whats-new/5.0.3" title="5.0.3">Unity 5.0.3</a></li>
+          <li><a href="/releases/editor/whats-new/5.0.2" title="5.0.2">Unity 5.0.2</a></li>
+          <li><a href="/releases/editor/whats-new/5.0.1" title="5.0.1">Unity 5.0.1</a></li>
+          <li><a href="/releases/editor/whats-new/5.0.0" title="5.0.0">Unity 5.0.0</a></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+              </div>
+              <hr />
+              <div class="quick-jump">
+                <h2 class="title">Quick jump</h2>
+                <ul>
+                  <li>
+                    <a href="#additional-downloads">Additional downloads</a>
+                  </li>
+                  <li>
+                    <a href="#release-notes">Release Notes</a>
+                  </li>
+                                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</article>
+
+</main>
+
+
+</section>
+
+<footer class="component-footer">
+  <div class="container">
+    <div class="row">
+        
+<div class="language-switcher-language-get-param component-footer__language col-xs-12 col-sm-6 col-md-4" id="block-languageswitcher" role="navigation">
+
+  
+    
+
+      
+<div class="component-footer__label">Language</div>
+<div class="component-footer__list">
+  <ul class="links no-bullets"><li hreflang="en" data-drupal-link-system-path="node/31265" class="is-active"><a href="/releases/editor/whats-new/2021.3.37" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/31265">English</a></li><li hreflang="zh-hans" data-drupal-link-system-path="node/31265"><a href="/cn/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="zh-hans" data-drupal-link-system-path="node/31265">中文</a></li><li hreflang="de" data-drupal-link-system-path="node/31265"><a href="/de/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="de" data-drupal-link-system-path="node/31265">Deutsch</a></li><li hreflang="es" data-drupal-link-system-path="node/31265"><a href="/es/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="es" data-drupal-link-system-path="node/31265">Español</a></li><li hreflang="ja" data-drupal-link-system-path="node/31265"><a href="/ja/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="ja" data-drupal-link-system-path="node/31265">日本語</a></li><li hreflang="ru" data-drupal-link-system-path="node/31265"><a href="/ru/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="ru" data-drupal-link-system-path="node/31265">Русский</a></li><li hreflang="fr" data-drupal-link-system-path="node/31265"><a href="/fr/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="fr" data-drupal-link-system-path="node/31265">Français</a></li><li hreflang="ko" data-drupal-link-system-path="node/31265"><a href="/kr/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="ko" data-drupal-link-system-path="node/31265">한국어</a></li><li hreflang="pt-br" data-drupal-link-system-path="node/31265"><a href="/pt/releases/editor/whats-new/2021.3.37" class="language-link" hreflang="pt-br" data-drupal-link-system-path="node/31265">Português</a></li></ul>
+</div>
+
+  
+</div>
+
+<div id="block-socialblock" class="contextual-region component-footer__social col-xs-12 col-sm-6 col-md-3 col-md-offset-2">
+
+  
+    
+
+      <div class="component-footer__label">Social</div><div class="component-social-links"><a href="https://www.youtube.com/user/Unity3D" class="icon youtube" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24"><title>Subscribe on YouTube</title><defs><style>.cls-1{fill:#fff;}</style></defs><title>social-youtube</title><path class="cls-1" d="M4.65,0H6.09l1,3.7L8,0H9.45L7.78,5.51V9.26H6.35V5.51Zm6.6,2.37A1.75,1.75,0,0,0,9.39,4.21V7.56a1.64,1.64,0,0,0,1.86,1.83,1.73,1.73,0,0,0,1.82-1.83V4.21A1.78,1.78,0,0,0,11.25,2.37Zm.53,5.13c0,.37-.19.65-.53.65a.58.58,0,0,1-.56-.65V4.32c0-.37.17-.65.53-.65s.56.27.56.65Zm4.73-5.07V7.62c-.16.19-.5.51-.75.51s-.34-.19-.34-.46V2.43H14.15V8.14c0,.67.21,1.22.89,1.22a2,2,0,0,0,1.47-.85v.75h1.27V2.43Zm2.2,13.86c-.45,0-.54.31-.54.76v.66h1.07v-.66C19.24,16.61,19.15,16.29,18.71,16.29Zm-4.7,0a.76.76,0,0,0-.25.2v4a1,1,0,0,0,.28.23.51.51,0,0,0,.62-.07.74.74,0,0,0,.11-.45V16.94a.85.85,0,0,0-.13-.5A.49.49,0,0,0,14,16.33Zm4.82-5.2c-2.6-.17-11.06-.17-13.66,0C2.35,11.33,2,13,2,17.5s.35,6.18,3.17,6.37c2.6.17,11.06.17,13.66,0C21.65,23.68,22,22,22,17.5S21.65,11.33,18.83,11.13ZM6.51,21.82H5.15V14.28H3.74V13H7.92v1.28H6.51v7.54Zm4.84,0H10.14V21.1a2.57,2.57,0,0,1-.69.61c-.65.37-1.55.36-1.55-1V15.31H9.11v5c0,.26.06.44.32.44a1.2,1.2,0,0,0,.71-.49V15.31h1.21v6.51ZM16,20.47c0,.81-.3,1.43-1.1,1.43a1.37,1.37,0,0,1-1.15-.58v.5H12.54V13h1.22v2.84a1.45,1.45,0,0,1,1.07-.61c.89,0,1.18.75,1.18,1.63v3.61Zm4.47-1.75H18.17V20c0,.49,0,.91.53.91s.54-.35.54-.91V19.5h1.24V20c0,1.26-.53,2-1.81,2s-1.75-.84-1.75-2V17.06a1.79,1.79,0,0,1,1.84-1.91c1.16,0,1.72.74,1.72,1.91v1.66Z" transform="translate(-2)"/></svg></a><a href="https://www.linkedin.com/company/unity-technologies" class="icon linkedin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23"><title>Follow on LinkedIn</title><defs><style>.cls-1{fill:#fff;}</style></defs><title>social-linkedin</title><path class="cls-1" d="M5,3.5A2.48,2.48,0,1,1,2.5,1,2.49,2.49,0,0,1,5,3.5ZM5,8H0V24H5Zm8,0H8V24h5V15.6c0-4.67,6-5,6,0V24h5V13.87C24,6,15.08,6.28,13,10.16Z" transform="translate(0 -1)"/></svg></a><a href="http://www.twitter.com/unity" class="icon twitter" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 19.5"><title>Follow on Twitter</title><defs><style>.cls-1{fill:#fff;}</style></defs><title>social-twitter</title><path class="cls-1" d="M24,4.56a9.87,9.87,0,0,1-2.83.77,4.94,4.94,0,0,0,2.17-2.72A10,10,0,0,1,20.21,3.8a4.93,4.93,0,0,0-8.39,4.49A14,14,0,0,1,1.67,3.15,4.93,4.93,0,0,0,3.19,9.72,4.79,4.79,0,0,1,1,9.11,4.93,4.93,0,0,0,4.91,14a4.86,4.86,0,0,1-2.22.08,4.92,4.92,0,0,0,4.6,3.42,9.91,9.91,0,0,1-7.29,2,13.92,13.92,0,0,0,7.55,2.21,13.92,13.92,0,0,0,14-14.64A10.1,10.1,0,0,0,24,4.56Z" transform="translate(0 -2.25)"/></svg></a><a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 24"><title>Follow on Facebook</title><defs><style>.cls-1{fill:#fff;}</style></defs><title>social-facebook</title><path class="cls-1" d="M9,8H6v4H9V24h5V12h3.64L18,8H14V6.33c0-1,.19-1.33,1.11-1.33H18V0H14.19C10.6,0,9,1.58,9,4.61Z" transform="translate(-6)"/></svg></a><a href="https://www.instagram.com/unitytechnologies" class="icon instagram" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Follow on Instagram</title><defs><style>.cls-1{fill:#fff;}</style></defs><title>social-instagram</title><path class="cls-1" d="M12,2.16c3.2,0,3.58,0,4.85.07,3.25.15,4.77,1.69,4.92,4.92.06,1.27.07,1.65.07,4.85s0,3.59-.07,4.85c-.15,3.23-1.66,4.77-4.92,4.92-1.27.06-1.64.07-4.85.07s-3.58,0-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s0-3.58.07-4.85C2.38,3.92,3.9,2.38,7.15,2.23,8.42,2.18,8.8,2.16,12,2.16ZM12,0C8.74,0,8.33,0,7.05.07c-4.35.2-6.78,2.62-7,7C0,8.33,0,8.74,0,12S0,15.67.07,17c.2,4.36,2.62,6.78,7,7C8.33,24,8.74,24,12,24s3.67,0,4.95-.07c4.35-.2,6.78-2.62,7-7C24,15.67,24,15.26,24,12s0-3.67-.07-4.95c-.2-4.35-2.62-6.78-7-7C15.67,0,15.26,0,12,0Zm0,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.43,1.44A1.44,1.44,0,0,0,18.41,4.15Z" transform="translate(0)"/></svg></a></div>
+  
+</div>
+
+<div id="block-currency-selector" class="contextual-region component-footer__currency col-xs-12 col-sm-12 col-md-2 col-md-offset-1">
+
+  
+    
+
+      <div class="component-footer__currency">
+  <div data-unity-store="currency-select"></div>
+</div>
+
+  
+</div>
+<div class="col-xs-12">
+  <hr class="component-footer__line" />
+</div>
+
+<nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="col-xs-12 component-footer__menu">
+            
+  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+  
+
+        
+              <ul>
+              <li>
+        <span>Purchase</span>
+                                <ul>
+              <li>
+        <a href="/products" data-drupal-link-system-path="node/17851">Products</a>
+                                <ul>
+              <li>
+        <a href="/products/unity-ads" data-drupal-link-system-path="node/19604">Unity Ads</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li>
+        <a href="https://store.unity.com/">Subscription</a>
+              </li>
+          <li>
+        <a href="https://assetstore.unity.com/">Asset Store</a>
+              </li>
+          <li>
+        <a href="https://store.unity.com/resellers">Resellers</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li>
+        <span>Education</span>
+                                <ul>
+              <li>
+        <a href="https://store.unity.com/academic/unity-student">Students</a>
+              </li>
+          <li>
+        <a href="/products/unity-educator" data-drupal-link-system-path="node/19601">Educators</a>
+              </li>
+          <li>
+        <a href="/products/unity-certifications" data-drupal-link-system-path="node/17473">Certification</a>
+              </li>
+          <li>
+        <a href="/learn" data-drupal-link-system-path="node/894">Learn</a>
+              </li>
+          <li>
+        <a href="/coe" data-drupal-link-system-path="node/288">Center of Excellence</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li>
+        <span>Download</span>
+                                <ul>
+              <li>
+        <a href="https://store.unity.com/download-nuo">Get Unity</a>
+              </li>
+          <li>
+        <a href="https://unity3d.com/get-unity/download/archive">Download Archive</a>
+              </li>
+          <li>
+        <a href="https://unity3d.com/beta">Beta Program</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li>
+        <span>Unity Labs</span>
+                                <ul>
+              <li>
+        <a href="/labs" data-drupal-link-system-path="node/292">Labs</a>
+              </li>
+          <li>
+        <a href="/publications" data-drupal-link-system-path="node/690">Publications</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li>
+        <span>Resources</span>
+                                <ul>
+              <li>
+        <a href="https://learn.unity.com/">Learn platform</a>
+              </li>
+          <li>
+        <a href="/community" data-drupal-link-system-path="node/17494">Community</a>
+              </li>
+          <li>
+        <a href="https://unity3d.com/learn/documentation">Documentation</a>
+              </li>
+          <li>
+        <a href="https://unity3d.com/unity/qa">Unity QA</a>
+              </li>
+          <li>
+        <a href="/faq" data-drupal-link-system-path="node/20817">FAQ</a>
+              </li>
+          <li>
+        <a href="https://status.unity.com?utm_source=main_site&amp;utm_medium=website">Services Status</a>
+              </li>
+          <li>
+        <a href="/case-study" data-drupal-link-system-path="node/18016">Case Studies</a>
+              </li>
+          <li>
+        <a href="/madewith" data-drupal-link-system-path="node/17881">Made with Unity</a>
+              </li>
+        </ul>
+  
+              </li>
+          <li>
+        <span>Unity</span>
+                                <ul>
+              <li>
+        <a href="/our-company" data-drupal-link-system-path="node/17362">Our Company</a>
+              </li>
+          <li>
+        <a href="https://brand.unity.com">Brand</a>
+              </li>
+          <li>
+        <a href="https://create.unity.com/opt-in-consent">Newsletter</a>
+              </li>
+          <li>
+        <a href="https://blog.unity.com/">Blog</a>
+              </li>
+          <li>
+        <a href="/events-hub" data-drupal-link-system-path="node/17611">Events</a>
+              </li>
+          <li>
+        <a href="https://careers.unity.com/">Careers</a>
+              </li>
+          <li>
+        <a href="/help" data-drupal-link-system-path="node/18368">Help</a>
+              </li>
+          <li>
+        <a href="/news" data-drupal-link-system-path="news">Press</a>
+              </li>
+          <li>
+        <a href="/partners" data-drupal-link-system-path="node/1005">Partners</a>
+              </li>
+          <li>
+        <a href="https://investors.unity.com/">Investors</a>
+              </li>
+          <li>
+        <a href="/affiliates" data-drupal-link-system-path="node/18213">Affiliates</a>
+              </li>
+          <li>
+        <a href="/security" data-drupal-link-system-path="node/20732">Security</a>
+              </li>
+          <li>
+        <a href="/social-impact" data-drupal-link-system-path="node/18126">Social Impact</a>
+              </li>
+          <li>
+        <a href="/inclusion-diversity" data-drupal-link-system-path="node/22665">Inclusion &amp; Diversity</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+    </div>
+    <div class="row component-footer__small component-footer__small-legal">
+      <div class="col-xs-12 col-md-3 component-footer__copy">Copyright &copy; 2024 Unity Technologies</div>
+      <div class="col-xs-12 component-footer__legal">
+        
+              <ul>
+              <li>
+        <a href="/legal" data-drupal-link-system-path="node/22348">Legal</a>
+              </li>
+          <li>
+        <a href="/legal/privacy-policy" data-drupal-link-system-path="node/22014">Privacy Policy</a>
+              </li>
+          <li>
+        <a href="/legal/cookie-policy" data-drupal-link-system-path="node/22077">Cookies</a>
+              </li>
+          <li>
+        <a href="/legal/do-not-sell-my-personal-information" data-drupal-link-system-path="node/22182">Do Not Sell or Share My Personal Information</a>
+              </li>
+          <li>
+        <span id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</span>
+              </li>
+        </ul>
+  
+
+
+      </div>
+    </div>
+    <div class="row component-footer__small component-footer__small-legal">
+      <div class="col-xs-12 col-sm-6">"Unity", Unity logos, and other Unity trademarks are trademarks or registered trademarks of Unity Technologies or its affiliates in the U.S. and elsewhere (<a href="/legal/trademarks">more info here</a>). Other names or brands are trademarks of their respective owners.</div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  </div>
+  <script></script>
+
+
+  <div class="cookies-dialog hide">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="cookies-dialog__wrapper">
+            <p class="large">
+              We use cookies to ensure that we give you the best experience on our website. Visit our <a href="https://unity3d.com/legal/cookie-policy#cookies">cookie policy page</a> for more information.
+            </p>
+            <a class="btn btn-blue cookies-dialog__got-it">Got it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/sites/default/files/js/js_jaRS4vi81s7eBSJjEIDgP-7vrukv1VNpiid7ZBZnzAA.js"></script>
+<script src="https://store.unity.com/themes/contrib/unity_base/js/unity-cdp.js"></script>
+<script src="/sites/default/files/js/js_nZ645Cmx9ldo4ny43o_I-qn3JwiGktEj5DpTSSz_tLU.js"></script>
+<script src="/sites/default/files/js/js_P9TyWD23EBXC6twD_XbM-Hmjwqtp92bVO5ytUIY8Arw.js"></script>
+
+</body>
+</html>
