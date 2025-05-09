@@ -18,11 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    
     - name: Install Dependencies
       uses: actions/setup-node@v2
       env:
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
       with:
+        node-version: 'lts/*'
         args: install
         
     - name: Test Code
