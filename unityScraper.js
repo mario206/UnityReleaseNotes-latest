@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs').promises;
 const path = require('path');
 const sleep = require('util').promisify(setTimeout);
-const getReleaseNotesPuppeteer = require('./getReleaseNotesPuppeteer')
+const {getReleaseNotesPuppeteer} = require('./getReleaseNotesPuppeteer')
 
 async function createDirectoryIfNotExist(directoryPath) {
   try {

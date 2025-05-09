@@ -96,4 +96,13 @@ async function getReleaseNotesPuppeteer(url) {
     return await openUrl(url);
 }
 
-module.exports = getReleaseNotesPuppeteer;
+async function closePuppeteer(){
+    if (s_browser) {
+        await s_browser.close();
+    }
+}
+
+module.exports = {
+    getReleaseNotesPuppeteer: getReleaseNotesPuppeteer,
+    closePuppeteer: closePuppeteer
+}

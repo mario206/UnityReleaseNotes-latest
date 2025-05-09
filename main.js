@@ -2,6 +2,7 @@ const scrapeUnityReleaseNotes = require('./unityScraper');
 const getReleaseNotes = require('./merge');
 const generateSortedUnityVersionsLinksTable = require('./genReadMe');
 const fs = require('fs').promises;
+const {closePuppeteer} = require('./getReleaseNotesPuppeteer')
 
 var unityVersions = 
 [
@@ -41,7 +42,6 @@ var unityVersions =
     "6000.3",
 ]
 
-
 async function main()
 {
     for(var i = 0;i < unityVersions.length;++i){
@@ -53,6 +53,7 @@ async function main()
 
     const table = await generateSortedUnityVersionsLinksTable(unityVersions);
     await fs.writeFile('README.md', table);
+    await closePuppeteer();
 }
 
 
