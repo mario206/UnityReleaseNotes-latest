@@ -85,8 +85,9 @@ async function getReleaseNotesPuppeteer(url) {
                     "--profile-directory=Profile 8"],
             });
         } else if (process.platform == "linux") {
+            console.log(`getReleaseNotesPuppeteer PUPPETEER_EXEC_PATH = ${process.env.PUPPETEER_EXEC_PATH}`)
             s_browser = await puppeteer.launch({
-                args: ['--no-sandbox', '--disable-setuid-sandbox'],
+                args: ['--no-sandbox'/*, '--disable-setuid-sandbox'*/],
                 executablePath: process.env.PUPPETEER_EXEC_PATH, // set by docker container
                 headless: false,
             });
