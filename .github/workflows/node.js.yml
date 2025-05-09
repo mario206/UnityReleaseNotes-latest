@@ -15,24 +15,25 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: node main.js
     
+    - name: Install Dependencies
+      uses: actions/setup-node@v2
+      env:
+        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+      with:
+        node-version: 'lts/*'
+        args: install
+        
+    - name: Test Code
+      uses: mujo-code/puppeteer-headful@18.9.0
+      env:
+        CI: "true"
+      with:
+        args: npm ci && node main.js
+              
     - uses: EndBug/add-and-commit@v9
       with:
         default_author: github_actions
