@@ -87,6 +87,8 @@ async function getReleaseNotesPuppeteer(url) {
         } else if (process.platform == "linux") {
             s_browser = await puppeteer.launch({
                 args: ['--no-sandbox', '--disable-setuid-sandbox'],
+                executablePath: process.env.PUPPETEER_EXEC_PATH, // set by docker container
+                headless: false,
             });
         }
     }
