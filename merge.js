@@ -4,6 +4,8 @@ const cheerio = require('cheerio');
 const TurndownService = require('turndown');
 
 async function getReleaseNotes(directoryPath,resultFileName) {
+  console.log(`getReleaseNotes ${resultFileName}`);
+
   const files = await fs.readdir(directoryPath);
 
   const htmlFiles = files.filter(file => file.endsWith('.html')).sort((a, b) => {
@@ -19,9 +21,10 @@ async function getReleaseNotes(directoryPath,resultFileName) {
     console.log(`Processing release notes in file: ${file}`);
 
     const fileContent = await fs.readFile(filePath, 'utf8');
-    const $ = cheerio.load(fileContent);
+    const $ = cheerio.load(fileContent); 
 
-    const $releaseNotes = $('.release-notes');
+    //const $releaseNotes = $('.release-notes');
+    const $releaseNotes = $.root();
     
     function removeNodes(regPattern)
     {

@@ -87,7 +87,7 @@ async function generateSortedUnityVersionsLinksTable(unityVersions) {
     }
   }
 
-  var version = "2020.3";
+  var version = "6000.1";
 
   //var filePath = `./merge_htmls/${sortedUnityVersions[0]}.md`;
   var filePath = `./merge_htmls/${version}.md`;

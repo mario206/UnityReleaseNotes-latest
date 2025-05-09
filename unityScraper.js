@@ -2,6 +2,7 @@ const axios = require('axios');
 const fs = require('fs').promises;
 const path = require('path');
 const sleep = require('util').promisify(setTimeout);
+const getReleaseNotesPuppeteer = require('./getReleaseNotesPuppeteer')
 
 async function createDirectoryIfNotExist(directoryPath) {
   try {
@@ -35,47 +36,31 @@ async function getLatestDownloadedVersion(directoryPath, prefix = '2020.3.') {
 async function scrapeUnityReleaseNotes(startVersion, directoryPath = 'htmls', prefix = '2020.3.') {
   await createDirectoryIfNotExist(directoryPath);
   const latestVersion = startVersion === undefined ? await getLatestDownloadedVersion(directoryPath, prefix) + 1 : startVersion;
-  
+
   console.log(`Starting web scraping from Unity version ${prefix}${latestVersion}`);
   const url = `https://unity.com/releases/editor/whats-new/${prefix}${latestVersion}`;
   const filename = `${prefix}${latestVersion}.html`;
   const filePath = path.join(directoryPath, filename);
 
-  try {
-    const response = await axios.get(url);
-    if (response.status === 200) {
-      await fs.writeFile(filePath, response.data);
-      console.log(`Unity ${prefix}${latestVersion} release notes have been saved to ${filePath}.`);
+  let htmlContent = await getReleaseNotesPuppeteer(url);
+  if (htmlContent != null) {
+    await fs.writeFile(filePath, htmlContent,'utf-8');
 
-      // Log response details
-      console.log('--- Request successful ---');
-      console.log(`URL: ${url}`);
+    console.log(`Unity ${prefix}${latestVersion} release notes have been saved to ${filePath}.`);
 
-      // 休眠5秒
-      console.log('Waiting 5 seconds before scraping the next version...');
-      await sleep(2000);
+    // Log response details
+    console.log('--- Request successful ---');
+    console.log(`URL: ${url}`);
 
-      // 递归调用
-      scrapeUnityReleaseNotes(undefined, directoryPath, prefix);
-    }
-  } catch (error) {
-    if (error.response && error.response.status === 404) {
-      console.log(`Unity release notes have been scraped up to version ${prefix}${latestVersion - 1}.`);
-    } else {
-      console.log(`Error: ${error.message}`);
-    }
+    // 休眠5秒
+    console.log('Waiting 5 seconds before scraping the next version...');
+    await sleep(2000);
 
-    // Log error details
-    console.error('--- Request error ---');
-    console.error(`URL: ${url}`);
-    if (error.response) {
-      console.error(`Status: ${error.response.status}`);
-      //console.error(`StatusText: ${error.response.statusText}`);
-      //console.error('Headers:', error.response.headers);
-      //console.error('Data:', error.response.data);
-    }
-    await sleep(1000);
+    // 递归调用
+    await scrapeUnityReleaseNotes(undefined, directoryPath, prefix);
   }
 }
+
+
 
 module.exports = scrapeUnityReleaseNotes;

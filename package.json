@@ -1,5 +1,6 @@
 {
   "name": "unityreleasenotes",
+  "type":"commonjs",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -12,5 +13,8 @@
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
     "turndown": "^7.1.2"
+  },
+  "dependencies": {
+    "puppeteer": "^24.8.2"
   }
 }
