@@ -1,5 +1,5 @@
 # UnityReleaseNotes
-**Last update time : `2025-10-03 13:04:54`	Powered By ChatGPT**
+**Last update time : `2025-10-03 14:06:03`	Powered By ChatGPT**
 
 ## More Unity Versions 
 |&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|&emsp;|
@@ -10,6 +10,12 @@
 | [5.6](./merge_htmls/5.6.md) | [5.5](./merge_htmls/5.5.md) | [5.4](./merge_htmls/5.4.md) | [5.3](./merge_htmls/5.3.md) | [5.2](./merge_htmls/5.2.md) | [5.1](./merge_htmls/5.1.md) | [5.0](./merge_htmls/5.0.md) | | |
 
 ## 6000.1
+
+### 6000.1.17f1 Release Notes
+
+#### Fixes
+
+*   Scripting: Adressed CVE-2025-59489
 
 ### Known Issues in 6000.1.16f1
 
